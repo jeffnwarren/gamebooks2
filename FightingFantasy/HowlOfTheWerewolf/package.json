@@ -1,0 +1,19 @@
+{
+  "name": "howl-of-the-werewolf",
+  "scripts": {
+    "check": "npm run check:js && npm run check:data && npm run check:intro && npm run check:ocr && npm run check:fixtures",
+    "check:choices": "node tools/check-choices.js",
+    "check:data": "node tools/check-data.js",
+    "check:fixtures": "node tools/check-fixtures.js",
+    "check:intro": "node tools/check-intro.js",
+    "check:js": "node --check playable/app.js",
+    "check:ocr": "node tools/check-ocr-smoke.js",
+    "report:graph": "node tools/check-data.js --verbose",
+    "report:illustrations": "python ../tools/detect-full-page-illustrations.py .",
+    "build:illustrations": "python ../tools/detect-full-page-illustrations.py . --write --extract",
+    "report:ocr": "node tools/report-ocr.js"
+  },
+  "devDependencies": {
+    "playwright": "^1.60.0"
+  }
+}

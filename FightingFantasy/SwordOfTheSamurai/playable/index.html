@@ -1,0 +1,161 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Sword of the Samurai - Playable Book</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <div class="app-shell">
+      <aside class="side-panel">
+        <div class="cover-wrap">
+          <img src="../source/swordofthesamurai.jpg" alt="Sword of the Samurai cover">
+        </div>
+        <div class="title-block">
+          <p class="kicker">Playable Gamebook</p>
+          <h1>Sword of the Samurai</h1>
+        </div>
+
+        <nav class="nav-block" aria-label="Book navigation">
+          <button id="introBtn" type="button">Intro</button>
+          <button id="backgroundBtn" type="button">Background</button>
+          <button id="backBtn" type="button">Back</button>
+          <button id="forwardBtn" type="button">Forward</button>
+          <button id="bookmarkBtn" type="button">Bookmark</button>
+        </nav>
+
+        <form id="jumpForm" class="jump-form">
+          <label for="jumpInput">Section</label>
+          <div class="inline-control">
+            <input id="jumpInput" name="section" type="text" inputmode="numeric" value="1">
+            <button type="submit">Go</button>
+          </div>
+        </form>
+
+        <div class="search-block">
+          <label for="searchInput">Search</label>
+          <input id="searchInput" type="search" autocomplete="off" placeholder="katana, shogun, daimyo">
+          <div id="searchResults" class="search-results"></div>
+        </div>
+
+        <div class="saved-block">
+          <h2>Bookmarks</h2>
+          <div id="bookmarkList" class="mini-list"></div>
+        </div>
+
+        <div class="saved-block">
+          <h2>Visited</h2>
+          <div id="visitedList" class="mini-list"></div>
+        </div>
+      </aside>
+
+      <main class="reader-panel">
+        <section class="reader-toolbar" aria-label="Current section">
+          <div>
+            <p class="kicker">Section</p>
+            <h2 id="sectionTitle">1</h2>
+          </div>
+          <div class="toolbar-actions">
+            <button id="sourceBtn" type="button" aria-expanded="false">Show PDF</button>
+            <button id="resetBtn" type="button">New Game</button>
+          </div>
+        </section>
+
+        <article class="section-view">
+          <div id="sectionText" class="section-text"></div>
+          <div id="choiceList" class="choice-list"></div>
+        </article>
+
+        <section class="source-view" id="sourceView">
+          <div class="source-head">
+            <h2>Source Page <span id="pageNumber"></span></h2>
+            <a id="pdfLink" target="_blank" rel="noreferrer">Open PDF</a>
+          </div>
+          <iframe id="pdfFrame" title="Original PDF page"></iframe>
+        </section>
+      </main>
+
+      <aside class="sheet-panel">
+        <section class="sheet-section">
+          <div class="sheet-head">
+            <h2>Adventure Sheet</h2>
+            <button id="rollHeroBtn" type="button">Roll</button>
+          </div>
+          <div class="stat-grid">
+            <label>
+              <span>Skill</span>
+              <input data-stat="skillInitial" type="number" min="0">
+              <input data-stat="skill" type="number" min="0">
+            </label>
+            <label>
+              <span>Stamina</span>
+              <input data-stat="staminaInitial" type="number" min="0">
+              <input data-stat="stamina" type="number" min="0">
+            </label>
+            <label>
+              <span>Luck</span>
+              <input data-stat="luckInitial" type="number" min="0">
+              <input data-stat="luck" type="number" min="0">
+            </label>
+            <label>
+              <span>Honour</span>
+              <input data-stat="honourInitial" type="number" min="0">
+              <input data-stat="honour" type="number" min="0">
+            </label>
+          </div>
+          <div class="resource-grid">
+            <label>
+              <span>Provisions</span>
+              <input data-stat="provisions" type="number" min="0">
+            </label>
+            <label>
+              <span>Gold</span>
+              <input data-stat="gold" type="number" min="0">
+            </label>
+          </div>
+        </section>
+
+        <section class="sheet-section dice-section">
+          <h2>Dice</h2>
+          <div class="dice-row">
+            <button data-roll="1" type="button">D6</button>
+            <button data-roll="2" type="button">2D6</button>
+            <button id="testLuckBtn" type="button">Test Luck</button>
+          </div>
+          <output id="diceOutput">-</output>
+        </section>
+
+        <section class="sheet-section combat-section">
+          <h2>Combat</h2>
+          <div class="combat-grid">
+            <label>
+              <span>Enemy Skill</span>
+              <input id="enemySkill" type="number" min="0" value="8">
+            </label>
+            <label>
+              <span>Enemy Stamina</span>
+              <input id="enemyStamina" type="number" min="0" value="8">
+            </label>
+          </div>
+          <div class="dice-row">
+            <button id="attackRoundBtn" type="button">Attack Round</button>
+            <button id="enemyMinusBtn" type="button">Enemy -2</button>
+            <button id="heroMinusBtn" type="button">Hero -2</button>
+          </div>
+          <output id="combatOutput">-</output>
+        </section>
+
+        <section class="sheet-section notes-section">
+          <label for="inventoryText">Possessions</label>
+          <textarea id="inventoryText" rows="5"></textarea>
+          <label for="notesText">Notes</label>
+          <textarea id="notesText" rows="6"></textarea>
+        </section>
+      </aside>
+    </div>
+
+    <script src="book-data.js"></script>
+    <script src="app.js"></script>
+  </body>
+</html>

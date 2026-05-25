@@ -1,0 +1,684 @@
+from __future__ import annotations
+
+import json
+import re
+import subprocess
+from datetime import datetime
+from pathlib import Path
+
+
+ROOT = Path(__file__).resolve().parents[1]
+OCR_DATA = ROOT / "playable" / "book-data.js"
+OCR_PAGES = ROOT / "playable" / "pages.txt"
+FALLBACK_DATA = ROOT / "tools" / "embedded-cache" / "book-data.js"
+MAX_SECTION = 515
+MANUAL_SECTION_SLICES = {
+    16: [(14, 26, 43)],
+    17: [(14, 45, 47)],
+    18: [(15, 14, 23)],
+    36: [(24, 10, 20)],
+    37: [(24, 22, 53)],
+    39: [(22, 41, 48)],
+    53: [(28, 8, 18)],
+    54: [(28, 19, 55), (29, 3, 15)],
+    55: [(29, 17, 27)],
+    59: [(30, 43, 55), (31, 3, 18)],
+    60: [(31, 20, 39)],
+    61: [(31, 41, 47)],
+    67: [(33, 45, 55)],
+    70: [(35, 3, 25)],
+    71: [(35, 26, 30), (35, 32, 33)],
+    72: [(35, 35, 50)],
+    77: [(37, 21, 24)],
+    78: [(37, 26, 30)],
+    86: [(40, 15, 43), (41, 1, 41)],
+    87: [(41, 42, 60)],
+    92: [(43, 3, 14)],
+    96: [(44, 3, 24)],
+    107: [(48, 55, 60), (49, 2, 21)],
+    114: [(52, 3, 26)],
+    127: [(56, 42, 53), (57, 2, 11)],
+    132: [(58, 5, 17)],
+    211: [(82, 41, 56)],
+    212: [(82, 58, 64), (83, 2, 4)],
+    213: [(83, 6, 13)],
+    214: [(83, 15, 26)],
+    223: [(86, 3, 12)],
+    248: [(95, 3, 12)],
+    255: [(119, 21, 45), (97, 2, 4)],
+    305: [(116, 34, 45)],
+    314: [(118, 53, 59)],
+    323: [(122, 52, 63), (123, 2, 7)],
+    324: [(123, 9, 60), (124, 2, 5)],
+    328: [(125, 3, 35)],
+    329: [(125, 37, 39)],
+    330: [(125, 41, 56), (126, 2, 7)],
+    345: [(131, 23, 34)],
+    346: [(131, 36, 42)],
+    367: [(137, 40, 55)],
+    400: [(148, 35, 37)],
+    401: [(149, 19, 41)],
+    419: [(156, 33, 42)],
+    420: [(156, 44, 48)],
+    425: [(159, 11, 50)],
+    437: [(163, 13, 27)],
+    447: [(167, 46, 51)],
+    461: [(171, 18, 38)],
+    482: [(179, 3, 14)],
+    493: [(183, 53, 67), (184, 2, 7)],
+    494: [(184, 9, 48)],
+}
+
+
+def load_js_data(path: Path) -> dict:
+    text = path.read_text(encoding="utf-8")
+    match = re.search(r"window\.GAMEBOOK_DATA\s*=\s*(.*);\s*$", text, re.S)
+    if not match:
+        raise ValueError(f"Could not read data from {path}")
+    try:
+        return json.loads(match.group(1))
+    except json.JSONDecodeError:
+        node = Path(r"C:\Program Files\nodejs\node.exe")
+        script = (
+            "global.window={};"
+            f"require({json.dumps(str(path))});"
+            "process.stdout.write(JSON.stringify(window.GAMEBOOK_DATA));"
+        )
+        output = subprocess.check_output([str(node), "-e", script], cwd=ROOT)
+        return json.loads(output.decode("utf-8"))
+
+
+def clean_intro(text: str) -> str:
+    lines = []
+    for raw in text.splitlines():
+        line = raw.strip()
+        if not line:
+            lines.append("")
+            continue
+        if re.fullmatch(r"[-=_ .,'\"|\\/()A-Za-z]{1,30}", line) and len(re.findall(r"[A-Za-z]{3,}", line)) == 0:
+            continue
+        if re.fullmatch(r"\d{1,2}", line):
+            continue
+        lines.append(line)
+
+    value = "\n".join(lines)
+    value = re.sub(r"\n{3,}", "\n\n", value)
+    value = value.replace("Now tum to paragraph 1", "Now turn to paragraph 1")
+    value = value.replace("sraMina", "STAMINA")
+    value = value.replace("staMINA", "STAMINA")
+    value = value.replace("LucK", "LUCK")
+    value = value.replace("CHANCE points", "CHANGE points")
+    return value.strip()
+
+
+def digit_for_range(char: str) -> str:
+    mapping = {
+        "O": "0",
+        "o": "0",
+        "Q": "0",
+        "(": "0",
+        ")": "0",
+        "I": "1",
+        "l": "1",
+        "i": "1",
+        "t": "1",
+        "T": "1",
+        "|": "1",
+        "!": "1",
+        "z": "2",
+        "Z": "2",
+        "j": "3",
+        "J": "3",
+        "A": "4",
+        "a": "4",
+        "S": "5",
+        "s": "5",
+        "$": "5",
+        "G": "6",
+        "b": "6",
+        "B": "8",
+        "g": "5",
+        "q": "9",
+    }
+    if char.isdigit():
+        return char
+    return mapping.get(char, "")
+
+
+def parse_loose_number(token: str) -> int | None:
+    digits = "".join(digit_for_range(char) for char in token)
+    if not digits:
+        return None
+    value = int(re.sub(r"00+", "0", digits))
+    return value if 1 <= value <= MAX_SECTION else None
+
+
+def parse_range_line(line: str) -> tuple[int, int] | None:
+    match = re.fullmatch(r"\s*([0-9A-Za-z$%(){}]+)\s*-\s*([0-9A-Za-z$%(){}]+)\s*", line)
+    if not match:
+        return None
+    start = parse_loose_number(match.group(1))
+    end = parse_loose_number(match.group(2))
+    if start is None or end is None:
+        return None
+    if end < start and end < 100 and start >= 100:
+        end = (start // 100) * 100 + end
+    if start <= end and end - start <= 20:
+        return start, end
+    return None
+
+
+TURN_WORDS = (
+    "turn|tur|tum|tarn|tuin|tuln|tim|timi|tumi|tium|tiurn|tucn|furn|fum|fumi|"
+    "faim|fiumn|hrm|rurn|burn|bun|barn|hurn|hun|hum|humm|hirn|hon|harn|"
+    "ham|eum"
+)
+DIRECT_WORDS = "go|return|continue"
+TURN_CONNECTORS = r"at\s+once\s+to|back\s+to|to|lo|te|bo|eo|at|ta|i|l|fo"
+
+
+def token_matches_number(token: str, number: int) -> bool:
+    clean = re.sub(r"[^\w$%(){}!|]", "", token)
+    target = str(number)
+    if not clean or len(clean) != len(target):
+        return False
+    if clean == target:
+        return True
+
+    options = {
+        "0": set("0OoQ()D"),
+        "1": set("1IlitT!|7zZ2"),
+        "2": set("2zZ"),
+        "3": set("3jJ9"),
+        "4": set("4AaGgq"),
+        "5": set("5Ss$Gg"),
+        "6": set("6bBG"),
+        "7": set("7yY"),
+        "8": set("8B"),
+        "9": set("9gq"),
+    }
+    return all(char in options[digit] for char, digit in zip(clean, target))
+
+
+def previous_line_wants_target(line: str) -> bool:
+    return bool(
+        re.search(
+            rf"\b(?:(?:{TURN_WORDS})\s+(?:{TURN_CONNECTORS})?|(?:{DIRECT_WORDS})\s+(?:{TURN_CONNECTORS}))\s*(?:paragraph|section)?\s*$",
+            line.strip(),
+            re.I,
+        )
+    )
+
+
+def marker_number(
+    line: str,
+    expected: int,
+    active_range: tuple[int, int] | None,
+    previous_line: str = "",
+) -> int | None:
+    text = line.strip()
+    if not text or len(text) > 18 or "-" in text:
+        return None
+    if previous_line_wants_target(previous_line) and parse_loose_number(text) is not None:
+        return None
+    tokens = re.findall(r"[0-9A-Za-z$%(){}!|]+", text)
+    if not tokens or len(tokens) > 2:
+        return None
+    if len(tokens) == 2 and len(tokens[0]) > 1:
+        return None
+
+    search_start = expected
+    search_end = min(MAX_SECTION, expected + 6)
+    if active_range and active_range[0] <= expected + 12:
+        search_start = max(expected, active_range[0])
+        search_end = active_range[1]
+
+    exact_numbers = [int(token) for token in tokens if token.isdigit()]
+    exact_future = [number for number in exact_numbers if search_start <= number <= min(search_end, expected + 8)]
+    if exact_future:
+        return min(exact_future)
+
+    for number in range(search_start, search_end + 1):
+        if any(token_matches_number(token, number) for token in tokens):
+            return number
+
+    exact_valid_numbers = [number for number in exact_numbers if 1 <= number <= MAX_SECTION]
+    numberish = any(
+        len(token) <= 4 and (re.search(r"[0-9$§%]", token) or token_matches_number(token, expected))
+        for token in tokens
+    )
+    marker_glyph = (
+        active_range
+        and active_range[0] <= expected <= active_range[1]
+        and len(text) <= 4
+        and bool(re.fullmatch(r"[A-Za-z?*!|$§%(){}]+", text))
+        and len(re.findall(r"[A-Za-z]{3,}", text)) == 0
+    )
+    if (
+        active_range
+        and active_range[0] <= expected <= active_range[1]
+        and (numberish or marker_glyph)
+        and not exact_valid_numbers
+    ):
+        return expected
+    return None
+
+
+def is_artifact_line(line: str) -> bool:
+    text = line.strip()
+    if not text:
+        return True
+    if re.fullmatch(
+        rf"(?:(?:{TURN_WORDS})\s+)?(?:{TURN_CONNECTORS})\s*[\w$%(){{}}.,'\"]{{1,6}}",
+        text,
+        re.I,
+    ):
+        return False
+    if re.fullmatch(
+        rf"(?:{TURN_WORDS}\s+)?(?:{TURN_CONNECTORS})\s*[0-9OoQIiLlAaEeSsBbGgqQjJzZ$§%(){{}}.,'\"]{{1,6}}",
+        text,
+        re.I,
+    ):
+        return False
+    if re.fullmatch(r"\d{1,2}", text):
+        return True
+    if parse_range_line(text):
+        return True
+    words = re.findall(r"[A-Za-z]{3,}", text)
+    if not words and re.fullmatch(r"[-=_ .,'\"|\\/()A-Za-z0-9$%{}&]+", text) and len(text) <= 32:
+        return True
+    if re.fullmatch(r"(?:[A-Za-z]{1,2}|\d|[;:,.=+_|\-/\\ ]){1,12}", text):
+        return True
+    return False
+
+
+def clean_section_text(lines: list[tuple[int, str]]) -> str:
+    output = []
+    for _, raw in lines:
+        line = raw.strip()
+        if is_artifact_line(line):
+            continue
+        line = re.sub(r"^(?:[a-z]{1,3}\)|[a-z]{1,3})\s+(?=[A-Z'\"])", "", line)
+        line = re.sub(r"^[=|\\/()[\]{} .,'\"-]{1,10}\s*(?=[A-Z'\"])", "", line)
+        output.append(line)
+    value = " ".join(output)
+    value = re.sub(r"\s+", " ", value).strip()
+    replacements = {
+        " staMINA ": " STAMINA ",
+        " stAMINA ": " STAMINA ",
+        " sKILL ": " SKILL ",
+        " LucK ": " LUCK ",
+        " CHANCE ": " CHANGE ",
+        " CITANCE ": " CHANGE ",
+        " Roil ": " Roll ",
+        " Tum ": " Turn ",
+        " tum ": " turn ",
+        " Tur ": " Turn ",
+        " tur ": " turn ",
+        " Fum ": " Turn ",
+        " Bun to": "Turn to",
+        " bun to": "turn to",
+        " burn to": "turn to",
+        " harn to": " turn to",
+        " hun to": "turn to",
+        "(hum bo": "(turn to",
+        " hum bo": " turn to",
+        " hum to": "turn to",
+        " hirn to": "turn to",
+        " hon to": "turn to",
+        " hurn to": "turn to",
+        " turn at once bo": " turn at once to",
+        " Tam to": "Turn to",
+        " Tum to": "Turn to",
+        "turn to 4843": "turn to 484",
+    }
+    for old, new in replacements.items():
+        value = value.replace(old, new)
+    return value.strip()
+
+
+def has_turn_target(line: str) -> bool:
+    return bool(
+        re.search(
+            rf"\b(?:{TURN_WORDS})"
+            rf"\s+(?:{TURN_CONNECTORS})?\s*[0-9OoQIiLlAaEeSsBbGgqQjJzZ$§%(){{}}.,'\"]{{1,6}}",
+            line,
+            re.I,
+        )
+        or re.search(
+            rf"\b(?:{DIRECT_WORDS})"
+            rf"\s+(?:{TURN_CONNECTORS})\s*[0-9OoQIiLlAaEeSsBbGgqQjJzZ$§%(){{}}.,'\"]{{1,6}}",
+            line,
+            re.I,
+        )
+    )
+
+
+def looks_like_start(line: str) -> bool:
+    text = line.strip()
+    if is_artifact_line(text):
+        return False
+    text = re.sub(r"^[^A-Za-z'\"]+", "", text)
+    text = re.sub(r"^(?:[a-z]{1,3}\)|[a-z]{1,3})\s+(?=[A-Z'\"])", "", text)
+    if re.match(r"^[\"'A-Z]", text):
+        return True
+    return bool(
+        re.match(
+            r"^(You|The|A|An|As|After|Before|Being|Following|Leaving|Standing|Lifting|"
+            r"Konrad|Hans|Tugging|Making|Spinning|Brandishing|Eventually|Somehow|Opening|Peering|"
+            r"Descending|Cautiously|Sprinting|Revealed|Unable|Cutting|Among|Having|Two|To)\b",
+            text,
+            re.I,
+        )
+    )
+
+
+def find_section_boundary(lines: list[tuple[int, str]]) -> int:
+    if len(lines) < 4:
+        return -1
+
+    for index, (_, text) in enumerate(lines[:-1]):
+        previous = lines[index - 1][1] if index else ""
+        target_after_turn = (
+            len(text.strip()) <= 6
+            and re.search(
+                rf"\b(?:(?:{TURN_WORDS})\s+(?:{TURN_CONNECTORS})?|(?:{DIRECT_WORDS})\s+(?:{TURN_CONNECTORS}))\s*$",
+                previous,
+                re.I,
+            )
+        )
+        if not has_turn_target(text) and not target_after_turn:
+            continue
+
+        next_index = index + 1
+        while next_index < len(lines) and is_artifact_line(lines[next_index][1]):
+            next_index += 1
+        lookahead = []
+        probe = next_index
+        while probe < len(lines) and len(lookahead) < 3:
+            if not is_artifact_line(lines[probe][1]):
+                lookahead.append(lines[probe][1])
+            probe += 1
+        if any(has_turn_target(item) for item in lookahead):
+            continue
+        if next_index < len(lines) and looks_like_start(lines[next_index][1]):
+            return next_index
+    return -1
+
+
+def add_section_run(
+    sections: dict[int, dict],
+    start: int,
+    end: int,
+    page: int,
+    lines: list[tuple[int, str]],
+) -> None:
+    if start > end or start > MAX_SECTION:
+        return
+
+    end = min(end, MAX_SECTION)
+    remaining = list(lines)
+    for number in range(start, end + 1):
+        if number == end:
+            chunk = remaining
+            section_page = chunk[0][0] if chunk else page
+            sections[number] = {
+                "number": number,
+                "page": section_page,
+                "choices": [],
+                "text": clean_section_text(chunk),
+                "ocrSource": "tesseract-resplit",
+            }
+            return
+
+        boundary = find_section_boundary(remaining)
+        if boundary <= 0 or boundary >= len(remaining):
+            section_page = remaining[0][0] if remaining else page
+            sections[number] = {
+                "number": number,
+                "page": section_page,
+                "choices": [],
+                "text": clean_section_text(remaining),
+                "ocrSource": "tesseract-resplit",
+            }
+            for missing in range(number + 1, end + 1):
+                sections[missing] = {
+                    "number": missing,
+                    "page": section_page,
+                    "choices": [],
+                    "text": "",
+                    "ocrSource": "missing",
+                }
+            return
+
+        chunk = remaining[:boundary]
+        section_page = chunk[0][0] if chunk else page
+        sections[number] = {
+            "number": number,
+            "page": section_page,
+            "choices": [],
+            "text": clean_section_text(chunk),
+            "ocrSource": "tesseract-resplit",
+        }
+        remaining = remaining[boundary:]
+
+
+def manual_slice_lines(page_chunks: list[str], specs: list[tuple[int, int, int]]) -> list[tuple[int, str]]:
+    lines: list[tuple[int, str]] = []
+    for page, start, end in specs:
+        if page < 1 or page > len(page_chunks):
+            continue
+        page_lines = page_chunks[page - 1].splitlines()
+        for line_index in range(start - 1, min(end, len(page_lines))):
+            raw = page_lines[line_index].strip()
+            if raw:
+                lines.append((page, raw))
+    return lines
+
+
+def apply_manual_sections(sections: dict[int, dict], page_chunks: list[str]) -> None:
+    # These targeted slices recover sections whose printed numbers OCR confuses with lookalike glyphs.
+    for number, specs in MANUAL_SECTION_SLICES.items():
+        lines = manual_slice_lines(page_chunks, specs)
+        text = clean_section_text(lines)
+        if not text:
+            continue
+        sections[number] = {
+            "number": number,
+            "page": specs[0][0],
+            "choices": [],
+            "text": text,
+            "ocrSource": "manual-slice",
+        }
+
+
+def resplit_sections_from_pages(path: Path) -> dict[int, dict]:
+    text = path.read_text(encoding="utf-8")
+    page_chunks = re.split(r"\n\s*--- PAGE BREAK ---\s*\n", text)
+    sections: dict[int, dict] = {}
+    current_number: int | None = None
+    current_page = 1
+    current_lines: list[tuple[int, str]] = []
+    expected = 1
+    in_adventure = False
+    waiting_for_first_range = False
+    active_range: tuple[int, int] | None = None
+    previous_line = ""
+
+    for page_index, chunk in enumerate(page_chunks, start=1):
+        for raw in chunk.splitlines():
+            line = raw.strip()
+            if not line:
+                continue
+            if not in_adventure:
+                if re.search(r"\bTurn\s+to\s+paragraph\s+1\b", line, re.I):
+                    in_adventure = True
+                    waiting_for_first_range = True
+                continue
+
+            parsed_range = parse_range_line(line)
+            if parsed_range:
+                active_range = parsed_range
+                if waiting_for_first_range and parsed_range[0] == 1:
+                    waiting_for_first_range = False
+                previous_line = line
+                continue
+            if waiting_for_first_range:
+                previous_line = line
+                continue
+            if active_range and expected > active_range[1]:
+                active_range = None
+
+            matched = marker_number(line, expected, active_range, previous_line)
+            if matched:
+                if current_number is not None:
+                    add_section_run(sections, current_number, matched - 1, current_page, current_lines)
+                current_number = matched
+                current_page = page_index
+                current_lines = []
+                expected = matched + 1
+                previous_line = line
+                continue
+
+            if current_number is not None:
+                current_lines.append((page_index, line))
+            previous_line = line
+
+    if current_number is not None:
+        add_section_run(sections, current_number, MAX_SECTION, current_page, current_lines)
+
+    for number in range(1, MAX_SECTION + 1):
+        sections.setdefault(
+            number,
+            {"number": number, "page": 1, "choices": [], "text": "", "ocrSource": "missing"},
+        )
+    apply_manual_sections(sections, page_chunks)
+    return sections
+
+
+def token_to_section(token: str) -> int | None:
+    clean = re.sub(r"[^\w()%$§]", "", token)
+    if clean.isdigit():
+        value = int(clean)
+        if 1 <= value <= MAX_SECTION:
+            return value
+        if len(clean) == 3 and clean.startswith("7"):
+            corrected = int("3" + clean[1:])
+            if 1 <= corrected <= MAX_SECTION:
+                return corrected
+        return None
+
+    mapping = {
+        "O": "0",
+        "o": "0",
+        "Q": "0",
+        "I": "1",
+        "l": "1",
+        "i": "1",
+        "a": "1",
+        "A": "4",
+        "z": "2",
+        "Z": "2",
+        "j": "3",
+        "J": "3",
+        "%": "1",
+        "§": "5",
+        "$": "5",
+        "S": "5",
+        "s": "5",
+        "B": "8",
+        "b": "6",
+        "G": "6",
+        "e": "8",
+        "E": "8",
+        "g": "9",
+        "q": "9",
+    }
+    digits = "".join(char if char.isdigit() else mapping.get(char, "") for char in clean)
+    if not digits:
+        return None
+    value = int(re.sub(r"00+", "0", digits))
+    return value if 1 <= value <= MAX_SECTION else None
+
+
+def section_references(text: str, current: int) -> list[int]:
+    refs = []
+    seen = set()
+    pattern = re.compile(
+        rf"\b(?:(?:{TURN_WORDS})\s+(?:{TURN_CONNECTORS})?|(?:{DIRECT_WORDS})\s+(?:{TURN_CONNECTORS}))"
+        rf"\s*([0-9OoQIiLlAaEeSsBbGgqQjJzZ$§%{{}}.,'\"]{{1,6}})",
+        re.I,
+    )
+    pattern = re.compile(pattern.pattern + r"(?![A-Za-z])", re.I)
+    for match in pattern.finditer(text):
+        target = token_to_section(match.group(1))
+        if target and target != current and target not in seen:
+            refs.append(target)
+            seen.add(target)
+    return refs
+
+
+def intro_from_pages(path: Path) -> str:
+    text = path.read_text(encoding="utf-8")
+    marker = re.search(r"(?m)^\s*1\s*-\s*[34]\s*$", text)
+    if not marker:
+        return ""
+    return clean_intro(text[: marker.start()])
+
+
+def main() -> int:
+    data = load_js_data(OCR_DATA)
+    fallback = load_js_data(FALLBACK_DATA) if FALLBACK_DATA.exists() else {"sections": {}}
+    sections = resplit_sections_from_pages(OCR_PAGES)
+    fallback_count = 0
+
+    for number in range(1, MAX_SECTION + 1):
+        section = sections[number]
+        if section["text"]:
+            continue
+        fallback_section = fallback.get("sections", {}).get(str(number), {})
+        if fallback_section.get("text", "").strip():
+            section["text"] = fallback_section["text"]
+            section["page"] = fallback_section.get("page", section["page"])
+            section["ocrSource"] = "embedded-fallback"
+            fallback_count += 1
+
+    for number in range(1, MAX_SECTION + 1):
+        section = sections[number]
+        section["text"] = re.sub(rf"^\s*{number}\s+", "", section.get("text", "")).strip()
+        section["choices"] = section_references(section["text"], number)
+
+    total_missing = sum(1 for section in sections.values() if not section.get("text", "").strip())
+    total_fallback = sum(1 for section in sections.values() if section.get("ocrSource") == "embedded-fallback")
+    total_manual = sum(1 for section in sections.values() if section.get("ocrSource") == "manual-slice")
+
+    data.update(
+        {
+            "title": "Howl of the Werewolf",
+            "sourcePdf": "../source/altered FF61 Howl of the Werewolf.pdf",
+            "coverImage": "../source/howlofthewerewolf.jpg",
+            "generatedAt": datetime.now().isoformat(timespec="seconds"),
+            "intro": {"title": "Introduction", "page": 1, "text": intro_from_pages(OCR_PAGES)},
+            "sections": {str(number): sections[number] for number in range(1, MAX_SECTION + 1)},
+            "note": (
+                "Primary text was generated by fresh Tesseract OCR and re-split for Howl's 515-section structure. "
+                f"{total_manual} sections use targeted manual OCR slices; "
+                f"{total_fallback} sections use the PDF's embedded OCR fallback; "
+                f"{total_missing} sections still lack recovered text."
+            ),
+        }
+    )
+
+    OCR_DATA.write_text(
+        "window.GAMEBOOK_DATA = " + json.dumps(data, ensure_ascii=False, indent=2) + ";\n",
+        encoding="utf-8",
+    )
+    print(f"Fallback sections filled: {fallback_count}")
+    print(f"Manual slices applied: {total_manual}")
+    print(f"Sections still missing: {total_missing}/{MAX_SECTION}")
+    print(f"Intro characters: {len(data['intro']['text'])}")
+    return 0
+
+
+if __name__ == "__main__":
+    raise SystemExit(main())
