@@ -10,6 +10,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 OCR_DATA = ROOT / "playable" / "book-data.js"
 OCR_PAGES = ROOT / "playable" / "pages.txt"
+ILLUSTRATIONS_DATA = ROOT / "playable" / "illustrations.json"
 FALLBACK_DATA = ROOT / "tools" / "embedded-cache" / "book-data.js"
 MAX_SECTION = 515
 MANUAL_SECTION_SLICES = {
@@ -53,6 +54,7 @@ MANUAL_SECTION_SLICES = {
     328: [(125, 3, 35)],
     329: [(125, 37, 39)],
     330: [(125, 41, 56), (126, 2, 7)],
+    344: [(131, 36, 42)],
     345: [(131, 23, 34)],
     346: [(131, 36, 42)],
     367: [(137, 40, 55)],
@@ -63,7 +65,7 @@ MANUAL_SECTION_SLICES = {
     425: [(159, 11, 50)],
     437: [(163, 13, 27)],
     447: [(167, 46, 51)],
-    461: [(171, 18, 38)],
+    461: [(171, 18, 39)],
     482: [(179, 3, 14)],
     493: [(183, 53, 67), (184, 2, 7)],
     494: [(184, 9, 48)],
@@ -118,6 +120,7 @@ def digit_for_range(char: str) -> str:
         "Q": "0",
         "(": "0",
         ")": "0",
+        "£": "1",
         "I": "1",
         "l": "1",
         "i": "1",
@@ -170,11 +173,11 @@ def parse_range_line(line: str) -> tuple[int, int] | None:
 
 TURN_WORDS = (
     "turn|tur|tum|tarn|tuin|tuln|tim|timi|tumi|tium|tiurn|tucn|furn|fum|fumi|"
-    "faim|fiumn|hrm|rurn|burn|bun|barn|hurn|hun|hum|humm|hirn|hon|harn|"
-    "ham|eum"
+    "faim|fiumn|hrm|rurn|burn|bum|bun|barn|hurn|hun|hum|humm|hirn|hon|harn|"
+    "ham|eum|tun|fiirn|fom|fuorn|tuo|rehurn|tetum|him|hur|fur"
 )
 DIRECT_WORDS = "go|return|continue"
-TURN_CONNECTORS = r"at\s+once\s+to|back\s+to|to|lo|te|bo|eo|at|ta|i|l|fo"
+TURN_CONNECTORS = r"immediately\s+to|at\s+once\s+to|at\s+ance\s+to|al\s+once\s+to|back\s+to|to|lo|te|bo|eo|io|10|at|ta|in|tn|y|i|l|fo|fa"
 
 
 def token_matches_number(token: str, number: int) -> bool:
@@ -203,7 +206,7 @@ def token_matches_number(token: str, number: int) -> bool:
 def previous_line_wants_target(line: str) -> bool:
     return bool(
         re.search(
-            rf"\b(?:(?:{TURN_WORDS})\s+(?:{TURN_CONNECTORS})?|(?:{DIRECT_WORDS})\s+(?:{TURN_CONNECTORS}))\s*(?:paragraph|section)?\s*$",
+            rf"\b(?:(?:{TURN_WORDS})-?(?:\s+(?:{TURN_CONNECTORS}))?|(?:{DIRECT_WORDS})\s+(?:{TURN_CONNECTORS}))\s*(?:paragraph|section)?\s*$",
             line.strip(),
             re.I,
         )
@@ -292,11 +295,20 @@ def is_artifact_line(line: str) -> bool:
     return False
 
 
+def possible_target_fragment(line: str) -> bool:
+    for token in re.findall(r"[0-9A-Za-z$%(){}!|Â§£]+", line):
+        if re.search(r"[0-9$%Â§£]", token) and len(token) <= 6:
+            return True
+    return False
+
+
 def clean_section_text(lines: list[tuple[int, str]]) -> str:
     output = []
     for _, raw in lines:
         line = raw.strip()
         if is_artifact_line(line):
+            if output and previous_line_wants_target(output[-1]) and possible_target_fragment(line):
+                output.append(line)
             continue
         line = re.sub(r"^(?:[a-z]{1,3}\)|[a-z]{1,3})\s+(?=[A-Z'\"])", "", line)
         line = re.sub(r"^[=|\\/()[\]{} .,'\"-]{1,10}\s*(?=[A-Z'\"])", "", line)
@@ -330,10 +342,22 @@ def clean_section_text(lines: list[tuple[int, str]]) -> str:
         " turn at once bo": " turn at once to",
         " Tam to": "Turn to",
         " Tum to": "Turn to",
+        "andturn": "and turn",
+        "thenturn": "then turn",
+        "Nowturn": "Now turn",
+        "nowturn": "now turn",
+        "burn 10150": "burn to 150",
+        "tun to 991": "tun to 391",
+        "turn to. 4134": "turn to 434",
+        "turn tog7o": "turn to 270",
+        "to gog": "to 309",
         "turn to 4843": "turn to 484",
     }
     for old, new in replacements.items():
         value = value.replace(old, new)
+    value = re.sub(r"\bturn-\s*ing\s+(?=to\b)", "turn ", value, flags=re.I)
+    value = re.sub(r"\bturning\s+(?=to\b)", "turn ", value, flags=re.I)
+    value = re.sub(r"([a-z])(?=turn(?:ing)?\s+(?:to|lo|te|io|10|ta|at)\b)", r"\1 ", value)
     return value.strip()
 
 
@@ -349,6 +373,23 @@ def has_turn_target(line: str) -> bool:
             rf"\b(?:{DIRECT_WORDS})"
             rf"\s+(?:{TURN_CONNECTORS})\s*[0-9OoQIiLlAaEeSsBbGgqQjJzZ$§%(){{}}.,'\"]{{1,6}}",
             line,
+            re.I,
+        )
+    )
+
+
+def ending_like(text: str) -> bool:
+    return bool(
+        re.search(
+            r"\b(adventure ends|adventure is over|adventure ends here|adventure will end here|"
+            r"quest ends here|quest has failed|you have failed|you are dead|you die|"
+            r"you have died|you have been killed|you are killed|you pass out|"
+            r"horrible end to your adventure|fate worse than death|met your doom|"
+            r"hollow victory|willing servant always|mindless servant|new master|"
+            r"slay you|barbe-?\s*cued meal|the end|congratulations|you have escaped|"
+            r"start all over again|paragraph with the same number as the one you were last instructed|"
+            r"same number as the one you were last instructed)\b",
+            text,
             re.I,
         )
     )
@@ -387,7 +428,8 @@ def find_section_boundary(lines: list[tuple[int, str]]) -> int:
                 re.I,
             )
         )
-        if not has_turn_target(text) and not target_after_turn:
+        recent_text = " ".join(item[1] for item in lines[max(0, index - 2) : index + 1])
+        if not has_turn_target(text) and not target_after_turn and not ending_like(recent_text):
             continue
 
         next_index = index + 1
@@ -557,7 +599,7 @@ def resplit_sections_from_pages(path: Path) -> dict[int, dict]:
 
 
 def token_to_section(token: str) -> int | None:
-    clean = re.sub(r"[^\w()%$§]", "", token)
+    clean = re.sub(r"[^\w()%$§£]", "", token)
     if clean.isdigit():
         value = int(clean)
         if 1 <= value <= MAX_SECTION:
@@ -583,6 +625,7 @@ def token_to_section(token: str) -> int | None:
         "J": "3",
         "%": "1",
         "§": "5",
+        "£": "1",
         "$": "5",
         "S": "5",
         "s": "5",
@@ -598,7 +641,13 @@ def token_to_section(token: str) -> int | None:
     if not digits:
         return None
     value = int(re.sub(r"00+", "0", digits))
-    return value if 1 <= value <= MAX_SECTION else None
+    if 1 <= value <= MAX_SECTION:
+        return value
+    if len(clean) == 3 and clean[0] in {"q", "Q"}:
+        corrected = int("4" + digits[1:])
+        if 1 <= corrected <= MAX_SECTION:
+            return corrected
+    return None
 
 
 def section_references(text: str, current: int) -> list[int]:
@@ -606,7 +655,7 @@ def section_references(text: str, current: int) -> list[int]:
     seen = set()
     pattern = re.compile(
         rf"\b(?:(?:{TURN_WORDS})\s+(?:{TURN_CONNECTORS})?|(?:{DIRECT_WORDS})\s+(?:{TURN_CONNECTORS}))"
-        rf"\s*([0-9OoQIiLlAaEeSsBbGgqQjJzZ$§%{{}}.,'\"]{{1,6}})",
+        rf"\s*([0-9OoQIiLlAaEeSsBbGgqQjJzZ$§£%{{}}.,'\"]{{1,6}})",
         re.I,
     )
     pattern = re.compile(pattern.pattern + r"(?![A-Za-z])", re.I)
@@ -624,6 +673,19 @@ def intro_from_pages(path: Path) -> str:
     if not marker:
         return ""
     return clean_intro(text[: marker.start()])
+
+
+def illustrations_from_file(path: Path) -> dict:
+    if not path.exists():
+        return {"policy": "covers-and-full-page-illustrations-only", "fullPageIllustrations": []}
+
+    data = json.loads(path.read_text(encoding="utf-8"))
+    return {
+        "policy": data.get("policy", "covers-and-full-page-illustrations-only"),
+        "dpi": data.get("dpi"),
+        "firstSectionPdfPage": data.get("firstSectionPdfPage"),
+        "fullPageIllustrations": data.get("fullPageIllustrations", []),
+    }
 
 
 def main() -> int:
@@ -659,6 +721,7 @@ def main() -> int:
             "coverImage": "../source/howlofthewerewolf.jpg",
             "generatedAt": datetime.now().isoformat(timespec="seconds"),
             "intro": {"title": "Introduction", "page": 1, "text": intro_from_pages(OCR_PAGES)},
+            "illustrations": illustrations_from_file(ILLUSTRATIONS_DATA),
             "sections": {str(number): sections[number] for number in range(1, MAX_SECTION + 1)},
             "note": (
                 "Primary text was generated by fresh Tesseract OCR and re-split for Howl's 515-section structure. "

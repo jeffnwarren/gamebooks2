@@ -3907,5 +3907,342 @@ window.GAMEBOOK_DATA = {
     "title": "Introduction",
     "page": 1,
     "text": "INTRODUCTION\nBefore embarking on this adventure, you must first\ndetermine your strengths and weaknesses, You use\ndice to determine your initial SKILL, STAMINA\nLUCK and FAITH scores. On pages 18-19 there is an\nAdventure Sheet which you may use to record the\ndetails of your adventure. On it you will find boxes\nfor recording your SKILL, STAMINA, LUCK and\nFAITH scores\nYou are advised either to record your scores on the\nAdventure Sheet in pencil or to make photocopies of\nthe page for use in future attempts to complete this\nadventure\nSkill, Stamina, Luck and Faith\nRoll one die. Add 6 to this number and enter this\ntotal in the SKILL box on the Adventure Sheet (so this\nscore will be between 7 and 12\nRoll two dice. Add 12 to the number rolled and enter\nthis total in the STAMINA box on the Adventure Sheet\nso this score will lie between 14 and 24\nRoll one die. Add 6 to this number and enter this\ntotal in the LUCK box on the Adventure Sheet (this\nscore will be between 7 and 12\nRoll one die. Add 3 to this number and enter the\na aca a\n\n--- PAGE BREAK ---\n\ntotal in the FAITH box on the Adventure Sheet (so that\nthis score will be between 4 and 9\nFor reasons that will be explained below, SKILL\nSTAMINA and LUCK scores change constantly dur-\ning the adventure, and FAITH may change too. You\nmust keep an accurate record of these scores and of\nthe changes to them: for this reason you are advised\neither to write small in the boxes or to keep an eraser\nhandy. But never rub out your Initial scores\nAlthough you may be awarded additional SKILL\nSTAMINA and LUCK points, these additions cannot\nraise any score above its Initial figure, except on rare\noccasions when you will be instructed accordingly\nin a particular paragraph. FAITH can be raised above\nits Initial score if you encounter events or magic\nitems which increase FAITH. These situations are\nexplained in the relevant paragraphs\nYour SKILL score reflects your swordsmanship and\ngeneral fighting expertise; the higher the better\nYour STAMINA score reflects your general constitu-\ntion, your will to survive, your determination and\noverall fitness, and your ability to take blows in\nbattle; the higher your STAMINA score, the longer\nyou will be able to survive. Your LUCK score indi-\ncates how naturally lucky a person you are. Luck -\nand magic - are facts of life in the exciting fantasy\nworld you are about to explore! Your FAITH score\nindicates your purity of heart and the strength of\nyour belief in the forces of good. A high FAITH score\nenables you to force certain evil creatures to flee\nfrom you when they sense and fear your valour; but\nit also means that they are more likely to notice you\nand be hostile towards you! You will learn more\nabout the importance of your FAITH as you under-\ntake the adventure in store for you\nMagic\nDuring your adventure you may find some magic\nitems, although at first you may not realize that they\nare magic nor even be sure what they do! Such items\nmay - rarely - give you the ability to cast a magic\nspell; if you find such an item, you will be instructed\nin its use in a particular paragraph. To begin with\nhowever, you are not a mage but a brave warrior\nand you must overcome your enemies by your wits\nand courage and the use of your sword!\nBattles\nYou will often come across paragraphs in the book\nwhich instruct you to fight a creature of some sort\nAn option to flee may be given, but if not - or if you\nchoose to attack the creature anyway - you must\nresolve the battle as described below\nFirst record the opponent's SKILL and STAMINA\nscores in the first vacant Monster Encounter Box on\nyour Adventure Sheet. The scores for each creature\nare given every time you have an encounter. The\nsequence for combat is then\n1. Roll two dice for the opponent. Add its SKILL\nscore. This total is the creature's Attack Strength\nOnl EEE\n\n--- PAGE BREAK ---\n\n2. Roll two dice for yourself. Add your own SKILL\nscore to the number rolled. This total is your\nAttack Strength\n3. If your Attack Strength is higher than that of your\nopponent, you have wounded it: proceed to step\n4. If your opponent's Attack Strength is higher\nthan yours, it has wounded you: proceed to step\n5. If both Attack Strength totals are the same, you\nhave avoided each other's blows: start the next\nAttack Round from step 1, above\n4. You have wounded the creature, so subtract 2\npoints from its STAMINA score. (You may use\nyour Luck here to do additional damage - see\nbelow.) Proceed to step 6\n5. The creature has wounded you, so subtract 2\npoints from your own STAMINA score. (Again\nyou may use your LUCK to reduce the damage\nthe creature does to you - see below\n6. Make the appropriate changes to either your\nopponent's or your own STAMINA score (and to\nyour LUCK score if you used LUCK - see below\n7. Begin the next Attack Round (repeat steps 1-6\nThis sequence continues until the STAMINA of\neither you or the creature you are fighting has\nbeen reduced to zero (death\nFighting More Than One Creature\nIf you come across more than one potential enemy\nin a particular encounter, the instructions in that\nparagraph will tell you how to handle the battle\nSometimes you will have to fight them together\nsometimes you will be able to fight them one after\nthe other\nLuck\nAt various times during your adventure, either in\nbattles or when you come across situations in which\nyou could be either Lucky or Unlucky (details of\nthese are given in the relevant paragraphs), you\nmay call on your LUCK to make the outcome more\nfavourable. But beware! Using Luck is a risky busi-\nness and if you are Unlucky, the results could be\ndisastrous\nThe procedure for using your LUCK is as follows: roll\ntwo dice. If the number rolled is equal to or less than\nyour current LUCK score, you have been Lucky and\nthe result will go in your favour. If the number\nrolled is higher than your current LUCK score, you\nhave been Unlucky and will be penalized\nial ol\n\n--- PAGE BREAK ---\n\nThis procedure is known as Testing your Luck. Each\ntime you test your luck, you must subtract 1 point\nfrom your current LUCK score, whether the out-\ncome was successful or unsuccessful! Thus you will\nsoon realize that the more you rely on your LUCK\nthe more risky this will become\nIf things go so badly that your LUCK is reduced to 1\nor zero, you will automatically be Unlucky when-\never you are forced to Test your Luck. So, be cautious\nout there!\nUsing Luck in Battles\nOn certain pages of the book you will be told to Test\nyour Luck; you will then be told the consequences of\nyour being Lucky or Unlucky. However, in battles\nyou always have the option of using your LUCK\neither to inflict a more serious wound on a creature\nyou have just wounded or to reduce the effects of a\nwound the creature has just inflicted on you\nIf you have just wounded the creature you are\nfighting, you may Test your Luck as described above\nIf you are Lucky, you have inflicted a severe wound\nand may deduct 2 extra points from the creature's\nSTAMINA score (so that your blow reduces its\nSTAMINA by 4 points, rather than the usual 2). How-\never, if you are Unlucky, the wound was a mere\ngraze and you must restore 1 point to the creature's\nSTAMINA score (instead of your blow causing 2\npoints of damage to its STAMINA, it is reduced by\nonly 1 point\nOOOO aaa\nIf the creature has just wounded you, you may Test\nyour Luck to try to minimize this wound. If you are\nLucky, you have managed to avoid the full impact of\nthe blow and may restore 1 point to your own\nSTAMINA (instead of the creature's blow causing 2\npoints of damage to your STAMINA, it is reduced by\nonly 1 point). But if you are Unlucky, then you have\ntaken a more serious blow, and you must deduct 1\nextra STAMINA point (so that the creature's blow\ncauses damage worth 3 STAMINA points rather than\nthe usual 2\nRemember that you must deduct 1 point from your\ncurrent LUCK score each time you Test your Luck\nRestoring Skill, Stamina, Luck and Faith\nSkill\nYour SKILL score will not change much during the\nadventure. Occasionally, a paragraph may give an\ninstruction to increase or decrease your SKILL score\nA Magic Weapon may increase your SKILL - but\nremember that only one weapon can be used at a\ntime! You cannot claim two SKILL bonuses for car-\nrying two Magic Swords. Your SKILL score cannot\nexceed its Initial value unless you are specifically\ninstructed to the contrary\n\n--- PAGE BREAK ---\n\nStamina and Provisions\nYour STAMINA score will go up and down a !ot\nduring your adventure as you fight creatures and\nundertake arduous tasks. As you near your goal\nyour STAMINA score may be dangerously low and\nbattles may become particularly risky, so be careful!\nYour backpack contains enough Provisions for ten\nmeals. You may rest and eat at any time except\nwhen fighting, but you may eat only one meal at a\ntime. Eating a meal restores 4 STAMINA points\nWhen you eat a meal, add 4 points to your current\nSTAMINA score and deduct 1 point from your Provi-\nsions on your Adventure Sheet. A separate Provisions\nRemaining box is provided on the Adventure Sheet\nfor recording details of Provisions. Remember that\nyou have a long way to go, so use your Provisions\nwisely! Remember also that your STAMINA score\nmay never exceed its Initial value unless you are\nspecifically instructed otherwise on a page\nLuck\nYour LUCK score will also change during the adven-\nture as you Test your Luck; additions to your LUCK\nscore may also be awarded when you have been\nespecially fortunate; details of this are given in the\nappropriate paragraphs of this book. Remember\nthat, as with SKILL and STAMINA Scores, your LUCK\nmay never exceed its Initial value unless you are\nspecifically told this\nFaith\nYour FAITH may be shaken by certain perils during\nyour adventure, but it may also be increased when\nyou are victorious in very dangerous battles and\nwhen you find certain objects or relics of Good\nYour FAITH score can be increased above its Initial\nvalue. You will find out exactly how FAITH works\nwhen you encounter certain creatures during your\nadventure, and you will also be instructed about\nthis on the relevant pages\nAfflictions\nThe adventure you will embark on is very hazar-\ndous: monsters and traps are not the only dangers\nyou will face! You may find yourself beset by certain\nAfflictions at some stage - curses or other disadvan-\ntages of an even more sinister nature. We won't\nspoil your fun by telling you exactly what these are\nsuffice it to say that if you suffer one or more\nAfflictions, you will be instructed about their effects\nin the relevant paragraphs. Fortunately, it is poss-\nible to rid yourself of them - if you are brave, wise\nand lucky! Afflictions must be recorded in the A fflic-\ntions box on your Adventure Sheet when you incur\nthem - you can use an eraser to rub them out later if\nyou are fortunate enough to rid yourself of them!\n\n--- PAGE BREAK ---\n\nEquipment\nYou will start your adventure with a bare minimum\nof equipment, but you will find other items during\nyour travels. You are armed with a sword and\ndressed in leather armour; you also carry a shield\nYou have a backpack (like a rucksack or haversack\non your back to hold your Provisions and any\ntreasures or other items you may find. You also\ncarry a lantem which you can use to light your way\nwhen necessary\nHints on Play\nYour journey will be perilous, and you may well fail\non your first attempt. Make notes and draw a map\nas you explore - this map will prove invaluable in\nlater forays in this adventure, and it will enable you\nto progress more rapidly to unexplored sections\nNot all areas contain treasure: many merely contain\ntraps and creatures which you will no doubt fall foul\nof. You may take wrong turnings during your quest\nand, while you may indeed progress through to\nyour ultimate destination, it is by no means certain\nthat you will find what you are searching for\ner ibaa ih ba\na %\nee, Fee\nBe very wary about Testing your Luck unless a para-\ngraph tells you that you must do this! Generally\nwhen it comes to fights you should Test your Luck\nonly to keep yourself alive if a creature's blow might\notherwise kill you (so far as reducing your STAMINA\nloss from other creatures' blows is concerned\nDon't Test your Luck in order to try and do extra\ndamage to your enemy unless this is really necess-\nary! LUCK points are precious!\nIt will be realized that paragraphs make no sense if\nread in numerical order. It is essential that you read\nonly the paragraphs you are instructed to go to\nReading other paragraphs may only cause confu-\nsion and will certainly lessen the excitement and\nsurprise during play\nThe one true way to success in the adventure in-\nvolves minimizing risk; any player, no matter how\nweak his or her initial dice rolls, should be able to\nstruggle through to the final achievement and glory\nMay the luck of the gods go with you on the adven-\nture ahead!\n\n--- PAGE BREAK ---\n\nSKILL | | STAMINA | Luck\nINITIAL INITIAL INITIAL\nSKILL = STAMINA = LUCK =\nSPELLS AFFLICTIONS\nITEMS OF TREASURE\nEQUIPMENT\nCARRIED\nNOTES\n- PROVISIONS\nSKILL STAMINA | LUCK\nINITIAL INITIAL INITIAL\nSKILL = | STAMINA = LUCK =\nSKILL STAMIMGA LUCK\nINITIAL iNATIAL INITIAL\nSKILL = Mi = LUCK =\nSEALE | STARTIMA LUCK\neat | JMTTEAL INITIAL\nALLS Sith = LUCK =\nSKULL STAMINA | | LUCK\niNETMAL INITIAL ) | INITIAL\nkei. = STAMINA = LUCK =\n1 Es\n\n--- PAGE BREAK ---\n\nBACKGROUND\nRumours of great wealth and treasure have lured\nyou west of Femphrey in the Old World, to the\nforbidding land of Mauristatia, home of unscalable\npeaks clad in ice and snow, obscured by great\nswathes of freezing mist. The air is cold and damp\nand you are dressed in furs to keep out the chill\nHunched in a swaying coach heading north towards\nMortvania, you wonder whether any of the\nRumours you have heard have any truth in them\npeople hereabouts are poorly fed and clothed, and\nthis hardly seems a place of great riches! Still\nperhaps that means that the treasures are still hid-\nden and that the local folk haven't found them\nYou are aroused from your reverie as the coach\ncreaks to a halt. The coachmen open the doors and\nbegin lowering trunks and bags from the roof. You\nstep out into a murky twilight; a thick winter fog is\ndrawing in round the little coaching village of\nLeverhelven where you will rest tonight. The tavern\nis small and hardly luxurious, but the food is hot\nand the mulled wine is spiced and refreshing. But\nthe local people, wary of strangers, talk little; after\nyou enter, the tavern door is barred and the win-\ndows are already shuttered. The place has a strange\nname: the Hart's Blood - but this doesn't look like\nhunting country, except for those seeking bears or\nwolves for their pelts. You ask the tavern-keeper\nhow the inn got its name, and a deathly hush\ndescends in the room. He turns away, refusing to\nspeak to you; you wonder how a polite and innocent\nquestion can have made him react in such a way\nWhat's more, a man sitting by the fire turns round -\nand spits at your feet!\nAn old woman swathed in shawls and a peasant\nsmock looks over at you and says, 'Furriners don't\nknow no better.' You take her over a drink and ask\nher to tell you more - at least she's talking to you\nwhich is more friendly than anyone else in here is\nShe gulps greedily at the warm wine. \"Tain't no\n'Hart's Blood\", stranger. Were never called that 'til\nthey changed the sign outside. 'Tis the Heart's\nBlood, see, h-e-a-r-t. That's what too many folk\nround 'ere has given up, their 'eart's blood!'\nThe low murmur of voices that had begun once\nmore is completely silenced. Many people are cast-\ning fierce looks at you and the old woman and the\nbarman bellows at her to be silent. But her face is\nflushed with the warmth and the wine, and she says\nshe will not be unheard. ''Tis the Count, damn his\n\n--- PAGE BREAK ---\n\nblack heart; folk vanish from the village, they do\nand are never seen again. The Count takes them up\nto the castle, to be sure, and there they die a terrible\ndeath. Terrible! There's folk as have heard the\nscreams from the place, screams as from the souls in\nhell itself.' Now tears run down her old, weathered\nface. 'Didn't he take my grand-daughter only\nyesterday? Didn't we see the coach and the headless\nhorseman in the village? My poor little Nastassia\nsuch a beautiful, gentle girl, taken by the fiend\n'imself, and not a inan in this godforsaken place\nbrave enough to go to the castle and save her!'\nEmbarrassed voices murmur round the room as\nsparks fly from the fire; the crackling of the burning\nwood seems to emphasize the old woman's desper-\nate plea: 'I beg you, sir, to rescue her. She is only\nseventeen and she 'as done no harm to anyone. . .'\nshe bursts into tears again\nA tall, red-haired man gets up from a table opposite\nand approaches you; you see he has only one arm\nthe right sleeve of his tunic being pinned up to his\nchest. 'Stranger, I take you for a wanderer, a seeker\nafter adventure. What old Svetlana says is true: the\nCount is a terrible and evil soul, and Castle Heyd-\nrich is a place of horror. I would have tried to slay\nhim myself, but for one obvious reason - You nod\nas he glances down at his empty sleeve. 'Will you\nhelp us? From my own days as a warrior I have some\ngold put by, and it's yours gladly if you will help.'\nThe eyes of all present turn to you, imploring your\nassistance\nSSS ee OO\nYou are about to nod your agreement to this pro-\nposal when the door of the tavern bursts open. The\npeople inside cry out in fear as an icy blast whips\nthrough the room. Outside in the mist you can make\nout a black coach with four jet-black steeds prancing\nand whinnying, and in the doorway stands a spec-\ntral figure. Bony fingers extend from black sleeves\nand he beckons - you! But he says nothing - how\ncould he? He has no head\nNow turn to paragraph 1\n\n--- PAGE BREAK ---"
+  },
+  "illustrations": {
+    "policy": "covers-and-full-page-illustrations-only",
+    "dpi": 110,
+    "firstSectionPdfPage": 10,
+    "fullPageIllustrations": [
+      {
+        "pdfPage": 11,
+        "half": "L",
+        "inkCoverage": 0.4332,
+        "veryDarkCoverage": 0.2827,
+        "gridCoverage": 0.8843,
+        "darkThreshold": 217,
+        "score": 2.1834,
+        "likelyFullPage": true,
+        "image": "illustrations/pdf-page-011-l.jpg"
+      },
+      {
+        "pdfPage": 13,
+        "half": "L",
+        "inkCoverage": 0.476,
+        "veryDarkCoverage": 0.3121,
+        "gridCoverage": 0.8148,
+        "darkThreshold": 217,
+        "score": 2.2994,
+        "likelyFullPage": true,
+        "image": "illustrations/pdf-page-013-l.jpg"
+      },
+      {
+        "pdfPage": 16,
+        "half": "L",
+        "inkCoverage": 0.6723,
+        "veryDarkCoverage": 0.5625,
+        "gridCoverage": 0.8333,
+        "darkThreshold": 191,
+        "score": 3.2115,
+        "likelyFullPage": true,
+        "image": "illustrations/pdf-page-016-l.jpg"
+      },
+      {
+        "pdfPage": 19,
+        "half": "L",
+        "inkCoverage": 0.6698,
+        "veryDarkCoverage": 0.5899,
+        "gridCoverage": 0.8148,
+        "darkThreshold": 191,
+        "score": 3.2309,
+        "likelyFullPage": true,
+        "image": "illustrations/pdf-page-019-l.jpg"
+      },
+      {
+        "pdfPage": 23,
+        "half": "L",
+        "inkCoverage": 0.6892,
+        "veryDarkCoverage": 0.563,
+        "gridCoverage": 0.8657,
+        "darkThreshold": 217,
+        "score": 3.2806,
+        "likelyFullPage": true,
+        "image": "illustrations/pdf-page-023-l.jpg"
+      },
+      {
+        "pdfPage": 26,
+        "half": "L",
+        "inkCoverage": 0.6023,
+        "veryDarkCoverage": 0.4348,
+        "gridCoverage": 0.8657,
+        "darkThreshold": 191,
+        "score": 2.8578,
+        "likelyFullPage": true,
+        "image": "illustrations/pdf-page-026-l.jpg"
+      },
+      {
+        "pdfPage": 30,
+        "half": "L",
+        "inkCoverage": 0.5765,
+        "veryDarkCoverage": 0.4169,
+        "gridCoverage": 0.8148,
+        "darkThreshold": 215,
+        "score": 2.7275,
+        "likelyFullPage": true,
+        "image": "illustrations/pdf-page-030-l.jpg"
+      },
+      {
+        "pdfPage": 33,
+        "half": "L",
+        "inkCoverage": 0.6686,
+        "veryDarkCoverage": 0.5497,
+        "gridCoverage": 0.8148,
+        "darkThreshold": 217,
+        "score": 3.1712,
+        "likelyFullPage": true,
+        "image": "illustrations/pdf-page-033-l.jpg"
+      },
+      {
+        "pdfPage": 36,
+        "half": "L",
+        "inkCoverage": 0.5396,
+        "veryDarkCoverage": 0.4323,
+        "gridCoverage": 0.75,
+        "darkThreshold": 217,
+        "score": 2.6034,
+        "likelyFullPage": true,
+        "image": "illustrations/pdf-page-036-l.jpg"
+      },
+      {
+        "pdfPage": 39,
+        "half": "L",
+        "inkCoverage": 0.5184,
+        "veryDarkCoverage": 0.4078,
+        "gridCoverage": 0.8148,
+        "darkThreshold": 217,
+        "score": 2.552,
+        "likelyFullPage": true,
+        "image": "illustrations/pdf-page-039-l.jpg"
+      },
+      {
+        "pdfPage": 43,
+        "half": "L",
+        "inkCoverage": 0.6237,
+        "veryDarkCoverage": 0.4957,
+        "gridCoverage": 0.8148,
+        "darkThreshold": 215,
+        "score": 2.9699,
+        "likelyFullPage": true,
+        "image": "illustrations/pdf-page-043-l.jpg"
+      },
+      {
+        "pdfPage": 46,
+        "half": "L",
+        "inkCoverage": 0.5862,
+        "veryDarkCoverage": 0.4597,
+        "gridCoverage": 0.8056,
+        "darkThreshold": 215,
+        "score": 2.8085,
+        "likelyFullPage": true,
+        "image": "illustrations/pdf-page-046-l.jpg"
+      },
+      {
+        "pdfPage": 50,
+        "half": "L",
+        "inkCoverage": 0.6857,
+        "veryDarkCoverage": 0.5791,
+        "gridCoverage": 0.8148,
+        "darkThreshold": 217,
+        "score": 3.2604,
+        "likelyFullPage": true,
+        "image": "illustrations/pdf-page-050-l.jpg"
+      },
+      {
+        "pdfPage": 53,
+        "half": "L",
+        "inkCoverage": 0.6962,
+        "veryDarkCoverage": 0.5716,
+        "gridCoverage": 0.8889,
+        "darkThreshold": 215,
+        "score": 3.3274,
+        "likelyFullPage": true,
+        "image": "illustrations/pdf-page-053-l.jpg"
+      },
+      {
+        "pdfPage": 56,
+        "half": "L",
+        "inkCoverage": 0.522,
+        "veryDarkCoverage": 0.4025,
+        "gridCoverage": 0.8657,
+        "darkThreshold": 217,
+        "score": 2.5877,
+        "likelyFullPage": true,
+        "image": "illustrations/pdf-page-056-l.jpg"
+      },
+      {
+        "pdfPage": 59,
+        "half": "L",
+        "inkCoverage": 0.5892,
+        "veryDarkCoverage": 0.4594,
+        "gridCoverage": 0.8889,
+        "darkThreshold": 217,
+        "score": 2.8708,
+        "likelyFullPage": true,
+        "image": "illustrations/pdf-page-059-l.jpg"
+      },
+      {
+        "pdfPage": 62,
+        "half": "L",
+        "inkCoverage": 0.6721,
+        "veryDarkCoverage": 0.5788,
+        "gridCoverage": 0.8843,
+        "darkThreshold": 217,
+        "score": 3.2669,
+        "likelyFullPage": true,
+        "image": "illustrations/pdf-page-062-l.jpg"
+      },
+      {
+        "pdfPage": 65,
+        "half": "L",
+        "inkCoverage": 0.5412,
+        "veryDarkCoverage": 0.409,
+        "gridCoverage": 0.8611,
+        "darkThreshold": 215,
+        "score": 2.6477,
+        "likelyFullPage": true,
+        "image": "illustrations/pdf-page-065-l.jpg"
+      },
+      {
+        "pdfPage": 68,
+        "half": "L",
+        "inkCoverage": 0.6062,
+        "veryDarkCoverage": 0.4653,
+        "gridCoverage": 0.8889,
+        "darkThreshold": 215,
+        "score": 2.9265,
+        "likelyFullPage": true,
+        "image": "illustrations/pdf-page-068-l.jpg"
+      },
+      {
+        "pdfPage": 71,
+        "half": "L",
+        "inkCoverage": 0.6706,
+        "veryDarkCoverage": 0.4846,
+        "gridCoverage": 0.8889,
+        "darkThreshold": 217,
+        "score": 3.134,
+        "likelyFullPage": true,
+        "image": "illustrations/pdf-page-071-l.jpg"
+      },
+      {
+        "pdfPage": 76,
+        "half": "L",
+        "inkCoverage": 0.5922,
+        "veryDarkCoverage": 0.4172,
+        "gridCoverage": 0.8889,
+        "darkThreshold": 191,
+        "score": 2.8199,
+        "likelyFullPage": true,
+        "image": "illustrations/pdf-page-076-l.jpg"
+      },
+      {
+        "pdfPage": 80,
+        "half": "L",
+        "inkCoverage": 0.5655,
+        "veryDarkCoverage": 0.3938,
+        "gridCoverage": 0.8148,
+        "darkThreshold": 191,
+        "score": 2.6642,
+        "likelyFullPage": true,
+        "image": "illustrations/pdf-page-080-l.jpg"
+      },
+      {
+        "pdfPage": 83,
+        "half": "L",
+        "inkCoverage": 0.6413,
+        "veryDarkCoverage": 0.4883,
+        "gridCoverage": 0.8148,
+        "darkThreshold": 215,
+        "score": 3.0089,
+        "likelyFullPage": true,
+        "image": "illustrations/pdf-page-083-l.jpg"
+      },
+      {
+        "pdfPage": 86,
+        "half": "L",
+        "inkCoverage": 0.5354,
+        "veryDarkCoverage": 0.3937,
+        "gridCoverage": 0.8796,
+        "darkThreshold": 217,
+        "score": 2.622,
+        "likelyFullPage": true,
+        "image": "illustrations/pdf-page-086-l.jpg"
+      },
+      {
+        "pdfPage": 93,
+        "half": "L",
+        "inkCoverage": 0.5638,
+        "veryDarkCoverage": 0.44,
+        "gridCoverage": 0.7778,
+        "darkThreshold": 215,
+        "score": 2.7003,
+        "likelyFullPage": true,
+        "image": "illustrations/pdf-page-093-l.jpg"
+      },
+      {
+        "pdfPage": 99,
+        "half": "L",
+        "inkCoverage": 0.7296,
+        "veryDarkCoverage": 0.6467,
+        "gridCoverage": 0.8889,
+        "darkThreshold": 190,
+        "score": 3.5261,
+        "likelyFullPage": true,
+        "image": "illustrations/pdf-page-099-l.jpg"
+      },
+      {
+        "pdfPage": 102,
+        "half": "L",
+        "inkCoverage": 0.7221,
+        "veryDarkCoverage": 0.6057,
+        "gridCoverage": 0.8889,
+        "darkThreshold": 215,
+        "score": 3.4476,
+        "likelyFullPage": true,
+        "image": "illustrations/pdf-page-102-l.jpg"
+      },
+      {
+        "pdfPage": 104,
+        "half": "L",
+        "inkCoverage": 0.5391,
+        "veryDarkCoverage": 0.3993,
+        "gridCoverage": 0.8796,
+        "darkThreshold": 215,
+        "score": 2.6404,
+        "likelyFullPage": true,
+        "image": "illustrations/pdf-page-104-l.jpg"
+      },
+      {
+        "pdfPage": 111,
+        "half": "L",
+        "inkCoverage": 0.6961,
+        "veryDarkCoverage": 0.5823,
+        "gridCoverage": 0.8889,
+        "darkThreshold": 215,
+        "score": 3.3421,
+        "likelyFullPage": true,
+        "image": "illustrations/pdf-page-111-l.jpg"
+      },
+      {
+        "pdfPage": 115,
+        "half": "L",
+        "inkCoverage": 0.5982,
+        "veryDarkCoverage": 0.4322,
+        "gridCoverage": 0.8843,
+        "darkThreshold": 195,
+        "score": 2.8547,
+        "likelyFullPage": true,
+        "image": "illustrations/pdf-page-115-l.jpg"
+      }
+    ]
   }
 };

@@ -7,11 +7,12 @@ const expectedSectionsByTitle = new Map([
 
 const turnWordsPattern = [
   "turn", "tur", "tum", "tarn", "tuin", "tuln", "tim", "timi", "tumi", "tium", "tiurn",
-  "tucn", "furn", "fum", "fumi", "faim", "fiumn", "hrm", "rurn", "burn", "bun", "barn",
-  "hurn", "hun", "hum", "humm", "hirn", "hon", "harn", "ham", "eum", "go", "return", "continue"
+  "tucn", "furn", "fum", "fumi", "faim", "fiumn", "hrm", "rurn", "burn", "bum", "bun", "barn",
+  "hurn", "hun", "hum", "humm", "hirn", "hon", "harn", "ham", "eum", "tun", "fiirn",
+  "fom", "fuorn", "tuo", "rehurn", "tetum", "him", "hur", "fur", "go", "return", "continue"
 ].join("|");
-const turnConnectorPattern = "at\\s+once\\s+to|back\\s+to|to|lo|te|bo|eo|at|ta|i|l|fo|paragraph|section";
-const turnTokenPattern = "[0-9OoQIiLlAaEeSsBbGgqQjJzZ$Â§%(){}.,'\\\"]{1,6}";
+const turnConnectorPattern = "immediately\\s+to|at\\s+once\\s+to|at\\s+ance\\s+to|al\\s+once\\s+to|back\\s+to|to|lo|te|bo|eo|io|10|at|ta|in|tn|y|i|l|fo|fa|paragraph|section";
+const turnTokenPattern = "[0-9OoQIiLlAaEeSsBbGgqQjJzZ$Â§£%(){}.,'\\\"]{1,6}";
 const turnPattern = new RegExp(`\\b(?:${turnWordsPattern})\\b\\s*(?:${turnConnectorPattern})?\\s*(${turnTokenPattern})(?![A-Za-z])`, "gi");
 
 function loadData() {
@@ -36,7 +37,7 @@ function normalizeToken(token, maxSection) {
   const map = {
     O: "0", o: "0", Q: "0", I: "1", i: "1", l: "1", L: "1", "|": "1", "!": "1",
     A: "1", a: "1", S: "5", s: "5", "$": "5", "§": "5", B: "8", b: "6", G: "6",
-    E: "8", e: "8", g: "9", q: "9", Z: "2", z: "2", J: "3", j: "3", "%": "1"
+    E: "8", e: "8", g: "9", q: "9", Z: "2", z: "2", J: "3", j: "3", "%": "1", "£": "1"
   };
   let digits = "";
   for (const char of cleaned) {
@@ -45,7 +46,12 @@ function normalizeToken(token, maxSection) {
   }
   digits = digits.replace(/00+/g, "0");
   const number = Number.parseInt(digits, 10);
-  return Number.isInteger(number) && number >= 1 && number <= maxSection ? number : null;
+  if (Number.isInteger(number) && number >= 1 && number <= maxSection) return number;
+  if (/^[qQ]/.test(cleaned) && cleaned.length === 3) {
+    const corrected = Number.parseInt(`4${digits.slice(1)}`, 10);
+    if (corrected >= 1 && corrected <= maxSection) return corrected;
+  }
+  return null;
 }
 
 function scanTurnTargets(text, maxSection, currentNumber) {
@@ -62,7 +68,7 @@ function scanTurnTargets(text, maxSection, currentNumber) {
 }
 
 function endingLike(text) {
-  return /\b(adventure ends|adventure is over|quest ends here|quest has failed|you have failed|you are dead|you die|you have died|you have been killed|you are killed|you pass out|horrible end to your adventure|fate worse than death|met your doom|hollow victory|willing servant always|mindless servant|new master|slay you|barbe-?\s*cued meal|the end|congratulations|you have escaped|start all over again)\b/i.test(String(text || ""));
+  return /\b(adventure ends|adventure is over|quest ends here|quest has failed|you have failed|you are dead|you die|you have died|you have been killed|you are killed|you pass out|horrible end to your adventure|fate worse than death|met your doom|hollow victory|willing servant always|mindless servant|new master|slay you|barbe-?\s*cued meal|the end|congratulations|you have escaped|start all over again|paragraph with the same number as the one you were last instructed|same number as the one you were last instructed)\b/i.test(String(text || ""));
 }
 
 function snippet(text) {

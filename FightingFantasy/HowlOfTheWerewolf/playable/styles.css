@@ -238,6 +238,40 @@ p {
   max-width: 840px;
 }
 
+.section-illustration {
+  display: grid;
+  gap: 14px;
+  margin-bottom: 18px;
+}
+
+.section-illustration[hidden] {
+  display: none;
+}
+
+.illustration-figure {
+  margin: 0;
+}
+
+.illustration-figure img {
+  background: var(--night);
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  display: block;
+  height: auto;
+  max-height: min(70vh, 760px);
+  max-width: 100%;
+  object-fit: contain;
+  width: auto;
+}
+
+.illustration-figure figcaption {
+  color: var(--muted);
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 0.78rem;
+  font-weight: 700;
+  margin-top: 7px;
+}
+
 .section-text {
   background: rgba(255, 250, 240, 0.82);
   border-left: 5px solid var(--blood);

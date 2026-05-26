@@ -85,6 +85,16 @@ async function runVault(page) {
   await goto(page, 1, ".choice-list");
   expect(JSON.stringify(await choiceTargets(page)) === JSON.stringify([201, 174, 148]), "Vault section 1 choices changed.");
 
+  await goto(page, 5, "#sectionIllustration img");
+  const section5Illustration = await page.$eval("#sectionIllustration img", (image) => ({
+    naturalWidth: image.naturalWidth,
+    naturalHeight: image.naturalHeight
+  }));
+  expect(section5Illustration.naturalWidth > 0 && section5Illustration.naturalHeight > 0, "Vault section 5 illustration should load.");
+  expect(await page.locator("#illustrationList .mini-link").count() === 30, "Vault should list 30 full-page illustrations.");
+  await goto(page, 6);
+  expect(await page.$eval("#sectionIllustration", (element) => element.hidden), "Vault should not repeat page 11 illustration on section 6.");
+
   await goto(page, "intro");
   await page.click("#rollHeroBtn");
   const stats = await statValues(page);

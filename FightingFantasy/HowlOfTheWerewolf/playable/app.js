@@ -4,11 +4,26 @@
   const data = window.GAMEBOOK_DATA;
   const sections = data.sections || {};
   const maxSection = Math.max(...Object.keys(sections).map((key) => Number.parseInt(key, 10)).filter(Number.isFinite), 0);
+  const fullPageIllustrations = Array.isArray(data.illustrations?.fullPageIllustrations)
+    ? data.illustrations.fullPageIllustrations.filter((item) => item && item.image && Number.isInteger(item.pdfPage))
+    : [];
+  const illustrationsByPage = new Map();
+  for (const illustration of fullPageIllustrations) {
+    const pageItems = illustrationsByPage.get(illustration.pdfPage) || [];
+    pageItems.push(illustration);
+    illustrationsByPage.set(illustration.pdfPage, pageItems);
+  }
+  const firstSectionForPage = new Map();
+  for (const section of Object.values(sections)) {
+    if (!section || !Number.isInteger(section.page) || !Number.isInteger(section.number)) continue;
+    const existing = firstSectionForPage.get(section.page);
+    if (!existing || section.number < existing) firstSectionForPage.set(section.page, section.number);
+  }
   const storageKey = "howl-of-the-werewolf-play-state";
-  const turnWordsPattern = "turn|tur|tum|tarn|tuin|tuln|tim|timi|tumi|tium|tiurn|tucn|furn|fum|fumi|faim|fiumn|hrm|rurn|burn|bun|barn|hurn|hun|hum|humm|hirn|hon|harn|ham|eum";
+  const turnWordsPattern = "turn|tur|tum|tarn|tuin|tuln|tim|timi|tumi|tium|tiurn|tucn|furn|fum|fumi|faim|fiumn|hrm|rurn|burn|bum|bun|barn|hurn|hun|hum|humm|hirn|hon|harn|ham|eum|tun|fiirn|fom|fuorn|tuo|rehurn|tetum|him|hur|fur";
   const directWordsPattern = "go|return|continue";
-  const turnConnectorPattern = "at\\s+once\\s+to|back\\s+to|to|lo|te|bo|eo|at|ta|i|l|fo";
-  const turnTokenPattern = "[0-9OoQIiLlAaEeSsBbGgqQjJzZ$§%(){}.,'\\\"]{1,6}";
+  const turnConnectorPattern = "immediately\\s+to|at\\s+once\\s+to|at\\s+ance\\s+to|al\\s+once\\s+to|back\\s+to|to|lo|te|bo|eo|io|10|at|ta|in|tn|y|i|l|fo|fa";
+  const turnTokenPattern = "[0-9OoQIiLlAaEeSsBbGgqQjJzZ$§£%(){}.,'\\\"]{1,6}";
   const turnLeadPattern = `(?:(?:${turnWordsPattern})\\s+(?:${turnConnectorPattern})?|(?:${directWordsPattern})\\s+(?:${turnConnectorPattern}))`;
   const codewordAliases = new Map([
     ["avnkez", "Avokez"],
@@ -83,7 +98,9 @@
     searchResults: document.getElementById("searchResults"),
     bookmarkList: document.getElementById("bookmarkList"),
     visitedList: document.getElementById("visitedList"),
+    illustrationList: document.getElementById("illustrationList"),
     sectionTitle: document.getElementById("sectionTitle"),
+    sectionIllustration: document.getElementById("sectionIllustration"),
     sectionText: document.getElementById("sectionText"),
     choiceList: document.getElementById("choiceList"),
     sourceBtn: document.getElementById("sourceBtn"),
@@ -330,6 +347,7 @@
       s: "5",
       S: "5",
       "$": "5",
+      "£": "1",
       "§": "5",
       b: "6",
       G: "6",
@@ -351,7 +369,12 @@
 
     digits = digits.replace(/00+/g, "0");
     const number = Number.parseInt(digits, 10);
-    return number >= 1 && number <= maxSection ? number : null;
+    if (number >= 1 && number <= maxSection) return number;
+    if (/^[qQ]/.test(trimmed) && trimmed.length === 3) {
+      const corrected = Number.parseInt(`4${digits.slice(1)}`, 10);
+      if (corrected >= 1 && corrected <= maxSection) return corrected;
+    }
+    return null;
   }
 
   function extractChoices(section) {
@@ -1001,6 +1024,7 @@
       const intro = data.intro || { text: "", page: 1 };
       refs.sectionTitle.textContent = "Introduction";
       refs.jumpInput.value = "i";
+      hideSectionIllustration();
       refs.sectionText.classList.remove("empty-text");
       refs.sectionText.classList.add("intro-text");
       refs.sectionText.innerHTML = formatIntroHtml(intro.text || "No introduction text was extracted.", {
@@ -1021,6 +1045,7 @@
       const backgroundPage = 7;
       refs.sectionTitle.textContent = "0";
       refs.jumpInput.value = "0";
+      hideSectionIllustration();
       refs.sectionText.classList.remove("empty-text");
       refs.sectionText.classList.add("intro-text");
       refs.sectionText.innerHTML = formatIntroHtml(intro.text || "No background text was extracted.", {
@@ -1038,6 +1063,7 @@
     const section = sections[String(state.current)] || sections["1"];
     refs.sectionTitle.textContent = section.number;
     refs.jumpInput.value = section.number;
+    renderSectionIllustration(section);
 
     if (section.text.trim()) {
       refs.sectionText.classList.remove("empty-text");
@@ -1099,6 +1125,66 @@
   function renderLists() {
     renderMiniList(refs.bookmarkList, state.bookmarks, "No bookmarks");
     renderMiniList(refs.visitedList, state.visited, "No visits yet");
+    renderIllustrationList();
+  }
+
+  function hideSectionIllustration() {
+    refs.sectionIllustration.innerHTML = "";
+    refs.sectionIllustration.hidden = true;
+  }
+
+  function illustrationCaption(illustration) {
+    const half = illustration.half === "L" ? "left" : illustration.half === "R" ? "right" : "";
+    return half ? `PDF page ${illustration.pdfPage}, ${half}` : `PDF page ${illustration.pdfPage}`;
+  }
+
+  function renderSectionIllustration(section) {
+    const page = section?.page;
+    const illustrations = illustrationsByPage.get(page) || [];
+    const firstSection = firstSectionForPage.get(page);
+    if (!illustrations.length || firstSection !== section.number) {
+      hideSectionIllustration();
+      return;
+    }
+
+    refs.sectionIllustration.innerHTML = "";
+    refs.sectionIllustration.hidden = false;
+    for (const illustration of illustrations) {
+      const figure = document.createElement("figure");
+      figure.className = "illustration-figure";
+
+      const image = document.createElement("img");
+      image.src = illustration.image;
+      image.alt = `Full-page illustration from ${illustrationCaption(illustration)}`;
+      image.loading = "eager";
+
+      const caption = document.createElement("figcaption");
+      caption.textContent = illustrationCaption(illustration);
+
+      figure.append(image, caption);
+      refs.sectionIllustration.append(figure);
+    }
+  }
+
+  function renderIllustrationList() {
+    refs.illustrationList.innerHTML = "";
+    if (!fullPageIllustrations.length) {
+      const empty = document.createElement("div");
+      empty.className = "empty-text";
+      empty.textContent = "No illustrations";
+      refs.illustrationList.append(empty);
+      return;
+    }
+
+    for (const illustration of fullPageIllustrations) {
+      const target = firstSectionForPage.get(illustration.pdfPage);
+      const link = document.createElement("a");
+      link.className = "mini-link";
+      link.href = target ? `#${target}` : `${data.sourcePdf}#page=${illustration.pdfPage}`;
+      if (target) link.dataset.section = String(target);
+      link.innerHTML = `<strong>${escapeHtml(illustrationCaption(illustration))}</strong><span>${target ? `Section ${target}` : "PDF"}</span>`;
+      refs.illustrationList.append(link);
+    }
   }
 
   function renderMiniList(container, items, emptyText) {

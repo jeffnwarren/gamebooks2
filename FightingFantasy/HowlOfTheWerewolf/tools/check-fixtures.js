@@ -47,6 +47,15 @@ async function runHowl(page) {
 
   await goto(page, 1, ".choice-list");
   expect(JSON.stringify(await choiceTargets(page)) === JSON.stringify([43, 66, 147]), "Howl section 1 choices changed.");
+  await page.waitForSelector("#sectionIllustration img");
+  const section1Illustration = await page.$eval("#sectionIllustration img", (image) => ({
+    naturalWidth: image.naturalWidth,
+    naturalHeight: image.naturalHeight
+  }));
+  expect(section1Illustration.naturalWidth > 0 && section1Illustration.naturalHeight > 0, "Howl section 1 illustration should load.");
+  expect(await page.locator("#illustrationList .mini-link").count() === 31, "Howl should list 31 full-page illustrations.");
+  await goto(page, 2, ".choice-list");
+  expect(await page.$eval("#sectionIllustration", (element) => element.hidden), "Howl should not repeat page 9 illustration on section 2.");
 
   await goto(page, 41, "#codewordPrompts");
   expect((await promptTexts(page)).includes("Add Egnarts"), "Howl section 41 should prompt Add Egnarts.");
