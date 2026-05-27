@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Howl of the Werewolf - Proofreader</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="proofreader.css">
+  </head>
+  <body class="proofreader-body">
+    <div class="proof-shell">
+      <aside class="proof-sidebar">
+        <div class="cover-wrap">
+          <img src="../source/howlofthewerewolf.jpg" alt="Howl of the Werewolf cover">
+        </div>
+        <div class="title-block">
+          <p class="kicker">Proofreading</p>
+          <h1>Howl of the Werewolf</h1>
+        </div>
+
+        <nav class="proof-nav-row" aria-label="Proofreader navigation">
+          <a class="button-link" href="index.html">Reader</a>
+          <button id="prevPageBtn" type="button" aria-label="Previous page">&lt;</button>
+          <button id="nextPageBtn" type="button" aria-label="Next page">&gt;</button>
+        </nav>
+
+        <div class="proof-summary" aria-label="Proofreading summary">
+          <output id="pageCount">0 pages</output>
+          <output id="suspectCount">0 suspects</output>
+          <output id="markedCount">0 marked</output>
+          <output id="reviewedCount">0 reviewed</output>
+        </div>
+
+        <div class="proof-sidebar-block">
+          <label for="pageSearch">Find</label>
+          <input id="pageSearch" type="search" autocomplete="off" placeholder="battle, section 12, page 6">
+        </div>
+
+        <div class="proof-filter" aria-label="Page filter">
+          <button data-filter="all" type="button">All</button>
+          <button data-filter="suspects" type="button">Suspects</button>
+          <button data-filter="marked" type="button">Marked</button>
+          <button data-filter="reviewed" type="button">Reviewed</button>
+        </div>
+
+        <div id="pageList" class="proof-page-list" aria-label="Pages"></div>
+      </aside>
+
+      <main class="proof-main">
+        <section class="proof-toolbar" aria-label="Current page">
+          <div>
+            <p class="kicker" id="sourceKind">Page</p>
+            <h2 id="pageTitle">Intro</h2>
+            <p id="pageMeta" class="proof-meta"></p>
+          </div>
+          <div class="toolbar-actions">
+            <button id="sourceBtn" type="button" aria-expanded="false">Show PDF</button>
+            <a id="openPdfLink" class="button-link is-quiet" target="_blank" rel="noreferrer">Open PDF</a>
+          </div>
+        </section>
+
+        <div class="proof-workspace">
+          <article class="proof-paper">
+            <div id="proofEditor" class="proof-editor" contenteditable="true" spellcheck="true" aria-label="Editable proofreading text"></div>
+          </article>
+
+          <aside class="proof-tools" aria-label="Proofreading tools">
+            <section class="proof-tool-section">
+              <h2>Mark</h2>
+              <label for="correctionInput">Correction</label>
+              <input id="correctionInput" type="text" autocomplete="off">
+              <label for="noteInput">Note</label>
+              <textarea id="noteInput" rows="4"></textarea>
+              <div class="proof-button-grid">
+                <button id="boldBtn" type="button" aria-label="Bold selection">B</button>
+                <button id="italicBtn" type="button" aria-label="Italic selection"><i>I</i></button>
+                <button id="markBtn" type="button">Highlight</button>
+                <button id="clearMarkBtn" type="button">Clear</button>
+              </div>
+            </section>
+
+            <section class="proof-tool-section">
+              <h2>Status</h2>
+              <label class="proof-check">
+                <input id="reviewedToggle" type="checkbox">
+                <span>Reviewed</span>
+              </label>
+              <div class="proof-button-grid">
+                <button id="saveBtn" type="button">Save</button>
+                <button id="resetPageBtn" type="button">Reset Page</button>
+              </div>
+              <output id="saveStatus" class="proof-status">Ready</output>
+            </section>
+
+            <section class="proof-tool-section">
+              <h2>Flags</h2>
+              <div id="suspectList" class="proof-suspect-list"></div>
+            </section>
+
+            <section class="proof-tool-section">
+              <h2>Export</h2>
+              <div class="proof-button-grid">
+                <button id="exportJsonBtn" type="button">JSON</button>
+                <button id="exportMarkdownBtn" type="button">Markdown</button>
+              </div>
+            </section>
+          </aside>
+        </div>
+
+        <section class="source-view" id="sourceView">
+          <div class="source-head">
+            <h2>Source Page <span id="pdfPageNumber"></span></h2>
+          </div>
+          <iframe id="pdfFrame" title="Original PDF page"></iframe>
+        </section>
+      </main>
+    </div>
+
+    <script src="book-data.js"></script>
+    <script src="proofreader.js"></script>
+  </body>
+</html>

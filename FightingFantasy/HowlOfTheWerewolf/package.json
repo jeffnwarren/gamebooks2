@@ -1,17 +1,24 @@
 {
   "name": "howl-of-the-werewolf",
   "scripts": {
-    "check": "npm run check:js && npm run check:data && npm run check:intro && npm run check:ocr && npm run check:fixtures",
+    "check": "npm run check:js && npm run check:data && npm run check:intro && npm run check:proofreader && npm run check:ocr && npm run check:fixtures",
     "check:choices": "node tools/check-choices.js",
     "check:data": "node tools/check-data.js",
     "check:fixtures": "node tools/check-fixtures.js",
     "check:intro": "node tools/check-intro.js",
     "check:js": "node --check playable/app.js",
+    "check:proofreader": "node tools/check-proofreader.js",
     "check:ocr": "node tools/check-ocr-smoke.js",
+    "export:proofreading": "node tools/export-proofreading-text.js",
+    "fix:intro-ocr": "node tools/apply-intro-cleanup.js",
+    "fix:intro-ocr:dry": "node tools/apply-intro-cleanup.js --dry-run",
+    "fix:safe-ocr": "node tools/apply-safe-ocr-fixes.js",
+    "fix:safe-ocr:dry": "node tools/apply-safe-ocr-fixes.js --dry-run",
     "report:graph": "node tools/check-data.js --verbose",
     "report:illustrations": "python ../tools/detect-full-page-illustrations.py .",
     "build:illustrations": "python ../tools/detect-full-page-illustrations.py . --write --extract",
-    "report:ocr": "node tools/report-ocr.js"
+    "report:ocr": "node tools/report-ocr.js",
+    "report:review": "node tools/build-review-queue.js"
   },
   "devDependencies": {
     "playwright": "^1.60.0"

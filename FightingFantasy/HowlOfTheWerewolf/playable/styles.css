@@ -52,6 +52,32 @@ button:hover {
   background: var(--blood-dark);
 }
 
+.button-link {
+  align-items: center;
+  background: var(--blood);
+  border: 1px solid var(--blood-dark);
+  border-radius: 6px;
+  color: #fffaf0;
+  display: inline-flex;
+  justify-content: center;
+  min-height: 38px;
+  padding: 8px 12px;
+  text-decoration: none;
+}
+
+.button-link:hover {
+  background: var(--blood-dark);
+}
+
+.button-link.is-quiet {
+  background: var(--paper-strong);
+  color: var(--blood-dark);
+}
+
+.button-link.is-quiet:hover {
+  background: #efe0c9;
+}
+
 button:disabled {
   cursor: not-allowed;
   opacity: 0.45;

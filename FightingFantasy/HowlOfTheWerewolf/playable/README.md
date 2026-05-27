@@ -11,12 +11,13 @@ The app includes:
 - Dedicated codeword tracking with current-section add, cross-off, and check prompts, including normalization for common OCR variants.
 - Full-page illustrations shown contextually in the reader, plus an illustration index in the sidebar.
 - An optional original PDF page pane that is off by default.
+- `proofreader.html`, a page-by-page proofreading workbench with automatic OCR flags, editable text, human highlights, reviewed status, and JSON/Markdown export.
 
 The main book text now comes from fresh Tesseract OCR, re-split for Howl's 515-section structure. A targeted manual-slice layer repairs OCR marker misses so all 515 sections have recovered text, while the app keeps the PDF pane available as the authoritative source whenever extracted text looks odd.
 
 Illustrations are limited to the cover plus full-page illustrations detected from the book PDF. The playable reader embeds the detected illustration metadata during `merge-ocr-data.py`, shows each illustrated PDF page once at the first section on that page, and lists all extracted images in the sidebar. Run `npm run report:illustrations -- --summary` to inspect the detected list, or `npm run build:illustrations` to write `illustrations.json` and extract the selected JPEGs into `playable/illustrations`.
 
-Run `npm run check` from the project root for JavaScript syntax, book-data integrity, intro rendering, intro/background OCR smoke checks, and golden browser fixtures. Use `npm run check:choices -- 1 10 100` to sample specific sections, `npm run report:graph` for choice graph warnings, and `npm run report:ocr -- 25` for the highest-scoring OCR suspects.
+Run `npm run check` from the project root for JavaScript syntax, book-data integrity, intro rendering, proofreader smoke coverage, intro/background OCR smoke checks, and golden browser fixtures. Use `npm run check:choices -- 1 10 100` to sample specific sections, `npm run report:graph` for choice graph warnings, `npm run report:ocr -- 25` for the highest-scoring OCR suspects, `npm run report:review` for a human-facing OCR review queue plus safe-fix candidates, `npm run fix:intro-ocr:dry` to preview the curated intro/background cleanup, `npm run fix:intro-ocr` to apply it, `npm run fix:safe-ocr:dry` to preview exact safe OCR replacements, `npm run fix:safe-ocr` to apply them, and `npm run export:proofreading` to generate raw/readable text copies plus paste-sized chunks.
 
 ## QA status
 

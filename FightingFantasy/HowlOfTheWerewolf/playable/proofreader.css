@@ -1,0 +1,330 @@
+.proofreader-body {
+  background:
+    linear-gradient(90deg, rgba(33, 28, 26, 0.06), transparent 18%, transparent 82%, rgba(33, 28, 26, 0.06)),
+    var(--paper);
+}
+
+.proof-shell {
+  display: grid;
+  grid-template-columns: minmax(240px, 320px) minmax(0, 1fr);
+  min-height: 100vh;
+}
+
+.proof-sidebar {
+  background: var(--panel);
+  border-right: 1px solid var(--line);
+  overflow: auto;
+  padding: 18px;
+}
+
+.proof-main {
+  min-width: 0;
+  overflow: auto;
+  padding: 24px clamp(16px, 3vw, 42px);
+}
+
+.proof-nav-row,
+.proof-filter,
+.proof-button-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.proof-nav-row .button-link {
+  flex: 1 1 auto;
+}
+
+.proof-nav-row button {
+  flex: 0 0 44px;
+}
+
+.proof-summary {
+  border-top: 1px solid var(--line);
+  display: grid;
+  gap: 8px;
+  grid-template-columns: 1fr 1fr;
+  margin-top: 16px;
+  padding-top: 16px;
+}
+
+.proof-summary output {
+  background: rgba(255, 250, 240, 0.78);
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  color: var(--ink);
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 0.78rem;
+  font-weight: 800;
+  min-height: 34px;
+  padding: 8px;
+}
+
+.proof-sidebar-block {
+  border-top: 1px solid var(--line);
+  margin-top: 16px;
+  padding-top: 16px;
+}
+
+.proof-filter {
+  border-top: 1px solid var(--line);
+  margin-top: 16px;
+  padding-top: 16px;
+}
+
+.proof-filter button {
+  background: var(--paper-strong);
+  border-color: var(--line);
+  color: var(--ink);
+  flex: 1 1 auto;
+}
+
+.proof-filter button.is-active,
+.proof-filter button:hover {
+  background: var(--moss);
+  border-color: #3c4735;
+  color: #fffaf0;
+}
+
+.proof-page-list {
+  display: grid;
+  gap: 8px;
+  margin-top: 16px;
+}
+
+.proof-page-button {
+  background: rgba(255, 250, 240, 0.78);
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  color: var(--ink);
+  cursor: pointer;
+  display: grid;
+  gap: 4px;
+  min-height: 50px;
+  padding: 8px 10px;
+  text-align: left;
+}
+
+.proof-page-button:hover,
+.proof-page-button.is-active {
+  border-color: var(--brass);
+  box-shadow: inset 4px 0 0 var(--brass);
+}
+
+.proof-page-button strong {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 0.84rem;
+}
+
+.proof-page-button span {
+  color: var(--muted);
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 0.74rem;
+  font-weight: 700;
+}
+
+.proof-toolbar {
+  align-items: end;
+  border-bottom: 2px solid var(--ink);
+  display: flex;
+  gap: 16px;
+  justify-content: space-between;
+  margin-bottom: 18px;
+  padding-bottom: 13px;
+}
+
+.proof-toolbar h2 {
+  font-size: clamp(2rem, 4vw, 3.4rem);
+  line-height: 0.95;
+  margin-bottom: 4px;
+}
+
+.proof-meta {
+  color: var(--muted);
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 0.82rem;
+  font-weight: 700;
+  margin-bottom: 0;
+}
+
+.proof-workspace {
+  display: grid;
+  gap: 18px;
+  grid-template-columns: minmax(0, 1fr) minmax(260px, 340px);
+}
+
+.proof-paper {
+  max-width: 920px;
+}
+
+.proof-editor {
+  background: rgba(255, 250, 240, 0.86);
+  border: 1px solid var(--line);
+  border-left: 5px solid var(--blood);
+  border-radius: 6px;
+  font-size: clamp(1.02rem, 1.45vw, 1.18rem);
+  line-height: 1.62;
+  min-height: min(72vh, 820px);
+  outline: none;
+  padding: clamp(16px, 3vw, 30px);
+  white-space: pre-wrap;
+}
+
+.proof-editor:focus {
+  box-shadow: 0 0 0 3px rgba(45, 106, 106, 0.25);
+}
+
+.proof-editor h3 {
+  color: var(--blood-dark);
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 0.86rem;
+  letter-spacing: 0;
+  margin: 0 0 12px;
+  text-transform: uppercase;
+}
+
+.auto-suspect {
+  background: rgba(169, 118, 43, 0.24);
+  box-shadow: inset 0 -2px 0 rgba(169, 118, 43, 0.76);
+}
+
+.auto-suspect.is-focused {
+  outline: 3px solid rgba(141, 31, 45, 0.45);
+  outline-offset: 2px;
+}
+
+.human-mark {
+  background: #ffe66d;
+  border-radius: 3px;
+  box-shadow: inset 0 -2px 0 rgba(141, 31, 45, 0.45);
+  padding: 0 1px;
+}
+
+.human-mark.is-focused {
+  outline: 3px solid rgba(45, 106, 106, 0.45);
+  outline-offset: 2px;
+}
+
+.proof-tools {
+  border-left: 1px solid var(--line);
+  padding-left: 18px;
+}
+
+.proof-tool-section {
+  border-top: 1px solid var(--line);
+  display: grid;
+  gap: 10px;
+  padding: 16px 0;
+}
+
+.proof-tool-section:first-child {
+  border-top: 0;
+  padding-top: 0;
+}
+
+.proof-tool-section h2 {
+  font-size: 1rem;
+  margin-bottom: 0;
+}
+
+.proof-button-grid button {
+  flex: 1 1 auto;
+}
+
+.proof-check {
+  align-items: center;
+  display: flex;
+  gap: 8px;
+}
+
+.proof-check input {
+  width: auto;
+}
+
+.proof-status {
+  background: var(--paper-strong);
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  color: var(--muted);
+  display: block;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 0.78rem;
+  font-weight: 700;
+  min-height: 34px;
+  padding: 8px;
+}
+
+.proof-suspect-list {
+  display: grid;
+  gap: 7px;
+  max-height: 42vh;
+  overflow: auto;
+}
+
+.proof-suspect-button {
+  background: var(--paper-strong);
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  color: var(--ink);
+  cursor: pointer;
+  display: grid;
+  gap: 3px;
+  padding: 7px 9px;
+  text-align: left;
+}
+
+.proof-suspect-button:hover {
+  border-color: var(--brass);
+}
+
+.proof-suspect-button strong,
+.proof-suspect-button span {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.proof-suspect-button strong {
+  font-size: 0.8rem;
+}
+
+.proof-suspect-button span {
+  color: var(--muted);
+  font-size: 0.74rem;
+  font-weight: 700;
+}
+
+.source-view {
+  margin-top: 20px;
+}
+
+@media (max-width: 1120px) {
+  .proof-shell {
+    grid-template-columns: minmax(220px, 280px) minmax(0, 1fr);
+  }
+
+  .proof-workspace {
+    grid-template-columns: 1fr;
+  }
+
+  .proof-tools {
+    border-left: 0;
+    border-top: 1px solid var(--line);
+    padding-left: 0;
+    padding-top: 16px;
+  }
+}
+
+@media (max-width: 760px) {
+  .proof-shell {
+    display: block;
+  }
+
+  .proof-sidebar {
+    border-bottom: 1px solid var(--line);
+    border-right: 0;
+  }
+
+  .proof-toolbar {
+    align-items: stretch;
+    display: grid;
+  }
+}
