@@ -7,121 +7,29 @@ Use this as a triage list. Do not apply PDF-check items without opening the sour
 ## Summary
 
 - Locations scanned: 524
-- Flagged locations: 378
-- Locations needing PDF/mechanics review: 264
+- Flagged locations: 309
+- Locations needing PDF/mechanics review: 137
 - Locations with safe-candidate flags: 49
 - Exact safe-fix candidate instances: 61
 
 ## Top Queue
 
-### Section 196 | PDF page 76 | score 87
+### Section 196 | PDF page 76 | score 73
 
 Preview: Unlucky, tir bo 233 inhabitants of Wulfenstem have locked and barred whatever it is that is making the dreadfu) growling don't Like the look of this place,' she says, her eves narrewed by dark suspicions. 'Itis too wild
 
 | Risk | Flag | Count | Examples |
 | --- | --- | ---: | --- |
 | pdf-check | mechanics: suspicious stat block | 1 | STAMINA S |
-| pdf-check | stray replacement/control glyph | 5 | ® |
+| pdf-check | stray replacement/control glyph | 3 | ® |
 | review | at-sign or hash inside prose | 5 | @ays, @ecbican, @olfman, @ichouse, @efend |
 | review | common OCR token | 3 | bo, thal, vour |
 | review | bracketed letter in word | 2 | n!m, [tis |
 | safe-candidate | joined words | 1 | Itis |
 
-- mechanics: suspicious stat block: monsters as Katya struggles to @efend herself against the other WEREWARG SKILL? STAMINA S W the Werewarg wounds you more than twice, add 1 © ® vour cHance score. If you kill the undead horr
+- mechanics: suspicious stat block: monsters as Katya struggles to @efend herself against the other WEREWARG SKILL? STAMINA S W the Werewarg wounds you more than twice, add 1 vour cHance score. If you kill the undead horror t
 - stray replacement/control glyph: strils, you pass beneath the @ecbican. And then your lupme senses are screaming ®warning. You draw your weapon as what looks like @olfman leaps at you from out of the shadows of the
 - at-sign or hash inside prose: tle,' you say. 'A lord i) who would Set his demesne become a place fit only for @ays and wild an!mals must at least have an inkling tp what is happening here.' Katya agrees and so the
-
-### Section 44 | PDF page 23 | score 78
-
-Preview: You follow the corridor until it ends at an open archway in the right-hand wall. Stepping through you find yourself in a cloistered courtyard. In front of you looms the impressive and yet, at the same time oppressive fac
-
-| Risk | Flag | Count | Examples |
-| --- | --- | ---: | --- |
-| pdf-check | mechanics: suspicious turn reference | 4 | turn to 3§6, tarn to 68, turn lo 369, turn bo 426 |
-| pdf-check | mechanics: suspicious stat block | 1 | SKILL6 |
-| pdf-check | stray replacement/control glyph | 3 | § |
-| review | common OCR token | 4 | lo, ihe, bo |
-
-- mechanics: suspicious turn reference: r sanchom of the Abbey church (tun to 196), try the door in the left-hand wall (turn to 3§6), or turn right and make your escape from this accursed Abbey (turn to 98)? that split second the b
-- mechanics: suspicious stat block: ng one @ your Attack Strength because you are defending a harrow Opening WOLVES SKILL6 STAMINA - £ you win, you will then have to do away with any her wolves that have managed to enter t
-- stray replacement/control glyph: of the Abbey church (tun to 196), try the door in the left-hand wall (turn to 3§6), or turn right and make your escape from this accursed Abbey (turn to 98)? that split second the
-
-### Section 85 | PDF page 39 | score 68
-
-Preview: Cutting the bodies free of the webs, you are not sucprised to find that they are those of two dead zoblins. They are wearing rough hide clothes and have small leather backpacks. In one you find a pouch <ontaining a lotal
-
-| Risk | Flag | Count | Examples |
-| --- | --- | ---: | --- |
-| pdf-check | mechanics: suspicious turn reference | 1 | turn ta 73 |
-| pdf-check | mechanics: suspicious stat block | 2 | sxILL, skILL |
-| pdf-check | stray replacement/control glyph | 1 | ¥ |
-| review | common OCR token | 6 | ime, fom, ta, hwo |
-| pdf-check | unclosed parenthetical sentence | 1 | (see below Doktor Kafka has already begun to dissect the corpse and as a result its performance may be affected. Rell one dice to see which crucial part, or parts, of the bedy the surgeon has removed and alter the Cadaver's slats accordingly Dice Part(s Roll = Removed Effect 1-2 = Brain Reduce its skILL by 1 point I-4 Heart Reduce its STAMINA by 2 points 5 Brain and Reduce both ibs attributes as Heart described above 6 Intestines Noeffect In the cramped confines of the lab, you must fight the first hwo Attack Rounds against the corpse alone ie After that Van Richten is able fo Join the fight, so you effectively have two Atacks to the Cadaver's one The Vampire Hunter has a skKiLL score of ic but any successful strikes made by the corpse are deducted from your STAMINA score, a5 you ate the one it is trying to kill. Also, if the Cadaver wins hwo Attack Rounds in a row, it grabs you by the throat and throtles you for an extra 2 STAMINA points of damage If you win your Aight with the Doktor's dissection subject, turn ta 73 |
-| pdf-check | page-art residue | 2 | Qui Ren, My Cre |
-
-- mechanics: suspicious turn reference: NA points of damage If you win your Aight with the Doktor's dissection subject, turn ta 73
-- mechanics: suspicious stat block: the undead cadaver bears down on you with throttling hands outstretched CADAVER sxILL 8 (see below) STAMINA 9 (see below Doktor Kafka has already begun to dissect the corpse and as a re
-- stray replacement/control glyph: leave the cave. Retuim to 368 to choose your way cut Qui Ren My Cre ee ai, (tee ¥ = kT : i "I 3 ie t | Wiis Uy? (ONS) \ , : At , ' é, s | 'ZN fas 2 Sa ZN Wes Wha) Soe f si ! ' a AVA
-
-### Section 178 | PDF page 70 | score 57
-
-Preview: You gulp down the mixture and immediately feel sick to the pit of your stomach. However, the potion has bed the desired effect and, although it hasnot actually 'eured you of your lycanthropy, it has significantly Smeduce
-
-| Risk | Flag | Count | Examples |
-| --- | --- | ---: | --- |
-| pdf-check | stray replacement/control glyph | 7 | ® |
-| review | at-sign or hash inside prose | 1 | @stortion |
-| review | common OCR token | 1 | te |
-
-- stray replacement/control glyph: hropy, it has significantly Smeduced its effects. Reduce your CHANGE score by 4 ® points (but note it cannot drop below 1) and regain 1 "atck point. Vereticus tells you that, much a
-- at-sign or hash inside prose: y the name of Lord "Filthy" Lucre Konrad explains. His crimes were many - from '@stortion and armed robbery, to horse-stealing and cold-blooded murder - and his reputation spread far ® and
-- common OCR token: ate - but not before Vereticus has given you 3 Meals @ Provisions. Turn to 46 1 te life he went by the name of Lord "Filthy" Lucre Konrad explains. His crimes were many - from '@stor
-
-### Section 278 | PDF page 105 | score 51
-
-Preview: Dice Roll Effect I-a Restore your current SKILL score to its Initial level 3-4 Restore your current staMINa score to ibs Initial level P 5-6 Restore your current LUcE score to its Initial level Will you now drink one of
-
-| Risk | Flag | Count | Examples |
-| --- | --- | ---: | --- |
-| pdf-check | mechanics: suspicious turn reference | 2 | turn to aga, turn to eee |
-| pdf-check | mechanics: suspicious stat block | 1 | LUcE |
-| review | common OCR token | 2 | tuming, te |
-| pdf-check | page-art residue | 3 | eee, SSS |
-
-- mechanics: suspicious turn reference: e other potions (turn to 337) or would you prefer to leave the burning bullding turn to aga)? apa You lift the mace down from its mountings and test its weight in your hand. It is heavy enoug
-- mechanics: suspicious stat block: tore your current staMINa score to ibs Initial level P 5-6 Restore your current LUcE score to its Initial level Will you now drink one of the other potions (turn to 337) or would you p
-- common OCR token: ll suffer 3 points of STAMINA damage. You may escape after two Attack Rounds by tuming to 7. If you stay the fight and destroy the metal CCCOCO-™-™O ei aka a lit i | Pg hi A H i -: f " e
-
-### Section 171 | PDF page 67 | score 50
-
-Preview: At various stalls around the square you find the sorts of things you might be looky for Tlem Cas? sword 10 Gold Pieces Dagger 6 Gold Pieces Rope and grapple 4 Gald Pieces Crossbow and six quarrels 12 Gold Pieces Breastpl
-
-| Risk | Flag | Count | Examples |
-| --- | --- | ---: | --- |
-| pdf-check | mechanics: suspicious turn reference | 2 | Turn to §4, hirn to 7 |
-| pdf-check | stray replacement/control glyph | 1 | § |
-| review | digit inside prose word | 1 | a7a |
-| review | common OCR token | 3 | looky, vou |
-| pdf-check | page-art residue | 2 | eee |
-
-- mechanics: suspicious turn reference: u would like to do next, Will you Visit the alchemist-cum-metallurgist's stand? Turn to §4 Join the hunting party before the town hall? Turn to 201 Leave Vargerhof altogether? Turn to 507 Th
-- stray replacement/control glyph: like to do next, Will you Visit the alchemist-cum-metallurgist's stand? Turn to §4 Join the hunting party before the town hall? Turn to 201 Leave Vargerhof altogether? Turn to 507 T
-- digit inside prose word: al oe rail = aie i al Coe ee aE iu ---- a! sf ii hy ) Be a i eee ae! ab MN Lpl-a7a have enough money, of course) and then decide what > vou would like to do next, Will you Visit the
-
-### Section 86 | PDF page 40 | score 49
-
-Preview: The Order of the Black Rose," you state confidently The old man looks you up and down once more and then hurriedly ushers you inside, securing the door firmiy behind you Well met, friend,' comes a familiar voice from a d
-
-| Risk | Flag | Count | Examples |
-| --- | --- | ---: | --- |
-| pdf-check | mechanics: suspicious turn reference | 1 | turn ta 73 |
-| pdf-check | mechanics: suspicious stat block | 2 | sxILL, skILL |
-| review | common OCR token | 6 | ime, fom, ta, hwo |
-| pdf-check | unclosed parenthetical sentence | 1 | (see below Doktor Kafka has already begun to dissect the corpse and as a result its performance may be affected. Rell one dice to see which crucial part, or parts, of the bedy the surgeon has removed and alter the Cadaver's slats accordingly Dice Part(s Roll = Removed Effect 1-2 = Brain Reduce its skILL by 1 point I-4 Heart Reduce its STAMINA by 2 points 5 Brain and Reduce both ibs attributes as Heart described above 6 Intestines Noeffect In the cramped confines of the lab, you must fight the first hwo Attack Rounds against the corpse alone ie After that Van Richten is able fo Join the fight, so you effectively have two Atacks to the Cadaver's one The Vampire Hunter has a skKiLL score of ic but any successful strikes made by the corpse are deducted from your STAMINA score, a5 you ate the one it is trying to kill. Also, if the Cadaver wins hwo Attack Rounds in a row, it grabs you by the throat and throtles you for an extra 2 STAMINA points of damage If you win your Aight with the Doktor's dissection subject, turn ta 73 |
-
-- mechanics: suspicious turn reference: NA points of damage If you win your Aight with the Doktor's dissection subject, turn ta 73
-- mechanics: suspicious stat block: the undead cadaver bears down on you with throttling hands outstretched CADAVER sxILL 8 (see below) STAMINA 9 (see below Doktor Kafka has already begun to dissect the corpse and as a re
-- common OCR token: elp I can put an end to her. Let us ready ourselves and then be on our way, for ime is very much of the essence.' There is a movernent fom under the sheet covering the corpse. All eye
 
 ### Introduction page 2 | PDF page 2 | score 47
 
@@ -196,22 +104,6 @@ Preview: BAD MOON RISING Tt was madness even to think that you could make it ta 
 - known intro/background token: BAD MOON RISING Tt was madness even to think that you could make it ta thenext village before nightfall, As dusk descended what possessed you to leave the road and attempt to tak
 - common OCR token: BAD MOON RISING Tt was madness even to think that you could make it ta thenext village before nightfall, As dusk descended what possessed you to leave the road and attemp
 
-### Section 477 | PDF page 176 | score 43
-
-Preview: You know that you cannot sk tarrying here any longer. Running to the other end of the corridor, you fling open the doors there and burst into the room beyond. You find yourself in a grand, high-ceilinged chamber, omately
-
-| Risk | Flag | Count | Examples |
-| --- | --- | ---: | --- |
-| pdf-check | stray replacement/control glyph | 2 | ¥, § |
-| review | digit inside prose word | 1 | ie0s |
-| review | common OCR token | 1 | lo |
-| pdf-check | unclosed parenthetical sentence | 1 | (aa \| i ¥ ip Hy; eee ee es poe ea oe ae eee Bsr i \|} ee ZMy : + : a AA 2 ( -- ae § sare 27 (1 I SNE .t™' @ @ i_i_i"m"-_ -=-S-S<("CSséai'i'i'i'i'i'i'i'"a"i"i"i-i<"i<-i<"i<"i"i<-i-i |
-| pdf-check | page-art residue | 3 | eee, i_i_i |
-
-- stray replacement/control glyph: NUE WY). ie0s: \ Ne Je Aes LAS oe | 44 Biri Vz r ») a 7 9) is Wil Wi | (aa | i ¥ ip Hy; eee ee es poe ea oe ae eee Bsr i |} ee ZMy : + : a AA 2 ( -- ae § sare 27 (1 I SNE .t™' @ @
-- digit inside prose word: lo 52 euler ge sage AON CUM. ARH ANGE all ie a I. ey 1 ay 4 NE (a s > NUE WY). ie0s: \ Ne Je Aes LAS oe | 44 Biri Vz r ») a 7 9) is Wil Wi | (aa | i ¥ ip Hy; eee ee es poe ea oe ae ee
-- common OCR token: l is less than or equal to your CHANGE score, turn to 10; if it is greater farn lo 52 euler ge sage AON CUM. ARH ANGE all ie a I. ey 1 ay 4 NE (a s > NUE WY). ie0s: \ Ne Je Aes LAS o
-
 ### Introduction page 1 | PDF page 1 | score 42
 
 Preview: INTRODUCTION Before embarking on your adventure, you must first determine your own strengths and weaknesses. You use dice to discover your initial scores. On pages 14- 15 there is an Adventure Sheet, which you may use to
@@ -226,191 +118,35 @@ Preview: INTRODUCTION Before embarking on your adventure, you must first determi
 - common OCR token: of between 12 and 22. Enter this total in the STAMINA box Roll one dice. Add 6 lo the number, piving you a total of between 7 and 12. Enter this total in the Luck box For reasons th
 - possible missing sentence break: s of your adventure. On it you will find boxes for recording the scores of your attributes You are advised either to record your scores on the Adventure Sheet in pencil or to make photocopies
 
-### Section 89 | PDF page 42 | score 42
+### Section 278 | PDF page 105 | score 42
 
-Preview: What is this?' Van Richten almost screams. "What kind of a creature are you that you can command the beast-servants of a creature of the night, unless you are a thing of darkness yourself? And if that is the case, how we
-
-| Risk | Flag | Count | Examples |
-| --- | --- | ---: | --- |
-| pdf-check | mechanics: suspicious turn reference | 3 | fain 1, burn to 102, hum to 240 |
-| pdf-check | mechanics: suspicious stat block | 1 | SKILL10 |
-| review | common OCR token | 2 | lo, Lhe |
-
-- mechanics: suspicious turn reference: AMPIRE HUNTER SKILL10 STAMINA l you defeat the Vampire Hunter lose 1 Luck point fain 1 ALARM point and then decide how you want to proceed. Will you continue with Van Richten's mission t
-- mechanics: suspicious stat block: ave no choice but to defend yourself against your erstwhile ally VAMPIRE HUNTER SKILL10 STAMINA l you defeat the Vampire Hunter lose 1 Luck point fain 1 ALARM point and then decide how yo
-- common OCR token: and cannot allow you to live." Van Richten seems willing to put aside his quest lo destroy the Lady of Maun uniil after he has dealt with you. You have no choice but to defend yourse
-
-### Section 190 | PDF page 74 | score 37
-
-Preview: Preoccupied with thoughts of how long you have left Sent the next full moon, you barely realise that the sen has set and that the last splashes of colour seederlighting the clouds is fading to dusky amethyst = moon is ri
+Preview: Dice Roll Effect I-a Restore your current SKILL score to its Initial level 3-4 Restore your current STAMINA score to ibs Initial level P 5-6 Restore your current LUCK score to its Initial level Will you now drink one of
 
 | Risk | Flag | Count | Examples |
 | --- | --- | ---: | --- |
-| pdf-check | mechanics: suspicious turn reference | 2 | turn tail, burn to 462 |
-| pdf-check | stray replacement/control glyph | 2 | ® |
-| review | at-sign or hash inside prose | 1 | @tumming |
+| pdf-check | mechanics: suspicious turn reference | 2 | turn to aga, turn to eee |
+| review | common OCR token | 2 | tuming, te |
+| pdf-check | page-art residue | 3 | eee, SSS |
 
-- mechanics: suspicious turn reference: ill morning!' The phantom rider and its steed are closing on you fast. Will you turn tail and run, trying to reach the safety of the inn before the rider catches you (turn to 60), or will y
-- stray replacement/control glyph: ith no shelter in sight, it Woks like you are going to have to camp in the open ® =a these dark moors. Just then you come in sight of a ® Seching inn. A light flickers in a window,
-- at-sign or hash inside prose: there is no one there; no horse, mo rider, nothing. But you can still hear the @tumming beat of the hooves pounding the road. You peer through the darkness, back the way you have -come. A
+- mechanics: suspicious turn reference: e other potions (turn to 337) or would you prefer to leave the burning bullding turn to aga)? apa You lift the mace down from its mountings and test its weight in your hand. It is heavy enoug
+- common OCR token: ll suffer 3 points of STAMINA damage. You may escape after two Attack Rounds by tuming to 7. If you stay the fight and destroy the metal CCCOCO-™-™O ei aka a lit i | Pg hi A H i -: f " e
+- page-art residue: the feel of the mace you hear an ominous grating sound behind you. You turn to eee ome of the suits of armour climb down from its pedestal, the iron plate clattering noisily as it do
 
-### Section 375 | PDF page 141 | score 37
+### Section 477 | PDF page 176 | score 36
 
-Preview: You are not halfway across the room when the birds lift off from their perches and swoop at you, trying ta peck out your eyes and seralch your face with ther hard black talons. You are forced to defend yourself UNKINDNES
-
-| Risk | Flag | Count | Examples |
-| --- | --- | ---: | --- |
-| pdf-check | mechanics: suspicious turn reference | 1 | barn to 394 |
-| pdf-check | mechanics: suspicious stat block | 1 | STAMINAS |
-| pdf-check | stray replacement/control glyph | 1 | ¥ |
-| review | common OCR token | 3 | ta, Lhe, lo |
-| review | bracketed letter in word | 1 | [oul |
-
-- mechanics: suspicious turn reference: on of a man picked clean b¥ the murderous birds. [f you want to open the locket barn to 394. If not, you may take the locket and Gold Pieces with you (adding them to the Equipment List on you
-- mechanics: suspicious stat block: ard black talons. You are forced to defend yourself UNKINDNESS OF RAVENS SKILL? STAMINAS If you defeat the birds you can take it that those ravers still alive re turn to their perches but
-- stray replacement/control glyph: a chain, and most discon certingly of all, the skeleton of a man picked clean b¥ the murderous birds. [f you want to open the locket barn to 394. If not, you may take the locket an
-
-### Section 37 | PDF page 24 | score 36
-
-Preview: The cottage shudders with a resounding crash as something throws itself at the bolted door. Incredibly the wolves are attacking the cottage, trying to force their way in. You are going to have to help defend Grandmother
+Preview: You know that you cannot sk tarrying here any longer. Running to the other end of the corridor, you fling open the doors there and burst into the room beyond. You find yourself in a grand, high-ceilinged chamber, omately
 
 | Risk | Flag | Count | Examples |
 | --- | --- | ---: | --- |
-| pdf-check | mechanics: suspicious turn reference | 2 | turn lo 369, turn bo 426 |
-| pdf-check | mechanics: suspicious stat block | 1 | SKILL6 |
-| review | common OCR token | 3 | ihe, lo, bo |
-
-- mechanics: suspicious turn reference: ain about the creature that attacked you,' she says. If you have a Signet Ring, turn lo 369. If mot, turn bo 426
-- mechanics: suspicious stat block: ng one @ your Attack Strength because you are defending a harrow Opening WOLVES SKILL6 STAMINA - £ you win, you will then have to do away with any her wolves that have managed to enter t
-- common OCR token: ed to enter the cottage 7 Once you have dispatched any remaining wolves DP with ihe pack's attack repelled the wizened old wisewoman turns to you, fixing you with her needling @e. 'Te
-
-### Section 138 | PDF page 60 | score 36
-
-Preview: And so you come at last to Wulfenstein. Its buildings are dusted with snow and cling to the edge of the Garou Gorge, a great rift that drops hundreds of feet from these mountainous highlands to the Raging River that lies
-
-| Risk | Flag | Count | Examples |
-| --- | --- | ---: | --- |
-| pdf-check | mechanics: suspicious turn reference | 3 | turn te 196, fam to 19, turn bo 173 |
-| review | common OCR token | 3 | bo, te |
-
-- mechanics: suspicious turn reference: your progress. if you have the axdeword Aytak recorded on your Adventure Sheet turn te 196, If nok, fam to 19 at you are able to fight with a Silver Dagger, turn to 192. If you do not have s
-- common OCR token: he sky. Dusk is spreading its purple-grey manile over the snow-capped mountains bo the north, which in turn cast their shadows across the roofs of the village. Your first impression
-
-### Section 198 | PDF page 77 | score 36
-
-Preview: Getting off the road, you hunker down in a ditch using your travelling cloak like a tarpaulin. Exhausted you soon fall asleep, despite the inclement weather You are woken some time later when the full fury a thunder shak
-
-| Risk | Flag | Count | Examples |
-| --- | --- | ---: | --- |
-| pdf-check | mechanics: suspicious turn reference | 1 | turn bo 500 |
-| pdf-check | stray replacement/control glyph | 2 | ®, ¥ |
-| review | common OCR token | 3 | te, bo |
-| pdf-check | unclosed parenthetical sentence | 1 | (> lose 2 STAMINA points However, if you ight these elemental beings unarmed yeu will not suffer this damage, although you will have bo reduce your Attack Strength by 1 point for the duration of the battle. If you manage to defeat the of the night battered by howling winds and lashed by trrendal rain. When morning does eventually come you go on your way, sodden and weary (turn bo 500 |
-
-- mechanics: suspicious turn reference: l rain. When morning does eventually come you go on your way, sodden and weary (turn bo 500
-- stray replacement/control glyph: in your possession. Fight the elementals both at the same lime. i SKILL STAMINA ® First LIGHTNING SPRITE ¥ 4 second LIGHTNING SPRITE 6 4 Wf you choose to fight the sprites with a sw
-- common OCR token: r own safety to worry about. Lighming and sending secondary bolts sparking down te the ground. Two of these bolts hit the ground nearby but rather than earth themselves harmlessly in
-
-### Section 239 | PDF page 91 | score 36
-
-Preview: You while away the rest of the day in the village of Baici itself. There is nothing particulariy special about the place: it has a mill, tavern and forge, and its people spend their days tending the land or labouring in
-
-| Risk | Flag | Count | Examples |
-| --- | --- | ---: | --- |
-| pdf-check | mechanics: suspicious turn reference | 3 | hum to 370, turn te 502, furn to 380 |
-| review | common OCR token | 1 | te |
-| review | bracketed letter in word | 1 | [fit |
-| safe-candidate | joined words | 1 | itis |
-
-- mechanics: suspicious turn reference: tively you can try to Fude. Ifso, will you hide in the large tent to your left (hum to 370) or the painted caravan to your right (bum to 316)? The coach sweeps around a bend in the road and
-- common OCR token: tal of these four dice is less than or equal to the horses' sTaMINa score, turn te 502. [fit is greater furn to 380
-- bracketed letter in word: hese four dice is less than or equal to the horses' sTaMINa score, turn te 502. [fit is greater furn to 380
-
-### Section 90 | PDF page 42 | score 35
-
-Preview: Leaving the bright tents of the Carnivale behind you enter the village of Balci. There appears to be nothing Particularly special about this place. [t has a mill, a a tavern and a forge and you would judge that most of t
-
-| Risk | Flag | Count | Examples |
-| --- | --- | ---: | --- |
-| pdf-check | mechanics: suspicious turn reference | 2 | burn to 144, burn to §o8 |
 | pdf-check | stray replacement/control glyph | 1 | § |
-| review | common OCR token | 2 | ime, Lhe |
-| pdf-check | unclosed parenthetical sentence | 1 | (burn to §o8 You knock back the contents of the cup in one go and > swallow decply. 'You feel the effects of the potion ' immediately, as the sleeping draught you have just cansumed sends you into an unconscicus shupor in seconds. Turn to 16 |
+| review | digit inside prose word | 1 | ie0s |
+| review | common OCR token | 1 | lo |
+| pdf-check | unclosed parenthetical sentence | 1 | (aa \| i ip Hy; eee ee es poe ea oe ae eee Bsr i \|} ee ZMy : + : a AA 2 ( -- ae § sare 27 (1 I SNE .t™' @ @ i_i_i"m"-_ -=-S-S<("CSséai'i'i'i'i'i'i'i'"a"i"i"i-i<"i<-i<"i<"i"i<-i-i |
+| pdf-check | page-art residue | 3 | eee, i_i_i |
 
-- mechanics: suspicious turn reference: es you can take out of the village the road east, signposted towards Vargenhof (burn to 144), of the well-worm back that leads south-east - +owards Lhe forest (burn to §o8 You knock back the
-- stray replacement/control glyph: 144), of the well-worm back that leads south-east - +owards Lhe forest (burn to §o8 You knock back the contents of the cup in one go and > swallow decply. 'You feel the effects of t
-- common OCR token: you eat here or not, with the sun pasl the zenith again, you decide that it is ime to press on There are two routes you can take out of the village the road east, signposted towards
-
-### Section 387 | PDF page 144 | score 35
-
-Preview: "t You spend the rest of the night under the stars and E) come the morning, by dawn's wan light, you descend =) fom the rolling moors to the valley-lying settlements Po tp the east. As you do so you catch sight of a floc
-
-| Risk | Flag | Count | Examples |
-| --- | --- | ---: | --- |
-| pdf-check | mechanics: suspicious turn reference | 2 | tum te 243, burn to 69 |
-| review | at-sign or hash inside prose | 1 | @em |
-| review | common OCR token | 2 | fom, te |
-| pdf-check | page-art residue | 1 | SSS |
-
-- mechanics: suspicious turn reference: you - want to take a diversion north, to see what you might C) be found there (tum te 243}, or will you continue east ' back to the road (burn to 69)? The Werewarg dies on the end of your s
-- at-sign or hash inside prose: nfluence throughout all Lupravia. Root it out, put an end to it - free Lupravia @em the curse of the Were.' And then she is gone Before you continue with your quest alone, you may tak
-- common OCR token: ht under the stars and E) come the morning, by dawn's wan light, you descend =) fom the rolling moors to the valley-lying settlements Po tp the east. As you do so you catch sight of a
-
-### Section 113 | PDF page 52 | score 34
-
-Preview: At your final, killing stroke, the giant maggot goes into its death-throes. Convulsing violently, il thrashes about in the slick mess of its own yellow ichor-blood Its segmented tail hits one of the incense-buming brazie
-
-| Risk | Flag | Count | Examples |
-| --- | --- | ---: | --- |
-| pdf-check | mechanics: suspicious turn reference | 1 | Turn fo 5a0 |
-| review | common OCR token | 7 | lo, ihe, Lhe |
-| pdf-check | unclosed parenthetical sentence | 1 | (Regain 1 Luck point Taking nothing from this desecrated lemple, you flee Abbey. No one tries to stop you as you run back through the courtyard to Lhe main entrance, and from there you follow the winding track back through the crags. By the Hime you re turn lo the highway, the night sky to the east is litup for miles around by the blazing beacon of lhe buming Abbey Eventually you can go no further withcut stopping to rest. You sleep fitfully, in a ditch beside the road, and come the morming you are on your way again. Turn fo 5a0 |
-
-- mechanics: suspicious turn reference: ly, in a ditch beside the road, and come the morming you are on your way again. Turn fo 5a0
-- common OCR token: tail hits one of the incense-buming braziers, sending the brass sland crashing lo the floor and het coals cascading across the flagstones of ihe sanctuary. Several of these come lo
-- unclosed parenthetical sentence: iting that the corruption that was at work here should new be purged with fire. (Regain 1 Luck point Taking nothing from this desecrated lemple, you flee Abbey. No one tries to stop you as you run back through the courtyard to Lhe main entrance, and from there you follow the winding track back through the crags. By the Hime you re turn lo the highway, the night sky to the east is litup for miles around by the blazing beacon of lhe buming Abbey Eventually you can go no further withcut stopping to rest. You sleep fitfully, in a ditch beside the road, and come the morming you are on your way again. Turn fo 5a0
-
-### Section 114 | PDF page 52 | score 34
-
-Preview: At your final, killing stroke, the giant maggot goes into its death-throes. Convulsing violently, il thrashes about in the slick mess of its own yellow ichor-blood Its segmented tail hits one of the incense-buming brazie
-
-| Risk | Flag | Count | Examples |
-| --- | --- | ---: | --- |
-| pdf-check | mechanics: suspicious turn reference | 1 | Turn fo 5a0 |
-| review | common OCR token | 7 | lo, ihe, Lhe |
-| pdf-check | unclosed parenthetical sentence | 1 | (Regain 1 Luck point Taking nothing from this desecrated lemple, you flee Abbey. No one tries to stop you as you run back through the courtyard to Lhe main entrance, and from there you follow the winding track back through the crags. By the Hime you re turn lo the highway, the night sky to the east is litup for miles around by the blazing beacon of lhe buming Abbey Eventually you can go no further withcut stopping to rest. You sleep fitfully, in a ditch beside the road, and come the morming you are on your way again. Turn fo 5a0 |
-
-- mechanics: suspicious turn reference: ly, in a ditch beside the road, and come the morming you are on your way again. Turn fo 5a0
-- common OCR token: tail hits one of the incense-buming braziers, sending the brass sland crashing lo the floor and het coals cascading across the flagstones of ihe sanctuary. Several of these come lo
-- unclosed parenthetical sentence: iting that the corruption that was at work here should new be purged with fire. (Regain 1 Luck point Taking nothing from this desecrated lemple, you flee Abbey. No one tries to stop you as you run back through the courtyard to Lhe main entrance, and from there you follow the winding track back through the crags. By the Hime you re turn lo the highway, the night sky to the east is litup for miles around by the blazing beacon of lhe buming Abbey Eventually you can go no further withcut stopping to rest. You sleep fitfully, in a ditch beside the road, and come the morming you are on your way again. Turn fo 5a0
-
-### Section 58 | PDF page 30 | score 33
-
-Preview: the alleyway, so you drop through the hole after the old man, pulling the grate shut above you This way,' the beggar calls and trots away along the stinking sewer tunnel you find yourselfin. Seeing that vou have little o
-
-| Risk | Flag | Count | Examples |
-| --- | --- | ---: | --- |
-| pdf-check | mechanics: suspicious turn reference | 1 | Turn to 4go |
-| pdf-check | mechanics: suspicious stat block | 2 | SKILL8, STAMINA6 |
-| review | common OCR token | 2 | vou, tums |
-
-- mechanics: suspicious turn reference: mbing rusted rungs to this grate you push it open and assess where you are now. Turn to 4go
-- mechanics: suspicious stat block: h a shrieking cry, almost like a furious squeaking, the Wererat attacks WERERAT SKILL8 STAMINA6 If the Wererat wounds you more than twice add 1 to YOUur CHANGE score, If you defeat it, y
-- common OCR token: and trots away along the stinking sewer tunnel you find yourselfin. Seeing that vou have little option other than to keep alter him, as ica you travel through the sewer, bent almost d
-
-### Section 59 | PDF page 30 | score 33
-
-Preview: This way,' the beggar says as you follow him into the alleyway. He scampers away from you along the harrow space between close buildings. AE the end of the alley he sweeps aside a ragged piece of sackcloth to reveal a gr
-
-| Risk | Flag | Count | Examples |
-| --- | --- | ---: | --- |
-| pdf-check | mechanics: suspicious turn reference | 1 | Turn to 4go |
-| pdf-check | mechanics: suspicious stat block | 2 | SKILL8, STAMINA6 |
-| review | common OCR token | 2 | vou, tums |
-
-- mechanics: suspicious turn reference: mbing rusted rungs to this grate you push it open and assess where you are now. Turn to 4go
-- mechanics: suspicious stat block: h a shrieking cry, almost like a furious squeaking, the Wererat attacks WERERAT SKILL8 STAMINA6 If the Wererat wounds you more than twice add 1 to YOUur CHANGE score, If you defeat it, y
-- common OCR token: and trots away along the stinking sewer tunnel you find yourselfin. Seeing that vou have little option other than to keep alter him, as ica you travel through the sewer, bent almost d
+- stray replacement/control glyph: (aa | i ip Hy; eee ee es poe ea oe ae eee Bsr i |} ee ZMy : + : a AA 2 ( -- ae § sare 27 (1 I SNE .t™' @ @ i_i_i"m"-_ -=-S-S<("CSséai'i'i'i'i'i'i'i'"a"i"i"i-i<"i<-i<"i<"i"i<-i-i
+- digit inside prose word: lo 52 euler ge sage AON CUM. ARH ANGE all ie a I. ey 1 ay 4 NE (a s > NUE WY). ie0s: \ Ne Je Aes LAS oe | 44 Biri Vz r ») a 7 9) is Wil Wi | (aa | i ip Hy; eee ee es poe ea oe ae eee
+- common OCR token: l is less than or equal to your CHANGE score, turn to 10; if it is greater farn lo 52 euler ge sage AON CUM. ARH ANGE all ie a I. ey 1 ay 4 NE (a s > NUE WY). ie0s: \ Ne Je Aes LAS o
 
 ### Section 111 | PDF page 50 | score 33
 
@@ -426,281 +162,34 @@ Preview: You wake from a feverish and terrifyingly realistic dream, in which a w
 - common OCR token: ion is a painhul one- the savage atlack by the Black Wolf - and then you recall Ihe face of the woodsman peenng down at you, his axe gripped finnly in his meaty hands, its sharp edge
 - bracketed letter in word: rom limb. If you have a crossbow or pistol, and something to fire, turn to. gg. [inot, turn to 206
 
-### Section 122 | PDF page 55 | score 33
+### Section 85 | PDF page 39 | score 31
 
-Preview: You find yourself following a slope downwards into a cave, which is little more than a wide tunnel, with bwo further tunnels leading off it. Gold glearns in the dark- ness, a sear of the glittering yellow metal coursing
-
-| Risk | Flag | Count | Examples |
-| --- | --- | ---: | --- |
-| pdf-check | mechanics: suspicious turn reference | 2 | Turn to97, Turn ta 14 |
-| review | common OCR token | 5 | bwo, lo, nat, ta |
-
-- mechanics: suspicious turn reference: of the ways: but which way will you go? Along the narrow crawl-space of an eat? Turn to97 Along a wide areular tunnel? Turn ta 14 Along a stalactite-hung passageway? Turn to 442 taj You not
-- common OCR token: ng a slope downwards into a cave, which is little more than a wide tunnel, with bwo further tunnels leading off it. Gold glearns in the dark- ness, a sear of the glittering yellow met
-
-### Section 201 | PDF page 79 | score 33
-
-Preview: the whole place appear truly uninvitng. As you get nearer stil, a weathered road sign informs you that you are approaching the village of Strigoiva, Beyond the huddle of houses, you make out a road that leads away fom St
+Preview: Cutting the bodies free of the webs, you are not sucprised to find that they are those of two dead zoblins. They are wearing rough hide clothes and have small leather backpacks. In one you find a pouch <ontaining a lotal
 
 | Risk | Flag | Count | Examples |
 | --- | --- | ---: | --- |
-| pdf-check | mechanics: suspicious turn reference | 2 | burn to 169, hum to 8 |
-| review | common OCR token | 3 | fom, te |
-| pdf-check | page-art residue | 1 | eee |
+| review | common OCR token | 5 | ime, fom, ta, hwo |
+| pdf-check | unclosed parenthetical sentence | 1 | (see below Doktor Kafka has already begun to dissect the corpse and as a result its performance may be affected. Rell one dice to see which crucial part, or parts, of the bedy the surgeon has removed and alter the Cadaver's slats accordingly Dice Part(s Roll = Removed Effect 1-2 = Brain Reduce its SKILL by 1 point I-4 Heart Reduce its STAMINA by 2 points 5 Brain and Reduce both ibs attributes as Heart described above 6 Intestines Noeffect In the cramped confines of the lab, you must fight the first hwo Attack Rounds against the corpse alone ie After that Van Richten is able fo Join the fight, so you effectively have two Atacks to the Cadaver's one The Vampire Hunter has a SKILL score of ic but any successful strikes made by the corpse are deducted from your STAMINA score, a5 you ate the one it is trying to kill. Also, if the Cadaver wins hwo Attack Rounds in a row, it grabs you by the throat and throtles you for an extra 2 STAMINA points of damage If you win your Aight with the Doktor's dissection subject, turn to 73 |
+| pdf-check | page-art residue | 2 | Qui Ren, My Cre |
 
-- mechanics: suspicious turn reference: e of Lupravia, you may skirt around Strigoiva and take the road heacling north {burn to 169), the one heading east (turn to 479 or the one less well-travetled that leads north-east into the f
-- common OCR token: of Strigoiva, Beyond the huddle of houses, you make out a road that leads away fom Strgoiva before forking in three directions Hf you want to enter the village, turn to 116- Alter- n
-- page-art residue: to 62) or, if you are done here, leave the town altogether (turn to 507 heeieee eee ome
+- common OCR token: elp I can put an end to her. Let us ready ourselves and then be on our way, for ime is very much of the essence.' There is a movernent fom under the sheet covering the corpse. All eye
+- unclosed parenthetical sentence: on you with throttling hands outstretched CADAVER SKILL 8 (see below) STAMINA 9 (see below Doktor Kafka has already begun to dissect the corpse and as a result its performance may be affected. Rell one dice to see which crucial part, or parts, of the bedy the surgeon has removed and alter the Cadaver's slats accordingly Dice Part(s Roll = Removed Effect 1-2 = Brain Reduce its SKILL by 1 point I-4 Heart Reduce its STAMINA by 2 points 5 Brain and Reduce both ibs attributes as Heart described above 6 Intestines Noeffect In the cramped confines of the lab, you must fight the first hwo Attack Rounds against the corpse alone ie After that Van Richten is able fo Join the fight, so you effectively have two Atacks to the Cadaver's one The Vampire Hunter has a SKILL score of ic but any successful strikes made by the corpse are deducted from your STAMINA score, a5 you ate the one it is trying to kill. Also, if the Cadaver wins hwo Attack Rounds in a row, it grabs you by the throat and throtles you for an extra 2 STAMINA points of damage If you win your Aight with the Doktor's dissection subject, turn to 73
+- page-art residue: rs of the webs return, you leave the cave. Retuim to 368 to choose your way cut Qui Ren My Cre ee ai, (tee = kT : i "I 3 ie t | Wiis Uy? (ONS) \ , : At , ' é, s | 'ZN fas 2 Sa ZN Wes Wha)
 
-### Section 232 | PDF page 89 | score 33
+### Section 375 | PDF page 141 | score 28
 
-Preview: Crouching in front of the mirror, you examine where the glass meets the frame. The sound of stone grinding on stone sends a shiver down your spine. You react instantly, jumping back Irom the mirror as the stone priffin c
-
-| Risk | Flag | Count | Examples |
-| --- | --- | ---: | --- |
-| pdf-check | mechanics: suspicious turn reference | 1 | turn bo 269 |
-| pdf-check | mechanics: suspicious stat block | 2 | SKILL8, STAMINAY |
-| review | common OCR token | 2 | lo, bo |
-
-- mechanics: suspicious turn reference: ou resume your inspechon of the mirror. Test your Skill. If you are successful, turn bo 269. If you fail you are unable to find anything unusual and so have to leave this floor turn to 7)-
-- mechanics: suspicious stat block: t you witha marble paw, Once again you are fighting for your life STONE GRIFFIN SKILL8 STAMINAY If you are using a bladed weapon, such as a sword ora dagper, a successful strike against
-- common OCR token: e. You react instantly, jumping back Irom the mirror as the stone priffin comes lo life and steps down from its plinth With a granite growl, the statue swipes at you witha marble paw
-
-### Section 404 | PDF page 151 | score 33
-
-Preview: "len years,' the scholar replies, a sorrowful faraway look in his eyes. "But this is nat helping you. There is an elixic I can prepare for you, but it will take a little while, While you are waiting, why don't you avail
+Preview: You are not halfway across the room when the birds lift off from their perches and swoop at you, trying ta peck out your eyes and seralch your face with ther hard black talons. You are forced to defend yourself UNKINDNES
 
 | Risk | Flag | Count | Examples |
 | --- | --- | ---: | --- |
-| pdf-check | mechanics: suspicious turn reference | 2 | tarn to 471, turn lo 386 |
-| review | common OCR token | 5 | nat, writen, yau, bwo, lo |
-
-- mechanics: suspicious turn reference: the codeword Avokez, bum to 364. If you have writen down the codeword Dloterof, tarn to 471. [f you have both of the codewords recorded, han to 457. If you neither, which of the following tom
-- common OCR token: years,' the scholar replies, a sorrowful faraway look in his eyes. "But this is nat helping you. There is an elixic I can prepare for you, but it will take a little while, While you a
-
-### Section 473 | PDF page 174 | score 33
-
-Preview: Ulrich leads you back to the spat where you were first attacked, From there it is not hard io pick up the trail left by the wolves as they made iheir flight. By the flickering yellow light of your laniern - and thanks io
-
-| Risk | Flag | Count | Examples |
-| --- | --- | ---: | --- |
-| pdf-check | mechanics: suspicious turn reference | 1 | tuum to 440 |
-| pdf-check | stray replacement/control glyph | 2 | ¥, € |
-| review | at-sign or hash inside prose | 1 | #ekova |
-| review | common OCR token | 1 | Lo |
-| review | possible missing sentence break | 1 | again |
-
-- mechanics: suspicious turn reference: have driven them off. LE you Ulrich manage this in seven Attack Rounds or less, tuum to 440. If it takes you eight AHack Rounds or more Lo win the battle,turn to 486 Lf ae Lge "' Gan a Fe ale
-- stray replacement/control glyph: ch-roafed cattage nesled between the looming trees at the botiom of a slope OXN ¥ OO , 7, Vs) Va By the cold, silver moonlight you can see the wolves circling the cottage, but from
-- at-sign or hash inside prose: e catage. 'By the spirits!' Uirich suddenly exclaims, 'Grandmother! Grandmother #ekova!' And then he is rushing down the slope ready to meet the wolf pack with his axe, You cannot let hi
-
-### Section 119 | PDF page 53 | score 32
-
-Preview: Bravely - or foolishly - you scoop up some of the sludgy green broth in a ladle and raise it to your Lips In one bald action you gulp down its contents. You gasp at the foul taste and it is all you can do to stop your go
-
-| Risk | Flag | Count | Examples |
-| --- | --- | ---: | --- |
-| pdf-check | mechanics: suspicious turn reference | 1 | Turn lo 4368 |
-| pdf-check | stray replacement/control glyph | 2 | ®, ¥ |
-| review | common OCR token | 3 | lo, Lhe, lO |
-
-- mechanics: suspicious turn reference: 1 Feeling that there is hope yet for your cause, will you now Look at the book? Turn lo 4368 ® Leave the kitchen and take the other passageway leading from the entrance hall? Turn to 340 leave
-- stray replacement/control glyph: t there is hope yet for your cause, will you now Look at the book? Turn lo 4368 ® Leave the kitchen and take the other passageway leading from the entrance hall? Turn to 340 leave a
-- common OCR token: ling that there is hope yet for your cause, will you now Look at the book? Turn lo 4368 ® Leave the kitchen and take the other passageway leading from the entrance hall? Turn to 340
-
-### Section 333 | PDF page 126 | score 31
-
-Preview: the threat of Gid Night, men such as myself, Doktor Kafka and the hermit priest Corran. Even that grief- stricken scholar Vereticus has become a recluse and ® tumed his back on old acquaintances. Myself, the Doktor and t
-
-| Risk | Flag | Count | Examples |
-| --- | --- | ---: | --- |
-| pdf-check | stray replacement/control glyph | 4 | ® |
-| review | common OCR token | 1 | tumed |
-
-- stray replacement/control glyph: st Corran. Even that grief- stricken scholar Vereticus has become a recluse and ® tumed his back on old acquaintances. Myself, the Doktor and the priest are in fact all who remain o
-- common OCR token: Corran. Even that grief- stricken scholar Vereticus has become a recluse and ® tumed his back on old acquaintances. Myself, the Doktor and the priest are in fact all who remain of the
-
-### Section 18 | PDF page 15 | score 30
-
-Preview: The savage Shuck is upon you. This demon dog has terrorised would-be pilgrims making the journcy {o the healing shrine of Saint Crucius for long enough Tonight, its reign of terror must come to an end SHUCK SKILL7 STAMIN
-
-| Risk | Flag | Count | Examples |
-| --- | --- | ---: | --- |
-| pdf-check | mechanics: suspicious turn reference | 2 | turn to 9g, turn lo az |
-| pdf-check | mechanics: suspicious stat block | 1 | SKILL7 |
-| review | common OCR token | 1 | lo |
-
-- mechanics: suspicious turn reference: ttle with the hell-hound teaches the seventh Attack Round without a resolu- ton,turn to 9g. If you kill the beast before then, turn lo az
-- mechanics: suspicious stat block: Crucius for long enough Tonight, its reign of terror must come to an end SHUCK SKILL7 STAMINA Uf the Shuck wins three consecufive Attack Rounds turn at once to 30. If your battle with t
-- common OCR token: Round without a resolu- ton,turn to 9g. If you kill the beast before then, turn lo az
-
-### Section 392 | PDF page 146 | score 30
-
-Preview: Clambering over a fence, you begin to cross the uapmire that the rain-sodden pasture has become Through the heavy rain, and under an overcast sky D sat spreads its pall across the barren Jandscape like Se dusky mantle of
-
-| Risk | Flag | Count | Examples |
-| --- | --- | ---: | --- |
-| pdf-check | mechanics: suspicious stat block | 2 | SKILLS, STAMINAG |
-| pdf-check | stray replacement/control glyph | 1 | ® |
-| review | at-sign or hash inside prose | 1 | @cross |
-
-- mechanics: suspicious stat block: rom between ulcerated Gps, But whatever it ie, you have to fightit SOVINE BEAST SKILLS =STAMINAG 4s you fight the cow-creature you find the sucking fzud hampers your movements. Unless yo
-- stray replacement/control glyph: on the other side of the field The going is hard, the thick mud sucking al your ® Soots. You are halfway across when you hear a gruff "snorting, and the clanking of an iron bell, an
-- at-sign or hash inside prose: nking of an iron bell, and turn in to see a monstrous bovine creature galloping @cross the field towards you, splashing through the 'nud, You would have said it was a cow; were it not fo
-
-### Section 472 | PDF page 174 | score 30
-
-Preview: The door to the house is suddenly flung open, a middle-aged man slanding in the doorway, wearing scholarly robes and with a neatly bimmed poater beard. He commands the creature to be still andl, to your amazement, the We
-
-| Risk | Flag | Count | Examples |
-| --- | --- | ---: | --- |
-| pdf-check | mechanics: suspicious turn reference | 2 | Turn lo 403, Turn ta 436 |
-| review | common OCR token | 4 | vou, thal, lo, ta |
-
-- mechanics: suspicious turn reference: urn ic 451 Tell him the truth that you are seekine a cure for your lycanthropy? Turn lo 403 Or will you seize the moment and finish Wolf-Were? Turn ta 436
-- common OCR token: aks off its attack and takes a slouching step away from you. 'What du you think vou are doing here, trespassing on my land?' the man demands. Flow will you answer hun? Wall you Say th
-
-### Section 70 | PDF page 35 | score 28
-
-Preview: The tunnel that lies beyond the cave entrance winds f its way up inside the peak. When the daylight thal seeps in from outside is but the merest glimmer, you emerge from the twisting passageway and step down into a broad
-
-| Risk | Flag | Count | Examples |
-| --- | --- | ---: | --- |
-| pdf-check | mechanics: suspicious turn reference | 2 | Turn tog, Tumi to 31 |
-| review | common OCR token | 2 | thal, lo |
-| pdf-check | unclosed parenthetical sentence | 1 | (While you are exploring the cave network inside the Sundered Peak make a careful note of the paragraph number of each new caver you enter. If you find yourself retuming to somewhere you have already been, unless you are specifically told otherwise, you may skip the encounter described at that paragraph and go straigh? lo the exit options listed at the end}. Which way do you want to go now? The white quartz funnel? Turn tog The blue crystal passageway? Turn to 415 The green crystal path? Tumi to 31 The narrower yellow crystal tunnel? Turn to 159 The wider tunnel with the rumour of daylight at its end? Turn to 331 |
-
-- mechanics: suspicious turn reference: s listed at the end}. Which way do you want to go now? The white quartz funnel? Turn tog The blue crystal passageway? Turn to 415 The green crystal path? Tumi to 31 The narrower yellow cry
-- common OCR token: beyond the cave entrance winds f its way up inside the peak. When the daylight thal seeps in from outside is but the merest glimmer, you emerge from the twisting passageway and step d
-- unclosed parenthetical sentence: walls of each is shot through with differen coloured seams of quartz crystals. (While you are exploring the cave network inside the Sundered Peak make a careful note of the paragraph number of each new caver you enter. If you find yourself retuming to somewhere you have already been, unless you are specifically told otherwise, you may skip the encounter described at that paragraph and go straigh? lo the exit options listed at the end}. Which way do you want to go now? The white quartz funnel? Turn tog The blue crystal passageway? Turn to 415 The green crystal path? Tumi to 31 The narrower yellow crystal tunnel? Turn to 159 The wider tunnel with the rumour of daylight at its end? Turn to 331
-
-### Section 135 | PDF page 58 | score 28
-
-Preview: Lost, You say?' The man's stecly eye never wavers a3 he considers your story. In an effort to convince him Bek' -2 i y SNe | Bye aiey | OF peer ds 9 pe! Migieg bo) -Jan iy, 4 fie .! fap Mee ee i ig Fi = a rae a oF a he d
-
-| Risk | Flag | Count | Examples |
-| --- | --- | ---: | --- |
-| pdf-check | mechanics: suspicious turn reference | 1 | burn to 181 |
-| pdf-check | mechanics: suspicious stat block | 1 | SKILL6G |
-| review | digit inside prose word | 1 | SKILL6G |
-| review | common OCR token | 2 | bo, te |
-
-- mechanics: suspicious turn reference: hilt and pull it cut (Garn fo 482) or would you rather reborn to the junction (burn to 181)? Once the farmer and his wife are out of the way you make your move against the Changeling, The cr
-- mechanics: suspicious stat block: folk-lore having it that iron is inimical] to such as the Changeling CHANGELING SKILL6G STAMINA 5 f the Changeling wounds you more than once, add 1 Your CHANGE score. As soon as you defea
-- digit inside prose word: folk-lore having it that iron is inimical] to such as the Changeling CHANGELING SKILL6G STAMINA 5 f the Changeling wounds you more than once, add 1 Your CHANGE score. As soon as you defea
-
-### Section 241 | PDF page 92 | score 28
-
-Preview: You scuff away part of ihe chalk-drawn sigil with the heel of your boot, drawing your sword ready to defend yourself at the same ime. A sudden gust of wind whirls around the stable, like a bapped tomado and the candles a
-
-| Risk | Flag | Count | Examples |
-| --- | --- | ---: | --- |
-| pdf-check | mechanics: suspicious turn reference | 1 | Turn io 76 |
-| review | common OCR token | 3 | ihe, ime, lo |
-| pdf-check | unclosed parenthetical sentence | 1 | ('"'éa_eLLL' Summoning Sigil, a witch-mark of ill-omen, used to draw restless spirits lo a place. Having destroyed it you have broken the girl's power aver the ghost of the Headless Highwayman. Turn io 76 |
-| pdf-check | page-art residue | 1 | SSS |
-
-- mechanics: suspicious turn reference: it you have broken the girl's power aver the ghost of the Headless Highwayman. Turn io 76
-- common OCR token: You scuff away part of ihe chalk-drawn sigil with the heel of your boot, drawing your sword ready to defend yourself at the sa
-- unclosed parenthetical sentence: swings her onto the saddle in front of him. The symbol was a SS SSS ee OD "-té"'('"'éa_eLLL' Summoning Sigil, a witch-mark of ill-omen, used to draw restless spirits lo a place. Having destroyed it you have broken the girl's power aver the ghost of the Headless Highwayman. Turn io 76
-
-### Section 488 | PDF page 181 | score 28
-
-Preview: The Grendel grabs you with both of its huge hands and lifts you bodily off the ground. With a grunt of delight the ogre hurls you against the bars of the Cage and you fall to the ground, cradling bniised ribs {lose 4 STA
-
-| Risk | Flag | Count | Examples |
-| --- | --- | ---: | --- |
-| pdf-check | mechanics: suspicious turn reference | 1 | furn to 167 |
-| pdf-check | stray replacement/control glyph | 1 | § |
-| review | common OCR token | 2 | ta, lo |
-| pdf-check | page-art residue | 1 | SSS |
-
-- mechanics: suspicious turn reference: r possessions before disappearing into the crowds to hide your embarrass- ment {furn to 167 The people of these parts have been protecting their flocks, herds and homes from the predations of
-- stray replacement/control glyph: id-transformation - and night has still not yet fallen WOLF-WERE sanL8 sTamMina § If the Wolf-Were wounds you more than twice, add 1 point to your CHANGE score. You may escape after
-- common OCR token: dog, Running around the side of the house is a creature that at first you take ta be a wolf, A moment's consideration later and yousee that, despite rushing towards you on all fours
-
-### Section 500 | PDF page 187 | score 28
-
-Preview: As soon as you arrive at the smal) market town of Varpenhof you sense that something is wrong. A pall of fear and uncerlainty hangs over the place hke a smothering shroud. A group of men with spike- collared hunting dogs
-
-| Risk | Flag | Count | Examples |
-| --- | --- | ---: | --- |
-| pdf-check | mechanics: suspicious turn reference | 2 | turn te 82, turn to §e7 |
-| pdf-check | stray replacement/control glyph | 1 | § |
-| review | common OCR token | 1 | te |
-
-- mechanics: suspicious turn reference: be dene' If you want to avail yourself of the services Vargenhol has to offer, turn te 82. If not, you can either join the party of hunters gathered before the meeting hall turn to 201) or
-- stray replacement/control glyph: eeting hall turn to 201) or quil the town without dallying here al all (turn to §e7
-- common OCR token: ene' If you want to avail yourself of the services Vargenhol has to offer, turn te 82. If not, you can either join the party of hunters gathered before the meeting hall turn to 201)
-
-### Section 63 | PDF page 32 | score 27
-
-Preview: She Hall of Mirrors isn't very impressive: it's not very Sree for a start, and seeing yourself morphed to be aller and thinner, or shorter and fatter, than you really i) are can only be so funny for so long. The longer y
-
-| Risk | Flag | Count | Examples |
-| --- | --- | ---: | --- |
-| pdf-check | mechanics: suspicious turn reference | 2 | turn to g2, burn lo 7a |
-| review | common OCR token | 2 | te, lo |
-| review | bracketed letter in word | 1 | [Fit |
-
-- mechanics: suspicious turn reference: u. Roll two dice. If 7 fe talal rolled is less than or equal te your CHANGE are,turn to g2. [Fit is greater, burn lo 7a
-- common OCR token: arting to get to you. Roll two dice. If 7 fe talal rolled is less than or equal te your CHANGE are,turn to g2. [Fit is greater, burn lo 7a
-- bracketed letter in word: dice. If 7 fe talal rolled is less than or equal te your CHANGE are,turn to g2. [Fit is greater, burn lo 7a
-
-### Section 175 | PDF page 69 | score 27
-
-Preview: The voices of the spectral creatures steadily over- whelm your senses until it is the only sound you can bear. It is as if the ghostly howling is speaking to Lhe wolf inside you. It strains to take control of your body a
-
-| Risk | Flag | Count | Examples |
-| --- | --- | ---: | --- |
-| pdf-check | mechanics: suspicious turn reference | 2 | turn te 478, hum to 8 |
-| review | common OCR token | 3 | Lhe, lhe, te |
-
-- mechanics: suspicious turn reference: Will you follow the read as it divides to the =orth. (turn to 160) or the east (turn te 478), or will you 'ake the less well-used tack into the forest that lies a nile orso to the north-east
-- common OCR token: is the only sound you can bear. It is as if the ghostly howling is speaking to Lhe wolf inside you. It strains to take control of your body and as you try to fight the eHeci your mus
-
-### Section 288 | PDF page 109 | score 27
-
-Preview: you carry with you, you light a small fire and are able to get a dry tree branch io burn. Waving your burming brand in front of you, you force the sprite back and out of your way. Frost and snow and chill winds blow, the
-
-| Risk | Flag | Count | Examples |
-| --- | --- | ---: | --- |
-| pdf-check | mechanics: suspicious turn reference | 2 | hum te 314, burn fo 336 |
-| review | common OCR token | 2 | te, ihe |
-| safe-candidate | joined words | 1 | itis |
-
-- mechanics: suspicious turn reference: eature shrieks and then seems to evaporate into thin air Regain 1 Luck pomt and hum te 314 Changing course you pick your way through the undergrowth towards the lilting music and flickering
-- common OCR token: re shrieks and then seems to evaporate into thin air Regain 1 Luck pomt and hum te 314 Changing course you pick your way through the undergrowth towards the lilting music and flicker
-- joined words: olled. If the total 1s less than or equal to your CHANGE score, burn fo 336; if itis greater, turn to 423
-
-### Section 293 | PDF page 111 | score 27
-
-Preview: As soon as you wade into the slimy pool the magents* blind heads turn lowards you, drawn to your body- heat. Unperturbed, with one hand on the pommel of another across the lake of coze. The slime sucks at your sword, you
-
-| Risk | Flag | Count | Examples |
-| --- | --- | ---: | --- |
-| pdf-check | mechanics: suspicious turn reference | 2 | turn ta 307, furn to 322 |
-| review | common OCR token | 2 | vour, ta |
-| safe-candidate | joined words | 1 | itis |
-
-- mechanics: suspicious turn reference: to reach mto the slime to pick up whatever itis you have inadvertently - found (turn ta 307), or will you keep going without stopping, justin case (furn to 322)?
-- common OCR token: ike walking through a clinging swamp.A bloated maggot rolls over and bumps into vour leg, making you jump, but the fly jarvae do not altack. They are only interested m consuming dead '
-- joined words: he surface of the slime. De you want to reach mto the slime to pick up whatever itis you have inadvertently - found (turn ta 307), or will you keep going without stopping, justin case
-
-### Section 316 | PDF page 120 | score 27
-
-Preview: behind you. You hold your breath as whomever you Ducking inside the wagon you shut the door carefully heard walks right pasl the caravan and around the Carnivale camp. Itis only after their voices have faded into the dis
-
-| Risk | Flag | Count | Examples |
-| --- | --- | ---: | --- |
-| pdf-check | mechanics: suspicious turn reference | 1 | barn 10 |
-| pdf-check | mechanics: suspicious stat block | 1 | SKILLG |
-| review | common OCR token | 2 | yau, Lhe |
-| safe-candidate | joined words | 1 | Itis |
-
-- mechanics: suspicious turn reference: managed to fight your way back to Lhe door and so can escape from the caravan (barn 10 326
-- mechanics: suspicious stat block: ded the Puppetmaster's innermost sanctum and now you must pay the price PUPPETS SKILLG STAMINA 12 Where one puppet falls to your hacking blows, it seems that another takes its place in a
-- common OCR token: an instant. If you have not defeated the puppets within ten Attack Rounds, and yau are shill alive, turn to 344. If you win this battle within ten Attack Rounds, all il means is that
+| pdf-check | mechanics: suspicious stat block | 1 | STAMINAS |
+| pdf-check | stray replacement/control glyph | 1 | ¥ |
+| review | common OCR token | 3 | ta, Lhe, lo |
+| review | bracketed letter in word | 1 | [oul |
+
+- mechanics: suspicious stat block: ard black talons. You are forced to defend yourself UNKINDNESS OF RAVENS SKILL? STAMINAS If you defeat the birds you can take it that those ravers still alive re turn to their perches but
+- stray replacement/control glyph: a chain, and most discon certingly of all, the skeleton of a man picked clean b¥ the murderous birds. [f you want to open the locket turn to 394. If not, you may take the locket an
+- common OCR token: ss the room when the birds lift off from their perches and swoop at you, trying ta peck out your eyes and seralch your face with ther hard black talons. You are forced to defend your
 
 ### Section 370 | PDF page 139 | score 27
 
@@ -715,32 +204,6 @@ Preview: Sugging back a piece of canvas, you duck inside. You wait, your heart r
 - mechanics: suspicious stat block: going to have bw fight your way free, and fast SERPENSA THE SNAKEWOMAN SKIELLQ STAMINAQ Before you can tackle your adversary in the usual way Fou are going to have to free yourself from h
 - common OCR token: and reduce your Attack Strength by 1 for the next Attack Round as you strugple lo stand again Sonwards Tearing talons - lose 2 STAMINA points If you manage to slay the Snakewoman, t
 - joined words: the Toices pass by and then disappear, as they check amother part of the camp. Itis then that you hear a dry rapid rattle behind you and the scraping of scales on the floor. Before yo
-
-### Section 406 | PDF page 152 | score 27
-
-Preview: Shay, ire = re | = & eg: Fw | i ena \it "i tes es, au sue ae i = pili ery Ati Hi . fi bz ah Mower ia i 7 e : | eee wet | Se ae / hat Sei seen turn, leads into a chamel house. Homan skulls fill row The passageway leads to
-
-| Risk | Flag | Count | Examples |
-| --- | --- | ---: | --- |
-| pdf-check | mechanics: suspicious stat block | 2 | SKILL8, STAMINA8 |
-| review | bracketed letter in word | 1 | [ly |
-| pdf-check | page-art residue | 1 | eee |
-
-- mechanics: suspicious stat block: sively, the hybrid scampers towards you, closing in for the kill COCKROACH MONK SKILL8 STAMINA8 If you manage to slay this grotesque abomination, you flee the morbid chamel house. Your m
-- bracketed letter in word: ead misshapen by savage, beetle-like mandibles and grotesquely bulging compound [ly's eyes. Appalled by the horrific appearance of the abomination you stare aghast as two extra pairs
-- page-art residue: ena \it "i tes es, au sue ae i = pili ery Ati Hi . fi bz ah Mower ia i 7 e : | eee wet | Se ae / hat Sei seen turn, leads into a chamel house. Homan skulls fill row The passageway le
-
-### Section 11 | PDF page 12 | score 25
-
-Preview: By the time you have trekked high into the hills to the dark, fortress-like structure, night has property fallen and the moon holds dominion over the land once more. The path between the peaks climbs a rocky escarpment,
-
-| Risk | Flag | Count | Examples |
-| --- | --- | ---: | --- |
-| pdf-check | mechanics: suspicious turn reference | 2 | turn to §8, turn to23 |
-| pdf-check | stray replacement/control glyph | 1 | § |
-
-- mechanics: suspicious turn reference: g to have to gain access to the building, somehow. Will you ring the bell pull (turn to §8) or look for another possible way in first (turn to23)?
-- stray replacement/control glyph: e to gain access to the building, somehow. Will you ring the bell pull (turn to §8) or look for another possible way in first (turn to23)?
 
 ### Section 52 | PDF page 27 | score 25
 
@@ -757,20 +220,43 @@ Preview: I hy Even as the woman's beguiling powers are beginning to take effect,
 - stray replacement/control glyph: ery beat of its wings, you retaliate with your own weapon WEREBAT SKILLB STAMINA®B If the Werebat wins hwo consecutive Attack Rounds turn at once to 36. Also, if the Werebat wounds
 - common OCR token: you retaliate with your own weapon WEREBAT SKILLB STAMINA®B If the Werebat wins hwo consecutive Attack Rounds turn at once to 36. Also, if the Werebat wounds you more than twice, add
 
-### Section 97 | PDF page 44 | score 25
+### Section 113 | PDF page 52 | score 25
 
-Preview: You enter a chamber thal is really a natural chimney sing into the gloom above, from which you can feel "movement in the cold, moist air of the cave complex And the breeze is not all that is moving in the cave Two zebra-
+Preview: At your final, killing stroke, the giant maggot goes into its death-throes. Convulsing violently, il thrashes about in the slick mess of its own yellow ichor-blood Its segmented tail hits one of the incense-buming brazie
 
 | Risk | Flag | Count | Examples |
 | --- | --- | ---: | --- |
-| pdf-check | stray replacement/control glyph | 1 | ® |
-| safe-candidate | known intro/background token | 1 | AHtack |
-| review | common OCR token | 3 | thal, lhe, bwo |
-| pdf-check | unclosed parenthetical sentence | 1 | (unless your have the Quickening special ability ® which case you jump to your feet straight away This means that you must Aght the next round of battle with your AHtack Strength reduced by 1 point. If rou defeal the bwo spiders, which way will you lake oul of the chimmey-cave? Atunnel through which the moist breeze ' ischannelled? Turn to 368 A narrow crawl-space? Turn to 122 A passageway strewn with rough 7 broken stones? Turn to 207 A pit-like hole inthe floorofthecave? Turn to 4% |
+| review | common OCR token | 7 | lo, ihe, Lhe |
+| pdf-check | unclosed parenthetical sentence | 1 | (Regain 1 Luck point Taking nothing from this desecrated lemple, you flee Abbey. No one tries to stop you as you run back through the courtyard to Lhe main entrance, and from there you follow the winding track back through the crags. By the Hime you re turn lo the highway, the night sky to the east is litup for miles around by the blazing beacon of lhe buming Abbey Eventually you can go no further withcut stopping to rest. You sleep fitfully, in a ditch beside the road, and come the morming you are on your way again. Turn to 510 |
 
-- stray replacement/control glyph: Attack Round getting up again (unless your have the Quickening special ability ® which case you jump to your feet straight away This means that you must Aght the next round of batt
-- known intro/background token: straight away This means that you must Aght the next round of battle with your AHtack Strength reduced by 1 point. If rou defeal the bwo spiders, which way will you lake oul of the chim
-- common OCR token: You enter a chamber thal is really a natural chimney sing into the gloom above, from which you can feel "movement in the col
+- common OCR token: tail hits one of the incense-buming braziers, sending the brass sland crashing lo the floor and het coals cascading across the flagstones of ihe sanctuary. Several of these come lo
+- unclosed parenthetical sentence: iting that the corruption that was at work here should new be purged with fire. (Regain 1 Luck point Taking nothing from this desecrated lemple, you flee Abbey. No one tries to stop you as you run back through the courtyard to Lhe main entrance, and from there you follow the winding track back through the crags. By the Hime you re turn lo the highway, the night sky to the east is litup for miles around by the blazing beacon of lhe buming Abbey Eventually you can go no further withcut stopping to rest. You sleep fitfully, in a ditch beside the road, and come the morming you are on your way again. Turn to 510
+
+### Section 114 | PDF page 52 | score 25
+
+Preview: At your final, killing stroke, the giant maggot goes into its death-throes. Convulsing violently, il thrashes about in the slick mess of its own yellow ichor-blood Its segmented tail hits one of the incense-buming brazie
+
+| Risk | Flag | Count | Examples |
+| --- | --- | ---: | --- |
+| review | common OCR token | 7 | lo, ihe, Lhe |
+| pdf-check | unclosed parenthetical sentence | 1 | (Regain 1 Luck point Taking nothing from this desecrated lemple, you flee Abbey. No one tries to stop you as you run back through the courtyard to Lhe main entrance, and from there you follow the winding track back through the crags. By the Hime you re turn lo the highway, the night sky to the east is litup for miles around by the blazing beacon of lhe buming Abbey Eventually you can go no further withcut stopping to rest. You sleep fitfully, in a ditch beside the road, and come the morming you are on your way again. Turn to 510 |
+
+- common OCR token: tail hits one of the incense-buming braziers, sending the brass sland crashing lo the floor and het coals cascading across the flagstones of ihe sanctuary. Several of these come lo
+- unclosed parenthetical sentence: iting that the corruption that was at work here should new be purged with fire. (Regain 1 Luck point Taking nothing from this desecrated lemple, you flee Abbey. No one tries to stop you as you run back through the courtyard to Lhe main entrance, and from there you follow the winding track back through the crags. By the Hime you re turn lo the highway, the night sky to the east is litup for miles around by the blazing beacon of lhe buming Abbey Eventually you can go no further withcut stopping to rest. You sleep fitfully, in a ditch beside the road, and come the morming you are on your way again. Turn to 510
+
+### Section 171 | PDF page 67 | score 25
+
+Preview: At various stalls around the square you find the sorts of things you might be looky for Tlem Cas? sword 10 Gold Pieces Dagger 6 Gold Pieces Rope and grapple 4 Gald Pieces Crossbow and six quarrels 12 Gold Pieces Breastpl
+
+| Risk | Flag | Count | Examples |
+| --- | --- | ---: | --- |
+| review | digit inside prose word | 1 | a7a |
+| review | common OCR token | 3 | looky, vou |
+| pdf-check | page-art residue | 2 | eee |
+
+- digit inside prose word: al oe rail = aie i al Coe ee aE iu ---- a! sf ii hy ) Be a i eee ae! ab MN Lpl-a7a have enough money, of course) and then decide what > vou would like to do next, Will you Visit the
+- common OCR token: At various stalls around the square you find the sorts of things you might be looky for Tlem Cas? sword 10 Gold Pieces Dagger 6 Gold Pieces Rope and grapple 4 Gald Pieces Crossbow and
+- page-art residue: ses you desire (as long as you SS Wann a al ba Lane i rie iy A! Rd aa a ae i Hd eee nh if i il ail fh tee ee ee ee = a Al 'hein a ay F Hye Me ss e Tr geet tah | TRON VY Bet ieee een e
 
 ### Section 252 | PDF page 96 | score 25
 
@@ -786,34 +272,6 @@ Preview: And then the monstrous spider-creature is on lop of you and you have no
 - stray replacement/control glyph: ext AHack Round as you struggle to free yourself from the sticky silken strands § Venomous bite-lose q 5TAMINA points 6 Spider-swanm - tiny, red-bodied spiders bursi from blisters o
 - common OCR token: choice but to fight back Trespasser!' she shrieks. 'Step into my parlour, would yout Well now you never leave!' Arming yourself YOu prepare to repel the Spider-Queen's assault ARANAEA
 
-### Section 272 | PDF page 103 | score 25
-
-Preview: You bnidge on across Fenmoor, following the narrow paths of firmer ground zigzagging between the marshes that have given these moors their name. The fog that continues to thicken around you adds to your sense of disorien
-
-| Risk | Flag | Count | Examples |
-| --- | --- | ---: | --- |
-| pdf-check | stray replacement/control glyph | 2 | ® |
-| review | at-sign or hash inside prose | 1 | @icks |
-| review | common OCR token | 2 | thal, ta |
-
-- stray replacement/control glyph: of terrible premonitions -) = asail your overwrought mind and you begin to feel ® thal your fate is inescapable. (Add 1 to your CHANGE ® sore.) And then you see movement ahead. Smok
-- at-sign or hash inside prose: ppearing through the fog. As you @e wondering whether your own eyes are playing @icks on you, a nightmarish visage coalesces from the apour around you. Ithas burning eyes and a hideous
-- common OCR token: terrible premonitions -) = asail your overwrought mind and you begin to feel ® thal your fate is inescapable. (Add 1 to your CHANGE ® sore.) And then you see movement ahead. Smoky ten
-
-### Section 452 | PDF page 169 | score 25
-
-Preview: Inserting the key in the hole, you burn il wntil you hear a ratchetting click. With a sudden lurch the automaton lakes a step towards you, and without hesitation tries to strike you with its crushing gauntlet-hard hands
-
-| Risk | Flag | Count | Examples |
-| --- | --- | ---: | --- |
-| pdf-check | mechanics: suspicious turn reference | 2 | burn il, tum bo 496 |
-| review | common OCR token | 1 | bo |
-| pdf-check | unclosed parenthetical sentence | 1 | (Gum to 426}, of alternatively, the one that is now to your night (tum bo 496 ! -- |
-
-- mechanics: suspicious turn reference: Inserting the key in the hole, you burn il wntil you hear a ratchetting click. With a sudden lurch the automaton lakes a step towards you, and
-- common OCR token: d of you (Gum to 426}, of alternatively, the one that is now to your night (tum bo 496 ! --
-- unclosed parenthetical sentence: re turn to the junction, from there you take the door which is now ahead of you (Gum to 426}, of alternatively, the one that is now to your night (tum bo 496 ! --
-
 ### Section 480 | PDF page 178 | score 25
 
 Preview: And then a brief window of opportunily presents itself and you seize it with both hands. Plunging your blade downwards, you slice through the lethers securing the horses to their traces. Leaping onto lhe back of the hors
@@ -828,32 +286,6 @@ Preview: And then a brief window of opportunily presents itself and you seize it
 - mechanics: suspicious turn reference: ue quarry at last. Make a note of the number goon your Adventure Sheet and then turn to zo aia You manage to prise the box open and find that ii is lined with red velvet. Lying within a shap
 - common OCR token: you slice through the lethers securing the horses to their traces. Leaping onto lhe back of the horse next to Katya's, with a "Yaah!' you set the untethered steeds galloping free of t
 - bracketed letter in word: e road, the Werebecast raging in vain atop it. Down, down, down it plunges into [he paping void of Garou Gorge. You have put an end to the Beast of Vargenho at last: regain 2 Luck Poi
-
-### Section 75 | PDF page 36 | score 24
-
-Preview: Itisa daringly honest move, but one which pays off Then I think we can help you,' the monk says in response to your brave admission. 'Come with me.' He leads you inside the complex, taking you to the Abbey's herbalist, T
-
-| Risk | Flag | Count | Examples |
-| --- | --- | ---: | --- |
-| pdf-check | mechanics: suspicious turn reference | 1 | barn to 108 |
-| review | common OCR token | 4 | warkshep, lo, clixir, bwo |
-| safe-candidate | joined words | 1 | Itisa |
-
-- mechanics: suspicious turn reference: o down the draught in one go, as the monk instructed? Iisa, turn to 91; if not, barn to 108
-- common OCR token: his monk is robed like the first, his face hidden, but he welcomes you into his warkshep where he quickly sets lo work. In no time at all it seems, he has prepared you a concoction made fr
-- joined words: Itisa daringly honest move, but one which pays off Then I think we can help you,' the monk says in respon
-
-### Section 77 | PDF page 37 | score 24
-
-Preview: Taking a firm hold of the Iron Red you hurl it at the construct-creahure as if it were a spear. Test your Skill If you are successful, tucn lo 22, 1f you fail, incredibly you miss your target (tuum bo 152
-
-| Risk | Flag | Count | Examples |
-| --- | --- | ---: | --- |
-| pdf-check | mechanics: suspicious turn reference | 2 | tucn lo 22, tuum bo 152 |
-| review | common OCR token | 2 | lo, bo |
-
-- mechanics: suspicious turn reference: onstruct-creahure as if it were a spear. Test your Skill If you are successful, tucn lo 22, 1f you fail, incredibly you miss your target (tuum bo 152
-- common OCR token: uct-creahure as if it were a spear. Test your Skill If you are successful, tucn lo 22, 1f you fail, incredibly you miss your target (tuum bo 152
 
 ### Section 125 | PDF page 56 | score 24
 
@@ -883,83 +315,6 @@ Preview: Mirror, mirror, hear me speak. The Silver Dagger is what I seek.' As so
 - mechanics: suspicious stat block: Dagger will also harm Undead and Demons but in this case will cause the usual 2 TAMINA points of damage Certain that you are one step closer to defeating the evil that holds all of Lupra
 - common OCR token: he Equipment List on your Adventure Sheet. You may use the dagger in combat, if vou wish, but because it is not balanced in the same way as your sword, you must fight with your Attack
 
-### Section 128 | PDF page 58 | score 24
-
-Preview: Taking a deep breath you approach the bar and enquire as lo the cest of a room for the night 'Three pald pieces, half board,' he says, 'one gold piece for just the recom." If you ate willing to pay the 3 Gold Pieces, you
-
-| Risk | Flag | Count | Examples |
-| --- | --- | ---: | --- |
-| pdf-check | mechanics: suspicious turn reference | 2 | tum te 155, hum to 188 |
-| review | common OCR token | 2 | lo, te |
-
-- mechanics: suspicious turn reference: o your room {turn to 258), or stay in the bar and try speaking to the landierd (tum te 155 the barmaid (hum to 188) or the intense young man turn to 220
-- common OCR token: Taking a deep breath you approach the bar and enquire as lo the cest of a room for the night 'Three pald pieces, half board,' he says, 'one gold piece for just
-
-### Section 131 | PDF page 58 | score 24
-
-Preview: Taking a deep breath you approach the bar and enquire as lo the cest of a room for the night 'Three pald pieces, half board,' he says, 'one gold piece for just the recom." If you ate willing to pay the 3 Gold Pieces, you
-
-| Risk | Flag | Count | Examples |
-| --- | --- | ---: | --- |
-| pdf-check | mechanics: suspicious turn reference | 2 | tum te 155, hum to 188 |
-| review | common OCR token | 2 | lo, te |
-
-- mechanics: suspicious turn reference: o your room {turn to 258), or stay in the bar and try speaking to the landierd (tum te 155 the barmaid (hum to 188) or the intense young man turn to 220
-- common OCR token: Taking a deep breath you approach the bar and enquire as lo the cest of a room for the night 'Three pald pieces, half board,' he says, 'one gold piece for just
-
-### Section 140 | PDF page 60 | score 24
-
-Preview: And so you come at last to Wulfenstein. Its buildings are dusted with snow and cling to the edge of the Garou Gorge, a great rift that drops hundreds of feet from these mountainous highlands to the Raging River that lies
-
-| Risk | Flag | Count | Examples |
-| --- | --- | ---: | --- |
-| pdf-check | mechanics: suspicious turn reference | 2 | turn te 196, fam to 19 |
-| review | common OCR token | 2 | bo, te |
-
-- mechanics: suspicious turn reference: your progress. if you have the axdeword Aytak recorded on your Adventure Sheet turn te 196, If nok, fam to 19
-- common OCR token: he sky. Dusk is spreading its purple-grey manile over the snow-capped mountains bo the north, which in turn cast their shadows across the roofs of the village. Your first impression
-
-### Section 188 | PDF page 73 | score 24
-
-Preview: Good evening,' you say, flashing the barmaid your most winning smule, 'How's trade?' The barmaid continues to stare at the fire and says moxthing. The landlord is watching you edgily from the other end of the bar. Then t
-
-| Risk | Flag | Count | Examples |
-| --- | --- | ---: | --- |
-| pdf-check | mechanics: suspicious turn reference | 1 | Turn lo256 |
-| pdf-check | stray replacement/control glyph | 1 | ® |
-| review | at-sign or hash inside prose | 1 | @ishes |
-| review | common OCR token | 1 | tums |
-
-- mechanics: suspicious turn reference: just your own «ompany for the rest of the evening and so you rehire ®yourrcom. Turn lo256
-- stray replacement/control glyph: ould prefer just your own «ompany for the rest of the evening and so you rehire ®yourrcom. Turn lo256
-- at-sign or hash inside prose: silencing the girl. 'That's mough, daughter. Get back to the kitchen. There are @ishes to wash and the floor needs scrubbing!' Meg tums to go and then glances back over her shoulder, fix
-
-### Section 243 | PDF page 92 | score 24
-
-Preview: Lying in a hollow between patchy gorse bushes is the body of an adventurer, much like yourself. Only this poor wretch is obviously dead, his body lacerated by terrible claw marks. His backpack lies at his side and seeing
-
-| Risk | Flag | Count | Examples |
-| --- | --- | ---: | --- |
-| pdf-check | mechanics: suspicious stat block | 1 | SKILL6 |
-| review | common OCR token | 1 | te |
-| pdf-check | page-art residue | 2 | SSS, eee |
-
-- mechanics: suspicious stat block: d- denly drop out of the sky, beaks snapping and talons clawkng MURDER OF CROWS SKILL6 STAMINA 12 If you defeat the crows, thereby driving the flock away, you set off east again, before
-- common OCR token: en investigating this scene, the crows have been circling OO ----- SSS E> =a 3 "te: ZZ a * 5 ees ad ah i WE Ne sd Nine? mm! it) Vind | eee oO iF ai" jae a Ht Aa Spe fe ib Pm P Nb = e
-- page-art residue: e you have been investigating this scene, the crows have been circling OO ----- SSS E> =a 3 "te: ZZ a * 5 ees ad ah i WE Ne sd Nine? mm! it) Vind | eee oO iF ai" jae a Ht Aa Spe fe ib
-
-### Section 251 | PDF page 95 | score 24
-
-Preview: Inexplicably, you find yourself drawn towards the demonic howling. Following the wailing lure, you stumble over swampy ground, unmindful of what is happening underfoot. You take another step and abruptly sink to your thi
-
-| Risk | Flag | Count | Examples |
-| --- | --- | ---: | --- |
-| pdf-check | mechanics: suspicious turn reference | 2 | burn lo 128, turn to Gg |
-| review | common OCR token | 2 | lo |
-
-- mechanics: suspicious turn reference: ll three dice. If the total rolled is less than or equal fo your STAMINA score, burn lo 128. If the total is greater, turn to Gg
-- common OCR token: , the power the eerie howling had over you is broken. You twist and turn trving lo get yourself out of the bog before you sink any further. You are already up to your chest when You
-
 ### Section 290 | PDF page 110 | score 24
 
 Preview: Picking up the transformed hand you hur! it into the lire with a scream of rage and then watch as the fingers blacken and burn, the flesh crisping and crackling in ihe hungry flames Thea lam deomed,' you say, in utter de
@@ -969,20 +324,6 @@ Preview: Picking up the transformed hand you hur! it into the lire with a scream
 | review | common OCR token | 8 | ihe, lo, bwo |
 
 - common OCR token: then watch as the fingers blacken and burn, the flesh crisping and crackling in ihe hungry flames Thea lam deomed,' you say, in utter despair as you gaze inlo the fire. 'Doomed lo bec
-
-### Section 334 | PDF page 127 | score 24
-
-Preview: KAP = BS = "rif iE ee = = 7 ie ; ; Seu ag " igre Se "4 -- os EAS ARS Ga EAS - * Ch Fate pel ts en aT ES Over the roars of the enraged Beast you hear the Kwang of a crossbow firing, and another bolt buries itself in the m
-
-| Risk | Flag | Count | Examples |
-| --- | --- | ---: | --- |
-| pdf-check | mechanics: suspicious turn reference | 2 | Turn to 50g, Turn to 6a |
-| review | possible missing sentence break | 1 | Sheet |
-| pdf-check | unclosed parenthetical sentence | 1 | (Add the codeword Aytak to your Adventure Sheet The injured Werebeast leaves a trail that even one unskilled in the ways of the tracker could follow. The tail of blood spots and gouging paw-prints leads you Sack to the town and right up to the steps of the meeting hall! You burst in, expecting a scene of camage and chaos to greet you but there is no sign of any monster and everything seems calm. What is going on? The Werebeast must have resumed human form! Gathered before you in the hall are five men Your lupine senses flaring, you know that one of them is the creabure you now seek, but which one? You and Katya scan their surprised faces, as you bry to discern which is the savage, murdering monster you seek Will you strike at Veteran hunter Johannes? Turn to 453 Gregor the blacksmith? Turn to 377 Trapper Sorn? Turn to 50g Burzomaster Straub? Turn to 6a Piotr, Master of the Hounds? Turn 19 199 |
-
-- mechanics: suspicious turn reference: n hunter Johannes? Turn to 453 Gregor the blacksmith? Turn to 377 Trapper Sorn? Turn to 50g Burzomaster Straub? Turn to 6a Piotr, Master of the Hounds? Turn 19 199
-- possible missing sentence break: even now. We cannot let it get away!' (Add the codeword Aytak to your Adventure Sheet The injured Werebeast leaves a trail that even one unskilled in the ways of the tracker could follow
-- unclosed parenthetical sentence: . But Inust be away; our quarry eludes us even now. We cannot let it get away!' (Add the codeword Aytak to your Adventure Sheet The injured Werebeast leaves a trail that even one unskilled in the ways of the tracker could follow. The tail of blood spots and gouging paw-prints leads you Sack to the town and right up to the steps of the meeting hall! You burst in, expecting a scene of camage and chaos to greet you but there is no sign of any monster and everything seems calm. What is going on? The Werebeast must have resumed human form! Gathered before you in the hall are five men Your lupine senses flaring, you know that one of them is the creabure you now seek, but which one? You and Katya scan their surprised faces, as you bry to discern which is the savage, murdering monster you seek Will you strike at Veteran hunter Johannes? Turn to 453 Gregor the blacksmith? Turn to 377 Trapper Sorn? Turn to 50g Burzomaster Straub? Turn to 6a Piotr, Master of the Hounds? Turn 19 199
 
 ### Section 56 | PDF page 29 | score 23
 
@@ -999,20 +340,17 @@ Preview: The Tower of Maun, forbidding fortified domain of Countess Isolde, stan
 - known intro/background token: e walf-bite for himself. He gasps in horror and recoils. Glancing sideways, you cannol contain your own appalled cry of disgust as you see the skin surrounding the spot where the Black W
 - common OCR token: ds, add 1 to your ALARM score, Also, if you suffer more than three wounds add 1 lo your CHANGE score 5? And it was then that the wolves attacked,' you explain, coming to the end of y
 
-### Section 208 | PDF page 81 | score 23
+### Section 392 | PDF page 146 | score 23
 
-Preview: Once you are past the axe-blade, you hear a grind- ing of pears and the pendulum stops swinging Opening the door at the end of the corridor you enter 3 circular turret room. The chamber has no windows > but is lit by hun
+Preview: Clambering over a fence, you begin to cross the uapmire that the rain-sodden pasture has become Through the heavy rain, and under an overcast sky D sat spreads its pall across the barren Jandscape like Se dusky mantle of
 
 | Risk | Flag | Count | Examples |
 | --- | --- | ---: | --- |
-| pdf-check | mechanics: suspicious turn reference | 1 | hum to 321 |
-| pdf-check | stray replacement/control glyph | 1 | § |
-| review | common OCR token | 1 | vou |
-| pdf-check | unclosed parenthetical sentence | 1 | (hum to 321}. If you want to stay, however, you are going to have to fight as the magically animated creature reaches for you with burning, taper-fingers WAX GOLEM SKILL§ STAMINA 10 you win an Attack Round against the Golem and > vou are fighting it using a bladed weapon, such as a sword or a dagger, roll one dice. On a roll of 6 your blade sticks in the waxy body of the creature and you mnust fight the next round of combat with your Attack Sarength reduced by 2 points as you try to free your blade. If you defeat the room's curious guardian, turn ip 264 |
+| pdf-check | mechanics: suspicious stat block | 2 | SKILLS, STAMINAG |
+| review | at-sign or hash inside prose | 1 | @cross |
 
-- mechanics: suspicious turn reference: ing the door behind you and re turning to the Map Reom without having to Fight (hum to 321}. If you want to stay, however, you are going to have to fight as the magically animated creature r
-- stray replacement/control glyph: ly animated creature reaches for you with burning, taper-fingers WAX GOLEM SKILL§ STAMINA 10 you win an Attack Round against the Golem and > vou are fighting it using a bladed weapo
-- common OCR token: ers WAX GOLEM SKILL§ STAMINA 10 you win an Attack Round against the Golem and > vou are fighting it using a bladed weapon, such as a sword or a dagger, roll one dice. On a roll of 6 y
+- mechanics: suspicious stat block: rom between ulcerated Gps, But whatever it ie, you have to fightit SOVINE BEAST SKILLS =STAMINAG 4s you fight the cow-creature you find the sucking fzud hampers your movements. Unless yo
+- at-sign or hash inside prose: nking of an iron bell, and turn in to see a monstrous bovine creature galloping @cross the field towards you, splashing through the 'nud, You would have said it was a cow; were it not fo
 
 ### Section 424 | PDF page 158 | score 23
 
@@ -1044,373 +382,832 @@ Preview: You are unaware of the presence of the two Black Monks lying in wait fo
 - known intro/background token: evolting stuff. Roll two dice. If the total rolled is less than or equal to you curtent CHANGE score,turn to gg7. If itis greater, turn to 474
 - common OCR token: o Black Monks lying in wait for you beyond the archway until itis too late. The hwo holy men leap out of the shadows with preternatural speed and seize you, holding you ina grip of ir
 
-### Section 183 | PDF page 72 | score 22
+### Section 449 | PDF page 168 | score 21
 
-Preview: Tell me what you know," you demand, your voice barely more than a growl Count Varcolac was not always as he is now," ihe crone explains. 'Once he was an ordinary mortal man but now he is something much greater, and much
+Preview: Adventure Sheet, tam to 463. If not, you have no choice but to take up your weapon and defend yourself. In the narrow confines of the corridor, ight the shadow- bom one at a time SKILL STAMINA First TENEBRAEB 7 7 Second
 
 | Risk | Flag | Count | Examples |
 | --- | --- | ---: | --- |
-| pdf-check | mechanics: suspicious turn reference | 1 | hum to 467 |
-| pdf-check | stray replacement/control glyph | 1 | ® |
+| review | common OCR token | 1 | yau |
+| pdf-check | page-art residue | 3 | SSS, eee |
+
+- common OCR token: ther matter altogether. Inside you find a number of folded dresses, which leads yau to believe that you are actually inside the bedchamber of the landlord's daughter. Underneath the d
+- page-art residue: of objects that includes buncles of herbs, dried powders in small glass bottles SSS eee eee _--O and a book covered in unsettling symbols. You decide to leave these well alone, as the
+
+### Section 44 | PDF page 23 | score 20
+
+Preview: You follow the corridor until it ends at an open archway in the right-hand wall. Stepping through you find yourself in a cloistered courtyard. In front of you looms the impressive and yet, at the same time oppressive fac
+
+| Risk | Flag | Count | Examples |
+| --- | --- | ---: | --- |
+| pdf-check | stray replacement/control glyph | 2 | § |
+| review | common OCR token | 2 | lo, ihe |
+
+- stray replacement/control glyph: MINA points). You have no choice but to fight your ershwhile fend WEREBEAR SKILL§ §STAMINA 10 If the Werebear wounds you three times or more add 1 to your CHANGE score. If you win t
+- common OCR token: the Abbey church. To your right another archway leads back to the main entrance lo the complex and in the left-hand wall of the cloister there is a closed oak door Will you enter the
+
+### Section 70 | PDF page 35 | score 19
+
+Preview: The tunnel that lies beyond the cave entrance winds f its way up inside the peak. When the daylight thal seeps in from outside is but the merest glimmer, you emerge from the twisting passageway and step down into a broad
+
+| Risk | Flag | Count | Examples |
+| --- | --- | ---: | --- |
+| pdf-check | mechanics: suspicious turn reference | 1 | Turn tog |
+| review | common OCR token | 2 | thal, lo |
+| pdf-check | unclosed parenthetical sentence | 1 | (While you are exploring the cave network inside the Sundered Peak make a careful note of the paragraph number of each new caver you enter. If you find yourself retuming to somewhere you have already been, unless you are specifically told otherwise, you may skip the encounter described at that paragraph and go straigh? lo the exit options listed at the end}. Which way do you want to go now? The white quartz funnel? Turn tog The blue crystal passageway? Turn to 415 The green crystal path? Turn to 31 The narrower yellow crystal tunnel? Turn to 159 The wider tunnel with the rumour of daylight at its end? Turn to 331 |
+
+- mechanics: suspicious turn reference: s listed at the end}. Which way do you want to go now? The white quartz funnel? Turn tog The blue crystal passageway? Turn to 415 The green crystal path? Turn to 31 The narrower yellow cry
+- common OCR token: beyond the cave entrance winds f its way up inside the peak. When the daylight thal seeps in from outside is but the merest glimmer, you emerge from the twisting passageway and step d
+- unclosed parenthetical sentence: walls of each is shot through with differen coloured seams of quartz crystals. (While you are exploring the cave network inside the Sundered Peak make a careful note of the paragraph number of each new caver you enter. If you find yourself retuming to somewhere you have already been, unless you are specifically told otherwise, you may skip the encounter described at that paragraph and go straigh? lo the exit options listed at the end}. Which way do you want to go now? The white quartz funnel? Turn tog The blue crystal passageway? Turn to 415 The green crystal path? Turn to 31 The narrower yellow crystal tunnel? Turn to 159 The wider tunnel with the rumour of daylight at its end? Turn to 331
+
+### Section 86 | PDF page 40 | score 19
+
+Preview: The Order of the Black Rose," you state confidently The old man looks you up and down once more and then hurriedly ushers you inside, securing the door firmiy behind you Well met, friend,' comes a familiar voice from a d
+
+| Risk | Flag | Count | Examples |
+| --- | --- | ---: | --- |
+| review | common OCR token | 5 | ime, fom, ta, hwo |
+| pdf-check | unclosed parenthetical sentence | 1 | (see below Doktor Kafka has already begun to dissect the corpse and as a result its performance may be affected. Rell one dice to see which crucial part, or parts, of the bedy the surgeon has removed and alter the Cadaver's slats accordingly Dice Part(s Roll = Removed Effect 1-2 = Brain Reduce its SKILL by 1 point I-4 Heart Reduce its STAMINA by 2 points 5 Brain and Reduce both ibs attributes as Heart described above 6 Intestines Noeffect In the cramped confines of the lab, you must fight the first hwo Attack Rounds against the corpse alone ie After that Van Richten is able fo Join the fight, so you effectively have two Atacks to the Cadaver's one The Vampire Hunter has a SKILL score of ic but any successful strikes made by the corpse are deducted from your STAMINA score, a5 you ate the one it is trying to kill. Also, if the Cadaver wins hwo Attack Rounds in a row, it grabs you by the throat and throtles you for an extra 2 STAMINA points of damage If you win your Aight with the Doktor's dissection subject, turn to 73 |
+
+- common OCR token: elp I can put an end to her. Let us ready ourselves and then be on our way, for ime is very much of the essence.' There is a movernent fom under the sheet covering the corpse. All eye
+- unclosed parenthetical sentence: on you with throttling hands outstretched CADAVER SKILL 8 (see below) STAMINA 9 (see below Doktor Kafka has already begun to dissect the corpse and as a result its performance may be affected. Rell one dice to see which crucial part, or parts, of the bedy the surgeon has removed and alter the Cadaver's slats accordingly Dice Part(s Roll = Removed Effect 1-2 = Brain Reduce its SKILL by 1 point I-4 Heart Reduce its STAMINA by 2 points 5 Brain and Reduce both ibs attributes as Heart described above 6 Intestines Noeffect In the cramped confines of the lab, you must fight the first hwo Attack Rounds against the corpse alone ie After that Van Richten is able fo Join the fight, so you effectively have two Atacks to the Cadaver's one The Vampire Hunter has a SKILL score of ic but any successful strikes made by the corpse are deducted from your STAMINA score, a5 you ate the one it is trying to kill. Also, if the Cadaver wins hwo Attack Rounds in a row, it grabs you by the throat and throtles you for an extra 2 STAMINA points of damage If you win your Aight with the Doktor's dissection subject, turn to 73
+
+### Section 106 | PDF page 48 | score 19
+
+Preview: Unaatiral Vigour - Your continued transformation into a Werewolf has granted you an increased metabolism and resistance to damage. After a battle ¥ou may restore up to half the number of samina soints you lost during the
+
+| Risk | Flag | Count | Examples |
+| --- | --- | ---: | --- |
+| pdf-check | mechanics: suspicious turn reference | 1 | turn to aos |
+| pdf-check | stray replacement/control glyph | 1 | ¥ |
+| review | common OCR token | 1 | lo |
+
+- mechanics: suspicious turn reference: wounds you more than bwice, add 1 to your CHANGE score. If you win this battle, turn to aos
+- stray replacement/control glyph: as granted you an increased metabolism and resistance to damage. After a battle ¥ou may restore up to half the number of samina soints you lost during the fight. Also, if you suffer
+- common OCR token: cum. to the paragraph with the same number as the one you were Jast instructed lo write dowm You hurry over to Ulrich. At first you are thrilled to see that he is not dead - he lies
+
+### Section 135 | PDF page 58 | score 19
+
+Preview: Lost, You say?' The man's stecly eye never wavers a3 he considers your story. In an effort to convince him Bek' -2 i y SNe | Bye aiey | OF peer ds 9 pe! Migieg bo) -Jan iy, 4 fie .! fap Mee ee i ig Fi = a rae a oF a he d
+
+| Risk | Flag | Count | Examples |
+| --- | --- | ---: | --- |
+| pdf-check | mechanics: suspicious stat block | 1 | SKILL6G |
+| review | digit inside prose word | 1 | SKILL6G |
+| review | common OCR token | 2 | bo, te |
+
+- mechanics: suspicious stat block: folk-lore having it that iron is inimical] to such as the Changeling CHANGELING SKILL6G STAMINA 5 f the Changeling wounds you more than once, add 1 Your CHANGE score. As soon as you defea
+- digit inside prose word: folk-lore having it that iron is inimical] to such as the Changeling CHANGELING SKILL6G STAMINA 5 f the Changeling wounds you more than once, add 1 Your CHANGE score. As soon as you defea
+- common OCR token: an effort to convince him Bek' -2 i y SNe | Bye aiey | OF peer ds 9 pe! Migieg bo) -Jan iy, 4 fie .! fap Mee ee i ig Fi = a rae a oF a he dds Me WA Uy ih you begin to babble, embeil
+
+### Section 241 | PDF page 92 | score 19
+
+Preview: You scuff away part of ihe chalk-drawn sigil with the heel of your boot, drawing your sword ready to defend yourself at the same ime. A sudden gust of wind whirls around the stable, like a bapped tomado and the candles a
+
+| Risk | Flag | Count | Examples |
+| --- | --- | ---: | --- |
+| review | common OCR token | 3 | ihe, ime, lo |
+| pdf-check | unclosed parenthetical sentence | 1 | ('"'éa_eLLL' Summoning Sigil, a witch-mark of ill-omen, used to draw restless spirits lo a place. Having destroyed it you have broken the girl's power aver the ghost of the Headless Highwayman. Turn to 76 |
+| pdf-check | page-art residue | 1 | SSS |
+
+- common OCR token: You scuff away part of ihe chalk-drawn sigil with the heel of your boot, drawing your sword ready to defend yourself at the sa
+- unclosed parenthetical sentence: swings her onto the saddle in front of him. The symbol was a SS SSS ee OD "-té"'('"'éa_eLLL' Summoning Sigil, a witch-mark of ill-omen, used to draw restless spirits lo a place. Having destroyed it you have broken the girl's power aver the ghost of the Headless Highwayman. Turn to 76
+- page-art residue: in his arms and swings her onto the saddle in front of him. The symbol was a SS SSS ee OD "-té"'('"'éa_eLLL' Summoning Sigil, a witch-mark of ill-omen, used to draw restless spirits l
+
+### Section 488 | PDF page 181 | score 19
+
+Preview: The Grendel grabs you with both of its huge hands and lifts you bodily off the ground. With a grunt of delight the ogre hurls you against the bars of the Cage and you fall to the ground, cradling bniised ribs {lose 4 STA
+
+| Risk | Flag | Count | Examples |
+| --- | --- | ---: | --- |
+| pdf-check | stray replacement/control glyph | 1 | § |
+| review | common OCR token | 2 | ta, lo |
+| pdf-check | page-art residue | 1 | SSS |
+
+- stray replacement/control glyph: id-transformation - and night has still not yet fallen WOLF-WERE sanL8 sTamMina § If the Wolf-Were wounds you more than twice, add 1 point to your CHANGE score. You may escape after
+- common OCR token: dog, Running around the side of the house is a creature that at first you take ta be a wolf, A moment's consideration later and yousee that, despite rushing towards you on all fours
+- page-art residue: s the Wolf-Were will be held at bay by its chain (turn *"_ Vs a - eos Z a - Lee SSS Io 46). However, if you choose ic fight and reduce the Wolf-Were's STAMINA {0 4 points or less, tur
+
+### Section 97 | PDF page 44 | score 18
+
+Preview: You enter a chamber thal is really a natural chimney sing into the gloom above, from which you can feel "movement in the cold, moist air of the cave complex And the breeze is not all that is moving in the cave Two zebra-
+
+| Risk | Flag | Count | Examples |
+| --- | --- | ---: | --- |
+| safe-candidate | known intro/background token | 1 | AHtack |
+| review | common OCR token | 3 | thal, lhe, bwo |
+| pdf-check | unclosed parenthetical sentence | 1 | (unless your have the Quickening special ability which case you jump to your feet straight away This means that you must Aght the next round of battle with your AHtack Strength reduced by 1 point. If rou defeal the bwo spiders, which way will you lake oul of the chimmey-cave? Atunnel through which the moist breeze ' ischannelled? Turn to 368 A narrow crawl-space? Turn to 122 A passageway strewn with rough 7 broken stones? Turn to 207 A pit-like hole inthe floorofthecave? Turn to 41 |
+
+- known intro/background token: straight away This means that you must Aght the next round of battle with your AHtack Strength reduced by 1 point. If rou defeal the bwo spiders, which way will you lake oul of the chim
+- common OCR token: You enter a chamber thal is really a natural chimney sing into the gloom above, from which you can feel "movement in the col
+- unclosed parenthetical sentence: you to the Noor This means fat you spend the next Attack Round getting up again (unless your have the Quickening special ability which case you jump to your feet straight away This means that you must Aght the next round of battle with your AHtack Strength reduced by 1 point. If rou defeal the bwo spiders, which way will you lake oul of the chimmey-cave? Atunnel through which the moist breeze ' ischannelled? Turn to 368 A narrow crawl-space? Turn to 122 A passageway strewn with rough 7 broken stones? Turn to 207 A pit-like hole inthe floorofthecave? Turn to 41
+
+### Section 119 | PDF page 53 | score 18
+
+Preview: Bravely - or foolishly - you scoop up some of the sludgy green broth in a ladle and raise it to your Lips In one bald action you gulp down its contents. You gasp at the foul taste and it is all you can do to stop your go
+
+| Risk | Flag | Count | Examples |
+| --- | --- | ---: | --- |
+| pdf-check | mechanics: suspicious turn reference | 1 | Turn lo 4368 |
+| review | common OCR token | 3 | lo, Lhe, lO |
+
+- mechanics: suspicious turn reference: 1 Feeling that there is hope yet for your cause, will you now Look at the book? Turn lo 4368 Leave the kitchen and take the other passageway leading from the entrance hall? Turn to 340 leave a
+- common OCR token: ling that there is hope yet for your cause, will you now Look at the book? Turn lo 4368 Leave the kitchen and take the other passageway leading from the entrance hall? Turn to 340 le
+
+### Section 154 | PDF page 63 | score 18
+
+Preview: Your ascent of the pit shaft, although Hring, does not come with any more nasty surprises and you haul yourselfintothe subterranean chamber withoutsuffer- ing any unpleasant accidents. Still uncertain as to what happened
+
+| Risk | Flag | Count | Examples |
+| --- | --- | ---: | --- |
+| pdf-check | mechanics: suspicious stat block | 2 | SKILLB, STAMINAY |
+
+- mechanics: suspicious stat block: ight be feet, all the time hissing like a susurration of cockroaches THE MALICE SKILLB | STAMINAY If you defeat the Malice, the evil entity seers to melt like wax and its pure black esse
+
+### Section 263 | PDF page 99 | score 18
+
+Preview: The cloud of black mist moves across the palatial chamber at speed, until it disappears under a tapestry on lhe far wall. Hurrying alter it, you pull aside the wall-hanging and find a hidden door. Beyond it, ina camped t
+
+| Risk | Flag | Count | Examples |
+| --- | --- | ---: | --- |
+| pdf-check | mechanics: suspicious turn reference | 1 | fm bo 325 |
+| review | common OCR token | 3 | lhe, Te, bo |
+
+- mechanics: suspicious turn reference: ly dead al last, do you want to spend ome searching her chambers for treasures (fm bo 325), or de you want to quit this Place of evil as without further delay (turn to 346)?
+- common OCR token: s across the palatial chamber at speed, until it disappears under a tapestry on lhe far wall. Hurrying alter it, you pull aside the wall-hanging and find a hidden door. Beyond it, ina
+
+### Section 316 | PDF page 120 | score 18
+
+Preview: behind you. You hold your breath as whomever you Ducking inside the wagon you shut the door carefully heard walks right pasl the caravan and around the Carnivale camp. Itis only after their voices have faded into the dis
+
+| Risk | Flag | Count | Examples |
+| --- | --- | ---: | --- |
+| pdf-check | mechanics: suspicious stat block | 1 | SKILLG |
+| review | common OCR token | 2 | yau, Lhe |
+| safe-candidate | joined words | 1 | Itis |
+
+- mechanics: suspicious stat block: ded the Puppetmaster's innermost sanctum and now you must pay the price PUPPETS SKILLG STAMINA 12 Where one puppet falls to your hacking blows, it seems that another takes its place in a
+- common OCR token: an instant. If you have not defeated the puppets within ten Attack Rounds, and yau are shill alive, turn to 344. If you win this battle within ten Attack Rounds, all il means is that
+- joined words: oor carefully heard walks right pasl the caravan and around the Carnivale camp. Itis only after their voices have faded into the distance that you dare to breathe again and take in you
+
+### Background page 2 | PDF page 8 | score 17
+
+Preview: bloody as that of the Old World itself. People talk in hushed tones of the Vampire Lords of Mortvania and the ghoulish death-cults of Bathoria. No land is more benighted and accursed than that of Lupravia. A chill place
+
+| Risk | Flag | Count | Examples |
+| --- | --- | ---: | --- |
+| safe-candidate | known intro/background token | 2 | beretfytngly, pourice |
 | review | common OCR token | 1 | ihe |
+| review | possible missing sentence break | 2 | real, night |
+
+- known intro/background token: Lupravia, and suddenly everything you have ever heard about that place seems sa beretfytngly real A snarl more menacing and blood-chilling than any you have yet heard this hateful night brings
+- common OCR token: ves halt as one, Pushing aside the other wolves as id moves through the pack is ihe un- doubtable leader. It is caught for a moment in the washed-out light of the moon, which hangs li
+- possible missing sentence break: suddenly everything you have ever heard about that place seems sa beretfytngly real A snarl more menacing and blood-chilling than any you have yet heard this hateful night brings you b
+
+### Section 473 | PDF page 174 | score 17
+
+Preview: Ulrich leads you back to the spat where you were first attacked, From there it is not hard io pick up the trail left by the wolves as they made iheir flight. By the flickering yellow light of your laniern - and thanks io
+
+| Risk | Flag | Count | Examples |
+| --- | --- | ---: | --- |
+| pdf-check | stray replacement/control glyph | 1 | € |
+| review | at-sign or hash inside prose | 1 | #ekova |
+| review | common OCR token | 1 | Lo |
+| review | possible missing sentence break | 1 | again |
+
+- stray replacement/control glyph: k Rounds or more Lo win the battle,turn to 486 Lf ae Lge "' Gan a Fe ale ik ede €74-475
+- at-sign or hash inside prose: e catage. 'By the spirits!' Uirich suddenly exclaims, 'Grandmother! Grandmother #ekova!' And then he is rushing down the slope ready to meet the wolf pack with his axe, You cannot let hi
+- common OCR token: Attack Rounds or less, turn to 440. If it takes you eight AHack Rounds or more Lo win the battle,turn to 486 Lf ae Lge "' Gan a Fe ale ik ede €74-475
+
+### Section 191 | PDF page 75 | score 16
+
+Preview: You throw yourself out of the way as the wolf lands hunched on the spot where you were standing only a moment before. But you are still surrounded by the rest of the pack. You abruptly find yourself face-to- face with tw
+
+| Risk | Flag | Count | Examples |
+| --- | --- | ---: | --- |
+| pdf-check | mechanics: suspicious stat block | 1 | STAMINAG |
+| pdf-check | stray replacement/control glyph | 1 | § |
+
+- mechanics: suspicious stat block: g of waiting for its fellows to finish you - joins the battle BLACK WOLF SKILL§ STAMINAG You now find yourself fighting all three wolves at the name time. After two further Attack Rounds,
+- stray replacement/control glyph: ing of waiting for its fellows to finish you - joins the battle BLACK WOLF SKILL§ STAMINAG You now find yourself fighting all three wolves at the name time. After two further Attack
+
+### Section 487 | PDF page 181 | score 16
+
+Preview: Dropping down from the broken-mortared top of the wall you land in a pile of russet leaves and, shooting darting glances al) around, you creep towards the house. You freeze once on hearing a cry, but it is only the croak
+
+| Risk | Flag | Count | Examples |
+| --- | --- | ---: | --- |
+| pdf-check | mechanics: suspicious stat block | 1 | STAMINAS |
+| pdf-check | stray replacement/control glyph | 1 | § |
+
+- mechanics: suspicious stat block: pped mid-transformation - and night has still not yet fallen WOLF-WERE SKILL§ 9 STAMINAS If the Wolf-Were wounds you more than twice, add 1 point to your CHANGE score, You may escape after
+- stray replacement/control glyph: trapped mid-transformation - and night has still not yet fallen WOLF-WERE SKILL§ 9 STAMINAS If the Wolf-Were wounds you more than twice, add 1 point to your CHANGE score, You may e
+
+### Section 489 | PDF page 182 | score 16
+
+Preview: The Grendel grabs you with both of its huge hands and lifts you bodily off the ground. With a grunt of delight the ogre hurls you against the bars of the Cage and you fall to the ground, cradling bruised ribs (lose 4 STA
+
+| Risk | Flag | Count | Examples |
+| --- | --- | ---: | --- |
+| review | common OCR token | 4 | lo, te |
+| pdf-check | unclosed parenthetical sentence | 1 | (turn to 167 The people of these parts have been protecting their flocks, herds and homes from the predations of wild animals for far longer than they have had to worry about 4 Werebeast, so the forest paths are riddled with wolf traps - which are just as effective against unwary humans. Walking along a seemingly little-used track alone you succumb lo ane such trap, as what you had taken te be fallen branches strewing the palh give way under your weight, dropping you into a deep pit lined with sharpened stakes. You cannot slop yourself from falling in and being speared by the cruel pit-stakes Roll one dice, add one and lose this many stamina points. (Lf you have The Quickerting special ability you may divide this damage by 2, rounding fractions up- If you are still alive, you eventually struggle out of the pittrap and do whal you can to bind your wounds before rejoining the rest of the party as they are preparing to re turn lo Vargenhof. Turn to 251 ee sss sss |
+
+- common OCR token: r from the Cage to reclaim your possessions before disappearing into the crowds lo hide your embarrass- ment (turn to 167 The people of these parts have been protecting their flocks,
+- unclosed parenthetical sentence: ur possessions before disappearing into the crowds lo hide your embarrass- ment (turn to 167 The people of these parts have been protecting their flocks, herds and homes from the predations of wild animals for far longer than they have had to worry about 4 Werebeast, so the forest paths are riddled with wolf traps - which are just as effective against unwary humans. Walking along a seemingly little-used track alone you succumb lo ane such trap, as what you had taken te be fallen branches strewing the palh give way under your weight, dropping you into a deep pit lined with sharpened stakes. You cannot slop yourself from falling in and being speared by the cruel pit-stakes Roll one dice, add one and lose this many stamina points. (Lf you have The Quickerting special ability you may divide this damage by 2, rounding fractions up- If you are still alive, you eventually struggle out of the pittrap and do whal you can to bind your wounds before rejoining the rest of the party as they are preparing to re turn lo Vargenhof. Turn to 251 ee sss sss
+
+### Section 500 | PDF page 187 | score 16
+
+Preview: As soon as you arrive at the smal) market town of Varpenhof you sense that something is wrong. A pall of fear and uncerlainty hangs over the place hke a smothering shroud. A group of men with spike- collared hunting dogs
+
+| Risk | Flag | Count | Examples |
+| --- | --- | ---: | --- |
+| pdf-check | mechanics: suspicious turn reference | 1 | turn to §e7 |
+| pdf-check | stray replacement/control glyph | 1 | § |
+
+- mechanics: suspicious turn reference: re the meeting hall turn to 201) or quil the town without dallying here al all (turn to §e7
+- stray replacement/control glyph: eeting hall turn to 201) or quil the town without dallying here al all (turn to §e7
+
+### Background page 3 | PDF page 9 | score 15
+
+Preview: ii i ; oo : te Wh Ht : ee a= "A [ i ee a a a ie eee i ! E vs gage ee 2 = : oe eae ae a eo
+
+| Risk | Flag | Count | Examples |
+| --- | --- | ---: | --- |
+| review | common OCR token | 1 | te |
+| pdf-check | page-art residue | 2 | Wh Ht, eee |
+
+- common OCR token: ii i ; oo : te Wh Ht : ee a= "A [ i ee a a a ie eee i ! E vs gage ee 2 = : oe eae ae a eo
+- page-art residue: ii i ; oo : te Wh Ht : ee a= "A [ i ee a a a ie eee i ! E vs gage ee 2 = : oe eae ae a eo
+
+### Section 27 | PDF page 18 | score 15
+
+Preview: You take another step forward and your boot abruptly sinks into the squidgy grownd up te your thigh. Your momentam carries you forward with your other foot and soon you are up to your waist m the stinking chitches of a p
+
+| Risk | Flag | Count | Examples |
+| --- | --- | ---: | --- |
+| review | common OCR token | 5 | te, bwist, ta, Lhe, lo |
+
+- common OCR token: ke another step forward and your boot abruptly sinks into the squidgy grownd up te your thigh. Your momentam carries you forward with your other foot and soon you are up to your wais
+
+### Section 75 | PDF page 36 | score 15
+
+Preview: Itisa daringly honest move, but one which pays off Then I think we can help you,' the monk says in response to your brave admission. 'Come with me.' He leads you inside the complex, taking you to the Abbey's herbalist, T
+
+| Risk | Flag | Count | Examples |
+| --- | --- | ---: | --- |
+| review | common OCR token | 4 | warkshep, lo, clixir, bwo |
+| safe-candidate | joined words | 1 | Itisa |
+
+- common OCR token: his monk is robed like the first, his face hidden, but he welcomes you into his warkshep where he quickly sets lo work. In no time at all it seems, he has prepared you a concoction made fr
+- joined words: Itisa daringly honest move, but one which pays off Then I think we can help you,' the monk says in respon
+
+### Section 89 | PDF page 42 | score 15
+
+Preview: What is this?' Van Richten almost screams. "What kind of a creature are you that you can command the beast-servants of a creature of the night, unless you are a thing of darkness yourself? And if that is the case, how we
+
+| Risk | Flag | Count | Examples |
+| --- | --- | ---: | --- |
+| pdf-check | mechanics: suspicious turn reference | 1 | fain 1 |
+| review | common OCR token | 2 | lo, Lhe |
+
+- mechanics: suspicious turn reference: MPIRE HUNTER SKILL 10 STAMINA l you defeat the Vampire Hunter lose 1 Luck point fain 1 ALARM point and then decide how you want to proceed. Will you continue with Van Richten's mission t
+- common OCR token: and cannot allow you to live." Van Richten seems willing to put aside his quest lo destroy the Lady of Maun uniil after he has dealt with you. You have no choice but to defend yourse
+
+### Section 159 | PDF page 64 | score 15
+
+Preview: You have lo crouch low to keep from cracking your head on the rough rock of the ceiling only a matter of yourself in a cold cave that is little more than a parting oF converging, of the waya. Which way will you go now? A
+
+| Risk | Flag | Count | Examples |
+| --- | --- | ---: | --- |
+| pdf-check | mechanics: suspicious turn reference | 1 | Turn ta aga |
+| review | common OCR token | 2 | lo, ta |
+
+- mechanics: suspicious turn reference: ? Along a winding corkscrew tunnel? Turn to 34 Down a pebble-strewn passageway? Turn ta aga Follow a yellow quartz shaft? Turn to 70
+- common OCR token: You have lo crouch low to keep from cracking your head on the rough rock of the ceiling only a matter of yourse
+
+### Section 188 | PDF page 73 | score 15
+
+Preview: Good evening,' you say, flashing the barmaid your most winning smule, 'How's trade?' The barmaid continues to stare at the fire and says moxthing. The landlord is watching you edgily from the other end of the bar. Then t
+
+| Risk | Flag | Count | Examples |
+| --- | --- | ---: | --- |
+| pdf-check | stray replacement/control glyph | 1 | ® |
+| review | at-sign or hash inside prose | 1 | @ishes |
+| review | common OCR token | 1 | tums |
+
+- stray replacement/control glyph: ould prefer just your own «ompany for the rest of the evening and so you rehire ®yourrcom. Turn to 256
+- at-sign or hash inside prose: silencing the girl. 'That's mough, daughter. Get back to the kitchen. There are @ishes to wash and the floor needs scrubbing!' Meg tums to go and then glances back over her shoulder, fix
+- common OCR token: ck to the kitchen. There are @ishes to wash and the floor needs scrubbing!' Meg tums to go and then glances back over her shoulder, fixing you with her stony amethyst gaze for the firs
+
+### Section 201 | PDF page 79 | score 15
+
+Preview: the whole place appear truly uninvitng. As you get nearer stil, a weathered road sign informs you that you are approaching the village of Strigoiva, Beyond the huddle of houses, you make out a road that leads away fom St
+
+| Risk | Flag | Count | Examples |
+| --- | --- | ---: | --- |
+| review | common OCR token | 3 | fom, te |
+| pdf-check | page-art residue | 1 | eee |
+
+- common OCR token: of Strigoiva, Beyond the huddle of houses, you make out a road that leads away fom Strgoiva before forking in three directions Hf you want to enter the village, turn to 116- Alter- n
+- page-art residue: to 62) or, if you are done here, leave the town altogether (turn to 507 heeieee eee ome
+
+### Section 243 | PDF page 92 | score 15
+
+Preview: Lying in a hollow between patchy gorse bushes is the body of an adventurer, much like yourself. Only this poor wretch is obviously dead, his body lacerated by terrible claw marks. His backpack lies at his side and seeing
+
+| Risk | Flag | Count | Examples |
+| --- | --- | ---: | --- |
+| review | common OCR token | 1 | te |
+| pdf-check | page-art residue | 2 | SSS, eee |
+
+- common OCR token: en investigating this scene, the crows have been circling OO ----- SSS E> =a 3 "te: ZZ a * 5 ees ad ah i WE Ne sd Nine? mm! it) Vind | eee oO iF ai" jae a Ht Aa Spe fe ib Pm P Nb = e
+- page-art residue: e you have been investigating this scene, the crows have been circling OO ----- SSS E> =a 3 "te: ZZ a * 5 ees ad ah i WE Ne sd Nine? mm! it) Vind | eee oO iF ai" jae a Ht Aa Spe fe ib
+
+### Section 264 | PDF page 100 | score 15
+
+Preview: Vampiress' coffins. Throwing back the lid you see the Te-forming body of the undead dominatrix. Without hesilation you plunge your blade into the creature's chesl, penetraling her shrivelled black heart. The Countless' e
+
+| Risk | Flag | Count | Examples |
+| --- | --- | ---: | --- |
+| pdf-check | mechanics: suspicious turn reference | 1 | fm bo 325 |
+| review | common OCR token | 2 | Te, bo |
+
+- mechanics: suspicious turn reference: ly dead al last, do you want to spend ome searching her chambers for treasures (fm bo 325), or de you want to quit this Place of evil as without further delay (turn to 346)?
+- common OCR token: Vampiress' coffins. Throwing back the lid you see the Te-forming body of the undead dominatrix. Without hesilation you plunge your blade into the creature's
+
+### Section 297 | PDF page 112 | score 15
+
+Preview: As you descend the staircase the shadows deepen, as Ge wall-mounted torches peter out. The crypt itselFis etch black and you will need a lantern if you are progress any further, If you have a lantern, the Mghi Creature s
+
+| Risk | Flag | Count | Examples |
+| --- | --- | ---: | --- |
+| pdf-check | mechanics: suspicious turn reference | 1 | burn 7 |
+| pdf-check | page-art residue | 1 | eee |
+
+- mechanics: suspicious turn reference: tering the crypt, turn to > 39. If you don't want to enter the crypt after ail, burn 7 to choose ancther floor of the tower to explore LJ Jan Qee py pi oe Weiler giaeysy wk free bas rae
+- page-art residue: F ee Tae a di <j "il f= + Aion! a a! |. a" eos" OF iso ee 'a Lata Ve) a ener s eee Alli Ls ai. ot ide - VE ie dd PE, one? nlf ee =he mist thickens in front of you, coalescing into th
+
+### Section 353 | PDF page 134 | score 15
+
+Preview: In the bottom of your pack you find a bottle of the eypmes' vodka as well as Matbreads and cheese enough for 2 Meals. (Add these items to your Adpenture Sheet and regain 1 LUCK point.) You may drink the vodka whenever yo
+
+| Risk | Flag | Count | Examples |
+| --- | --- | ---: | --- |
+| pdf-check | mechanics: suspicious turn reference | 1 | Tumi bo ga |
+| review | common OCR token | 2 | ime, bo |
+
+- mechanics: suspicious turn reference: rease your Attack Strength by 2 point. Then it is dime to be on your way again. Tumi bo ga
+- common OCR token: . The vodka is sterling stuff: each tot restores 3 STAMINA points. But the next ime you are instructed Test your Sioil after drinking it, you must reduce your sia. by 1 point. However
+
+### Section 371 | PDF page 140 | score 15
+
+Preview: Attack Rounds; after that you can consider that yo have managed to free yourself and will no longe suffer this penalty. However, Serpensa has sever different methods of attack, depending on whic Attack Round itis. If you
+
+| Risk | Flag | Count | Examples |
+| --- | --- | ---: | --- |
+| pdf-check | mechanics: suspicious stat block | 1 | 5TAMINA |
+| review | common OCR token | 1 | lo |
 | safe-candidate | joined words | 1 | itis |
 
-- mechanics: suspicious turn reference: e. 'Now Mave me in peace!' the cld crone snarls. Will you Save, as she demands (hum to 467), or finish her first =! 10 be sure (turn to 50)?
-- stray replacement/control glyph: the Map Room, to look for is secret door, deduct 50 from the paragraph you are ® ex at the time and turn to this new reference. 'Now Mave me in peace!' the cld crone snarls. Will y
-- common OCR token: our voice barely more than a growl Count Varcolac was not always as he is now," ihe crone explains. 'Once he was an ordinary mortal man but now he is something much greater, and much
+- mechanics: suspicious stat block: se 3 STAMINA points 3 Cobra's kiss - her fangs deliver a poisonous bite. Lose 4 5TAMINA points and 1 SKILL point 4 Tail-lash - a swipe from her tail knocks you off your feet. Lose 2 5TaMI
+- common OCR token: and reduce your Attack Strength by 1 for the next Attack Round as you strugple lo stand again Sonwards Tearing talons - lose 2 STAMINA points If you manage to slay the Snakewoman, t
+- joined words: Serpensa has sever different methods of attack, depending on whic Attack Round itis. If you lose an Attack Round chee on the table below to discover what damape yo suffer Allack Round
 
-### Section 273 | PDF page 104 | score 22
+### Section 403 | PDF page 150 | score 15
+
+Preview: There is nothing else among the Snakewoman''s possessions that is of interest to you so you leave the tent. Will you also leave the Camivaie at this juncture turn to 29), or will you explore further (turn to 281)? With h
+
+| Risk | Flag | Count | Examples |
+| --- | --- | ---: | --- |
+| review | common OCR token | 3 | ta, bo, lhe |
+| review | bracketed letter in word | 2 | [suspect, [had |
+
+- common OCR token: further (turn to 281)? With humbling honesty you relate your own wretched story ta Vereticus who listens with growing intensite When you have finished, it i¢ the scholar's turn speak
+- bracketed letter in word: y the usual Means: eating sprigs of poisonous belladonna and suchlike. But then [suspect you have found that much oul for yourself already.' You nod, confirming the scholar's assumption. T
+
+### Section 416 | PDF page 155 | score 15
+
+Preview: Something in the tone of the man's voice speaks to the primal creature that is awakening within you. Unable to stop yoursell, and before Ulrich or the old waman realise what you are doing, as if ina trance you walk over
+
+| Risk | Flag | Count | Examples |
+| --- | --- | ---: | --- |
+| pdf-check | mechanics: suspicious stat block | 1 | SKILLF |
+| review | common OCR token | 2 | lhe, belore |
+
+- mechanics: suspicious stat block: h the dirt-encrusted talon-like fingernails of his remaining right hand LUNATIC SKILLF STAMINA As you fight the crazed lunatic on the threshold to the cottage, neither Ulrich nor the old
+- common OCR token: ina trance you walk over to the threshold, draw back the bolts, and fling open lhe door. Standing in the doorway is a wild- looking man dressed in only a shirt and torn britches His
+
+### Section 442 | PDF page 165 | score 15
+
+Preview: Before you reach the end of the twisting tunnel you make out sparkling light coming from the chamber that lies at its end. You emerge from the passageway behind a large stalagmite and enter a cave lit by glittering cryst
+
+| Risk | Flag | Count | Examples |
+| --- | --- | ---: | --- |
+| pdf-check | mechanics: suspicious turn reference | 1 | hurn te 219g |
+| review | common OCR token | 2 | ihe, te |
+
+- mechanics: suspicious turn reference: have the codeword Snilbog recorded on your Adventure Sheet, turn to 2. If not, hurn te 219g
+- common OCR token: ars to have grown from that of a human woman From the waist dewm the abdomen of ihe monster isa swollen, hairy black pulsaling sac ending in silk- oozing spinnerets. From the waist up
+
+### Section 35 | PDF page 21 | score 14
+
+Preview: You crouch over the body of the werewolf, lantern in one hand and sword ready in the other. Before your eves the creature undergoes one final transformation You watch appalled as the beast sheds much of its thick black h
+
+| Risk | Flag | Count | Examples |
+| --- | --- | ---: | --- |
+| pdf-check | stray replacement/control glyph | 2 | § |
+
+- stray replacement/control glyph: MINA points). You have no choice but to fight your ershwhile fend WEREBEAR SKILL§ §STAMINA 10 If the Werebear wounds you three times or more add 1 to your CHANGE score. If you win t
+
+### Section 73 | PDF page 35 | score 14
+
+Preview: The Cadaver drops to the Hoor and is motionless again, as Doktor Kafka sits up, rubbing his head. 'She knows we are coming!' Van Richten hisses, his expression as dark as ever. "The situation is even more dire than I had
+
+| Risk | Flag | Count | Examples |
+| --- | --- | ---: | --- |
+| pdf-check | mechanics: suspicious stat block | 1 | STAMINA g |
+| review | common OCR token | 1 | hwo |
+| review | possible missing sentence break | 1 | Sheet |
+
+- mechanics: suspicious stat block: nsummate swords- man, will do away with the other. His attributes are SKILL 16, STAMINA g. If you face only one opponent you will gain twa Attacks, both of which can injure that opponent. I
+- common OCR token: therwise, you will face with Van Richten fighting at your side. When faced with hwo opponents you need only fight the first one to win that battle, as Vampire Hunter, who is a consumm
+- possible missing sentence break: will have to continue alone Cross off the codeword Nethcir from your Adventure Sheet This Hime we were gone,' Van Richten says, eager tobe away. The two of you set off for the home of t
+
+### Section 190 | PDF page 74 | score 14
+
+Preview: Preoccupied with thoughts of how long you have left Sent the next full moon, you barely realise that the sen has set and that the last splashes of colour seederlighting the clouds is fading to dusky amethyst = moon is ri
+
+| Risk | Flag | Count | Examples |
+| --- | --- | ---: | --- |
+| pdf-check | mechanics: suspicious turn reference | 1 | turn tail |
+| review | at-sign or hash inside prose | 1 | @tumming |
+
+- mechanics: suspicious turn reference: ill morning!' The phantom rider and its steed are closing on you fast. Will you turn tail and run, trying to reach the safety of the inn before the rider catches you (turn to 60), or will y
+- at-sign or hash inside prose: there is no one there; no horse, mo rider, nothing. But you can still hear the @tumming beat of the hooves pounding the road. You peer through the darkness, back the way you have -come. A
+
+### Section 208 | PDF page 81 | score 14
+
+Preview: Once you are past the axe-blade, you hear a grind- ing of pears and the pendulum stops swinging Opening the door at the end of the corridor you enter 3 circular turret room. The chamber has no windows > but is lit by hun
+
+| Risk | Flag | Count | Examples |
+| --- | --- | ---: | --- |
+| pdf-check | stray replacement/control glyph | 1 | § |
+| review | common OCR token | 1 | vou |
+| pdf-check | unclosed parenthetical sentence | 1 | (turn to 321}. If you want to stay, however, you are going to have to fight as the magically animated creature reaches for you with burning, taper-fingers WAX GOLEM SKILL§ STAMINA 10 you win an Attack Round against the Golem and > vou are fighting it using a bladed weapon, such as a sword or a dagger, roll one dice. On a roll of 6 your blade sticks in the waxy body of the creature and you mnust fight the next round of combat with your Attack Sarength reduced by 2 points as you try to free your blade. If you defeat the room's curious guardian, turn ip 264 |
+
+- stray replacement/control glyph: ly animated creature reaches for you with burning, taper-fingers WAX GOLEM SKILL§ STAMINA 10 you win an Attack Round against the Golem and > vou are fighting it using a bladed weapo
+- common OCR token: ers WAX GOLEM SKILL§ STAMINA 10 you win an Attack Round against the Golem and > vou are fighting it using a bladed weapon, such as a sword or a dagger, roll one dice. On a roll of 6 y
+- unclosed parenthetical sentence: ming the door behind you and re turning to the Map Reom without having to Fight (turn to 321}. If you want to stay, however, you are going to have to fight as the magically animated creature reaches for you with burning, taper-fingers WAX GOLEM SKILL§ STAMINA 10 you win an Attack Round against the Golem and > vou are fighting it using a bladed weapon, such as a sword or a dagger, roll one dice. On a roll of 6 your blade sticks in the waxy body of the creature and you mnust fight the next round of combat with your Attack Sarength reduced by 2 points as you try to free your blade. If you defeat the room's curious guardian, turn ip 264
+
+### Section 387 | PDF page 144 | score 14
+
+Preview: "t You spend the rest of the night under the stars and E) come the morning, by dawn's wan light, you descend =) fom the rolling moors to the valley-lying settlements Po tp the east. As you do so you catch sight of a floc
+
+| Risk | Flag | Count | Examples |
+| --- | --- | ---: | --- |
+| review | at-sign or hash inside prose | 1 | @em |
+| review | common OCR token | 1 | fom |
+| pdf-check | page-art residue | 1 | SSS |
+
+- at-sign or hash inside prose: nfluence throughout all Lupravia. Root it out, put an end to it - free Lupravia @em the curse of the Were.' And then she is gone Before you continue with your quest alone, you may tak
+- common OCR token: ht under the stars and E) come the morning, by dawn's wan light, you descend =) fom the rolling moors to the valley-lying settlements Po tp the east. As you do so you catch sight of a
+- page-art residue: ) #l hi mr ee AN FH) etc gy Ni TAR aN a how r aa Sad NN Lie Y/f MSS ge Kee | Og SSS SS
+
+### Section 66 | PDF page 33 | score 13
+
+Preview: Feeling the familiar, reassuring weight of the blade in ') your hand, you take deep, measured breaths to calm -) yourself, and prepare to meet the beast's attack, With 2snarl, the creature is on you BLACK WOLF SKILL& = S
+
+| Risk | Flag | Count | Examples |
+| --- | --- | ---: | --- |
+| pdf-check | mechanics: suspicious stat block | 1 | STAMINAG |
+| review | digit inside prose word | 1 | S0oner |
+
+- mechanics: suspicious stat block: eet the beast's attack, With 2snarl, the creature is on you BLACK WOLF SKILL& = STAMINAG After two further Attack Rounds, or if you reduce the 7 "Black Wolf's stasamna to 7 or less, whiche
+- digit inside prose word: ds, or if you reduce the 7 "Black Wolf's stasamna to 7 or less, whichever comes S0oner, turn at once to 271
+
+### Section 217 | PDF page 84 | score 13
+
+Preview: On the second floor you come loan omately decorated chamber that is filled with all manner of stone statues They range from sculptures of knights in armour and weeping angels to funereal effigies and the busts of notable
+
+| Risk | Flag | Count | Examples |
+| --- | --- | ---: | --- |
+| review | common OCR token | 3 | fom, lo, Lhe |
+| pdf-check | unclosed parenthetical sentence | 1 | (turn to 232 or will you leave the ropm and the second flour altogether (turn to 7}? |
+
+- common OCR token: ur and weeping angels to funereal effigies and the busts of notable individuals fom Lupravia's past. One of the finest examples of the stone-carver's art is the stalue of a griffin st
+- unclosed parenthetical sentence: strange place lo have a mirror. Do you want to examine Lhe mirror more closely (turn to 232 or will you leave the ropm and the second flour altogether (turn to 7}?
+
+### Section 224 | PDF page 86 | score 13
+
+Preview: And then one of the welves does indeed find the brazen bravado it needs to assault the stagecoach. The lithe, grey-pelted creature manages a gravity-defying leap onto the roof of the coach and, having found purchase with
+
+| Risk | Flag | Count | Examples |
+| --- | --- | ---: | --- |
+| pdf-check | mechanics: suspicious stat block | 1 | STAMINA6G |
+| review | digit inside prose word | 1 | STAMINA6G |
+
+- mechanics: suspicious stat block: having found purchase with its unsheathed claws, goes far you GREY WOLF SKILL? STAMINA6G Unless you have the Quickening special ability, duc to your precarious position on the roof of the
+- digit inside prose word: having found purchase with its unsheathed claws, goes far you GREY WOLF SKILL? STAMINA6G Unless you have the Quickening special ability, duc to your precarious position on the roof of the
+
+### Section 273 | PDF page 104 | score 13
 
 Preview: At the very top of the spiral staircase you pasa through a door and emerge onto the batt!ements of the tower Dark rags of cloud scud across the moon, which hangs neat full over the jandscape. Staring up at the moon you c
 
 | Risk | Flag | Count | Examples |
 | --- | --- | ---: | --- |
-| pdf-check | mechanics: suspicious turn reference | 1 | barn to 7 |
 | pdf-check | stray replacement/control glyph | 1 | § |
 | review | common OCR token | 1 | thal |
 | review | bracketed letter in word | 1 | t!e |
 
-- mechanics: suspicious turn reference: e the bats off and re turn to the relative safety of the interior of the tower, barn to 7 to explore elsewhere
 - stray replacement/control glyph: o fight these servants of the night creature whe Tules here FLOCK OF BAIS SKILL § STAMINA 10 Deduct your 5KILL score from 15; this = the total number of Attack Rounds you will have
 - common OCR token: flock of bats descending from the tempestuous sky Before you can reach the door thal leads back down into the tower, the bats are upon you, all slashing wing-claws and needle-sharp fan
+- bracketed letter in word: very top of the spiral staircase you pasa through a door and emerge onto the batt!ements of the tower Dark rags of cloud scud across the moon, which hangs neat full over the jandscape
 
-### Section 340 | PDF page 129 | score 22
+### Section 276 | PDF page 105 | score 13
 
-Preview: You follow the passageway past and through aban- 'doned rooms and empty spaces that appear to have ® afl the characteristics of an animal's den rather than a mbleman's family seat. At last you come to another =t of stone
-
-| Risk | Flag | Count | Examples |
-| --- | --- | ---: | --- |
-| pdf-check | mechanics: suspicious turn reference | 1 | Turn ta 349 |
-| pdf-check | stray replacement/control glyph | 1 | ® |
-| review | common OCR token | 2 | lo, ta |
-
-- mechanics: suspicious turn reference: se steps? Turn to 74 Retum to the entrance hall and take the left-hand passage? Turn ta 349 Retum to the hall and climb the staircase 10 the double doors beyond? Turn to 1.46
-- stray replacement/control glyph: ageway past and through aban- 'doned rooms and empty spaces that appear to have ® afl the characteristics of an animal's den rather than a mbleman's family seat. At last you come to
-- common OCR token: descend into the bedrock of the diff, on which the castle is built. Do you want lo Continue down these steps? Turn to 74 Retum to the entrance hall and take the left-hand passage? Tu
-
-### Section 38 | PDF page 22 | score 21
-
-Preview: Turning back, you retrace your sbeps through tl tumbledown warren of the ruins. You are within sig! of the spot where you entered the ruins when yc become aware of a skittering, scurrying sound Ire all around you. [rides
+Preview: When you phunged your sword into the bow! of water anointing the blade with holy water from the village shrine. As a result, thankfully, you are now able to cause the spectral wolf harm (regain 1 Luck point but it is sti
 
 | Risk | Flag | Count | Examples |
 | --- | --- | ---: | --- |
-| pdf-check | mechanics: suspicious stat block | 2 | SKILL6, sxi1 |
-| review | bracketed letter in word | 1 | [ridescent |
+| pdf-check | mechanics: suspicious stat block | 1 | STAMINAG |
+| pdf-check | unclosed parenthetical sentence | 1 | (regain 1 Luck point but it is still going to be a battle thet will test your mettle SPECTRAL WOLF SKILL? STAMINAG Hf you destroy the wolf-ghost, turn to 443 |
 
-- mechanics: suspicious stat block: o fight this bizarre manifestation of the ev possessing these ruins VERMIN-HOST SKILL6 STAMINA (see below To work out the YVermin-Host's STAMINA score, TU one dice and add 5; if you rola
-- bracketed letter in word: ruins when yc become aware of a skittering, scurrying sound Ire all around you. [ridescent black beetles scuttle acro the packed earth at your feet, while long-bodied cent pedes withe from b
+- mechanics: suspicious stat block: t is still going to be a battle thet will test your mettle SPECTRAL WOLF SKILL? STAMINAG Hf you destroy the wolf-ghost, turn to 443
+- unclosed parenthetical sentence: rine. As a result, thankfully, you are now able to cause the spectral wolf harm (regain 1 Luck point but it is still going to be a battle thet will test your mettle SPECTRAL WOLF SKILL? STAMINAG Hf you destroy the wolf-ghost, turn to 443
 
-### Section 69 | PDF page 34 | score 21
+### Section 307 | PDF page 117 | score 13
 
-Preview: You walk for the best part of the moming, your well- paced footsteps carrying you to the village of Balci Uke architecture of the buildings reminds you of the distinctive style of Strigeiva, all sharply pointed roofs and
-
-| Risk | Flag | Count | Examples |
-| --- | --- | ---: | --- |
-| pdf-check | mechanics: suspicious turn reference | 1 | tuum bo 4 |
-| review | common OCR token | 4 | Camivale, bo, ta |
-
-- mechanics: suspicious turn reference: black bop hat. If you have the codeword Retsis written on Tour Adventure Sheet, tuum bo 4. If not, a visit fo the Camivale might be just what you need ta give you an hour's respite from the
-- common OCR token: Balci so different is the huddle of multicoloured tents pitched outside it. The Camivale is in town. The sound ef accordion music teaches your ears along with the 'oohs' and 'ahhs' of a ca
-
-### Section 82 | PDF page 38 | score 21
-
-Preview: Wandering the market square you find all manner of peddlers and traders selling their goods. But one stall attracts your particular attention. It is hung with a garish banner declaring that it belongs to "Plumbus Gelt =
+Preview: A silver weapon will harm the brides just as it would other werecreatures. If you are wounded more than three times, add 1 to your CHANGE score. If you manage to kill all three of the savage brides, turn to 352 Blind whi
 
 | Risk | Flag | Count | Examples |
 | --- | --- | ---: | --- |
-| pdf-check | mechanics: suspicious turn reference | 2 | burn to 201, hirn to 507 |
-| review | common OCR token | 1 | Lhe |
+| review | common OCR token | 3 | lo, thal |
+| pdf-check | unclosed parenthetical sentence | 1 | (3 STAMINA points rather than the usual 2} as the pure metal is inimical to their kind, The Silver Dagger will also harm Undead and demons but only causes the usual 2 STAMINA points li takes a few moments for you to realise thal there has been a cost to putting your hand imto the slime, for it is mildly acidic. Your hand begins to burn and the skin reddens, just as if you had been burned. In time the pain wil] pass but you still suffer 1 STAMINA point of damage caused by the acid burn. Turn to 322 |
 
-- mechanics: suspicious turn reference: vely, if you wish, you may join the hunting party in front of the meeting hall (burn to 201) or simply quit Lhe town (hirn to 507
-- common OCR token: oin the hunting party in front of the meeting hall (burn to 201) or simply quit Lhe town (hirn to 507
+- common OCR token: d are amazed to discover that you are holding a beautifully crafted If you want lo lake the Silver Dagger, add this item to your Advrnitire Sheet and add the codeword Stoggam lo your
+- unclosed parenthetical sentence: ause any creahure with the word 'Were* in its name will suffer increased damage (3 STAMINA points rather than the usual 2} as the pure metal is inimical to their kind, The Silver Dagger will also harm Undead and demons but only causes the usual 2 STAMINA points li takes a few moments for you to realise thal there has been a cost to putting your hand imto the slime, for it is mildly acidic. Your hand begins to burn and the skin reddens, just as if you had been burned. In time the pain wil] pass but you still suffer 1 STAMINA point of damage caused by the acid burn. Turn to 322
 
-### Section 95 | PDF page 44 | score 21
+### Section 351 | PDF page 132 | score 13
 
-Preview: You hack and slash at the ghostly wolf but your sword simply passes straight through it. However the dire spectre has no difficulty in harming you. The phantasm savages you with teeth and claws before leaving you for dea
+Preview: Under the hulking Beast's relentless attack, you flounder and shumble backwards - over the edge of the roof of the carriage. And then you are falling plummeting to your death at the bottom of Garou Gorge, the stagecoach,
 
 | Risk | Flag | Count | Examples |
 | --- | --- | ---: | --- |
-| pdf-check | mechanics: suspicious turn reference | 1 | tum 10 |
-| pdf-check | mechanics: suspicious stat block | 1 | sTamMINA |
-| review | common OCR token | 1 | Lhe |
+| pdf-check | stray replacement/control glyph | 1 | § |
+| pdf-check | page-art residue | 1 | eee |
 
-- mechanics: suspicious turn reference: track into the forest, which lies a mile or so fo the north-easl of Strigorva (tum 10 8)?
-- mechanics: suspicious stat block: leaving you for dead on the cold ground and moving" onto its next vic. (Lose 6 sTamMINA points.) lf you survive the attack, you slowly lose consciousness listening to the desperate cries
-- common OCR token: vans as they struggle against seemingly insurmountable odds torid themselves of Lhe spectral pack You come to the next day, lying on the cold, hard ground where the villagers left you
+- stray replacement/control glyph: ring in triumph atop it, racing away into the night. Your adventure is over Ley § "On Aco AV eee 4 eu ™- ooze es ae LaF | Ree Ses go faa a i jee b ee / a le ! seen aig tees pe aes S
+- page-art residue: ph atop it, racing away into the night. Your adventure is over Ley § "On Aco AV eee 4 eu ™- ooze es ae LaF | Ree Ses go faa a i jee b ee / a le ! seen aig tees pe aes Sa fa oe
+
+### Section 382 | PDF page 142 | score 13
+
+Preview: So, am I cured?' you ask the wizened wisewoman Have yourid me of the curse of the werewolf?' Before Grandmother Zekova can answer, a chilling how! cuts through the night it came from outside the cottage Spirits preserve
+
+| Risk | Flag | Count | Examples |
+| --- | --- | ---: | --- |
+| review | common OCR token | 1 | ta |
+| pdf-check | unclosed parenthetical sentence | 1 | ((\\\\\]\. ee == === equal to, your current CHANGE score, turn to 416. If it B grealer, turn to 37 |
+| pdf-check | page-art residue | 1 | eee |
+
+- common OCR token: hly howl. The wolf pack take up the cry, and deep inside you, something strains ta answer their call. Roll two dice and if the total rolled is less than, or Za A 4 WLS la df ee i, 37
+- unclosed parenthetical sentence: tal rolled is less than, or Za A 4 WLS la df ee i, 37) Sor, fe. me x a q = in|. ((\\\\\]\. ee == === equal to, your current CHANGE score, turn to 416. If it B grealer, turn to 37
+- page-art residue: cottage. The wolves have Grandmother Zekova's cottage surrounded. There is RK. eee " - 2 ae 1 pte eae a sudden, and totally unexpected rap at the door which makes the old woman start
+
+### Section 398 | PDF page 148 | score 13
+
+Preview: Those who would dare challenge Van Richten Vampire Hunter extraordinaire and champion of the light, will meet their end in righteous battle. So dol decree!' As is so often the way, cold steel will settle your disagreemen
+
+| Risk | Flag | Count | Examples |
+| --- | --- | ---: | --- |
+| pdf-check | mechanics: suspicious stat block | 1 | SKILL1O |
+| review | digit inside prose word | 1 | SKILL1O |
+
+- mechanics: suspicious stat block: r disagreement with the paranoid Vampire Hunter once and for all VAMPIRE HUNTER SKILL1O 5TAMINAY If you biumph in your strugele against the Vampire Hunler, turn to 182
+- digit inside prose word: r disagreement with the paranoid Vampire Hunter once and for all VAMPIRE HUNTER SKILL1O 5TAMINAY If you biumph in your strugele against the Vampire Hunler, turn to 182
+
+### Section 452 | PDF page 169 | score 13
+
+Preview: Inserting the key in the hole, you burn il wntil you hear a ratchetting click. With a sudden lurch the automaton lakes a step towards you, and without hesitation tries to strike you with its crushing gauntlet-hard hands
+
+| Risk | Flag | Count | Examples |
+| --- | --- | ---: | --- |
+| pdf-check | mechanics: suspicious turn reference | 1 | burn il |
+| pdf-check | unclosed parenthetical sentence | 1 | (Gum to 426}, of alternatively, the one that is now to your night (turn to 496 ! -- |
+
+- mechanics: suspicious turn reference: Inserting the key in the hole, you burn il wntil you hear a ratchetting click. With a sudden lurch the automaton lakes a step towards you, and
+- unclosed parenthetical sentence: re turn to the junction, from there you take the door which is now ahead of you (Gum to 426}, of alternatively, the one that is now to your night (turn to 496 ! --
+
+### Section 470 | PDF page 173 | score 13
+
+Preview: To the uproarious cheers of the crowd you force the beast into a headlock and, with the ring of a bell are declared the winner. Reluctantly the strongman hands over vour winnings (a bag containing 10 Gald Pieces and his
+
+| Risk | Flag | Count | Examples |
+| --- | --- | ---: | --- |
+| review | common OCR token | 3 | vour, ihe, thal |
+| pdf-check | unclosed parenthetical sentence | 1 | (a bag containing 10 Gald Pieces and his assistant relurns your other possessions. As you leave ihe stage the strongman tells the crowd thal Cage is closed for business for the rest of the day ioa chorus of light-hearted boos. Turn to 167 |
+
+- common OCR token: he ring of a bell are declared the winner. Reluctantly the strongman hands over vour winnings (a bag containing 10 Gald Pieces and his assistant relurns your other possessions. As you
+- unclosed parenthetical sentence: ell are declared the winner. Reluctantly the strongman hands over vour winnings (a bag containing 10 Gald Pieces and his assistant relurns your other possessions. As you leave ihe stage the strongman tells the crowd thal Cage is closed for business for the rest of the day ioa chorus of light-hearted boos. Turn to 167
+
+### Section 475 | PDF page 175 | score 13
+
+Preview: Unbelievably, you make your way between the bloated, bruise-coloured fungi without causing any of them to release their 'spores. Regain 1 LUCK point Opening the second door you enter another stone- walled corridor. Turn
+
+| Risk | Flag | Count | Examples |
+| --- | --- | ---: | --- |
+| pdf-check | mechanics: suspicious turn reference | 1 | Turn to q9z |
+| review | digit inside prose word | 1 | q9z |
+
+- mechanics: suspicious turn reference: 1 LUCK point Opening the second door you enter another stone- walled corridor. Turn to q9z
+- digit inside prose word: point Opening the second door you enter another stone- walled corridor. Turn to q9z
+
+### Section 492 | PDF page 183 | score 13
+
+Preview: CO e§ECOOoeoreoO EE well. Disconsolate that you have not managed to track dowm the Beasl of Vargenhof but satisfied that you have done good at Bauer Farm, you relrace your steps through the hills, negotiating the wooded
+
+| Risk | Flag | Count | Examples |
+| --- | --- | ---: | --- |
+| pdf-check | stray replacement/control glyph | 1 | § |
+| review | common OCR token | 1 | ime |
+| review | bracketed letter in word | 1 | [fnot |
+
+- stray replacement/control glyph: CO e§ECOOoeoreoO EE well. Disconsolate that you have not managed to track dowm the Beasl of Vargenhof but
+- common OCR token: o you as in a dream. 'Do not look inte her eyes!' you hear him cry, louder this ime. You somehow, manage to break free of her beguiling power, tearing your eyes away from hers There i
+- bracketed letter in word: it, or a Pair of Silver Candlesticks with which you can improvise, turn to 17. [fnot,turn to 141
+
+### Section 18 | PDF page 15 | score 12
+
+Preview: The savage Shuck is upon you. This demon dog has terrorised would-be pilgrims making the journcy {o the healing shrine of Saint Crucius for long enough Tonight, its reign of terror must come to an end SHUCK SKILL 7 STAMI
+
+| Risk | Flag | Count | Examples |
+| --- | --- | ---: | --- |
+| pdf-check | mechanics: suspicious turn reference | 1 | turn lo az |
+| review | common OCR token | 1 | lo |
+
+- mechanics: suspicious turn reference: tack Round without a resolu- ton,turn to 99. If you kill the beast before then, turn lo az
+- common OCR token: Round without a resolu- ton,turn to 99. If you kill the beast before then, turn lo az
+
+### Section 33 | PDF page 20 | score 12
+
+Preview: As you gaze around the chamber, your vision blun momentarily and then nefocuses, only now everything is suffused with an orange glow. Burning torches hav appeared in cast iron brackets on the walls. That is no the only c
+
+| Risk | Flag | Count | Examples |
+| --- | --- | ---: | --- |
+| pdf-check | mechanics: suspicious turn reference | 1 | turn toss |
+| review | common OCR token | 1 | mear |
+
+- mechanics: suspicious turn reference: be hurls the sword mto the hungry black maw of ») Se pit. Each of the others in turn toss the relics of Steir former lives into the pit, their chanting rising im pitch and intensity. Their
+- common OCR token: apmg hole. They are chanting the same phrase over and over, esoteric words that mear nothing to you, but words of power nonetheless. They are carrying oul some kind of invocation, the
 
 ## All Flagged Locations
 
 | Location | PDF page | Score | Main flags |
 | --- | ---: | ---: | --- |
-| Section 196 | 76 | 87 | mechanics: suspicious stat block (1); stray replacement/control glyph (5); at-sign or hash inside prose (5) |
-| Section 44 | 23 | 78 | mechanics: suspicious turn reference (4); mechanics: suspicious stat block (1); stray replacement/control glyph (3) |
-| Section 85 | 39 | 68 | mechanics: suspicious turn reference (1); mechanics: suspicious stat block (2); stray replacement/control glyph (1) |
-| Section 178 | 70 | 57 | stray replacement/control glyph (7); at-sign or hash inside prose (1); common OCR token (1) |
-| Section 278 | 105 | 51 | mechanics: suspicious turn reference (2); mechanics: suspicious stat block (1); common OCR token (2) |
-| Section 171 | 67 | 50 | mechanics: suspicious turn reference (2); stray replacement/control glyph (1); digit inside prose word (1) |
-| Section 86 | 40 | 49 | mechanics: suspicious turn reference (1); mechanics: suspicious stat block (2); common OCR token (6) |
+| Section 196 | 76 | 73 | mechanics: suspicious stat block (1); stray replacement/control glyph (3); at-sign or hash inside prose (5) |
 | Introduction page 2 | 2 | 47 | known intro/background token (7); common OCR token (2); possible missing sentence break (1) |
 | Introduction page 4 | 4 | 45 | known intro/background token (5); common OCR token (5); bracketed letter in word (1) |
 | Introduction page 5 | 5 | 45 | known intro/background token (6); common OCR token (5) |
 | Introduction page 3 | 3 | 44 | known intro/background token (7); common OCR token (1); possible missing sentence break (1) |
 | Background page 1 | 7 | 44 | at-sign or hash inside prose (1); known intro/background token (4); common OCR token (3) |
-| Section 477 | 176 | 43 | stray replacement/control glyph (2); digit inside prose word (1); common OCR token (1) |
 | Introduction page 1 | 1 | 42 | known intro/background token (7); common OCR token (1); possible missing sentence break (2) |
-| Section 89 | 42 | 42 | mechanics: suspicious turn reference (3); mechanics: suspicious stat block (1); common OCR token (2) |
-| Section 190 | 74 | 37 | mechanics: suspicious turn reference (2); stray replacement/control glyph (2); at-sign or hash inside prose (1) |
-| Section 375 | 141 | 37 | mechanics: suspicious turn reference (1); mechanics: suspicious stat block (1); stray replacement/control glyph (1) |
-| Section 37 | 24 | 36 | mechanics: suspicious turn reference (2); mechanics: suspicious stat block (1); common OCR token (3) |
-| Section 138 | 60 | 36 | mechanics: suspicious turn reference (3); common OCR token (3) |
-| Section 198 | 77 | 36 | mechanics: suspicious turn reference (1); stray replacement/control glyph (2); common OCR token (3) |
-| Section 239 | 91 | 36 | mechanics: suspicious turn reference (3); common OCR token (1); bracketed letter in word (1) |
-| Section 90 | 42 | 35 | mechanics: suspicious turn reference (2); stray replacement/control glyph (1); common OCR token (2) |
-| Section 387 | 144 | 35 | mechanics: suspicious turn reference (2); at-sign or hash inside prose (1); common OCR token (2) |
-| Section 113 | 52 | 34 | mechanics: suspicious turn reference (1); common OCR token (7); unclosed parenthetical sentence (1) |
-| Section 114 | 52 | 34 | mechanics: suspicious turn reference (1); common OCR token (7); unclosed parenthetical sentence (1) |
-| Section 58 | 30 | 33 | mechanics: suspicious turn reference (1); mechanics: suspicious stat block (2); common OCR token (2) |
-| Section 59 | 30 | 33 | mechanics: suspicious turn reference (1); mechanics: suspicious stat block (2); common OCR token (2) |
+| Section 278 | 105 | 42 | mechanics: suspicious turn reference (2); common OCR token (2); page-art residue (3) |
+| Section 477 | 176 | 36 | stray replacement/control glyph (1); digit inside prose word (1); common OCR token (1) |
 | Section 111 | 50 | 33 | mechanics: suspicious turn reference (1); common OCR token (7); bracketed letter in word (1) |
-| Section 122 | 55 | 33 | mechanics: suspicious turn reference (2); common OCR token (5) |
-| Section 201 | 79 | 33 | mechanics: suspicious turn reference (2); common OCR token (3); page-art residue (1) |
-| Section 232 | 89 | 33 | mechanics: suspicious turn reference (1); mechanics: suspicious stat block (2); common OCR token (2) |
-| Section 404 | 151 | 33 | mechanics: suspicious turn reference (2); common OCR token (5) |
-| Section 473 | 174 | 33 | mechanics: suspicious turn reference (1); stray replacement/control glyph (2); at-sign or hash inside prose (1) |
-| Section 119 | 53 | 32 | mechanics: suspicious turn reference (1); stray replacement/control glyph (2); common OCR token (3) |
-| Section 333 | 126 | 31 | stray replacement/control glyph (4); common OCR token (1) |
-| Section 18 | 15 | 30 | mechanics: suspicious turn reference (2); mechanics: suspicious stat block (1); common OCR token (1) |
-| Section 392 | 146 | 30 | mechanics: suspicious stat block (2); stray replacement/control glyph (1); at-sign or hash inside prose (1) |
-| Section 472 | 174 | 30 | mechanics: suspicious turn reference (2); common OCR token (4) |
-| Section 70 | 35 | 28 | mechanics: suspicious turn reference (2); common OCR token (2); unclosed parenthetical sentence (1) |
-| Section 135 | 58 | 28 | mechanics: suspicious turn reference (1); mechanics: suspicious stat block (1); digit inside prose word (1) |
-| Section 241 | 92 | 28 | mechanics: suspicious turn reference (1); common OCR token (3); unclosed parenthetical sentence (1) |
-| Section 488 | 181 | 28 | mechanics: suspicious turn reference (1); stray replacement/control glyph (1); common OCR token (2) |
-| Section 500 | 187 | 28 | mechanics: suspicious turn reference (2); stray replacement/control glyph (1); common OCR token (1) |
-| Section 63 | 32 | 27 | mechanics: suspicious turn reference (2); common OCR token (2); bracketed letter in word (1) |
-| Section 175 | 69 | 27 | mechanics: suspicious turn reference (2); common OCR token (3) |
-| Section 288 | 109 | 27 | mechanics: suspicious turn reference (2); common OCR token (2); joined words (1) |
-| Section 293 | 111 | 27 | mechanics: suspicious turn reference (2); common OCR token (2); joined words (1) |
-| Section 316 | 120 | 27 | mechanics: suspicious turn reference (1); mechanics: suspicious stat block (1); common OCR token (2) |
+| Section 85 | 39 | 31 | common OCR token (5); unclosed parenthetical sentence (1); page-art residue (2) |
+| Section 375 | 141 | 28 | mechanics: suspicious stat block (1); stray replacement/control glyph (1); common OCR token (3) |
 | Section 370 | 139 | 27 | mechanics: suspicious stat block (2); common OCR token (1); joined words (2) |
-| Section 406 | 152 | 27 | mechanics: suspicious stat block (2); bracketed letter in word (1); page-art residue (1) |
-| Section 11 | 12 | 25 | mechanics: suspicious turn reference (2); stray replacement/control glyph (1) |
 | Section 52 | 27 | 25 | mechanics: suspicious stat block (1); stray replacement/control glyph (1); common OCR token (1) |
-| Section 97 | 44 | 25 | stray replacement/control glyph (1); known intro/background token (1); common OCR token (3) |
+| Section 113 | 52 | 25 | common OCR token (7); unclosed parenthetical sentence (1) |
+| Section 114 | 52 | 25 | common OCR token (7); unclosed parenthetical sentence (1) |
+| Section 171 | 67 | 25 | digit inside prose word (1); common OCR token (3); page-art residue (2) |
 | Section 252 | 96 | 25 | mechanics: suspicious stat block (1); stray replacement/control glyph (1); common OCR token (3) |
-| Section 272 | 103 | 25 | stray replacement/control glyph (2); at-sign or hash inside prose (1); common OCR token (2) |
-| Section 452 | 169 | 25 | mechanics: suspicious turn reference (2); common OCR token (1); unclosed parenthetical sentence (1) |
 | Section 480 | 178 | 25 | mechanics: suspicious turn reference (1); common OCR token (3); bracketed letter in word (1) |
-| Section 75 | 36 | 24 | mechanics: suspicious turn reference (1); common OCR token (4); joined words (1) |
-| Section 77 | 37 | 24 | mechanics: suspicious turn reference (2); common OCR token (2) |
 | Section 125 | 56 | 24 | mechanics: suspicious turn reference (1); mechanics: suspicious stat block (1); common OCR token (2) |
 | Section 127 | 56 | 24 | mechanics: suspicious turn reference (1); mechanics: suspicious stat block (1); common OCR token (2) |
-| Section 128 | 58 | 24 | mechanics: suspicious turn reference (2); common OCR token (2) |
-| Section 131 | 58 | 24 | mechanics: suspicious turn reference (2); common OCR token (2) |
-| Section 140 | 60 | 24 | mechanics: suspicious turn reference (2); common OCR token (2) |
-| Section 188 | 73 | 24 | mechanics: suspicious turn reference (1); stray replacement/control glyph (1); at-sign or hash inside prose (1) |
-| Section 243 | 92 | 24 | mechanics: suspicious stat block (1); common OCR token (1); page-art residue (2) |
-| Section 251 | 95 | 24 | mechanics: suspicious turn reference (2); common OCR token (2) |
 | Section 290 | 110 | 24 | common OCR token (8) |
-| Section 334 | 127 | 24 | mechanics: suspicious turn reference (2); possible missing sentence break (1); unclosed parenthetical sentence (1) |
 | Section 56 | 29 | 23 | mechanics: suspicious turn reference (1); known intro/background token (1); common OCR token (2) |
-| Section 208 | 81 | 23 | mechanics: suspicious turn reference (1); stray replacement/control glyph (1); common OCR token (1) |
+| Section 392 | 146 | 23 | mechanics: suspicious stat block (2); at-sign or hash inside prose (1) |
 | Section 424 | 158 | 23 | mechanics: suspicious stat block (1); common OCR token (2); bracketed letter in word (2) |
 | Section 439 | 163 | 23 | mechanics: suspicious turn reference (1); known intro/background token (1); common OCR token (1) |
-| Section 183 | 72 | 22 | mechanics: suspicious turn reference (1); stray replacement/control glyph (1); common OCR token (1) |
-| Section 273 | 104 | 22 | mechanics: suspicious turn reference (1); stray replacement/control glyph (1); common OCR token (1) |
-| Section 340 | 129 | 22 | mechanics: suspicious turn reference (1); stray replacement/control glyph (1); common OCR token (2) |
-| Section 38 | 22 | 21 | mechanics: suspicious stat block (2); bracketed letter in word (1) |
-| Section 69 | 34 | 21 | mechanics: suspicious turn reference (1); common OCR token (4) |
-| Section 82 | 38 | 21 | mechanics: suspicious turn reference (2); common OCR token (1) |
-| Section 95 | 44 | 21 | mechanics: suspicious turn reference (1); mechanics: suspicious stat block (1); common OCR token (1) |
-| Section 96 | 44 | 21 | mechanics: suspicious turn reference (1); mechanics: suspicious stat block (1); common OCR token (1) |
-| Section 124 | 56 | 21 | mechanics: suspicious turn reference (2); common OCR token (1) |
-| Section 136 | 60 | 21 | mechanics: suspicious turn reference (2); common OCR token (1) |
-| Section 156 | 64 | 21 | mechanics: suspicious turn reference (2); common OCR token (1) |
-| Section 215 | 83 | 21 | mechanics: suspicious turn reference (1); mechanics: suspicious stat block (1); joined words (1) |
-| Section 225 | 86 | 21 | mechanics: suspicious turn reference (1); page-art residue (2) |
-| Section 253 | 96 | 21 | mechanics: suspicious turn reference (2); bracketed letter in word (1) |
-| Section 360 | 135 | 21 | mechanics: suspicious turn reference (1); mechanics: suspicious stat block (1); common OCR token (1) |
-| Section 361 | 136 | 21 | mechanics: suspicious turn reference (1); mechanics: suspicious stat block (1); common OCR token (1) |
 | Section 449 | 168 | 21 | common OCR token (1); page-art residue (3) |
-| Section 462 | 172 | 21 | mechanics: suspicious turn reference (2); common OCR token (1) |
-| Section 483 | 179 | 21 | mechanics: suspicious turn reference (1); common OCR token (2); page-art residue (1) |
-| Section 496 | 185 | 21 | mechanics: suspicious turn reference (2); common OCR token (1) |
-| Section 509 | 189 | 21 | mechanics: suspicious turn reference (2); joined words (1) |
-| Section 512 | 189 | 21 | mechanics: suspicious turn reference (1); page-art residue (2) |
-| Section 388 | 145 | 20 | mechanics: suspicious stat block (1); at-sign or hash inside prose (1); common OCR token (1) |
-| Section 51 | 26 | 19 | stray replacement/control glyph (1); page-art residue (2) |
+| Section 44 | 23 | 20 | stray replacement/control glyph (2); common OCR token (2) |
+| Section 70 | 35 | 19 | mechanics: suspicious turn reference (1); common OCR token (2); unclosed parenthetical sentence (1) |
+| Section 86 | 40 | 19 | common OCR token (5); unclosed parenthetical sentence (1) |
 | Section 106 | 48 | 19 | mechanics: suspicious turn reference (1); stray replacement/control glyph (1); common OCR token (1) |
-| Section 163 | 65 | 19 | mechanics: suspicious stat block (1); stray replacement/control glyph (1); bracketed letter in word (1) |
-| Section 194 | 75 | 19 | mechanics: suspicious turn reference (1); stray replacement/control glyph (1); common OCR token (1) |
-| Section 501 | 187 | 19 | mechanics: suspicious stat block (1); stray replacement/control glyph (1); common OCR token (1) |
-| Section 80 | 37 | 18 | mechanics: suspicious turn reference (1); common OCR token (3) |
-| Section 102 | 47 | 18 | mechanics: suspicious turn reference (1); common OCR token (2); joined words (1) |
-| Section 103 | 47 | 18 | mechanics: suspicious turn reference (1); common OCR token (2); joined words (1) |
-| Section 105 | 48 | 18 | mechanics: suspicious turn reference (1); common OCR token (3) |
-| Section 142 | 60 | 18 | mechanics: suspicious turn reference (2) |
-| Section 143 | 60 | 18 | mechanics: suspicious turn reference (2) |
+| Section 135 | 58 | 19 | mechanics: suspicious stat block (1); digit inside prose word (1); common OCR token (2) |
+| Section 241 | 92 | 19 | common OCR token (3); unclosed parenthetical sentence (1); page-art residue (1) |
+| Section 488 | 181 | 19 | stray replacement/control glyph (1); common OCR token (2); page-art residue (1) |
+| Section 97 | 44 | 18 | known intro/background token (1); common OCR token (3); unclosed parenthetical sentence (1) |
+| Section 119 | 53 | 18 | mechanics: suspicious turn reference (1); common OCR token (3) |
 | Section 154 | 63 | 18 | mechanics: suspicious stat block (2) |
-| Section 155 | 64 | 18 | mechanics: suspicious turn reference (1); common OCR token (3) |
-| Section 202 | 80 | 18 | mechanics: suspicious turn reference (2) |
-| Section 261 | 98 | 18 | mechanics: suspicious turn reference (1); common OCR token (1); page-art residue (1) |
 | Section 263 | 99 | 18 | mechanics: suspicious turn reference (1); common OCR token (3) |
-| Section 277 | 105 | 18 | mechanics: suspicious turn reference (1); mechanics: suspicious stat block (1) |
-| Section 418 | 156 | 18 | mechanics: suspicious turn reference (2) |
-| Section 420 | 156 | 18 | mechanics: suspicious turn reference (2) |
-| Section 440 | 164 | 18 | mechanics: suspicious turn reference (1); common OCR token (2); bracketed letter in word (1) |
+| Section 316 | 120 | 18 | mechanics: suspicious stat block (1); common OCR token (2); joined words (1) |
 | Background page 2 | 8 | 17 | known intro/background token (2); common OCR token (1); possible missing sentence break (2) |
-| Section 268 | 101 | 17 | mechanics: suspicious turn reference (1); at-sign or hash inside prose (1); common OCR token (1) |
-| Section 269 | 101 | 17 | mechanics: suspicious turn reference (1); at-sign or hash inside prose (1); common OCR token (1) |
-| Section 332 | 126 | 17 | stray replacement/control glyph (2); common OCR token (1) |
-| Section 19 | 15 | 16 | stray replacement/control glyph (1); common OCR token (2); joined words (1) |
-| Section 40 | 22 | 16 | mechanics: suspicious turn reference (1); stray replacement/control glyph (1) |
-| Section 184 | 72 | 16 | mechanics: suspicious turn reference (1); stray replacement/control glyph (1) |
-| Section 185 | 72 | 16 | mechanics: suspicious stat block (1); stray replacement/control glyph (1) |
+| Section 473 | 174 | 17 | stray replacement/control glyph (1); at-sign or hash inside prose (1); common OCR token (1) |
 | Section 191 | 75 | 16 | mechanics: suspicious stat block (1); stray replacement/control glyph (1) |
-| Section 433 | 161 | 16 | mechanics: suspicious stat block (1); stray replacement/control glyph (1) |
 | Section 487 | 181 | 16 | mechanics: suspicious stat block (1); stray replacement/control glyph (1) |
 | Section 489 | 182 | 16 | common OCR token (4); unclosed parenthetical sentence (1) |
+| Section 500 | 187 | 16 | mechanics: suspicious turn reference (1); stray replacement/control glyph (1) |
 | Background page 3 | 9 | 15 | common OCR token (1); page-art residue (2) |
-| Section 6 | 10 | 15 | mechanics: suspicious turn reference (1); common OCR token (2) |
-| Section 24 | 17 | 15 | mechanics: suspicious turn reference (1); common OCR token (2) |
 | Section 27 | 18 | 15 | common OCR token (5) |
-| Section 129 | 58 | 15 | mechanics: suspicious turn reference (1); common OCR token (1); bracketed letter in word (1) |
+| Section 75 | 36 | 15 | common OCR token (4); joined words (1) |
+| Section 89 | 42 | 15 | mechanics: suspicious turn reference (1); common OCR token (2) |
 | Section 159 | 64 | 15 | mechanics: suspicious turn reference (1); common OCR token (2) |
-| Section 195 | 75 | 15 | mechanics: suspicious turn reference (1); common OCR token (2) |
-| Section 219 | 84 | 15 | mechanics: suspicious turn reference (1); common OCR token (2) |
-| Section 234 | 89 | 15 | mechanics: suspicious turn reference (1); common OCR token (2) |
-| Section 257 | 97 | 15 | mechanics: suspicious turn reference (1); common OCR token (2) |
+| Section 188 | 73 | 15 | stray replacement/control glyph (1); at-sign or hash inside prose (1); common OCR token (1) |
+| Section 201 | 79 | 15 | common OCR token (3); page-art residue (1) |
+| Section 243 | 92 | 15 | common OCR token (1); page-art residue (2) |
 | Section 264 | 100 | 15 | mechanics: suspicious turn reference (1); common OCR token (2) |
-| Section 282 | 107 | 15 | mechanics: suspicious stat block (1); page-art residue (1) |
-| Section 291 | 111 | 15 | mechanics: suspicious turn reference (1); common OCR token (2) |
 | Section 297 | 112 | 15 | mechanics: suspicious turn reference (1); page-art residue (1) |
-| Section 324 | 123 | 15 | mechanics: suspicious turn reference (1); common OCR token (2) |
 | Section 353 | 134 | 15 | mechanics: suspicious turn reference (1); common OCR token (2) |
 | Section 371 | 140 | 15 | mechanics: suspicious stat block (1); common OCR token (1); joined words (1) |
 | Section 403 | 150 | 15 | common OCR token (3); bracketed letter in word (2) |
 | Section 416 | 155 | 15 | mechanics: suspicious stat block (1); common OCR token (2) |
 | Section 442 | 165 | 15 | mechanics: suspicious turn reference (1); common OCR token (2) |
-| Section 445 | 167 | 15 | mechanics: suspicious turn reference (1); common OCR token (2) |
-| Section 495 | 186 | 15 | mechanics: suspicious turn reference (1); common OCR token (2) |
-| Section 497 | 186 | 15 | mechanics: suspicious turn reference (1); common OCR token (2) |
 | Section 35 | 21 | 14 | stray replacement/control glyph (2) |
 | Section 73 | 35 | 14 | mechanics: suspicious stat block (1); common OCR token (1); possible missing sentence break (1) |
-| Section 101 | 46 | 14 | mechanics: suspicious turn reference (1); common OCR token (1); possible missing sentence break (1) |
-| Section 322 | 122 | 14 | stray replacement/control glyph (1); common OCR token (1); unclosed parenthetical sentence (1) |
+| Section 190 | 74 | 14 | mechanics: suspicious turn reference (1); at-sign or hash inside prose (1) |
+| Section 208 | 81 | 14 | stray replacement/control glyph (1); common OCR token (1); unclosed parenthetical sentence (1) |
+| Section 387 | 144 | 14 | at-sign or hash inside prose (1); common OCR token (1); page-art residue (1) |
 | Section 66 | 33 | 13 | mechanics: suspicious stat block (1); digit inside prose word (1) |
-| Section 169 | 67 | 13 | mechanics: suspicious stat block (1); unclosed parenthetical sentence (1) |
 | Section 217 | 84 | 13 | common OCR token (3); unclosed parenthetical sentence (1) |
 | Section 224 | 86 | 13 | mechanics: suspicious stat block (1); digit inside prose word (1) |
+| Section 273 | 104 | 13 | stray replacement/control glyph (1); common OCR token (1); bracketed letter in word (1) |
 | Section 276 | 105 | 13 | mechanics: suspicious stat block (1); unclosed parenthetical sentence (1) |
 | Section 307 | 117 | 13 | common OCR token (3); unclosed parenthetical sentence (1) |
 | Section 351 | 132 | 13 | stray replacement/control glyph (1); page-art residue (1) |
 | Section 382 | 142 | 13 | common OCR token (1); unclosed parenthetical sentence (1); page-art residue (1) |
 | Section 398 | 148 | 13 | mechanics: suspicious stat block (1); digit inside prose word (1) |
-| Section 464 | 172 | 13 | mechanics: suspicious stat block (1); unclosed parenthetical sentence (1) |
+| Section 452 | 169 | 13 | mechanics: suspicious turn reference (1); unclosed parenthetical sentence (1) |
 | Section 470 | 173 | 13 | common OCR token (3); unclosed parenthetical sentence (1) |
 | Section 475 | 175 | 13 | mechanics: suspicious turn reference (1); digit inside prose word (1) |
 | Section 492 | 183 | 13 | stray replacement/control glyph (1); common OCR token (1); bracketed letter in word (1) |
-| Section 7 | 11 | 12 | mechanics: suspicious turn reference (1); common OCR token (1) |
-| Section 25 | 17 | 12 | mechanics: suspicious turn reference (1); joined words (1) |
-| Section 29 | 18 | 12 | mechanics: suspicious turn reference (1); common OCR token (1) |
+| Section 18 | 15 | 12 | mechanics: suspicious turn reference (1); common OCR token (1) |
 | Section 33 | 20 | 12 | mechanics: suspicious turn reference (1); common OCR token (1) |
-| Section 68 | 33 | 12 | mechanics: suspicious turn reference (1); common OCR token (1) |
+| Section 38 | 22 | 12 | mechanics: suspicious stat block (1); bracketed letter in word (1) |
+| Section 51 | 26 | 12 | page-art residue (2) |
 | Section 91 | 43 | 12 | common OCR token (2); possible missing sentence break (1); unclosed parenthetical sentence (1) |
 | Section 92 | 43 | 12 | common OCR token (2); possible missing sentence break (1); unclosed parenthetical sentence (1) |
-| Section 104 | 48 | 12 | mechanics: suspicious turn reference (1); common OCR token (1) |
-| Section 109 | 49 | 12 | mechanics: suspicious turn reference (1); common OCR token (1) |
-| Section 120 | 54 | 12 | mechanics: suspicious turn reference (1); common OCR token (1) |
-| Section 126 | 57 | 12 | mechanics: suspicious stat block (1); common OCR token (1) |
-| Section 132 | 58 | 12 | mechanics: suspicious turn reference (1); common OCR token (1) |
-| Section 141 | 60 | 12 | mechanics: suspicious turn reference (1); common OCR token (1) |
+| Section 122 | 55 | 12 | common OCR token (4) |
+| Section 138 | 60 | 12 | mechanics: suspicious turn reference (1); common OCR token (1) |
+| Section 140 | 60 | 12 | mechanics: suspicious turn reference (1); common OCR token (1) |
 | Section 150 | 62 | 12 | mechanics: suspicious stat block (1); common OCR token (1) |
-| Section 176 | 70 | 12 | mechanics: suspicious turn reference (1); common OCR token (1) |
-| Section 177 | 70 | 12 | mechanics: suspicious turn reference (1); common OCR token (1) |
-| Section 211 | 82 | 12 | mechanics: suspicious turn reference (1); common OCR token (1) |
-| Section 214 | 83 | 12 | mechanics: suspicious turn reference (1); common OCR token (1) |
+| Section 215 | 83 | 12 | mechanics: suspicious stat block (1); joined words (1) |
 | Section 221 | 85 | 12 | mechanics: suspicious stat block (1); bracketed letter in word (1) |
+| Section 225 | 86 | 12 | page-art residue (2) |
 | Section 231 | 89 | 12 | mechanics: suspicious turn reference (1); common OCR token (1) |
-| Section 265 | 100 | 12 | mechanics: suspicious turn reference (1); common OCR token (1) |
-| Section 287 | 108 | 12 | mechanics: suspicious turn reference (1); common OCR token (1) |
-| Section 289 | 109 | 12 | mechanics: suspicious turn reference (1); common OCR token (1) |
-| Section 325 | 124 | 12 | mechanics: suspicious turn reference (1); common OCR token (1) |
-| Section 337 | 128 | 12 | mechanics: suspicious turn reference (1); common OCR token (1) |
-| Section 338 | 129 | 12 | mechanics: suspicious turn reference (1); common OCR token (1) |
-| Section 344 | 131 | 12 | mechanics: suspicious turn reference (1); common OCR token (1) |
-| Section 346 | 131 | 12 | mechanics: suspicious turn reference (1); common OCR token (1) |
-| Section 372 | 140 | 12 | mechanics: suspicious turn reference (1); common OCR token (1) |
-| Section 394 | 147 | 12 | mechanics: suspicious turn reference (1); common OCR token (1) |
-| Section 395 | 147 | 12 | mechanics: suspicious turn reference (1); joined words (1) |
-| Section 397 | 148 | 12 | mechanics: suspicious turn reference (1); common OCR token (1) |
-| Section 407 | 152 | 12 | mechanics: suspicious turn reference (1); common OCR token (1) |
-| Section 410 | 153 | 12 | mechanics: suspicious turn reference (1); common OCR token (1) |
+| Section 232 | 89 | 12 | mechanics: suspicious stat block (1); common OCR token (1) |
+| Section 251 | 95 | 12 | mechanics: suspicious turn reference (1); common OCR token (1) |
+| Section 253 | 96 | 12 | mechanics: suspicious turn reference (1); bracketed letter in word (1) |
+| Section 404 | 151 | 12 | common OCR token (4) |
 | Section 436 | 162 | 12 | mechanics: suspicious turn reference (1); common OCR token (1) |
-| Section 471 | 174 | 12 | mechanics: suspicious turn reference (1); common OCR token (1) |
 | Section 478 | 177 | 12 | common OCR token (4) |
+| Section 483 | 179 | 12 | common OCR token (2); page-art residue (1) |
 | Section 490 | 183 | 12 | mechanics: suspicious turn reference (1); common OCR token (1) |
-| Section 505 | 188 | 12 | mechanics: suspicious turn reference (1); common OCR token (1) |
-| Section 506 | 188 | 12 | mechanics: suspicious turn reference (1); common OCR token (1) |
+| Section 512 | 189 | 12 | page-art residue (2) |
 | Section 270 | 102 | 11 | at-sign or hash inside prose (1); common OCR token (2) |
+| Section 272 | 103 | 11 | at-sign or hash inside prose (1); common OCR token (2) |
+| Section 388 | 145 | 11 | at-sign or hash inside prose (1); common OCR token (1); bracketed letter in word (1) |
 | Section 498 | 186 | 11 | mechanics: suspicious turn reference (1); possible missing sentence break (1) |
 | Section 3 | 9 | 10 | digit inside prose word (1); common OCR token (2) |
 | Section 47 | 25 | 10 | stray replacement/control glyph (1); common OCR token (1) |
+| Section 90 | 42 | 10 | common OCR token (2); unclosed parenthetical sentence (1) |
+| Section 163 | 65 | 10 | stray replacement/control glyph (1); bracketed letter in word (1) |
+| Section 198 | 77 | 10 | common OCR token (2); unclosed parenthetical sentence (1) |
 | Section 485 | 180 | 10 | common OCR token (1); bracketed letter in word (1); unclosed parenthetical sentence (1) |
+| Section 501 | 187 | 10 | stray replacement/control glyph (1); common OCR token (1) |
 | Section 515 | 191 | 10 | stray replacement/control glyph (1); common OCR token (1) |
 | Section 8 | 11 | 9 | common OCR token (2); joined words (1) |
+| Section 19 | 15 | 9 | common OCR token (2); joined words (1) |
 | Section 26 | 18 | 9 | mechanics: suspicious turn reference (1) |
-| Section 28 | 18 | 9 | mechanics: suspicious turn reference (1) |
 | Section 41 | 23 | 9 | common OCR token (2); joined words (1) |
-| Section 43 | 23 | 9 | mechanics: suspicious turn reference (1) |
-| Section 36 | 24 | 9 | mechanics: suspicious turn reference (1) |
-| Section 48 | 26 | 9 | mechanics: suspicious turn reference (1) |
-| Section 65 | 33 | 9 | mechanics: suspicious stat block (1) |
+| Section 69 | 34 | 9 | common OCR token (3) |
 | Section 87 | 41 | 9 | common OCR token (2); joined words (1) |
-| Section 94 | 43 | 9 | common OCR token (3) |
 | Section 98 | 45 | 9 | mechanics: suspicious stat block (1) |
 | Section 107 | 48 | 9 | mechanics: suspicious turn reference (1) |
-| Section 121 | 54 | 9 | mechanics: suspicious turn reference (1) |
-| Section 123 | 55 | 9 | mechanics: suspicious turn reference (1) |
 | Section 147 | 61 | 9 | mechanics: suspicious stat block (1) |
 | Section 152 | 62 | 9 | mechanics: suspicious stat block (1) |
-| Section 157 | 64 | 9 | mechanics: suspicious turn reference (1) |
+| Section 155 | 64 | 9 | common OCR token (3) |
+| Section 156 | 64 | 9 | mechanics: suspicious turn reference (1) |
 | Section 158 | 64 | 9 | common OCR token (3) |
-| Section 180 | 70 | 9 | mechanics: suspicious turn reference (1) |
-| Section 212 | 82 | 9 | mechanics: suspicious turn reference (1) |
+| Section 185 | 72 | 9 | mechanics: suspicious stat block (1) |
 | Section 220 | 84 | 9 | common OCR token (3) |
-| Section 233 | 89 | 9 | mechanics: suspicious turn reference (1) |
-| Section 238 | 90 | 9 | mechanics: suspicious turn reference (1) |
-| Section 240 | 92 | 9 | mechanics: suspicious stat block (1) |
 | Section 244 | 93 | 9 | common OCR token (3) |
-| Section 280 | 106 | 9 | mechanics: suspicious stat block (1) |
-| Section 285 | 108 | 9 | mechanics: suspicious turn reference (1) |
-| Section 286 | 108 | 9 | mechanics: suspicious turn reference (1) |
-| Section 292 | 111 | 9 | mechanics: suspicious turn reference (1) |
-| Section 295 | 112 | 9 | mechanics: suspicious turn reference (1) |
-| Section 302 | 115 | 9 | mechanics: suspicious turn reference (1) |
-| Section 315 | 120 | 9 | mechanics: suspicious turn reference (1) |
-| Section 320 | 121 | 9 | mechanics: suspicious turn reference (1) |
+| Section 261 | 98 | 9 | common OCR token (1); page-art residue (1) |
+| Section 277 | 105 | 9 | mechanics: suspicious turn reference (1) |
 | Section 321 | 122 | 9 | joined words (1); page-art residue (1) |
-| Section 328 | 125 | 9 | mechanics: suspicious turn reference (1) |
 | Section 329 | 125 | 9 | mechanics: suspicious turn reference (1) |
-| Section 350 | 132 | 9 | mechanics: suspicious turn reference (1) |
 | Section 352 | 133 | 9 | common OCR token (3) |
-| Section 359 | 135 | 9 | mechanics: suspicious turn reference (1) |
-| Section 385 | 143 | 9 | mechanics: suspicious turn reference (1) |
-| Section 391 | 146 | 9 | mechanics: suspicious turn reference (1) |
+| Section 360 | 135 | 9 | mechanics: suspicious stat block (1) |
+| Section 361 | 136 | 9 | mechanics: suspicious stat block (1) |
 | Section 399 | 148 | 9 | common OCR token (1); page-art residue (1) |
-| Section 409 | 153 | 9 | mechanics: suspicious turn reference (1) |
-| Section 412 | 154 | 9 | mechanics: suspicious turn reference (1) |
+| Section 406 | 152 | 9 | bracketed letter in word (1); page-art residue (1) |
 | Section 415 | 155 | 9 | mechanics: suspicious stat block (1) |
 | Section 417 | 156 | 9 | common OCR token (2); joined words (1) |
-| Section 421 | 156 | 9 | mechanics: suspicious turn reference (1) |
+| Section 418 | 156 | 9 | mechanics: suspicious turn reference (1) |
+| Section 420 | 156 | 9 | mechanics: suspicious turn reference (1) |
 | Section 426 | 159 | 9 | mechanics: suspicious stat block (1) |
-| Section 457 | 170 | 9 | mechanics: suspicious turn reference (1) |
-| Section 465 | 172 | 9 | mechanics: suspicious turn reference (1) |
-| Section 466 | 173 | 9 | mechanics: suspicious stat block (1) |
-| Section 468 | 173 | 9 | mechanics: suspicious turn reference (1) |
 | Section 476 | 176 | 9 | common OCR token (3) |
-| Section 484 | 179 | 9 | mechanics: suspicious turn reference (1) |
-| Section 502 | 187 | 9 | mechanics: suspicious turn reference (1) |
+| Section 178 | 70 | 8 | at-sign or hash inside prose (1); common OCR token (1) |
 | Section 229 | 88 | 8 | known intro/background token (1); common OCR token (1) |
 | Section 246 | 94 | 8 | known intro/background token (1); common OCR token (1) |
 | Section 271 | 103 | 8 | at-sign or hash inside prose (1); common OCR token (1) |
@@ -1420,56 +1217,82 @@ Preview: You hack and slash at the ghostly wolf but your sword simply passes str
 | Section 144 | 61 | 7 | stray replacement/control glyph (1) |
 | Section 258 | 97 | 7 | common OCR token (1); unclosed parenthetical sentence (1) |
 | Section 274 | 104 | 7 | stray replacement/control glyph (1) |
+| Section 322 | 122 | 7 | common OCR token (1); unclosed parenthetical sentence (1) |
 | Section 362 | 136 | 7 | stray replacement/control glyph (1) |
-| Section 511 | 189 | 7 | stray replacement/control glyph (1) |
+| Section 433 | 161 | 7 | stray replacement/control glyph (1) |
 | Introduction page 6 | 6 | 6 | page-art residue (1) |
 | Section 4 | 10 | 6 | common OCR token (2) |
 | Section 5 | 10 | 6 | common OCR token (2) |
+| Section 6 | 10 | 6 | common OCR token (2) |
 | Section 14 | 13 | 6 | common OCR token (2) |
 | Section 32 | 19 | 6 | common OCR token (1); bracketed letter in word (1) |
+| Section 58 | 30 | 6 | common OCR token (2) |
+| Section 59 | 30 | 6 | common OCR token (2) |
 | Section 62 | 31 | 6 | common OCR token (2) |
+| Section 63 | 32 | 6 | common OCR token (1); bracketed letter in word (1) |
 | Section 72 | 35 | 6 | common OCR token (1); joined words (1) |
+| Section 80 | 37 | 6 | common OCR token (2) |
+| Section 94 | 43 | 6 | common OCR token (2) |
+| Section 102 | 47 | 6 | common OCR token (1); joined words (1) |
+| Section 103 | 47 | 6 | common OCR token (1); joined words (1) |
+| Section 105 | 48 | 6 | common OCR token (2) |
 | Section 115 | 52 | 6 | common OCR token (2) |
 | Section 134 | 58 | 6 | common OCR token (2) |
-| Section 149 | 61 | 6 | common OCR token (2) |
 | Section 151 | 62 | 6 | common OCR token (2) |
 | Section 164 | 66 | 6 | common OCR token (2) |
-| Section 203 | 80 | 6 | common OCR token (2) |
-| Section 204 | 80 | 6 | common OCR token (1); joined words (1) |
+| Section 175 | 69 | 6 | common OCR token (2) |
+| Section 183 | 72 | 6 | common OCR token (1); joined words (1) |
 | Section 206 | 80 | 6 | common OCR token (1); joined words (1) |
+| Section 219 | 84 | 6 | common OCR token (2) |
+| Section 239 | 91 | 6 | bracketed letter in word (1); joined words (1) |
 | Section 281 | 107 | 6 | common OCR token (1); joined words (1) |
+| Section 282 | 107 | 6 | page-art residue (1) |
+| Section 288 | 109 | 6 | common OCR token (1); joined words (1) |
+| Section 293 | 111 | 6 | common OCR token (1); joined words (1) |
 | Section 306 | 117 | 6 | page-art residue (1) |
-| Section 313 | 118 | 6 | common OCR token (2) |
 | Section 255 | 119 | 6 | common OCR token (1); joined words (1) |
-| Section 341 | 129 | 6 | common OCR token (2) |
+| Section 324 | 123 | 6 | common OCR token (2) |
+| Section 334 | 127 | 6 | possible missing sentence break (1); unclosed parenthetical sentence (1) |
 | Section 343 | 130 | 6 | common OCR token (2) |
 | Section 358 | 135 | 6 | common OCR token (1); bracketed letter in word (1) |
 | Section 379 | 142 | 6 | common OCR token (2) |
 | Section 422 | 157 | 6 | common OCR token (2) |
 | Section 430 | 160 | 6 | common OCR token (2) |
+| Section 440 | 164 | 6 | common OCR token (1); bracketed letter in word (1) |
 | Section 441 | 164 | 6 | common OCR token (1); bracketed letter in word (1) |
+| Section 445 | 167 | 6 | common OCR token (2) |
 | Section 459 | 170 | 6 | page-art residue (1) |
 | Section 460 | 171 | 6 | page-art residue (1) |
+| Section 472 | 174 | 6 | common OCR token (2) |
 | Section 481 | 178 | 6 | page-art residue (1) |
 | Section 494 | 184 | 6 | common OCR token (1); bracketed letter in word (1) |
 | Section 503 | 188 | 6 | common OCR token (1); bracketed letter in word (1) |
 | Section 21 | 16 | 5 | at-sign or hash inside prose (1) |
 | Section 99 | 45 | 5 | common OCR token (1); possible missing sentence break (1) |
+| Section 101 | 46 | 5 | common OCR token (1); possible missing sentence break (1) |
 | Section 182 | 71 | 5 | known intro/background token (1) |
 | Section 218 | 84 | 5 | known intro/background token (1) |
+| Section 268 | 101 | 5 | at-sign or hash inside prose (1) |
+| Section 269 | 101 | 5 | at-sign or hash inside prose (1) |
 | Section 296 | 112 | 5 | at-sign or hash inside prose (1) |
 | Section 347 | 131 | 5 | at-sign or hash inside prose (1) |
 | Section 434 | 162 | 5 | joined words (1); possible missing sentence break (1) |
 | Section 53 | 28 | 4 | unclosed parenthetical sentence (1) |
 | Section 60 | 31 | 4 | unclosed parenthetical sentence (1) |
+| Section 169 | 67 | 4 | unclosed parenthetical sentence (1) |
 | Section 262 | 99 | 4 | unclosed parenthetical sentence (1) |
 | Section 323 | 122 | 4 | unclosed parenthetical sentence (1) |
 | Section 401 | 149 | 4 | digit inside prose word (1) |
 | Section 432 | 161 | 4 | unclosed parenthetical sentence (1) |
+| Section 464 | 172 | 4 | unclosed parenthetical sentence (1) |
 | Section 13 | 13 | 3 | common OCR token (1) |
 | Section 15 | 14 | 3 | common OCR token (1) |
 | Section 16 | 14 | 3 | common OCR token (1) |
 | Section 23 | 17 | 3 | common OCR token (1) |
+| Section 24 | 17 | 3 | common OCR token (1) |
+| Section 25 | 17 | 3 | joined words (1) |
+| Section 29 | 18 | 3 | common OCR token (1) |
+| Section 37 | 24 | 3 | common OCR token (1) |
 | Section 46 | 25 | 3 | common OCR token (1) |
 | Section 49 | 26 | 3 | common OCR token (1) |
 | Section 50 | 26 | 3 | common OCR token (1) |
@@ -1477,46 +1300,75 @@ Preview: You hack and slash at the ghostly wolf but your sword simply passes str
 | Section 64 | 32 | 3 | common OCR token (1) |
 | Section 76 | 36 | 3 | common OCR token (1) |
 | Section 78 | 37 | 3 | joined words (1) |
+| Section 82 | 38 | 3 | common OCR token (1) |
 | Section 83 | 38 | 3 | common OCR token (1) |
 | Section 84 | 39 | 3 | common OCR token (1) |
+| Section 95 | 44 | 3 | common OCR token (1) |
+| Section 96 | 44 | 3 | common OCR token (1) |
 | Section 110 | 49 | 3 | common OCR token (1) |
+| Section 126 | 57 | 3 | common OCR token (1) |
+| Section 128 | 58 | 3 | common OCR token (1) |
+| Section 129 | 58 | 3 | bracketed letter in word (1) |
+| Section 131 | 58 | 3 | common OCR token (1) |
 | Section 133 | 58 | 3 | bracketed letter in word (1) |
+| Section 136 | 60 | 3 | common OCR token (1) |
 | Section 146 | 61 | 3 | common OCR token (1) |
+| Section 149 | 61 | 3 | common OCR token (1) |
 | Section 166 | 66 | 3 | common OCR token (1) |
 | Section 167 | 67 | 3 | common OCR token (1) |
 | Section 172 | 68 | 3 | common OCR token (1) |
+| Section 176 | 70 | 3 | common OCR token (1) |
+| Section 194 | 75 | 3 | common OCR token (1) |
+| Section 195 | 75 | 3 | common OCR token (1) |
+| Section 203 | 80 | 3 | common OCR token (1) |
+| Section 204 | 80 | 3 | joined words (1) |
+| Section 214 | 83 | 3 | common OCR token (1) |
 | Section 222 | 85 | 3 | joined words (1) |
 | Section 223 | 86 | 3 | joined words (1) |
 | Section 226 | 87 | 3 | common OCR token (1) |
+| Section 234 | 89 | 3 | common OCR token (1) |
 | Section 235 | 90 | 3 | common OCR token (1) |
 | Section 242 | 92 | 3 | common OCR token (1) |
 | Section 248 | 95 | 3 | common OCR token (1) |
 | Section 249 | 95 | 3 | common OCR token (1) |
 | Section 254 | 96 | 3 | joined words (1) |
+| Section 257 | 97 | 3 | common OCR token (1) |
 | Section 260 | 98 | 3 | common OCR token (1) |
+| Section 265 | 100 | 3 | common OCR token (1) |
 | Section 267 | 100 | 3 | common OCR token (1) |
 | Section 283 | 108 | 3 | common OCR token (1) |
+| Section 289 | 109 | 3 | common OCR token (1) |
+| Section 291 | 111 | 3 | common OCR token (1) |
 | Section 294 | 111 | 3 | common OCR token (1) |
 | Section 300 | 114 | 3 | common OCR token (1) |
 | Section 301 | 114 | 3 | common OCR token (1) |
 | Section 303 | 115 | 3 | common OCR token (1) |
+| Section 313 | 118 | 3 | common OCR token (1) |
 | Section 318 | 121 | 3 | common OCR token (1) |
-| Section 342 | 130 | 3 | common OCR token (1) |
+| Section 332 | 126 | 3 | common OCR token (1) |
+| Section 333 | 126 | 3 | common OCR token (1) |
+| Section 340 | 129 | 3 | common OCR token (1) |
+| Section 341 | 129 | 3 | common OCR token (1) |
 | Section 348 | 132 | 3 | common OCR token (1) |
 | Section 354 | 134 | 3 | bracketed letter in word (1) |
 | Section 363 | 136 | 3 | joined words (1) |
 | Section 366 | 137 | 3 | common OCR token (1) |
+| Section 372 | 140 | 3 | common OCR token (1) |
 | Section 380 | 142 | 3 | common OCR token (1) |
+| Section 394 | 147 | 3 | common OCR token (1) |
+| Section 395 | 147 | 3 | joined words (1) |
 | Section 402 | 149 | 3 | common OCR token (1) |
+| Section 410 | 153 | 3 | common OCR token (1) |
 | Section 425 | 159 | 3 | common OCR token (1) |
-| Section 427 | 160 | 3 | common OCR token (1) |
 | Section 435 | 162 | 3 | common OCR token (1) |
 | Section 437 | 163 | 3 | common OCR token (1) |
 | Section 446 | 167 | 3 | common OCR token (1) |
 | Section 447 | 167 | 3 | common OCR token (1) |
 | Section 448 | 167 | 3 | common OCR token (1) |
-| Section 451 | 169 | 3 | common OCR token (1) |
 | Section 453 | 169 | 3 | common OCR token (1) |
+| Section 495 | 186 | 3 | common OCR token (1) |
+| Section 497 | 186 | 3 | common OCR token (1) |
 | Section 499 | 186 | 3 | common OCR token (1) |
+| Section 509 | 189 | 3 | joined words (1) |
 | Section 513 | 190 | 3 | common OCR token (1) |
 | Section 454 | 169 | 2 | possible missing sentence break (1) |

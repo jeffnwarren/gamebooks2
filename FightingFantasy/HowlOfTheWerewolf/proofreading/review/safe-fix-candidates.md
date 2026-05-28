@@ -60,7 +60,7 @@ These are exact OCR-token candidates only. They intentionally exclude section-nu
 ### vour -> your
 
 - Section 3, PDF page 9 (1): Inexplicably, something starts to claw at you inside vour chest - at Jeast that's what if Feels like. You cry out in pain as you double up, but the cry that
-- Section 196, PDF page 76 (1): WEREWARG SKILL? STAMINA S W the Werewarg wounds you more than twice, add 1 © ® vour cHance score. If you kill the undead horror turn to 387
+- Section 196, PDF page 76 (1): ther WEREWARG SKILL? STAMINA S W the Werewarg wounds you more than twice, add 1 vour cHance score. If you kill the undead horror turn to 387
 - Section 229, PDF page 88 (1): from its back. The beast dies ssuing one last howl as its limp body slides olf vour blade. Your attention immediately turns to the wretched wooadsman, who lies gome feet from you wher
 - Section 293, PDF page 111 (1): ike walking through a clinging swamp.A bloated maggot rolls over and bumps into vour leg, making you jump, but the fly jarvae do not altack. They are only interested m consuming dead '
 - Section 402, PDF page 149 (1): may also use the dagger in combat if you wish but because it is not as long as vour sword, nor balanced in the same way, if you do 7) so you must fight with your Attack Strength reduc
@@ -69,8 +69,8 @@ These are exact OCR-token candidates only. They intentionally exclude section-nu
 ### poimts -> points
 
 - Introduction page 4, PDF page 4 (1): ns box of your Adventure Sheet. Each Ome you eat a meal you may restore up te 4 poimts of STAMINA, but you must remember to deduct 1 Meal fom your remaining Provisions. 'You may stop and
-- Section 218, PDF page 84 (1): tack Strength by a point). If you are able to reduce the sprite's STAMINAa to 2 poimts or less, turn at once to 247
-- Section 246, PDF page 94 (1): otal as normal. If you win an Attack Round, however, you do not deduct sTaMINaA poimts as you would against a conventional enemy. Instead if you win two Attack Rounds in a row or, failin
+- Section 218, PDF page 84 (1): ttack Strength by a point). If you are able to reduce the sprite's STAMINA to 2 poimts or less, turn at once to 247
+- Section 246, PDF page 94 (1): total as normal. If you win an Attack Round, however, you do not deduct STAMINA poimts as you would against a conventional enemy. Instead if you win two Attack Rounds in a row or, failin
 
 ### AHtack -> Attack
 
@@ -262,7 +262,7 @@ These are exact OCR-token candidates only. They intentionally exclude section-nu
 
 ### would you preter to -> would you prefer to
 
-- Section 6, PDF page 10 (1): you want to spend what remains of the night at The Gibbet Tree (hum to 131), or would you preter to risk a night out on the moors under the stars turn to 466)?
+- Section 6, PDF page 10 (1): ou want to spend what remains of the night at The Gibbet Tree (turn to 131), or would you preter to risk a night out on the moors under the stars turn to 466)?
 
 ### zoobs -> roots
 
