@@ -50,7 +50,18 @@ _Last updated: 2026-05-28_
     Fixed those plus **two genuine graph bugs** the `oo`→`0` collapse had masked:
     §124 `2oo`/`2jt` → choices **[200, 231]** (was [20]; §200 is the Wraith fight, §231 the
     no-Magic-Sword branch) and §237 `4oo` → **[400]** (was [40]). Not worth porting the full
-    toolchain for so few fixes. **Sword not yet profiled.**
+    toolchain for so few fixes.
+  - _Sword status (2026-05-28):_ **not ready for cosmetic fixes — needs foundational
+    work first.** 117 of 400 sections have no OCR text (`ocrSource: "missing"`), and
+    since `merge-ocr-data.py` derives choices from text, the graph is barely built:
+    only **2 sections reachable** from §1 (§297, the only hop, is itself empty), 215
+    sections have no stored choices, and 116 have turn-targets not in their choices.
+    This is roughly where Howl was before its OCR-recovery pass. Prerequisites, in order:
+    (1) complete OCR for the 117 missing sections (Howl-style targeted manual slices or
+    re-OCR), (2) re-run `merge-ocr-data.py` to rebuild choices from the completed text,
+    (3) add a `check-data.js` + graph QA, then (4) the cosmetic turn-ref/stat/glyph fixers
+    become applicable. A turn-ref probe already finds ~60 safe rewrites once the graph is
+    trustworthy.
 - **CI / commit hook** to run `npm run check` automatically.
 
 ### 3. Known TODO
