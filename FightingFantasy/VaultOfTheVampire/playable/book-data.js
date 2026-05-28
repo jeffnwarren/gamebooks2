@@ -228,7 +228,7 @@ window.GAMEBOOK_DATA = {
         125,
         224
       ],
-      "text": "The Major Thassaloss is the most powerful of all the Count's guardians. When you fight it, in each Attack Round you must roll one die in addition to normal combat dice-rolls. If the roll is 1-5, a green tay of intense cold from the eye-sockets of the monster freezes you and you lose 1 STAMINA point Only if you roll 6 will you be able to evade this ray This happens, no matter who has the higher Attack Strength in the Attack Round, so the Thassaloss is a formidable enemy! MAJOR THASSALOSS sxKILE 10 STAMINA 15 If at any time you wish to cast a Shatter spell (and can do so), turn to 10g. If, at any time, you wish to cast a Jandor's Bolt spell (and can do so), turn to 125 If you win, turn to 224",
+      "text": "The Major Thassaloss is the most powerful of all the Count's guardians. When you fight it, in each Attack Round you must roll one die in addition to normal combat dice-rolls. If the roll is 1-5, a green tay of intense cold from the eye-sockets of the monster freezes you and you lose 1 STAMINA point Only if you roll 6 will you be able to evade this ray This happens, no matter who has the higher Attack Strength in the Attack Round, so the Thassaloss is a formidable enemy! MAJOR THASSALOSS sxKILE 10 STAMINA 15 If at any time you wish to cast a Shatter spell (and can do so), turn to 109. If, at any time, you wish to cast a Jandor's Bolt spell (and can do so), turn to 125 If you win, turn to 224",
       "ocrSource": "tesseract"
     },
     "23": {
@@ -1032,7 +1032,7 @@ window.GAMEBOOK_DATA = {
         18,
         2
       ],
-      "text": "Fight the two wolves one at a time in the doorway SKILL STAMINA First WOLF 6 5 Second WOLF 7 6 If you win, you search around but find nothing valuable. Now will you Head for the Crypt? Turn to 90 Open the southern doors in the courtyard? Turn to 18 Open the brass doors to the north? Turn to 2 SS ee -- Aa a 4g a DS, ey atige PSB Lie © jini pang Met athe. Lures taal ites fide",
+      "text": "Fight the two wolves one at a time in the doorway SKILL STAMINA First WOLF 6 5 Second WOLF 7 6 If you win, you search around but find nothing valuable. Now will you Head for the Crypt? Turn to 90 Open the southern doors in the courtyard? Turn to 18 Open the brass doors to the north? Turn to 2 SS ee -- Aa a 4g a DS, ey atige PSB Lie jini pang Met athe. Lures taal ites fide",
       "ocrSource": "tesseract"
     },
     "104": {
@@ -1239,9 +1239,10 @@ window.GAMEBOOK_DATA = {
       "number": 124,
       "page": 46,
       "choices": [
-        20
+        200,
+        231
       ],
-      "text": "The Wmith skikes atyou\nwith its chilling ralons. Do\nyou\nhave a Magic Sword? If you do, turn\nto 2oo. If\nyou dorit, tum to 2jt.",
+      "text": "The Wmith skikes atyou\nwith its chilling ralons. Do\nyou\nhave a Magic Sword? If you do, turn\nto 200. If\nyou dorit, turn to 231.",
       "ocrSource": "embedded-fallback"
     },
     "125": {
@@ -1517,7 +1518,7 @@ window.GAMEBOOK_DATA = {
         302,
         244
       ],
-      "text": "The Animated Armour advances upon you and while the cleaver-like bardiche blade is rusted, it still looks sharp enough to cause an unpleasant wound! ANIMATED ARMOUR SKILL8 5TAMINAQ lf you win, there is nothing of value or interest here - all is rusted and useless. You can try the door on the east side across the balcony (turn to 302) or the one at the far southern end of the balcony (turn to 244",
+      "text": "The Animated Armour advances upon you and while the cleaver-like bardiche blade is rusted, it still looks sharp enough to cause an unpleasant wound! ANIMATED ARMOUR SKILL 8 5TAMINAQ lf you win, there is nothing of value or interest here - all is rusted and useless. You can try the door on the east side across the balcony (turn to 302) or the one at the far southern end of the balcony (turn to 244",
       "ocrSource": "tesseract"
     },
     "154": {
@@ -2324,9 +2325,9 @@ window.GAMEBOOK_DATA = {
       "number": 237,
       "page": 75,
       "choices": [
-        40
+        400
       ],
-      "text": "Seeing that you are growing weak, little Nastassia pluckily picks up a dagger from a nearby table and comes to your aid. She will fight on your side with a SKILL of 6 You are now in a three-way fight. In each Attack Round, roll dice for all three fighters (yourself Katarina, Nastassia) to see who has the highest Attack Strength; this will be the combatant to get in the effective, damaging blow in that Attack Round Katarina will ignore Nastassia; she will continue to strike at you in order to finish you off first! If you win, turn to 4oo !",
+      "text": "Seeing that you are growing weak, little Nastassia pluckily picks up a dagger from a nearby table and comes to your aid. She will fight on your side with a SKILL of 6 You are now in a three-way fight. In each Attack Round, roll dice for all three fighters (yourself Katarina, Nastassia) to see who has the highest Attack Strength; this will be the combatant to get in the effective, damaging blow in that Attack Round Katarina will ignore Nastassia; she will continue to strike at you in order to finish you off first! If you win, turn to 400 !",
       "ocrSource": "tesseract"
     },
     "238": {
@@ -2369,7 +2370,7 @@ window.GAMEBOOK_DATA = {
       "choices": [
         55
       ],
-      "text": "You open the door, and a brilliant searing flash of light and heat injures you. Lose 4 STAMINA points and you are also partially blinded. Advancing on you is a four-armed skeletal figure with a scythe, its green eye-sockets glowing eerily in the darkness You have no time to run, and you must subtract 2 from your SKILL when fighting this monster be- cause of your half-blinded state In each Attack Round, you must roll one die in addition to the usual two combat dice. If this die-roll results in 1-3, the Minor Thassaloss will strike you with a chilling green ray from its eye-sockets, caus- ing 1 point of damage to your STAMINA. If the die-roll is 4-6, you manage to dodge the ray. The Minor Thassaloss can cause this freezing damage even when it has the lower Attack Strength in an Attack Round, making it a dangerous enemy! MINOR THASSALOSS skitL8 STAMINA11 If you win, turn to 55",
+      "text": "You open the door, and a brilliant searing flash of light and heat injures you. Lose 4 STAMINA points and you are also partially blinded. Advancing on you is a four-armed skeletal figure with a scythe, its green eye-sockets glowing eerily in the darkness You have no time to run, and you must subtract 2 from your SKILL when fighting this monster be- cause of your half-blinded state In each Attack Round, you must roll one die in addition to the usual two combat dice. If this die-roll results in 1-3, the Minor Thassaloss will strike you with a chilling green ray from its eye-sockets, caus- ing 1 point of damage to your STAMINA. If the die-roll is 4-6, you manage to dodge the ray. The Minor Thassaloss can cause this freezing damage even when it has the lower Attack Strength in an Attack Round, making it a dangerous enemy! MINOR THASSALOSS skitL8 STAMINA 11 If you win, turn to 55",
       "ocrSource": "tesseract"
     },
     "242": {
@@ -2386,7 +2387,7 @@ window.GAMEBOOK_DATA = {
         2,
         18
       ],
-      "text": "You abandon your attempt to get into the Crypt You see a flare of light from under the brass doors to the north; you could either investigate these doors turn to 2) or run to the south door and open that, if you haven't already done so (tur to 18",
+      "text": "You abandon your attempt to get into the Crypt You see a flare of light from under the brass doors to the north; you could either investigate these doors turn to 2) or run to the south door and open that, if you haven't already done so (turn to 18",
       "ocrSource": "tesseract"
     },
     "244": {
@@ -2666,7 +2667,7 @@ window.GAMEBOOK_DATA = {
         24,
         378
       ],
-      "text": "The fiend lunges at your throat and you hurl your- self sideways away from it; but the carriage door bursts open and you are flung out. Lose 2 STAMINA points caused by the bruising fall as you roll over and over, the laughter of the ghostly figure in the ' distance ringing in your ears. Now you must Test - your Luck. If you are Lucky, turn to 24. If you are Unlucky, turn to 37e",
+      "text": "The fiend lunges at your throat and you hurl your- self sideways away from it; but the carriage door bursts open and you are flung out. Lose 2 STAMINA points caused by the bruising fall as you roll over and over, the laughter of the ghostly figure in the ' distance ringing in your ears. Now you must Test - your Luck. If you are Lucky, turn to 24. If you are Unlucky, turn to 378",
       "ocrSource": "tesseract"
     },
     "273": {
@@ -2790,7 +2791,7 @@ window.GAMEBOOK_DATA = {
         383,
         236
       ],
-      "text": "i Roll two dice and add 2 to the total. If the result is less than or equal to your SKILL, you can get away tur to 383. If the total is higher than your SKILL you will have to fight after all, so turn to 236",
+      "text": "i Roll two dice and add 2 to the total. If the result is less than or equal to your SKILL, you can get away turn to 383. If the total is higher than your SKILL you will have to fight after all, so turn to 236",
       "ocrSource": "tesseract"
     },
     "286": {
@@ -3149,7 +3150,7 @@ window.GAMEBOOK_DATA = {
         379,
         21
       ],
-      "text": "The young man grabs a scimitar from the wall and fights; he is a better swordsman than you had expected! a WILHELM HEYDRICH sxkILL8 STAMINA7 If you win, did you choose to attack Wilhelm? If you did, turn to 379. If he attacked you first, turn to 21",
+      "text": "The young man grabs a scimitar from the wall and fights; he is a better swordsman than you had expected! a WILHELM HEYDRICH sxkILL8 STAMINA 7 If you win, did you choose to attack Wilhelm? If you did, turn to 379. If he attacked you first, turn to 21",
       "ocrSource": "tesseract"
     },
     "323": {

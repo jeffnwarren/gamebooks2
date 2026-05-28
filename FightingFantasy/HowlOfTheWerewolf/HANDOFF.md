@@ -45,6 +45,12 @@ _Last updated: 2026-05-28_
   unsatisfiable codeword gates (stronger than reachability).
 - **Port the fix/report tooling to Vault & Sword** — they still lack `report:review`,
   `fix:*`, and `export:proofreading`. Factor shared logic into the top-level `tools/`.
+  - _Vault status (2026-05-28):_ profiled and hand-cleaned — it OCR'd much cleaner than
+    Howl (only ~6 garbled turn-refs, 3 stat splits, 0 label garbles, 1 stray glyph).
+    Fixed those plus **two genuine graph bugs** the `oo`→`0` collapse had masked:
+    §124 `2oo`/`2jt` → choices **[200, 231]** (was [20]; §200 is the Wraith fight, §231 the
+    no-Magic-Sword branch) and §237 `4oo` → **[400]** (was [40]). Not worth porting the full
+    toolchain for so few fixes. **Sword not yet profiled.**
 - **CI / commit hook** to run `npm run check` automatically.
 
 ### 3. Known TODO
