@@ -6,10 +6,10 @@ const expectedSectionsByTitle = new Map([
 ]);
 
 const turnWordsPattern = [
-  "turn", "tur", "tum", "tarn", "tuin", "tuln", "tim", "timi", "tumi", "tium", "tiurn",
-  "tucn", "furn", "fum", "fumi", "faim", "fiumn", "hrm", "rurn", "burn", "bum", "bun", "barn",
+  "turn", "tur", "tum", "tarn", "tuin", "tuln", "tim", "timi", "tumi", "tuum", "tium", "tiurn",
+  "tucn", "furn", "fum", "fumi", "faim", "fim", "fiumn", "farm", "hrm", "rurn", "burn", "bum", "bun", "barn",
   "hurn", "hun", "hum", "humm", "hirn", "hon", "harn", "ham", "eum", "tun", "fiirn",
-  "fom", "fuorn", "tuo", "rehurn", "tetum", "him", "hur", "fur", "go", "return", "continue"
+  "tin", "fom", "fuorn", "tuo", "rehurn", "tetum", "him", "hur", "fur", "go", "return", "continue"
 ].join("|");
 const turnConnectorPattern = "immediately\\s+to|at\\s+once\\s+to|at\\s+ance\\s+to|al\\s+once\\s+to|back\\s+to|to|lo|te|bo|eo|io|10|at|ta|in|tn|y|i|l|fo|fa|paragraph|section";
 const turnTokenPattern = "[0-9OoQIiLlAaEeSsBbGgqQjJzZ$Â§£%(){}.,'\\\"]{1,6}";
@@ -68,7 +68,7 @@ function scanTurnTargets(text, maxSection, currentNumber) {
 }
 
 function endingLike(text) {
-  return /\b(adventure ends|adventure is over|quest ends here|quest has failed|you have failed|you are dead|you die|you have died|you have been killed|you are killed|you pass out|horrible end to your adventure|fate worse than death|met your doom|hollow victory|willing servant always|mindless servant|new master|slay you|barbe-?\s*cued meal|the end|congratulations|you have escaped|start all over again|paragraph with the same number as the one you were last instructed|same number as the one you were last instructed)\b/i.test(String(text || ""));
+  return /\b(adventure ends|advenhure ends|adventure is over|adventure ends here|adventure will end here|adventure are over|quest ends here|quest has failed|you have failed|you are dead|you die|you have died|you have been killed|you are killed|you pass out|horrible end to your adventure|fate worse than death|met your doom|hollow victory|willing servant always|mindless servant|new master|your money and your life|your life and your adventure are over|end your adventure|slay you|barbe-?\s*cued meal|the end|congratulations|you have escaped|start all over again|paragraph with the same number as the one you were last instructed|same number as the one you were last instructed|same number as[^.]{0,120}last[^.]{0,120}instructed)\b/i.test(String(text || ""));
 }
 
 function snippet(text) {

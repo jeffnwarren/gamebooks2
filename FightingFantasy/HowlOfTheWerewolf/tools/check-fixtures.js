@@ -64,8 +64,8 @@ async function runHowl(page) {
   const section186Prompts = await promptTexts(page);
   expect(section186Prompts.includes("Missing Retsis"), "Howl section 186 should check Retsis.");
   expect(section186Prompts.includes("Has Egnarts"), "Howl section 186 should recognize stored Egnarts.");
-  await goto(page, 74, "#codewordPrompts");
-  expect((await promptTexts(page)).includes("Cross Off Nethcir"), "Howl section 74 should prompt Cross Off Nethcir.");
+  await goto(page, 73, "#codewordPrompts");
+  expect((await promptTexts(page)).includes("Cross Off Nethcir"), "Howl section 73 should prompt Cross Off Nethcir.");
   await goto(page, 262, "#codewordPrompts");
   expect((await promptTexts(page)).includes("Missing Stoggam"), "Howl section 262 should check Stoggam.");
   await goto(page, 286, "#codewordPrompts");

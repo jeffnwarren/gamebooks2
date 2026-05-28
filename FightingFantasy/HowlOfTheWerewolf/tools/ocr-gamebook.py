@@ -29,6 +29,7 @@ class OcrLine:
     y1: int
     page: int
     half: str
+    confidence: float
 
 
 def clean_text(value: str) -> str:
@@ -179,6 +180,53 @@ def preprocess(image: Image.Image) -> Image.Image:
     return image
 
 
+def likely_range_text(text: str) -> bool:
+    return bool(re.fullmatch(r"\s*[0-9OIlSBAgq]{1,4}\s*[-:]\s*[0-9OIlSBAgq]{1,4}\s*", clean_line(text)))
+
+
+def text_words(text: str) -> list[str]:
+    return re.findall(r"[A-Za-z]{3,}", clean_line(text))
+
+
+def keep_ocr_line(line: OcrLine, width: int, height: int) -> bool:
+    text = clean_line(line.text)
+    if not text:
+        return False
+
+    if likely_range_text(text) or marker_numbers(line):
+        return True
+
+    words = text_words(text)
+    if len(words) >= 2:
+        return True
+
+    if re.search(r"\b(?:turn|tum|tarn|hurn|hum|burn|skill|stamina|luck|change|codeword)\b", text, re.I):
+        return True
+
+    center = (line.x0 + line.x1) / 2
+    centered = abs(center - (width / 2)) < width * 0.2
+    if centered and line.confidence >= 28 and re.fullmatch(r"[0-9A-Za-z$%(){}!|]{1,4}", text):
+        return True
+
+    textish = len(re.findall(r"[A-Za-z0-9]", text))
+    noisy = len(text) - textish
+    if textish == 0 or noisy > textish:
+        return False
+
+    if line.confidence < 32 and len(words) < 2:
+        return False
+
+    # Page art fragments often OCR as scattered letters across a wide line.
+    if len(words) < 2 and (line.x1 - line.x0) > width * 0.55:
+        return False
+
+    # Bottom dice/footer residue is not useful for section recovery.
+    if line.y0 > height * 0.965 and len(words) < 2:
+        return False
+
+    return True
+
+
 def ocr_image(image: Image.Image, page: int, half: str) -> list[OcrLine]:
     data = pytesseract.image_to_data(
         image,
@@ -210,7 +258,16 @@ def ocr_image(image: Image.Image, page: int, half: str) -> list[OcrLine]:
         tops = [data["top"][idx] for idx in indexes]
         rights = [data["left"][idx] + data["width"][idx] for idx in indexes]
         bottoms = [data["top"][idx] + data["height"][idx] for idx in indexes]
-        lines.append(OcrLine(text, min(lefts), min(tops), max(rights), max(bottoms), page, half))
+        confidences = []
+        for idx in indexes:
+            try:
+                confidence = float(data["conf"][idx])
+            except ValueError:
+                confidence = -1
+            if confidence >= 0:
+                confidences.append(confidence)
+        line_confidence = sum(confidences) / len(confidences) if confidences else 0
+        lines.append(OcrLine(text, min(lefts), min(tops), max(rights), max(bottoms), page, half, line_confidence))
 
     return sorted(lines, key=lambda item: (item.y0, item.x0))
 
@@ -227,13 +284,17 @@ def render_and_ocr() -> list[OcrLine]:
         width, height = image.size
 
         halves = [
-            ("L", image.crop((0, 0, width // 2, height))),
-            ("R", image.crop((width // 2, 0, width, height))),
+            ("L", image.crop((int(width * 0.02), 0, width // 2, int(height * 0.98)))),
+            ("R", image.crop((width // 2, 0, int(width * 0.98), int(height * 0.98)))),
         ]
 
         for half, crop in halves:
             crop = preprocess(crop)
-            lines = ocr_image(crop, page_index, half)
+            lines = [
+                line
+                for line in ocr_image(crop, page_index, half)
+                if keep_ocr_line(line, crop.width, crop.height)
+            ]
             all_lines.extend(lines)
 
         if page_index % 10 == 0:

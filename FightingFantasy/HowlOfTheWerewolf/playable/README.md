@@ -21,17 +21,17 @@ Run `npm run check` from the project root for JavaScript syntax, book-data integ
 
 ## QA status
 
-Current graph QA has no known missing stored choice targets: `scannerFoundUnstoredChoiceTargets` is `0`. Remaining graph warnings are broader review queues: `162` unreachable sections and `67` suspicious non-ending dead ends. These are noisier because they can include conditional, puzzle, codeword, and hidden-number paths.
+Current graph QA has no known missing stored choice targets: `scannerFoundUnstoredChoiceTargets` is `0`. Remaining graph warnings are broader review queues: `139` unreachable sections and `1` suspicious non-ending dead end. These are noisier because they can include conditional, puzzle, codeword, hidden-number paths, and source text with no printed onward turn.
 
 ## TODO
 
-- **Dead ends review**: Continue auditing the 67 suspicious non-ending dead ends to determine if they are legitimate game-over states, conditional paths, puzzle locks, or codeword gates. Update the graph checker with context rules if needed.
+- **Dead ends review**: Review section 386, the only remaining suspicious non-ending dead end, against the source because the printed text appears to have no onward turn.
 
 In this workspace, if Howl's Playwright-based fixture check cannot find dependencies, run checks with Vault's installed modules on `NODE_PATH`:
 
 ```powershell
 $env:NODE_PATH=(Resolve-Path '..\VaultOfTheVampire\node_modules').Path
-npm run check
+npm.cmd run check
 ```
 
 To regenerate `book-data.js` from the PDF, run this from the project root after Tesseract and the Python packages are installed:

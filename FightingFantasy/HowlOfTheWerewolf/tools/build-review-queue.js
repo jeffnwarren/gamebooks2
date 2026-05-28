@@ -279,7 +279,7 @@ function writeReviewQueue(rows, locations, fixes) {
   for (const row of flagged.slice(0, 80)) {
     lines.push(`### ${row.label} | PDF page ${row.pdfPage} | score ${row.score}`);
     lines.push("");
-    lines.push(`Preview: ${row.preview}`);
+    lines.push(`Preview: ${row.preview}`.trimEnd());
     lines.push("");
     lines.push("| Risk | Flag | Count | Examples |");
     lines.push("| --- | --- | ---: | --- |");
@@ -288,7 +288,7 @@ function writeReviewQueue(rows, locations, fixes) {
     }
     lines.push("");
     for (const hit of row.hits.slice(0, 3)) {
-      lines.push(`- ${hit.label}: ${hit.contexts[0] || ""}`);
+      lines.push(`- ${hit.label}: ${hit.contexts[0] || ""}`.trimEnd());
     }
     lines.push("");
   }
@@ -323,7 +323,7 @@ function writeSafeFixes(fixes) {
     lines.push(`### ${fix.from} -> ${fix.to}`);
     lines.push("");
     for (const instance of fix.instances.slice(0, 12)) {
-      lines.push(`- ${instance.label}, PDF page ${instance.pdfPage} (${instance.count}): ${instance.contexts[0] || ""}`);
+      lines.push(`- ${instance.label}, PDF page ${instance.pdfPage} (${instance.count}): ${instance.contexts[0] || ""}`.trimEnd());
     }
     lines.push("");
   }

@@ -14,24 +14,54 @@ ILLUSTRATIONS_DATA = ROOT / "playable" / "illustrations.json"
 FALLBACK_DATA = ROOT / "tools" / "embedded-cache" / "book-data.js"
 MAX_SECTION = 515
 MANUAL_SECTION_SLICES = {
+    5: [(10, 28, 49)],
+    6: [(10, 50, 63), (11, 1, 12)],
     16: [(14, 26, 43)],
     17: [(14, 45, 47)],
     18: [(15, 14, 23)],
+    21: [(16, 23, 59)],
+    22: [(16, 60, 64), (17, 1, 17)],
+    23: [(17, 18, 31)],
+    24: [(17, 35, 43)],
+    32: [(19, 31, 62), (20, 1, 13)],
+    33: [(20, 14, 62)],
+    34: [(21, 14, 30)],
+    35: [(21, 31, 45), (24, 1, 8)],
     36: [(24, 10, 20)],
     37: [(24, 22, 53)],
+    38: [(22, 1, 40)],
     39: [(22, 41, 48)],
+    40: [(22, 49, 63), (23, 1, 6)],
+    41: [(23, 7, 32)],
+    46: [(25, 9, 32)],
+    47: [(25, 33, 53)],
     53: [(28, 8, 18)],
     54: [(28, 19, 55), (29, 3, 15)],
     55: [(29, 17, 27)],
     59: [(30, 43, 55), (31, 3, 18)],
     60: [(31, 20, 39)],
     61: [(31, 41, 47)],
+    64: [(32, 50, 57), (33, 1, 16)],
+    65: [(33, 17, 33)],
+    66: [(33, 35, 43)],
     67: [(33, 45, 55)],
+    68: [(33, 56, 60), (34, 10, 16)],
+    69: [(34, 17, 40)],
     70: [(35, 3, 25)],
     71: [(35, 26, 30), (35, 32, 33)],
     72: [(35, 35, 50)],
-    77: [(37, 21, 24)],
+    73: [(35, 52, 61), (36, 2, 18)],
+    74: [(36, 20, 37)],
+    75: [(36, 39, 57)],
+    76: [(36, 59, 62), (37, 2, 19)],
+    77: [(37, 21, 25)],
     78: [(37, 26, 30)],
+    79: [(37, 37, 52)],
+    80: [(37, 53, 55), (38, 1, 20)],
+    81: [(38, 21, 36)],
+    82: [(38, 37, 48)],
+    83: [(38, 49, 57), (39, 1, 27)],
+    84: [(39, 28, 38)],
     86: [(40, 15, 43), (41, 1, 41)],
     87: [(41, 42, 60)],
     92: [(43, 3, 14)],
@@ -39,7 +69,17 @@ MANUAL_SECTION_SLICES = {
     107: [(48, 55, 60), (49, 2, 21)],
     114: [(52, 3, 26)],
     127: [(56, 42, 53), (57, 2, 11)],
-    132: [(58, 5, 17)],
+    131: [(58, 5, 17)],
+    132: [(58, 19, 23)],
+    133: [(58, 25, 31)],
+    153: [(62, 53, 60), (63, 14, 18)],
+    154: [(63, 20, 43), (64, 2, 7)],
+    169: [(67, 20, 31), (67, 34, 36)],
+    183: [(72, 3, 21), (72, 25, 33)],
+    263: [(99, 38, 42), (100, 2, 15)],
+    277: [(105, 26, 29), (105, 32, 41)],
+    280: [(106, 35, 50), (107, 2, 5)],
+    287: [(108, 60, 64), (109, 2, 8)],
     211: [(82, 41, 56)],
     212: [(82, 58, 64), (83, 2, 4)],
     213: [(83, 6, 13)],
@@ -54,21 +94,33 @@ MANUAL_SECTION_SLICES = {
     328: [(125, 3, 35)],
     329: [(125, 37, 39)],
     330: [(125, 41, 56), (126, 2, 7)],
+    332: [(126, 16, 30), (126, 33, 49)],
+    338: [(129, 6, 19)],
+    341: [(129, 50, 56), (130, 2, 4)],
     344: [(131, 36, 42)],
     345: [(131, 23, 34)],
     346: [(131, 36, 42)],
+    360: [(135, 59, 61), (136, 2, 11)],
     367: [(137, 40, 55)],
+    370: [(139, 25, 56), (140, 1, 23)],
+    399: [(148, 18, 31), (148, 35, 37)],
+    402: [(149, 43, 61), (150, 2, 5)],
     400: [(148, 35, 37)],
     401: [(149, 19, 41)],
     419: [(156, 33, 42)],
     420: [(156, 44, 48)],
     425: [(159, 11, 50)],
+    433: [(161, 43, 63), (162, 2, 10)],
     437: [(163, 13, 27)],
     447: [(167, 46, 51)],
+    448: [(167, 53, 65), (168, 2, 12)],
+    453: [(169, 36, 42)],
     461: [(171, 18, 39)],
     482: [(179, 3, 14)],
     493: [(183, 53, 67), (184, 2, 7)],
     494: [(184, 9, 48)],
+    496: [(185, 13, 41), (186, 2, 12)],
+    497: [(186, 14, 38)],
 }
 
 
@@ -172,9 +224,9 @@ def parse_range_line(line: str) -> tuple[int, int] | None:
 
 
 TURN_WORDS = (
-    "turn|tur|tum|tarn|tuin|tuln|tim|timi|tumi|tium|tiurn|tucn|furn|fum|fumi|"
-    "faim|fiumn|hrm|rurn|burn|bum|bun|barn|hurn|hun|hum|humm|hirn|hon|harn|"
-    "ham|eum|tun|fiirn|fom|fuorn|tuo|rehurn|tetum|him|hur|fur"
+    "turn|tur|tum|tarn|tuin|tuln|tim|timi|tumi|tuum|tium|tiurn|tucn|furn|fum|fumi|"
+    "faim|fim|fiumn|farm|hrm|rurn|burn|bum|bun|barn|hurn|hun|hum|humm|hirn|hon|harn|"
+    "ham|eum|tun|tin|fiirn|fom|fuorn|tuo|rehurn|tetum|him|hur|fur"
 )
 DIRECT_WORDS = "go|return|continue"
 TURN_CONNECTORS = r"immediately\s+to|at\s+once\s+to|at\s+ance\s+to|al\s+once\s+to|back\s+to|to|lo|te|bo|eo|io|10|at|ta|in|tn|y|i|l|fo|fa"
@@ -228,6 +280,11 @@ def marker_number(
     if not tokens or len(tokens) > 2:
         return None
     if len(tokens) == 2 and len(tokens[0]) > 1:
+        trailing = parse_loose_number(tokens[1])
+        prefix_letters = re.sub(r"[^A-Za-z]", "", tokens[0])
+        prefix_is_junk = len(prefix_letters) <= 2 and not re.search(r"\d", tokens[0])
+        if trailing == expected and prefix_is_junk:
+            return expected
         return None
 
     search_start = expected
@@ -271,6 +328,8 @@ def is_artifact_line(line: str) -> bool:
     text = line.strip()
     if not text:
         return True
+    if re.search(rf"\b(?:{TURN_WORDS})\b", text, re.I) and possible_target_fragment(text):
+        return False
     if re.fullmatch(
         rf"(?:(?:{TURN_WORDS})\s+)?(?:{TURN_CONNECTORS})\s*[\w$%(){{}}.,'\"]{{1,6}}",
         text,
@@ -290,7 +349,7 @@ def is_artifact_line(line: str) -> bool:
     words = re.findall(r"[A-Za-z]{3,}", text)
     if not words and re.fullmatch(r"[-=_ .,'\"|\\/()A-Za-z0-9$%{}&]+", text) and len(text) <= 32:
         return True
-    if re.fullmatch(r"(?:[A-Za-z]{1,2}|\d|[;:,.=+_|\-/\\ ]){1,12}", text):
+    if not words and re.fullmatch(r"(?:[A-Za-z]{1,2}|\d|[-;:,.=+_|/\\ ]){1,12}", text):
         return True
     return False
 
@@ -339,7 +398,12 @@ def clean_section_text(lines: list[tuple[int, str]]) -> str:
         " hirn to": "turn to",
         " hon to": "turn to",
         " hurn to": "turn to",
+        " farm to": " turn to",
+        " tin to": " turn to",
         " turn at once bo": " turn at once to",
+        " turn atonce to": " turn at once to",
+        " turn atonce": " turn at once",
+        " turn toa ": " turn to ",
         " Tam to": "Turn to",
         " Tum to": "Turn to",
         "andturn": "and turn",
@@ -352,11 +416,19 @@ def clean_section_text(lines: list[tuple[int, str]]) -> str:
         "turn tog7o": "turn to 270",
         "to gog": "to 309",
         "turn to 4843": "turn to 484",
+        "turn to 4979": "turn to 379",
     }
     for old, new in replacements.items():
         value = value.replace(old, new)
     value = re.sub(r"\bturn-\s*ing\s+(?=to\b)", "turn ", value, flags=re.I)
     value = re.sub(r"\bturning\s+(?=to\b)", "turn ", value, flags=re.I)
+    value = re.sub(r"\b(?:fim|tum)\s+to(?=\b)", "turn to", value, flags=re.I)
+    value = re.sub(r"\bturn\s+to\s+@(?=\d)", "turn to 6", value, flags=re.I)
+    value = re.sub(r"\bturn\s+to\s+éa\b", "turn to 62", value, flags=re.I)
+    value = re.sub(r"\bturn\s+to\s+son\b", "turn to 501", value, flags=re.I)
+    value = re.sub(r"\bfiumn\.?\s+bo\s+Fy\b", "turn to 7", value, flags=re.I)
+    value = re.sub(r"\bturn\s+toa\b", "turn to", value, flags=re.I)
+    value = re.sub(r"\bturn\s+at\s+orice\b", "turn at once", value, flags=re.I)
     value = re.sub(r"([a-z])(?=turn(?:ing)?\s+(?:to|lo|te|io|10|ta|at)\b)", r"\1 ", value)
     return value.strip()
 
@@ -381,14 +453,15 @@ def has_turn_target(line: str) -> bool:
 def ending_like(text: str) -> bool:
     return bool(
         re.search(
-            r"\b(adventure ends|adventure is over|adventure ends here|adventure will end here|"
-            r"quest ends here|quest has failed|you have failed|you are dead|you die|"
+            r"\b(adventure ends|advenhure ends|adventure is over|adventure ends here|adventure will end here|"
+            r"adventure are over|quest ends here|quest has failed|you have failed|you are dead|you die|"
             r"you have died|you have been killed|you are killed|you pass out|"
             r"horrible end to your adventure|fate worse than death|met your doom|"
             r"hollow victory|willing servant always|mindless servant|new master|"
-            r"slay you|barbe-?\s*cued meal|the end|congratulations|you have escaped|"
+            r"your money and your life|your life and your adventure are over|"
+            r"end your adventure|slay you|barbe-?\s*cued meal|the end|congratulations|you have escaped|"
             r"start all over again|paragraph with the same number as the one you were last instructed|"
-            r"same number as the one you were last instructed)\b",
+            r"same number as the one you were last instructed|same number as[^.]{0,120}last[^.]{0,120}instructed)\b",
             text,
             re.I,
         )
@@ -412,6 +485,26 @@ def looks_like_start(line: str) -> bool:
             re.I,
         )
     )
+
+
+def next_content_line(page_chunks: list[str], page_index: int, line_index: int) -> str:
+    for next_page_index in range(page_index, min(len(page_chunks), page_index + 2)):
+        page_lines = page_chunks[next_page_index].splitlines()
+        start = line_index + 1 if next_page_index == page_index else 0
+        for raw in page_lines[start:]:
+            line = raw.strip()
+            if line and not is_artifact_line(line):
+                return line
+    return ""
+
+
+def marker_context_is_valid(
+    page_chunks: list[str],
+    page_index: int,
+    line_index: int,
+) -> bool:
+    next_line = next_content_line(page_chunks, page_index, line_index)
+    return not next_line or looks_like_start(next_line)
 
 
 def find_section_boundary(lines: list[tuple[int, str]]) -> int:
@@ -548,7 +641,8 @@ def resplit_sections_from_pages(path: Path) -> dict[int, dict]:
     previous_line = ""
 
     for page_index, chunk in enumerate(page_chunks, start=1):
-        for raw in chunk.splitlines():
+        page_lines = chunk.splitlines()
+        for raw_index, raw in enumerate(page_lines):
             line = raw.strip()
             if not line:
                 continue
@@ -572,6 +666,8 @@ def resplit_sections_from_pages(path: Path) -> dict[int, dict]:
                 active_range = None
 
             matched = marker_number(line, expected, active_range, previous_line)
+            if matched and not marker_context_is_valid(page_chunks, page_index - 1, raw_index):
+                matched = None
             if matched:
                 if current_number is not None:
                     add_section_run(sections, current_number, matched - 1, current_page, current_lines)
@@ -691,8 +787,10 @@ def illustrations_from_file(path: Path) -> dict:
 def main() -> int:
     data = load_js_data(OCR_DATA)
     fallback = load_js_data(FALLBACK_DATA) if FALLBACK_DATA.exists() else {"sections": {}}
+    previous_sections = data.get("sections", {}) if isinstance(data.get("sections"), dict) else {}
     sections = resplit_sections_from_pages(OCR_PAGES)
     fallback_count = 0
+    previous_fallback_count = 0
 
     for number in range(1, MAX_SECTION + 1):
         section = sections[number]
@@ -704,6 +802,14 @@ def main() -> int:
             section["page"] = fallback_section.get("page", section["page"])
             section["ocrSource"] = "embedded-fallback"
             fallback_count += 1
+            continue
+
+        previous_section = previous_sections.get(str(number), {})
+        if previous_section.get("text", "").strip():
+            section["text"] = previous_section["text"]
+            section["page"] = previous_section.get("page", section["page"])
+            section["ocrSource"] = "previous-data-fallback"
+            previous_fallback_count += 1
 
     for number in range(1, MAX_SECTION + 1):
         section = sections[number]
@@ -712,6 +818,7 @@ def main() -> int:
 
     total_missing = sum(1 for section in sections.values() if not section.get("text", "").strip())
     total_fallback = sum(1 for section in sections.values() if section.get("ocrSource") == "embedded-fallback")
+    total_previous_fallback = sum(1 for section in sections.values() if section.get("ocrSource") == "previous-data-fallback")
     total_manual = sum(1 for section in sections.values() if section.get("ocrSource") == "manual-slice")
 
     data.update(
@@ -727,6 +834,7 @@ def main() -> int:
                 "Primary text was generated by fresh Tesseract OCR and re-split for Howl's 515-section structure. "
                 f"{total_manual} sections use targeted manual OCR slices; "
                 f"{total_fallback} sections use the PDF's embedded OCR fallback; "
+                f"{total_previous_fallback} sections retain previous OCR text as a fallback; "
                 f"{total_missing} sections still lack recovered text."
             ),
         }
@@ -737,6 +845,7 @@ def main() -> int:
         encoding="utf-8",
     )
     print(f"Fallback sections filled: {fallback_count}")
+    print(f"Previous-data fallback sections filled: {previous_fallback_count}")
     print(f"Manual slices applied: {total_manual}")
     print(f"Sections still missing: {total_missing}/{MAX_SECTION}")
     print(f"Intro characters: {len(data['intro']['text'])}")

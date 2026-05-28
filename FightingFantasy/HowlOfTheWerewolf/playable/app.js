@@ -20,7 +20,7 @@
     if (!existing || section.number < existing) firstSectionForPage.set(section.page, section.number);
   }
   const storageKey = "howl-of-the-werewolf-play-state";
-  const turnWordsPattern = "turn|tur|tum|tarn|tuin|tuln|tim|timi|tumi|tium|tiurn|tucn|furn|fum|fumi|faim|fiumn|hrm|rurn|burn|bum|bun|barn|hurn|hun|hum|humm|hirn|hon|harn|ham|eum|tun|fiirn|fom|fuorn|tuo|rehurn|tetum|him|hur|fur";
+  const turnWordsPattern = "turn|tur|tum|tarn|tuin|tuln|tim|timi|tumi|tuum|tium|tiurn|tucn|furn|fum|fumi|faim|fim|fiumn|farm|hrm|rurn|burn|bum|bun|barn|hurn|hun|hum|humm|hirn|hon|harn|ham|eum|tun|tin|fiirn|fom|fuorn|tuo|rehurn|tetum|him|hur|fur";
   const directWordsPattern = "go|return|continue";
   const turnConnectorPattern = "immediately\\s+to|at\\s+once\\s+to|at\\s+ance\\s+to|al\\s+once\\s+to|back\\s+to|to|lo|te|bo|eo|io|10|at|ta|in|tn|y|i|l|fo|fa";
   const turnTokenPattern = "[0-9OoQIiLlAaEeSsBbGgqQjJzZ$§£%(){}.,'\\\"]{1,6}";
