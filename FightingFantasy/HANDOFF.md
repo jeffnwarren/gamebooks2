@@ -113,19 +113,19 @@ directly determines how complete the choice graph is.**
   hand-edited **directly into `book-data.js`** and are **not** encoded in `merge-ocr-data.py`'s
   overrides. Re-running the OCR merge would silently wipe them. Patch `book-data.js` in place (or
   port the fixes into the merge overrides first) rather than regenerating.
-- **Review page for the proofreading pass (built this session).**
-  [`tools/build-review.js`](VaultOfTheVampire/tools/build-review.js) (`npm run build:review`)
-  renders [`playable/review.html`](VaultOfTheVampire/playable/review.html): a static, printable,
-  single-scroll read-through of intro + background + all 400 sections, illustrations at their
-  curated passages, with auto-flags for the things a human should eyeball — choice→prose mismatches
-  (misroute risk), stray OCR glyphs, and unbalanced parens. Current state: **76 sections flagged,
-  only 1 choice→prose mismatch (§50)**, and that one is confirmed cosmetic: prose reads "turn to
-  **gq**" (OCR garble for 99), but choice 99 is correct (§99 is the FAITH-success branch to §326).
+- **Proofreading pass happens in the playable reader.** The standalone `review.html` (and its
+  `build-review.js` generator / `build:review` script) was retired — the game format reads better.
+  Open [`playable/index.html`](VaultOfTheVampire/playable/index.html) and use the new **Prev/Next**
+  nav buttons to step straight through intro → background → §1…§400 in order, with **Show PDF**
+  toggled on to compare each section against the source and hand-edit cosmetic prose fixes directly
+  in `book-data.js`. (The misroute audit that `review.html` surfaced is also covered by
+  `npm run report:misroutes`; last run flagged only §50, a confirmed-cosmetic OCR garble — prose
+  reads "turn to **gq**" for 99, but the choice target 99 is correct.)
 - **Vault is done** for the digitization goals: clean integrity, fully connected, provably
   completable, illustrations placed (and now actually wired into the reader). **Remaining is the
-  human pass:** read `review.html` against the source PDF and apply cosmetic prose fixes (~40–80
-  garbled OCR tails; the easy first one is §50 `gq`→`99`). Optional: an item-economy winnability
-  check (current validator is optimistic).
+  human pass:** step through the reader (Prev/Next + Show PDF) against the source PDF and apply
+  cosmetic prose fixes (~40–80 garbled OCR tails; the easy first one is §50 `gq`→`99`). Optional:
+  an item-economy winnability check (current validator is optimistic).
 
 ### Sword of the Samurai — needs foundational OCR work first
 - **Not ready for cosmetic fixes.** 117 of 400 sections have no OCR text (`ocrSource: "missing"`),
@@ -163,7 +163,6 @@ directly determines how complete the choice graph is.**
 | `npm run report:orphans` | Orphan reconciliation: islands, gate hubs, fragile targets — Vault |
 | `npm run report:misroutes` | Flag choices that point to a valid-but-wrong section (prose mismatch) — Vault |
 | `npm run embed:illustration-sections` | Inject curated illustration `section`s from `illustrations.json` into `book-data.js` (no regen) — Vault |
-| `npm run build:review` | Build `playable/review.html`, the printable proofreading read-through with auto-flags — Vault |
 | `npm run check:winnable` | Prove a §1→victory path through the computed gates — Vault |
 | `npm run check` | Full QA suite (syntax, data, intro, OCR smoke, fixtures, winnable) — Howl, Vault |
 

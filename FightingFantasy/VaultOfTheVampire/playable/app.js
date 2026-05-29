@@ -27,6 +27,12 @@
     const existing = firstSectionForPage.get(section.page);
     if (!existing || section.number < existing) firstSectionForPage.set(section.page, section.number);
   }
+  const orderedSectionNumbers = Object.values(sections)
+    .map((section) => section && section.number)
+    .filter((number) => Number.isInteger(number))
+    .sort((a, b) => a - b);
+  // Straight-through reading order for proofreading: intro, background, then 1..400.
+  const readingOrder = ["intro", "background", ...orderedSectionNumbers];
   const storageKey = "vault-of-the-vampire-play-state";
   const defaultState = {
     current: "intro",
@@ -54,6 +60,8 @@
   const refs = {
     introBtn: document.getElementById("introBtn"),
     backgroundBtn: document.getElementById("backgroundBtn"),
+    prevBtn: document.getElementById("prevBtn"),
+    nextBtn: document.getElementById("nextBtn"),
     backBtn: document.getElementById("backBtn"),
     forwardBtn: document.getElementById("forwardBtn"),
     bookmarkBtn: document.getElementById("bookmarkBtn"),
@@ -168,6 +176,14 @@
       return;
     }
     gotoSection(location, pushHistory);
+  }
+
+  function stepReading(delta) {
+    const index = readingOrder.indexOf(state.current);
+    if (index === -1) return;
+    const target = readingOrder[index + delta];
+    if (target === undefined) return;
+    gotoLocation(target);
   }
 
   function parseLocationInput(value, fallback = state.current) {
@@ -404,11 +420,9 @@
     "During your adventure",
     "Such items",
     "To begin with",
-    "An option",
-    "First record",
-    "The scores",
-    "The sequence",
-    "Sometimes",
+    "Enter the creature's",
+    "Click Attack Round",
+    "Keep clicking Attack Round",
     "At various times",
     "The procedure",
     "Each time",
@@ -959,6 +973,9 @@
   }
 
   function renderButtons() {
+    const readingIndex = readingOrder.indexOf(state.current);
+    refs.prevBtn.disabled = readingIndex <= 0;
+    refs.nextBtn.disabled = readingIndex === -1 || readingIndex >= readingOrder.length - 1;
     refs.backBtn.disabled = state.back.length === 0;
     refs.forwardBtn.disabled = state.forward.length === 0;
     refs.bookmarkBtn.disabled = !Number.isInteger(state.current);
@@ -1004,6 +1021,8 @@
 
   refs.introBtn.addEventListener("click", () => gotoIntro());
   refs.backgroundBtn.addEventListener("click", () => gotoBackground());
+  refs.prevBtn.addEventListener("click", () => stepReading(-1));
+  refs.nextBtn.addEventListener("click", () => stepReading(1));
 
   refs.backBtn.addEventListener("click", () => {
     const previous = state.back.pop();
@@ -1104,7 +1123,6 @@
       faithInitial: faith,
       faith
     };
-    refs.diceOutput.value = `Skill ${skill}, Stamina ${stamina}, Luck ${luck}, Faith ${faith}`;
     saveState();
     renderSheet();
   });

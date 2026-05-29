@@ -15,7 +15,6 @@
     "report:illustrations": "python ../tools/detect-full-page-illustrations.py .",
     "build:illustrations": "python ../tools/detect-full-page-illustrations.py . --write --extract",
     "embed:illustration-sections": "node tools/embed-illustration-sections.js",
-    "build:review": "node tools/build-review.js",
     "report:ocr": "node tools/report-ocr.js"
   },
   "devDependencies": {
