@@ -183,7 +183,7 @@ islands.sort((a, b) => a.members[0] - b.members[0]);
 // graph cannot represent (cipher answers, "paragraph = number on the key", etc.).
 // Their targets can legitimately be orphans-by-design, so flag the hubs for review.
 const gateLanguage =
-  /\b(number on the key|paragraph whose number|number referred to|whispering the name|decode|transcription|spell out|same as the number|the correct paragraph)\b/i;
+  /\b(number on the key|paragraph whose number|number referred to|whispering the name|decode|transcription|spell out|same as the number|the correct paragraph|same number as|half the number|half of the|twice the number|number of the magic(?:al)? page)\b/i;
 const gateHubs = numbers
   .filter((n) => gateLanguage.test(String(sections[String(n)].text || "")))
   .map((n) => ({ section: n, page: sections[String(n)].page, text: snippet(sections[String(n)].text, 200) }));

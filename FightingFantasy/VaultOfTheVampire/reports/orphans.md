@@ -220,8 +220,16 @@ These sections route the player onward by a mechanism the choice graph can't fol
 
 | section | page | text |
 | ---: | ---: | --- |
+| §35 | 20 | "You possess all that is needed to destroy Reiner in his coffin,' says the ghost softly, 'but can you fight him?' Do you have-the Book of Swords? If you do turn to that paragraph which is half the num |
+| §48 | 24 | Gunthar looks nervous. He says that any magic he might use to help you would alert Katarina, which could be very dangerous... he is clearly reluctant. Do you have the Book of Healers? If you do, turn  |
 | §123 | 46 | There is a group of obscure runes on the plaque you manage to decode them into letters, but they don't make sense, You puess that they have to spell out sore phrase, hidden within these let- ters, to  |
+| §220 | 70 | 'You have the cross, but you lack the weapon to destroy Reiner,' says Siegfried grimly. Do you have the Book of Swords? If you have it, turn to that paragraph which is one half the number of the magic |
+| §282 | 87 | The kitchen contains some good food -- bread, bis- cuits, cheese, sweet dried fruits and so on. You can gather plentiful supplies here (add 6 to your Provi- sions). Now, are you searching for herbs fo |
+| §317 | 94 | If you have the Book of Healers, you decide to show this to Gunthar. If you have an Affliction, Gunthar will help you with this m return for getting the book back, so turn to 375. If you don't have an |
 | §332 | 97 | This door has a small silvered lock. Do you have a Silver Key? If you have, tum to the paragraph whose number is the same as the number on the key. If you haven't, you can't open this door. You can ei |
+| §375 | 109 | You give the Book of Healers to Gunthar, who is delighted to have it back. Reiner stole it some months ago, and Gunthar has not been able to find it without the Count's spies - his rats and bats - fol |
+| §378 | 110 | You enter a library lit by a golden globe of soft magica] light, hanging in the air. There are hun- dreds of books on the bookshelves, but one particu- lar shelf is full of works concerned with the hi |
+| §399 | 114 | 'Excellent,' purrs the saturnine lady. 'When he is dead, I shall rule here as Countess!' Do you have the Book of Swords? If you do, and you wish to show this to Katarina, turn to the paragraph which i |
 
 ## Fragile targets (potential hidden orphans)
 
