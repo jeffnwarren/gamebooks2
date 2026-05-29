@@ -213,3 +213,39 @@ Every "turn to N" phrase in the book already resolves to a valid number and `sca
 | §48 | §375 (may be a misread of §376) | 2 |
 | §317 | §375 (may be a misread of §376) | 2 |
 | §50 | §326 (may be a misread of §376) | 1 |
+
+## Gate hubs (orphans may be intentional)
+
+These sections route the player onward by a mechanism the choice graph can't follow (cipher answers, "turn to the paragraph matching the number on the key", etc.). An orphan that is the target of one of these is **orphaned by design** and needs no link fix — e.g. §350 (silvered chainmail) is the answer to the §123 cipher. Cross-check orphans against these.
+
+| section | page | text |
+| ---: | ---: | --- |
+| §123 | 46 | There is a group of obscure runes on the plaque you manage to decode them into letters, but they don't make sense, You puess that they have to spell out sore phrase, hidden within these let- ters, to  |
+| §332 | 97 | This door has a small silvered lock. Do you have a Silver Key? If you have, tum to the paragraph whose number is the same as the number on the key. If you haven't, you can't open this door. You can ei |
+
+## Fragile targets (potential hidden orphans)
+
+A **speculative watch list**: each section below is currently reachable only via inbound link(s) that are also strong (weight ≥ 2) candidate-corrections for an orphan above. *If* such a link is confirmed and redirected, the section becomes a new orphan (the §272→378 cascade). This over-reports — many links here are legitimate and merely happen to fit a confusion pattern. **Authoritative method:** apply the PDF-confirmed fixes, then re-run this report; genuine new orphans surface as real (zero-inbound) entries.
+
+| section | page | sole/all inbound from | text |
+| ---: | ---: | --- | --- |
+| §109 | 41 | §22, §93 | The spell snaps the spine of the monster, destroying it instantly. The last of the malevolent green glow fades from the eye-sockets and the great black scythe f |
+| §139 | 51 | §182 | Roll two dice and add 3 to the total. If the result is less than or equal to'your SKILL, you just manage to shut the door and get out: turn to 320. If the resul |
+| §157 | 55 | §91, §147 | Some ten feet along the corridor you stand before two doors, one on either side of you. The door to the north has a dusty plaque which you read after clearing a |
+| §159 | 56 | §30, §70 | You climb the stone steps, cobwebbed and filthy past growths of mould and fungus on the walls, and ascend to the top of the tower. Moonlight streams into the ci |
+| §160 | 56 | §102 | GREATSTRIKE is a spell that is usable in combat when you wield a sword. You cast the spell before you strike and, if you have the higher Attack Strength and lan |
+| §168 | 58 | §114 | Having overcome the guardian here, you snatch up a couple of silvered crystal birds which are small enough to carry. These are worth 3 Gold Pieces for the pair  |
+| §180 | 61 | §122 | Wiping the last of the slime from the Stench Ghoul off your sword, you take a quick look around and find a leather bag in the sarcophagus. This contains 5 Gold  |
+| §183 | 61 | §36 | Karl-Heinz refuses your offer. "You don't get basi- lisk livers and squid ink for nothing, you know. I've got costs to cover,' he laments. He looks thoughtful t |
+| §186 | 62 | §85 | The bat's vicious bite strikes home on your already injured neck, and the hateful flapping menace rips your jugular open. You collapse in agony as your life's b |
+| §272 | 84 | §223 | The fiend lunges at your throat and you hurl your- self sideways away from it; but the carriage door bursts open and you are flung out. Lose 2 STAMINA points ca |
+| §279 | 85 | §161 | As you cross the room, one of the carved stone rats comes to life and nips your heel! Lose 1 STAMINA point; as you turn to strike, it is gone! You cross the roo |
+| §307 | 91 | §353 | You open the door and enter a shrine of some kind; the room is unlit, and you need a light-source to see by. There are white and yellow cloths on tables, wall-h |
+| §316 | 94 | §44, §200, §252, §290 | You ascend the narrow, steeply sloping wooden stairs until you come to a landing before a wooden door which is barred and decorated with warding glyphs of amber |
+| §318 | 94 | §205 | The Alchemist says he will prepare a potion for you which will be of help, but he wants 8 Gold Pieces for the cost of the ingredients (coins, or other Treasure  |
+| §348 | 101 | §47 | You search the Zombies, but they have nothing of value. You pass through the half-open door in the east wall and enter another bare chamber. Here there is a fli |
+| §356 | 103 | §161 | As you cross the room, one of the stone wolf-heads snarls at you and seems about to rear from the wall to strike at you, but you evade the magical guardian and  |
+| §358 | 104 | §113 | You enter the hut and search around. In the Gnome's bedroom you find a portrait of a dark and cadaverous, but undoubtedly handsome man, his black hair brushed b |
+| §378 | 110 | §272 | You enter a library lit by a golden globe of soft magica] light, hanging in the air. There are hun- dreds of books on the bookshelves, but one particu- lar shel |
+| §381 | 110 | §264, §276 | Katarina's sweet smile utterly captivates you. 'You have done splendidly,' she purrs. 'Now I am the Countess here.' You will be her willing servant always - or  |
+| §385 | 112 | §168 | You make a lucky find: a tiny silver elven amulet on a chain of prayer-beads. Gain 1 LUCK point for finding this lucky charm. Now you leave, and you can try the |

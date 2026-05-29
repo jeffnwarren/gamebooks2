@@ -179,6 +179,43 @@ for (let id = 0; id < componentId; id += 1) {
 }
 islands.sort((a, b) => a.members[0] - b.members[0]);
 
+// --- gate hubs: sections that send the player onward by a mechanism the choice
+// graph cannot represent (cipher answers, "paragraph = number on the key", etc.).
+// Their targets can legitimately be orphans-by-design, so flag the hubs for review.
+const gateLanguage =
+  /\b(number on the key|paragraph whose number|number referred to|whispering the name|decode|transcription|spell out|same as the number|the correct paragraph)\b/i;
+const gateHubs = numbers
+  .filter((n) => gateLanguage.test(String(sections[String(n)].text || "")))
+  .map((n) => ({ section: n, page: sections[String(n)].page, text: snippet(sections[String(n)].text, 200) }));
+
+// --- fragile targets (potential hidden orphans): reachable sections whose ENTIRE
+// inbound set is "claimed" by an orphan candidate-correction. If those corrections
+// are applied, the link is redirected away and the target becomes a new orphan —
+// the §272→378 cascade. Every link src→target appearing in some orphan's candidate
+// list is "claimed"; a target all of whose inbound links are claimed is fragile.
+// Only the strongest (max-weight) candidate(s) per orphan are treated as "likely
+// fixes"; claiming all 8 would falsely flag dozens of legitimate links.
+const claimedLinks = new Set();
+for (const island of islands) {
+  for (const e of island.entries) {
+    if (!e.candidates.length) continue;
+    const topWeight = e.candidates[0].weight;
+    if (topWeight < 2) continue; // weak (w1) candidates are mostly false positives
+    for (const c of e.candidates) {
+      if (c.weight === topWeight) claimedLinks.add(`${c.source}->${c.currentTarget}`);
+    }
+  }
+}
+const fragileTargets = numbers
+  .filter((n) => !unreachableSet.has(n) && inbound.get(n).length > 0)
+  .filter((n) => inbound.get(n).every((src) => claimedLinks.has(`${src}->${n}`)))
+  .map((n) => ({
+    section: n,
+    page: sections[String(n)].page,
+    inboundFrom: inbound.get(n),
+    text: snippet(sections[String(n)].text, 160)
+  }));
+
 const summary = {
   title: data.title,
   sections: numbers.length,
@@ -187,7 +224,9 @@ const summary = {
   islands: islands.length,
   orphansWithSubstitutionCandidate: islands
     .flatMap((i) => i.entries)
-    .filter((e) => e.candidates.length).length
+    .filter((e) => e.candidates.length).length,
+  gateHubs: gateHubs.length,
+  fragileTargets: fragileTargets.length
 };
 
 // --- markdown report ---
@@ -227,6 +266,41 @@ islands.forEach((island, idx) => {
     lines.push("");
   }
 });
+
+lines.push(`## Gate hubs (orphans may be intentional)`, "");
+lines.push(
+  `These sections route the player onward by a mechanism the choice graph can't follow ` +
+    `(cipher answers, "turn to the paragraph matching the number on the key", etc.). An orphan that ` +
+    `is the target of one of these is **orphaned by design** and needs no link fix — e.g. §350 ` +
+    `(silvered chainmail) is the answer to the §123 cipher. Cross-check orphans against these.`,
+  ""
+);
+if (!gateHubs.length) {
+  lines.push(`_None detected._`, "");
+} else {
+  lines.push(`| section | page | text |`, `| ---: | ---: | --- |`);
+  for (const g of gateHubs) lines.push(`| §${g.section} | ${g.page} | ${g.text} |`);
+  lines.push("");
+}
+
+lines.push(`## Fragile targets (potential hidden orphans)`, "");
+lines.push(
+  `A **speculative watch list**: each section below is currently reachable only via inbound link(s) that ` +
+    `are also strong (weight ≥ 2) candidate-corrections for an orphan above. *If* such a link is confirmed ` +
+    `and redirected, the section becomes a new orphan (the §272→378 cascade). This over-reports — many ` +
+    `links here are legitimate and merely happen to fit a confusion pattern. **Authoritative method:** apply ` +
+    `the PDF-confirmed fixes, then re-run this report; genuine new orphans surface as real (zero-inbound) entries.`,
+  ""
+);
+if (!fragileTargets.length) {
+  lines.push(`_None detected._`, "");
+} else {
+  lines.push(`| section | page | sole/all inbound from | text |`, `| ---: | ---: | --- | --- |`);
+  for (const f of fragileTargets) {
+    lines.push(`| §${f.section} | ${f.page} | ${f.inboundFrom.map((s) => `§${s}`).join(", ")} | ${f.text} |`);
+  }
+  lines.push("");
+}
 
 const reportsDir = path.resolve(__dirname, "..", "reports");
 fs.mkdirSync(reportsDir, { recursive: true });
