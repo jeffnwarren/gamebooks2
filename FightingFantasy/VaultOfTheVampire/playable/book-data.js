@@ -509,7 +509,7 @@ window.GAMEBOOK_DATA = {
         99,
         326
       ],
-      "text": "You skirt carefully round the building. You have approached from the south, and can make out some features of what seems to be a two-storey building In the south-west and south-east corners are the towers, whose spires loom above the slate roofs over the stone walls. Bats flit into and out of the south-west tower belfry. The arrow-slits in the tow- ers are too high and too narrow to climb in through You can see lights on the ground floor from win- dows in the west and east sides, but heavy drapes prevent you from seeing anything within the Castle itself. Roll one die and add 3. If the total is less than or equal to your FAITH turn to gq; if it is greater than your FAITH, you continue walking around and arrive back at the main gates without finding any other likely means of getting into the place, so turn to 326",
+      "text": "You skirt carefully round the building. You have approached from the south, and can make out some features of what seems to be a two-storey building In the south-west and south-east corners are the towers, whose spires loom above the slate roofs over the stone walls. Bats flit into and out of the south-west tower belfry. The arrow-slits in the tow- ers are too high and too narrow to climb in through You can see lights on the ground floor from win- dows in the west and east sides, but heavy drapes prevent you from seeing anything within the Castle itself. Roll one die and add 3. If the total is less than or equal to your FAITH turn to 99; if it is greater than your FAITH, you continue walking around and arrive back at the main gates without finding any other likely means of getting into the place, so turn to 326",
       "ocrSource": "tesseract"
     },
     "51": {
@@ -3923,7 +3923,8 @@ window.GAMEBOOK_DATA = {
         "darkThreshold": 217,
         "score": 2.1834,
         "likelyFullPage": true,
-        "image": "illustrations/pdf-page-011-l.jpg"
+        "image": "illustrations/pdf-page-011-l.jpg",
+        "section": 5
       },
       {
         "pdfPage": 13,
@@ -3934,7 +3935,8 @@ window.GAMEBOOK_DATA = {
         "darkThreshold": 217,
         "score": 2.2994,
         "likelyFullPage": true,
-        "image": "illustrations/pdf-page-013-l.jpg"
+        "image": "illustrations/pdf-page-013-l.jpg",
+        "section": 13
       },
       {
         "pdfPage": 16,
@@ -3945,7 +3947,8 @@ window.GAMEBOOK_DATA = {
         "darkThreshold": 191,
         "score": 3.2115,
         "likelyFullPage": true,
-        "image": "illustrations/pdf-page-016-l.jpg"
+        "image": "illustrations/pdf-page-016-l.jpg",
+        "section": 22
       },
       {
         "pdfPage": 19,
@@ -3956,7 +3959,8 @@ window.GAMEBOOK_DATA = {
         "darkThreshold": 191,
         "score": 3.2309,
         "likelyFullPage": true,
-        "image": "illustrations/pdf-page-019-l.jpg"
+        "image": "illustrations/pdf-page-019-l.jpg",
+        "section": 34
       },
       {
         "pdfPage": 23,
@@ -3967,7 +3971,8 @@ window.GAMEBOOK_DATA = {
         "darkThreshold": 217,
         "score": 3.2806,
         "likelyFullPage": true,
-        "image": "illustrations/pdf-page-023-l.jpg"
+        "image": "illustrations/pdf-page-023-l.jpg",
+        "section": 45
       },
       {
         "pdfPage": 26,
@@ -3978,7 +3983,8 @@ window.GAMEBOOK_DATA = {
         "darkThreshold": 191,
         "score": 2.8578,
         "likelyFullPage": true,
-        "image": "illustrations/pdf-page-026-l.jpg"
+        "image": "illustrations/pdf-page-026-l.jpg",
+        "section": 54
       },
       {
         "pdfPage": 30,
@@ -3989,7 +3995,8 @@ window.GAMEBOOK_DATA = {
         "darkThreshold": 215,
         "score": 2.7275,
         "likelyFullPage": true,
-        "image": "illustrations/pdf-page-030-l.jpg"
+        "image": "illustrations/pdf-page-030-l.jpg",
+        "section": 70
       },
       {
         "pdfPage": 33,
@@ -4000,7 +4007,8 @@ window.GAMEBOOK_DATA = {
         "darkThreshold": 217,
         "score": 3.1712,
         "likelyFullPage": true,
-        "image": "illustrations/pdf-page-033-l.jpg"
+        "image": "illustrations/pdf-page-033-l.jpg",
+        "section": 78
       },
       {
         "pdfPage": 36,
@@ -4011,7 +4019,8 @@ window.GAMEBOOK_DATA = {
         "darkThreshold": 217,
         "score": 2.6034,
         "likelyFullPage": true,
-        "image": "illustrations/pdf-page-036-l.jpg"
+        "image": "illustrations/pdf-page-036-l.jpg",
+        "section": 90
       },
       {
         "pdfPage": 39,
@@ -4022,7 +4031,8 @@ window.GAMEBOOK_DATA = {
         "darkThreshold": 217,
         "score": 2.552,
         "likelyFullPage": true,
-        "image": "illustrations/pdf-page-039-l.jpg"
+        "image": "illustrations/pdf-page-039-l.jpg",
+        "section": 102
       },
       {
         "pdfPage": 43,
@@ -4033,7 +4043,8 @@ window.GAMEBOOK_DATA = {
         "darkThreshold": 215,
         "score": 2.9699,
         "likelyFullPage": true,
-        "image": "illustrations/pdf-page-043-l.jpg"
+        "image": "illustrations/pdf-page-043-l.jpg",
+        "section": 114
       },
       {
         "pdfPage": 46,
@@ -4044,7 +4055,8 @@ window.GAMEBOOK_DATA = {
         "darkThreshold": 215,
         "score": 2.8085,
         "likelyFullPage": true,
-        "image": "illustrations/pdf-page-046-l.jpg"
+        "image": "illustrations/pdf-page-046-l.jpg",
+        "section": 123
       },
       {
         "pdfPage": 50,
@@ -4055,7 +4067,8 @@ window.GAMEBOOK_DATA = {
         "darkThreshold": 217,
         "score": 3.2604,
         "likelyFullPage": true,
-        "image": "illustrations/pdf-page-050-l.jpg"
+        "image": "illustrations/pdf-page-050-l.jpg",
+        "section": 136
       },
       {
         "pdfPage": 53,
@@ -4066,7 +4079,8 @@ window.GAMEBOOK_DATA = {
         "darkThreshold": 215,
         "score": 3.3274,
         "likelyFullPage": true,
-        "image": "illustrations/pdf-page-053-l.jpg"
+        "image": "illustrations/pdf-page-053-l.jpg",
+        "section": 295
       },
       {
         "pdfPage": 56,
@@ -4077,7 +4091,8 @@ window.GAMEBOOK_DATA = {
         "darkThreshold": 217,
         "score": 2.5877,
         "likelyFullPage": true,
-        "image": "illustrations/pdf-page-056-l.jpg"
+        "image": "illustrations/pdf-page-056-l.jpg",
+        "section": 159
       },
       {
         "pdfPage": 59,
@@ -4088,7 +4103,8 @@ window.GAMEBOOK_DATA = {
         "darkThreshold": 217,
         "score": 2.8708,
         "likelyFullPage": true,
-        "image": "illustrations/pdf-page-059-l.jpg"
+        "image": "illustrations/pdf-page-059-l.jpg",
+        "section": 172
       },
       {
         "pdfPage": 62,
@@ -4099,7 +4115,8 @@ window.GAMEBOOK_DATA = {
         "darkThreshold": 217,
         "score": 3.2669,
         "likelyFullPage": true,
-        "image": "illustrations/pdf-page-062-l.jpg"
+        "image": "illustrations/pdf-page-062-l.jpg",
+        "section": 185
       },
       {
         "pdfPage": 65,
@@ -4110,7 +4127,8 @@ window.GAMEBOOK_DATA = {
         "darkThreshold": 215,
         "score": 2.6477,
         "likelyFullPage": true,
-        "image": "illustrations/pdf-page-065-l.jpg"
+        "image": "illustrations/pdf-page-065-l.jpg",
+        "section": 200
       },
       {
         "pdfPage": 68,
@@ -4121,7 +4139,8 @@ window.GAMEBOOK_DATA = {
         "darkThreshold": 215,
         "score": 2.9265,
         "likelyFullPage": true,
-        "image": "illustrations/pdf-page-068-l.jpg"
+        "image": "illustrations/pdf-page-068-l.jpg",
+        "section": 211
       },
       {
         "pdfPage": 71,
@@ -4132,7 +4151,8 @@ window.GAMEBOOK_DATA = {
         "darkThreshold": 217,
         "score": 3.134,
         "likelyFullPage": true,
-        "image": "illustrations/pdf-page-071-l.jpg"
+        "image": "illustrations/pdf-page-071-l.jpg",
+        "section": 221
       },
       {
         "pdfPage": 76,
@@ -4143,7 +4163,8 @@ window.GAMEBOOK_DATA = {
         "darkThreshold": 191,
         "score": 2.8199,
         "likelyFullPage": true,
-        "image": "illustrations/pdf-page-076-l.jpg"
+        "image": "illustrations/pdf-page-076-l.jpg",
+        "section": 240
       },
       {
         "pdfPage": 80,
@@ -4154,7 +4175,8 @@ window.GAMEBOOK_DATA = {
         "darkThreshold": 191,
         "score": 2.6642,
         "likelyFullPage": true,
-        "image": "illustrations/pdf-page-080-l.jpg"
+        "image": "illustrations/pdf-page-080-l.jpg",
+        "section": 255
       },
       {
         "pdfPage": 83,
@@ -4165,7 +4187,8 @@ window.GAMEBOOK_DATA = {
         "darkThreshold": 215,
         "score": 3.0089,
         "likelyFullPage": true,
-        "image": "illustrations/pdf-page-083-l.jpg"
+        "image": "illustrations/pdf-page-083-l.jpg",
+        "section": 266
       },
       {
         "pdfPage": 86,
@@ -4176,7 +4199,8 @@ window.GAMEBOOK_DATA = {
         "darkThreshold": 217,
         "score": 2.622,
         "likelyFullPage": true,
-        "image": "illustrations/pdf-page-086-l.jpg"
+        "image": "illustrations/pdf-page-086-l.jpg",
+        "section": 280
       },
       {
         "pdfPage": 93,
@@ -4187,7 +4211,8 @@ window.GAMEBOOK_DATA = {
         "darkThreshold": 215,
         "score": 2.7003,
         "likelyFullPage": true,
-        "image": "illustrations/pdf-page-093-l.jpg"
+        "image": "illustrations/pdf-page-093-l.jpg",
+        "section": 313
       },
       {
         "pdfPage": 99,
@@ -4198,7 +4223,8 @@ window.GAMEBOOK_DATA = {
         "darkThreshold": 190,
         "score": 3.5261,
         "likelyFullPage": true,
-        "image": "illustrations/pdf-page-099-l.jpg"
+        "image": "illustrations/pdf-page-099-l.jpg",
+        "section": 341
       },
       {
         "pdfPage": 102,
@@ -4209,7 +4235,8 @@ window.GAMEBOOK_DATA = {
         "darkThreshold": 215,
         "score": 3.4476,
         "likelyFullPage": true,
-        "image": "illustrations/pdf-page-102-l.jpg"
+        "image": "illustrations/pdf-page-102-l.jpg",
+        "section": 351
       },
       {
         "pdfPage": 104,
@@ -4220,7 +4247,8 @@ window.GAMEBOOK_DATA = {
         "darkThreshold": 215,
         "score": 2.6404,
         "likelyFullPage": true,
-        "image": "illustrations/pdf-page-104-l.jpg"
+        "image": "illustrations/pdf-page-104-l.jpg",
+        "section": 358
       },
       {
         "pdfPage": 111,
@@ -4231,7 +4259,8 @@ window.GAMEBOOK_DATA = {
         "darkThreshold": 215,
         "score": 3.3421,
         "likelyFullPage": true,
-        "image": "illustrations/pdf-page-111-l.jpg"
+        "image": "illustrations/pdf-page-111-l.jpg",
+        "section": 382
       },
       {
         "pdfPage": 115,
@@ -4242,7 +4271,8 @@ window.GAMEBOOK_DATA = {
         "darkThreshold": 195,
         "score": 2.8547,
         "likelyFullPage": true,
-        "image": "illustrations/pdf-page-115-l.jpg"
+        "image": "illustrations/pdf-page-115-l.jpg",
+        "section": 400
       }
     ]
   }

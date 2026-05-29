@@ -1,6 +1,6 @@
 # Fighting Fantasy Gamebooks — Handoff
 
-_Last updated: 2026-05-28_
+_Last updated: 2026-05-29_
 
 Digitizing scanned Fighting Fantasy gamebooks into playable HTML readers. Each book lives in its
 own directory under `FightingFantasy/` with `playable/` (the reader + `book-data.js`), `source/`
@@ -101,10 +101,31 @@ directly determines how complete the choice graph is.**
 - **Illustrations curated** — all 30 full-page illustrations carry an explicit `section` (the
   passage they depict, matched against the PDF); reader keys off it. Fixed §114 (never displayed)
   and §295 (bear, was on the journey spread). Embellishments remain excluded.
+- **Illustration→section mapping was inert in the reader (fixed this session).** The d2b1725
+  curation only updated `illustrations.json` + `app.js`; `book-data.js` (which the reader actually
+  reads illustration metadata from) still lacked the `section` fields, so the reader silently fell
+  back to page-heuristic placement — the curated §114/§295 fixes were not live. Fixed by injecting
+  the curated sections directly into `book-data.js` with
+  [`tools/embed-illustration-sections.js`](VaultOfTheVampire/tools/embed-illustration-sections.js)
+  (`npm run embed:illustration-sections`; idempotent, all 30 placed). **Did NOT regenerate via
+  `merge-ocr-data.py`** — see the regen trap below.
+- **⚠ Regen trap:** the recent graph fixes (§100/§286, §400, the 9 inbound-link fixes) were
+  hand-edited **directly into `book-data.js`** and are **not** encoded in `merge-ocr-data.py`'s
+  overrides. Re-running the OCR merge would silently wipe them. Patch `book-data.js` in place (or
+  port the fixes into the merge overrides first) rather than regenerating.
+- **Review page for the proofreading pass (built this session).**
+  [`tools/build-review.js`](VaultOfTheVampire/tools/build-review.js) (`npm run build:review`)
+  renders [`playable/review.html`](VaultOfTheVampire/playable/review.html): a static, printable,
+  single-scroll read-through of intro + background + all 400 sections, illustrations at their
+  curated passages, with auto-flags for the things a human should eyeball — choice→prose mismatches
+  (misroute risk), stray OCR glyphs, and unbalanced parens. Current state: **76 sections flagged,
+  only 1 choice→prose mismatch (§50)**, and that one is confirmed cosmetic: prose reads "turn to
+  **gq**" (OCR garble for 99), but choice 99 is correct (§99 is the FAITH-success branch to §326).
 - **Vault is done** for the digitization goals: clean integrity, fully connected, provably
-  completable, illustrations placed. **Still recommended:** a human/visual playthrough of the
-  §1→§400 path in the reader (fixtures pass but no eyes-on run yet); optional cosmetic prose pass
-  (~40–80 garbled OCR tails) and an item-economy winnability check (current validator is optimistic).
+  completable, illustrations placed (and now actually wired into the reader). **Remaining is the
+  human pass:** read `review.html` against the source PDF and apply cosmetic prose fixes (~40–80
+  garbled OCR tails; the easy first one is §50 `gq`→`99`). Optional: an item-economy winnability
+  check (current validator is optimistic).
 
 ### Sword of the Samurai — needs foundational OCR work first
 - **Not ready for cosmetic fixes.** 117 of 400 sections have no OCR text (`ocrSource: "missing"`),
@@ -141,6 +162,8 @@ directly determines how complete the choice graph is.**
 | `npm run report:graph` | Choice-graph warnings (unreachable / dead ends) — Howl, Vault |
 | `npm run report:orphans` | Orphan reconciliation: islands, gate hubs, fragile targets — Vault |
 | `npm run report:misroutes` | Flag choices that point to a valid-but-wrong section (prose mismatch) — Vault |
+| `npm run embed:illustration-sections` | Inject curated illustration `section`s from `illustrations.json` into `book-data.js` (no regen) — Vault |
+| `npm run build:review` | Build `playable/review.html`, the printable proofreading read-through with auto-flags — Vault |
 | `npm run check:winnable` | Prove a §1→victory path through the computed gates — Vault |
 | `npm run check` | Full QA suite (syntax, data, intro, OCR smoke, fixtures, winnable) — Howl, Vault |
 
