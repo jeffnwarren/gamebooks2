@@ -11,6 +11,7 @@
     "check:winnable": "node tools/check-winnable.js",
     "report:graph": "node tools/check-data.js --verbose",
     "report:orphans": "node tools/report-orphans.js",
+    "report:misroutes": "node tools/report-misroutes.js",
     "report:illustrations": "python ../tools/detect-full-page-illustrations.py .",
     "build:illustrations": "python ../tools/detect-full-page-illustrations.py . --write --extract",
     "report:ocr": "node tools/report-ocr.js"

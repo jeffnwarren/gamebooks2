@@ -499,7 +499,7 @@ window.GAMEBOOK_DATA = {
         95,
         144
       ],
-      "text": "Unfortunately your gaze dwells too long on the portrait of the Count, and its eyes burn into you holding you fascinated. Do you have the Lycan- thropy Afthiction? ff you do, turn togs. Lf yeu don't turn to 144 Ser 1",
+      "text": "Unfortunately your gaze dwells too long on the portrait of the Count, and its eyes burn into you holding you fascinated. Do you have the Lycan- thropy Affliction? If you do, turn to 95. If you don't, turn to 144.",
       "ocrSource": "tesseract"
     },
     "50": {
@@ -992,9 +992,9 @@ window.GAMEBOOK_DATA = {
       "number": 100,
       "page": 38,
       "choices": [
-        4
+        42
       ],
-      "text": "You feel horribly weak as the tentacles of the Vam- pire Mist unerringly pierce the bloodied patch of skin on your neck. Lose 2 STAMINA points from the pain, and you will lose 2 more STAMINA points in every Attack Round because of bleeding, irrespec- tive of whether you or the Mist has the higher Attack Strength, until you destroy the Mist! Turn to 42and finish the fight",
+      "text": "You feel horribly weak as the tentacles of the Vam- pire Mist unerringly pierce the bloodied patch of skin on your neck. Lose 2 STAMINA points from the pain, and you will lose 2 more STAMINA points in every Attack Round because of bleeding, irrespec- tive of whether you or the Mist has the higher Attack Strength, until you destroy the Mist! Turn to 42 and finish the fight",
       "ocrSource": "tesseract"
     },
     "101": {
@@ -2799,7 +2799,6 @@ window.GAMEBOOK_DATA = {
       "number": 286,
       "page": 87,
       "choices": [
-        15,
         31
       ],
       "text": "You strike one final blow at your enemy, but she has disappeared! Before your eyes she vanishes, leaving only the ghost of a laugh behind. Obviously she has achieved some magical escape You make only the briefest of searches here, aware that she could return as surprisingly as she left. You take gold ornaments and jewellery worth 7 Gold Pieces (add this to your Treasure) and you aiso find ina desk a magical potion of healing which you take add this to your Possessions). This potion can be drunk at any time, except during combats, and will restore 4 lost STAMINA points. Now you leave and return to the corridor, following it south; turn to 31",

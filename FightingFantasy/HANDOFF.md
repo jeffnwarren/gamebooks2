@@ -91,8 +91,20 @@ directly determines how complete the choice graph is.**
   optimistic reachability (assumes item/stat/LUCK gates are satisfiable). Result: **all 400
   sections reachable, 381 can reach victory (19 are death endings), zero "stuck"/trap sections.**
   Also fixed §400 (the victory ending) which had a spurious `choices: [8]` from OCR tail-garbage.
+- **Misroute audit (this session).** Built [`tools/report-misroutes.js`](VaultOfTheVampire/tools/report-misroutes.js)
+  (`npm run report:misroutes`): flags stored choices whose number never appears in their own
+  prose — the one bug class the graph checks miss (a choice pointing to a *valid but wrong*
+  section, so it never orphans anything). Found and fixed **§100 `4→42`** (OCR merged "42and";
+  §42 is the Vampire-Mist fight) and **§286 dropped spurious `15`** (prose only routes to 31, like
+  the §400→8 bug). §49/§50 hits were confirmed correct choices with garbled prose digits (cosmetic).
+  Audit now clean except §50 (cosmetic prose garble only).
+- **Illustrations curated** — all 30 full-page illustrations carry an explicit `section` (the
+  passage they depict, matched against the PDF); reader keys off it. Fixed §114 (never displayed)
+  and §295 (bear, was on the journey spread). Embellishments remain excluded.
 - **Vault is done** for the digitization goals: clean integrity, fully connected, provably
-  completable. Remaining polish is optional (cosmetic prose, the deferred stat-glyph pass).
+  completable, illustrations placed. **Still recommended:** a human/visual playthrough of the
+  §1→§400 path in the reader (fixtures pass but no eyes-on run yet); optional cosmetic prose pass
+  (~40–80 garbled OCR tails) and an item-economy winnability check (current validator is optimistic).
 
 ### Sword of the Samurai — needs foundational OCR work first
 - **Not ready for cosmetic fixes.** 117 of 400 sections have no OCR text (`ocrSource: "missing"`),
@@ -128,6 +140,7 @@ directly determines how complete the choice graph is.**
 | `npm run report:review` | Rebuild the OCR review queue + safe-fix candidates — Howl |
 | `npm run report:graph` | Choice-graph warnings (unreachable / dead ends) — Howl, Vault |
 | `npm run report:orphans` | Orphan reconciliation: islands, gate hubs, fragile targets — Vault |
+| `npm run report:misroutes` | Flag choices that point to a valid-but-wrong section (prose mismatch) — Vault |
 | `npm run check:winnable` | Prove a §1→victory path through the computed gates — Vault |
 | `npm run check` | Full QA suite (syntax, data, intro, OCR smoke, fixtures, winnable) — Howl, Vault |
 
