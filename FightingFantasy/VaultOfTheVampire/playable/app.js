@@ -36,7 +36,6 @@
   const storageKey = "vault-of-the-vampire-play-state";
   const defaultState = {
     current: "intro",
-    showPdf: false,
     back: [],
     forward: [],
     bookmarks: [],
@@ -79,10 +78,6 @@
     sectionText: document.getElementById("sectionText"),
     choiceList: document.getElementById("choiceList"),
     sourceBtn: document.getElementById("sourceBtn"),
-    sourceView: document.getElementById("sourceView"),
-    pageNumber: document.getElementById("pageNumber"),
-    pdfLink: document.getElementById("pdfLink"),
-    pdfFrame: document.getElementById("pdfFrame"),
     resetBtn: document.getElementById("resetBtn"),
     rollHeroBtn: document.getElementById("rollHeroBtn"),
     diceOutput: document.getElementById("diceOutput"),
@@ -100,6 +95,7 @@
   };
 
   let state = loadState();
+  let currentPdfUrl = "";
 
   function loadState() {
     try {
@@ -786,10 +782,7 @@
       refs.choiceList.innerHTML = "";
       appendLocationButton("background", "Read the background", "0");
       appendLocationButton(1, "Begin the adventure", "1");
-      const pdfUrl = `${data.sourcePdf}#page=${intro.page || 1}`;
-      refs.pageNumber.textContent = intro.page || 1;
-      refs.pdfLink.href = pdfUrl;
-      renderSourcePanel(pdfUrl);
+      currentPdfUrl = `${data.sourcePdf}#page=${intro.page || 1}`;
       return;
     }
 
@@ -806,10 +799,7 @@
       });
       refs.choiceList.innerHTML = "";
       appendLocationButton(1, "Begin the adventure", "1");
-      const pdfUrl = `${data.sourcePdf}#page=${backgroundPage}`;
-      refs.pageNumber.textContent = backgroundPage;
-      refs.pdfLink.href = pdfUrl;
-      renderSourcePanel(pdfUrl);
+      currentPdfUrl = `${data.sourcePdf}#page=${backgroundPage}`;
       return;
     }
 
@@ -825,7 +815,7 @@
     } else {
       refs.sectionText.classList.remove("intro-text");
       refs.sectionText.classList.add("empty-text");
-      refs.sectionText.textContent = "The OCR did not recover text for this section. Use the PDF page below and jump manually.";
+      refs.sectionText.textContent = "The OCR did not recover text for this section. Use Show full PDF and jump manually.";
     }
 
     refs.choiceList.innerHTML = "";
@@ -845,10 +835,7 @@
       }
     }
 
-    const pdfUrl = `${data.sourcePdf}#page=${section.page}`;
-    refs.pageNumber.textContent = section.page;
-    refs.pdfLink.href = pdfUrl;
-    renderSourcePanel(pdfUrl);
+    currentPdfUrl = `${data.sourcePdf}#page=${section.page}`;
   }
 
   function appendLocationButton(location, label, targetLabel) {
@@ -861,18 +848,6 @@
     }
     button.innerHTML = `<span>${escapeHtml(label)}</span><span class="choice-target">${escapeHtml(targetLabel)}</span>`;
     refs.choiceList.append(button);
-  }
-
-  function renderSourcePanel(pdfUrl) {
-    refs.sourceView.classList.toggle("is-open", state.showPdf);
-    refs.sourceBtn.textContent = state.showPdf ? "Hide PDF" : "Show PDF";
-    refs.sourceBtn.setAttribute("aria-expanded", String(state.showPdf));
-
-    if (state.showPdf) {
-      refs.pdfFrame.src = pdfUrl;
-    } else {
-      refs.pdfFrame.removeAttribute("src");
-    }
   }
 
   function renderLists() {
@@ -1063,9 +1038,7 @@
   });
 
   refs.sourceBtn.addEventListener("click", () => {
-    state.showPdf = !state.showPdf;
-    saveState();
-    render();
+    if (currentPdfUrl) window.open(currentPdfUrl, "_blank", "noopener");
   });
 
   refs.resetBtn.addEventListener("click", () => {

@@ -168,6 +168,10 @@ p {
   flex: 1 1 auto;
 }
 
+.pdf-block button {
+  width: 100%;
+}
+
 .jump-form,
 .search-block,
 .saved-block,
@@ -350,38 +354,6 @@ p {
   font-size: 0.82rem;
   font-weight: 800;
   margin-left: 12px;
-}
-
-.source-view {
-  border-top: 1px solid var(--line);
-  display: none;
-  margin-top: 20px;
-  max-width: 980px;
-  padding-top: 16px;
-}
-
-.source-view.is-open {
-  display: block;
-}
-
-.source-head {
-  align-items: center;
-  display: flex;
-  justify-content: space-between;
-  margin-bottom: 10px;
-}
-
-.source-head h2 {
-  font-size: 1rem;
-  margin-bottom: 0;
-}
-
-#pdfFrame {
-  background: var(--night);
-  border: 1px solid var(--line);
-  border-radius: 6px;
-  height: min(72vh, 760px);
-  width: 100%;
 }
 
 .sheet-head {

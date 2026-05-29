@@ -55,6 +55,10 @@
           <h2>Illustrations</h2>
           <div id="illustrationList" class="mini-list"></div>
         </div>
+
+        <div class="saved-block pdf-block">
+          <button id="sourceBtn" type="button" aria-expanded="false">Show full PDF</button>
+        </div>
       </aside>
 
       <main class="reader-panel">
@@ -64,7 +68,6 @@
             <h2 id="sectionTitle">1</h2>
           </div>
           <div class="toolbar-actions">
-            <button id="sourceBtn" type="button" aria-expanded="false">Show PDF</button>
             <button id="resetBtn" type="button">New Game</button>
           </div>
         </section>
@@ -74,14 +77,6 @@
           <div id="sectionText" class="section-text"></div>
           <div id="choiceList" class="choice-list"></div>
         </article>
-
-        <section class="source-view" id="sourceView">
-          <div class="source-head">
-            <h2>Source Page <span id="pageNumber"></span></h2>
-            <a id="pdfLink" target="_blank" rel="noreferrer">Open PDF</a>
-          </div>
-          <iframe id="pdfFrame" title="Original PDF page"></iframe>
-        </section>
       </main>
 
       <aside class="sheet-panel">
