@@ -152,6 +152,26 @@ directly determines how complete the choice graph is.**
    the per-book `tools/` currently duplicate `check-data.js`, `ocr-gamebook.py`, `merge-ocr-data.py`,
    etc. across books.
 5. **CI / commit hook** to run each book's `npm run check` automatically.
+6. **TODO — design an in-reader mapping/journal system (plan first, then build).** As the
+   player moves through the book, automatically record the journey and let them review and
+   export it. Scope to plan out before implementing:
+   - **Per-passage log:** passage number, the choice taken to reach it (and from where), and
+     timestamp/step order, so the path is a directed trail, not just a set of visited nodes.
+   - **Encounters:** capture combats and their outcome (enemy Skill/Stamina, rounds, result),
+     plus items/gold/spells/afflictions/FAITH gained or lost at each step.
+   - **Illustrative map:** a visual graph of visited passages and the links between them
+     (the curated illustration for a passage could mark that node), drawn incrementally.
+   - **Live maintenance:** the map/journal updates on every navigation and stat change, persists
+     in local state alongside the adventure sheet, and survives reloads.
+   - **Export:** downloadable record (e.g. Markdown/JSON, optionally an image of the map) available
+     at any time — **including after a loss/death ending**, so a failed run can still be reviewed.
+   - Open questions for the plan: how this interacts with free-jump/Prev-Next reading vs. genuine
+     play, whether to distinguish "played" from "browsed" moves, and where the export lives in the UI.
+   - **Consideration — exportable/importable bookmarks that carry the map.** Let a bookmark be
+     saved out and loaded back in as a portable file, bundling the journey/map (and adventure-sheet
+     state) recorded up to that point — so a bookmark becomes a shareable, resumable save, and
+     importing one restores both the position and the trail/map so far. Decide on format and how
+     importing merges with or replaces the current run.
 
 ## Tooling reference (Howl has the most complete set)
 | Command (run from a book dir) | Action |
@@ -164,7 +184,8 @@ directly determines how complete the choice graph is.**
 | `npm run report:misroutes` | Flag choices that point to a valid-but-wrong section (prose mismatch) — Vault |
 | `npm run embed:illustration-sections` | Inject curated illustration `section`s from `illustrations.json` into `book-data.js` (no regen) — Vault |
 | `npm run check:winnable` | Prove a §1→victory path through the computed gates — Vault |
-| `npm run check` | Full QA suite (syntax, data, intro, OCR smoke, fixtures, winnable) — Howl, Vault |
+| `npm run check:links` | Flag inline links where a word is misread as a "turn to N" reference (non-numeric token) — Vault |
+| `npm run check` | Full QA suite (syntax, data, links, intro, OCR smoke, fixtures, winnable) — Howl, Vault |
 
 **Running checks for Howl:** it has no local `node_modules`; borrow Vault's installed Playwright:
 

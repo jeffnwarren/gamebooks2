@@ -1,9 +1,10 @@
 {
   "name": "vault-of-the-vampire",
   "scripts": {
-    "check": "npm run check:js && npm run check:data && npm run check:intro && npm run check:ocr && npm run check:fixtures && npm run check:winnable",
+    "check": "npm run check:js && npm run check:data && npm run check:links && npm run check:intro && npm run check:ocr && npm run check:fixtures && npm run check:winnable",
     "check:choices": "node tools/check-choices.js",
     "check:data": "node tools/check-data.js",
+    "check:links": "node tools/check-links.js",
     "check:fixtures": "node tools/check-fixtures.js",
     "check:intro": "node tools/check-intro.js",
     "check:js": "node --check playable/app.js",

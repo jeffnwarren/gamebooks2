@@ -360,11 +360,15 @@
 
   function linkify(text) {
     const escaped = escapeHtml(text);
-    const turnPattern = /((?:turn|tur|tum|tarn|tuin|tuln|tim|timi|tumi|tium|tiurn|tucn|furn|fum|fumi|faim|fiumn|hrm|rurn|burn|bun|barn|hurn|hun|hum|humm|hirn|hon|harn|ham|eum|go|return|continue)\s+(?:at\s+once\s+to|back\s+to|to|lo|te|bo|eo|at|ta|i|l|fo)?\s*(?:paragraph|section)?\s*)([0-9OoQIiLlAaEeSsBbGgqQjJzZyY$%(){}.,'"]{1,6})/gi;
-    return escaped.replace(turnPattern, (full, lead, token) => {
+    const turnPattern = /((?:turn|tur|tum|tarn|tuin|tuln|tim|timi|tumi|tium|tiurn|tucn|furn|fum|fumi|faim|fiumn|hrm|rurn|burn|bun|barn|hurn|hun|hum|humm|hirn|hon|harn|ham|eum|go|return|continue)\s+)((?:at\s+once\s+to|back\s+to|to|lo|te|bo|eo|at|ta|i|l|fo)?\s*(?:paragraph|section)?\s*)([0-9OoQIiLlAaEeSsBbGgqQjJzZyY$%(){}.,'"]{1,6})(?![A-Za-z])/gi;
+    return escaped.replace(turnPattern, (full, trigger, connector, token) => {
       const target = normalizeToken(token);
       if (!validSection(target)) return full;
-      return `${lead}<a href="#${target}" data-section="${target}">${token}</a>`;
+      // A token built from OCR letter-substitutions (e.g. "gq" = 99) only counts as a
+      // reference when an explicit connector ("to"/"paragraph"/...) precedes it. Without
+      // one, ordinary words after a trigger ("go so", "return as") get misread as sections.
+      if (/[A-Za-z]/.test(token) && !connector.trim()) return full;
+      return `${trigger}${connector}<a href="#${target}" data-section="${target}">${token}</a>`;
     });
   }
 
