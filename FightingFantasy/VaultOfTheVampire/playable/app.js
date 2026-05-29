@@ -54,6 +54,8 @@
       gold: 0
     },
     inventory: "Sword\nLeather armour\nShield\nLantern\nBackpack",
+    spells: "",
+    afflictions: "",
     notes: ""
   };
 
@@ -92,6 +94,8 @@
     heroMinusBtn: document.getElementById("heroMinusBtn"),
     combatOutput: document.getElementById("combatOutput"),
     inventoryText: document.getElementById("inventoryText"),
+    spellsText: document.getElementById("spellsText"),
+    afflictionsText: document.getElementById("afflictionsText"),
     notesText: document.getElementById("notesText")
   };
 
@@ -969,6 +973,8 @@
       input.value = state.stats[input.dataset.stat] ?? 0;
     }
     refs.inventoryText.value = state.inventory;
+    refs.spellsText.value = state.spells;
+    refs.afflictionsText.value = state.afflictions;
     refs.notesText.value = state.notes;
   }
 
@@ -1091,6 +1097,16 @@
 
   refs.inventoryText.addEventListener("input", () => {
     state.inventory = refs.inventoryText.value;
+    saveState();
+  });
+
+  refs.spellsText.addEventListener("input", () => {
+    state.spells = refs.spellsText.value;
+    saveState();
+  });
+
+  refs.afflictionsText.addEventListener("input", () => {
+    state.afflictions = refs.afflictionsText.value;
     saveState();
   });
 
