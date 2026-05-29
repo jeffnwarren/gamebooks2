@@ -1761,9 +1761,9 @@ window.GAMEBOOK_DATA = {
       "number": 178,
       "page": 60,
       "choices": [
-        242
+        212
       ],
-      "text": "The Vampire reappears in the room in human form! Add 8 points to the STAMINA score he had when he escaped. Fight him again, and if you manage to reduce his STAMINA score to 4 or below once more turn at once to 242 ee",
+      "text": "The Vampire reappears in the room in human form! Add 8 points to the STAMINA score he had when he escaped. Fight him again, and if you manage to reduce his STAMINA score to 4 or below once more turn at once to 212 ee",
       "ocrSource": "tesseract"
     },
     "179": {
@@ -2043,10 +2043,10 @@ window.GAMEBOOK_DATA = {
       "number": 208,
       "page": 67,
       "choices": [
-        320,
+        310,
         365
       ],
-      "text": "Your weapon is useless against the Spectre, which strikes you; you lose 2 STAMINA points. You run from the room, trying to get back to the balcony, and the swiftly moving Spectre easily keeps pace with you, striking at your back. Roll one die. If the number rolled is a6, turn to 320. If you roll any other number, turn to 365",
+      "text": "Your weapon is useless against the Spectre, which strikes you; you lose 2 STAMINA points. You run from the room, trying to get back to the balcony, and the swiftly moving Spectre easily keeps pace with you, striking at your back. Roll one die. If the number rolled is a6, turn to 310. If you roll any other number, turn to 365",
       "ocrSource": "tesseract"
     },
     "209": {
@@ -2248,9 +2248,10 @@ window.GAMEBOOK_DATA = {
       "number": 229,
       "page": 73,
       "choices": [
-        304
+        304,
+        189
       ],
-      "text": "From the body, a ghostly double of the man rises and sits up, then moves out of the coffin to stand before you. Towering over you, the shade of Sieg- fried Heydrich stares grimly down and gestures for you to follow him - pointing to the coffin! You lift the lid and gently move the body aside. Your shak- ing hands find a secret door in the base of the coffin the gap is large enough for you to squeeze through following the impatient ghost. You drop a few feet down to a stone floor and, half crouching, using your light-source you follow Siegfried's ghost along a short, narrow passage which opens into a kind of small sinrine. Siegfried points first to a small, rosy quartz vial of colourless liquid. 'Holy water,' he explains, 'you'll find that useful.' (Add Holy Water to your Possessions.) Then Siegfried looks at a very strange gilded bronze globe, lying on the white- clothed table before you next to a silver chalice. Do you have a Stake? If you do, turn to 304. If you don't tumic 18g",
+      "text": "From the body, a ghostly double of the man rises and sits up, then moves out of the coffin to stand before you. Towering over you, the shade of Sieg- fried Heydrich stares grimly down and gestures for you to follow him - pointing to the coffin! You lift the lid and gently move the body aside. Your shak- ing hands find a secret door in the base of the coffin the gap is large enough for you to squeeze through following the impatient ghost. You drop a few feet down to a stone floor and, half crouching, using your light-source you follow Siegfried's ghost along a short, narrow passage which opens into a kind of small sinrine. Siegfried points first to a small, rosy quartz vial of colourless liquid. 'Holy water,' he explains, 'you'll find that useful.' (Add Holy Water to your Possessions.) Then Siegfried looks at a very strange gilded bronze globe, lying on the white- clothed table before you next to a silver chalice. Do you have a Stake? If you do, turn to 304. If you don't turn to 189",
       "ocrSource": "tesseract"
     },
     "230": {
@@ -2633,11 +2634,11 @@ window.GAMEBOOK_DATA = {
       "number": 269,
       "page": 84,
       "choices": [
-        304,
+        301,
         368,
         101
       ],
-      "text": "! Looking at the sleeping girl, will you try Waking her up? Turn to 304 Searching the room? Turn to 368 Leaving here and returning to the north door in the entrance hail? Turn to 101",
+      "text": "! Looking at the sleeping girl, will you try Waking her up? Turn to 301 Searching the room? Turn to 368 Leaving here and returning to the north door in the entrance hail? Turn to 101",
       "ocrSource": "tesseract"
     },
     "270": {
@@ -2665,9 +2666,9 @@ window.GAMEBOOK_DATA = {
       "page": 84,
       "choices": [
         24,
-        378
+        370
       ],
-      "text": "The fiend lunges at your throat and you hurl your- self sideways away from it; but the carriage door bursts open and you are flung out. Lose 2 STAMINA points caused by the bruising fall as you roll over and over, the laughter of the ghostly figure in the ' distance ringing in your ears. Now you must Test - your Luck. If you are Lucky, turn to 24. If you are Unlucky, turn to 378",
+      "text": "The fiend lunges at your throat and you hurl your- self sideways away from it; but the carriage door bursts open and you are flung out. Lose 2 STAMINA points caused by the bruising fall as you roll over and over, the laughter of the ghostly figure in the ' distance ringing in your ears. Now you must Test - your Luck. If you are Lucky, turn to 24. If you are Unlucky, turn to 370",
       "ocrSource": "tesseract"
     },
     "273": {
@@ -2817,10 +2818,11 @@ window.GAMEBOOK_DATA = {
       "number": 288,
       "page": 88,
       "choices": [
+        151,
         322,
         202
       ],
-      "text": "Roll one die. If the number rolled is 1, turn to £51. If the number rolled is 6, turn to 322. If you roll any other number, turn to 202",
+      "text": "Roll one die. If the number rolled is 1, turn to 151. If the number rolled is 6, turn to 322. If you roll any other number, turn to 202",
       "ocrSource": "tesseract"
     },
     "289": {
@@ -2855,9 +2857,9 @@ window.GAMEBOOK_DATA = {
       "page": 88,
       "choices": [
         388,
-        346
+        340
       ],
-      "text": "Do you have a Magic Sword? If you do, turn to 388 If you don't, turn to 346",
+      "text": "Do you have a Magic Sword? If you do, turn to 388 If you don't, turn to 340",
       "ocrSource": "tesseract"
     },
     "293": {
@@ -2987,9 +2989,10 @@ window.GAMEBOOK_DATA = {
       "number": 305,
       "page": 91,
       "choices": [
+        355,
         49
       ],
-      "text": "You walk through into a lounge, with rich imported\ncarpets of intricate design, sumptuously comfort-\nable armchafus, and tables bearing silverware\nand\nlace.\nTherc are three gilt-flamed paintings on the\neast wall, arrd you decide to go over and look\nat\nthem.\nOne shows a tall, handsome man with black\nhair tapering to a peak over his forehead and\ndeep\ngleen\neyes; the plaque below leads, 'Count Reiner\nHeydrich'. The Eecond shows a strikingly attractive\nyoung\nwoman with flowing curly black hair and the\nsame striking green eyes; she is wearing a black\nflowing dress and jewellery.\nemerald The plaque\nbelow this picture reads, 'Katarina Heydrich'. The\nthird painting has no plaque\nand has been defaced,\nalthough you call see that it once showed an excep-\ntionally tall, smooth-faced\nblond rnan. Do you have\na Magic Sword? If you do, tum to If you don't,\n355.\nturn to\n49.",
+      "text": "You walk through into a lounge, with rich imported\ncarpets of intricate design, sumptuously comfort-\nable armchafus, and tables bearing silverware\nand\nlace.\nTherc are three gilt-flamed paintings on the\neast wall, arrd you decide to go over and look\nat\nthem.\nOne shows a tall, handsome man with black\nhair tapering to a peak over his forehead and\ndeep\ngleen\neyes; the plaque below leads, 'Count Reiner\nHeydrich'. The Eecond shows a strikingly attractive\nyoung\nwoman with flowing curly black hair and the\nsame striking green eyes; she is wearing a black\nflowing dress and jewellery.\nemerald The plaque\nbelow this picture reads, 'Katarina Heydrich'. The\nthird painting has no plaque\nand has been defaced,\nalthough you call see that it once showed an excep-\ntionally tall, smooth-faced\nblond rnan. Do you have\na Magic Sword? If you do, turn to 355. If you don't,\nturn to\n49.",
       "ocrSource": "embedded-fallback"
     },
     "306": {
@@ -3284,11 +3287,11 @@ window.GAMEBOOK_DATA = {
       "number": 336,
       "page": 97,
       "choices": [
-        239,
+        219,
         392,
         271
       ],
-      "text": "This desk drawer is locked, although you will prob- ably be able to find a key among the Castellan's Keys which will open it. However, as you tug on the drawer handle you hear a slight crunching sound as if there might be some kind of trap on the drawer Will you Use a key to unlock this drawer? Turn to 239 Open the first drawer, if you haven't already done so? Turn to 392 Open the coffer? Turn to 271 ea ee",
+      "text": "This desk drawer is locked, although you will prob- ably be able to find a key among the Castellan's Keys which will open it. However, as you tug on the drawer handle you hear a slight crunching sound as if there might be some kind of trap on the drawer Will you Use a key to unlock this drawer? Turn to 219 Open the first drawer, if you haven't already done so? Turn to 392 Open the coffer? Turn to 271 ea ee",
       "ocrSource": "tesseract"
     },
     "337": {

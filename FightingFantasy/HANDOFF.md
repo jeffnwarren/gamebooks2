@@ -17,7 +17,7 @@ directly determines how complete the choice graph is.**
 | Book | Sections | Status |
 | --- | ---: | --- |
 | Howl of the Werewolf | 515 | **Playable, not fully clean** — prose cleaned this session; ~85 orphaned sections + §386 dead end remain |
-| Vault of the Vampire | 400 | **Playable, not fully clean** — proportionally cleanest; 14 confirmed broken inbound links remain |
+| Vault of the Vampire | 400 | **Graph reconciled** — all 14 orphans resolved (9 inbound-link fixes + 5 gated-by-design); every section player-reachable. Winnability still unverified. |
 | Sword of the Samurai | 400 | **Not playable yet** — 117/400 sections have no OCR text; graph barely built |
 
 ### What "playable" means here (assessed 2026-05-28)
@@ -66,14 +66,27 @@ directly determines how complete the choice graph is.**
     yet ingested.
 - **TODO §386:** only suspicious non-ending dead end — verify against the source PDF.
 
-### Vault of the Vampire — playable, 2 graph bugs fixed
-- Profiled and hand-cleaned this session. It OCR'd much cleaner than Howl (~6 garbled turn-refs,
-  3 stat splits, 0 label garbles, 1 stray glyph — all fixed).
-- Fixed **two genuine graph bugs** the OCR `oo`→`0` collapse had masked: §124 `2oo`/`2jt` →
-  choices **[200, 231]** (was `[20]`; §200 is the Wraith fight, §231 the no-Magic-Sword branch),
-  and §237 `4oo` → **[400]** (was `[40]`). `npm run check` passes; `scannerFoundUnstored` = 0.
-- **Remaining:** 14 orphaned sections (broken inbound links, listed above) — best fixed by the
-  orphan-reconciliation pass below. Tractable (14 is a small set).
+### Vault of the Vampire — graph reconciled
+- Profiled and hand-cleaned earlier; OCR'd much cleaner than Howl. Earlier fixed two `oo`→`0`
+  graph bugs (§124 → **[200, 231]**, §237 → **[400]**).
+- **Orphan reconciliation complete (this session).** Built [`tools/report-orphans.js`](VaultOfTheVampire/tools/report-orphans.js)
+  (`npm run report:orphans`): classifies unreachable sections into true orphans vs downstream,
+  groups them into islands, detects **gate hubs** (puzzle/computed references) and a fragile-target
+  watch list. All 14 orphans were then **PDF-confirmed** (rendered pages via PyMuPDF) and resolved:
+  - **9 inbound-link fixes** (OCR digit misreads, choices + prose): §269 `304→301`, §272 `378→370`,
+    §336 `239→219`, §208 `320→310`, §292 `346→340`, §288 `+151` ("£51"), §229 `+189`,
+    §178 `242→212`, §305 `+355`.
+  - **5 orphans are intentional, no fix** — a *magical-page* puzzle the choice-graph can't follow:
+    §188 = the magic page itself, §94 = half of 188, §376 = twice 188, §169 = the jar-number gate
+    (§282), §350 = the §123 cipher. Plus §378 (the library where you get the Book of Swords) is
+    reachable via the **Silver Key #378 gate** (§146→§332).
+  - `npm run check` passes; unreachable **27 → 8**, and all 8 are gated-by-design or downstream of a
+    gate (§328/§374 via §94). **Zero genuine broken links.** Every section is player-reachable.
+- **Key lesson:** substitution corruption leaves no garbled token to grep — both OCRs render a
+  *valid wrong* number. The digit-confusion candidate heuristic found only ~half the antecedents;
+  the rest needed narrative tracing + the **PDF text layer** (a separate OCR) + page rendering.
+- **Next for Vault:** the **winnability validator** (`check:winnable`) — must model the gate
+  mechanics above (computed/cipher/key references), not just stored choices.
 
 ### Sword of the Samurai — needs foundational OCR work first
 - **Not ready for cosmetic fixes.** 117 of 400 sections have no OCR text (`ocrSource: "missing"`),
@@ -87,9 +100,10 @@ directly determines how complete the choice graph is.**
   turn-ref rewrites once the graph is trustworthy).
 
 ## Cross-book next steps (prioritized)
-1. **Orphan reconciliation** (`report:orphans`) — for each orphaned section, fuzzy-match the
-   corrupted source reference that should point to it and fix the inbound link. Highest value for
-   making Howl/Vault truly clean and provably completable. **Do Vault first** (only 14).
+1. **Orphan reconciliation** (`report:orphans`) — ✅ **Vault done** (this session). **Howl next**
+   (85 orphans): port [`VaultOfTheVampire/tools/report-orphans.js`](VaultOfTheVampire/tools/report-orphans.js)
+   to Howl and apply the same PDF-confirm workflow. Expect Howl to also have gate/computed
+   references — run the gate-hub detector first and exclude those before chasing inbound links.
 2. **Winnability validator** (`check:winnable`) — prove ≥1 path from §1 to a victory ending; flag
    trap cycles and unsatisfiable codeword gates.
 3. **Sword OCR completion** — recover the 117 missing sections, then rebuild choices.
