@@ -6,8 +6,17 @@
   const fullPageIllustrations = Array.isArray(data.illustrations?.fullPageIllustrations)
     ? data.illustrations.fullPageIllustrations.filter((item) => item && item.image && Number.isInteger(item.pdfPage))
     : [];
+  // Illustrations carry an explicit `section` = the passage whose scene they depict
+  // (curated against the source PDF). Fall back to the spread-page heuristic only for
+  // any entry lacking one.
+  const illustrationsBySection = new Map();
   const illustrationsByPage = new Map();
   for (const illustration of fullPageIllustrations) {
+    if (Number.isInteger(illustration.section)) {
+      const items = illustrationsBySection.get(illustration.section) || [];
+      items.push(illustration);
+      illustrationsBySection.set(illustration.section, items);
+    }
     const pageItems = illustrationsByPage.get(illustration.pdfPage) || [];
     pageItems.push(illustration);
     illustrationsByPage.set(illustration.pdfPage, pageItems);
@@ -865,10 +874,16 @@
   }
 
   function renderSectionIllustration(section) {
-    const page = section?.page;
-    const illustrations = illustrationsByPage.get(page) || [];
-    const firstSection = firstSectionForPage.get(page);
-    if (!illustrations.length || firstSection !== section.number) {
+    // Prefer the curated section→illustration mapping; fall back to the spread-page
+    // heuristic (show on the first section of the page) only for unmapped entries.
+    let illustrations = illustrationsBySection.get(section?.number) || [];
+    if (!illustrations.length) {
+      const page = section?.page;
+      const pageItems = (illustrationsByPage.get(page) || []).filter((it) => !Number.isInteger(it.section));
+      const firstSection = firstSectionForPage.get(page);
+      if (pageItems.length && firstSection === section.number) illustrations = pageItems;
+    }
+    if (!illustrations.length) {
       hideSectionIllustration();
       return;
     }

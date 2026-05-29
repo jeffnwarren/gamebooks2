@@ -148,6 +148,28 @@ def extract_images(project: Path, manifest: dict, dpi: int, output_dir: Path) ->
         item["image"] = str((output_dir / name).relative_to(playable_dir)).replace("\\", "/")
 
 
+def carry_over_sections(project: Path, manifest: dict) -> None:
+    """Preserve the curated `section` (passage the illustration depicts) across
+    regenerations. The detector derives geometry only; the passage mapping is hand-
+    curated against the source PDF, so merge it back by (pdfPage, half)."""
+    existing_path = project / "playable" / "illustrations.json"
+    if not existing_path.exists():
+        return
+    try:
+        existing = json.loads(existing_path.read_text(encoding="utf-8"))
+    except (ValueError, OSError):
+        return
+    sections = {
+        (item.get("pdfPage"), item.get("half")): item.get("section")
+        for item in existing.get("fullPageIllustrations", [])
+        if isinstance(item.get("section"), int)
+    }
+    for item in manifest["fullPageIllustrations"]:
+        mapped = sections.get((item["pdfPage"], item["half"]))
+        if isinstance(mapped, int):
+            item["section"] = mapped
+
+
 def main() -> int:
     parser = argparse.ArgumentParser(description="Detect full-page illustration halves in a scanned gamebook PDF.")
     parser.add_argument("project", nargs="?", default=".", help="Project root containing playable/book-data.js")
@@ -159,6 +181,7 @@ def main() -> int:
 
     project = Path(args.project).resolve()
     manifest = detect(project, args.dpi)
+    carry_over_sections(project, manifest)
 
     if args.extract:
         extract_images(project, manifest, args.dpi, project / "playable" / "illustrations")
