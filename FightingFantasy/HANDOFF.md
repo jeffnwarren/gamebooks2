@@ -17,7 +17,7 @@ directly determines how complete the choice graph is.**
 | Book | Sections | Status |
 | --- | ---: | --- |
 | Howl of the Werewolf | 515 | **Playable, not fully clean** — prose cleaned this session; ~85 orphaned sections + §386 dead end remain |
-| Vault of the Vampire | 400 | **Graph reconciled** — all 14 orphans resolved (9 inbound-link fixes + 5 gated-by-design); every section player-reachable. Winnability still unverified. |
+| Vault of the Vampire | 400 | **Clean & provably winnable** — all 14 orphans resolved; `check:winnable` finds a §1→§400 victory path, all 400 sections reachable, zero trap regions. |
 | Sword of the Samurai | 400 | **Not playable yet** — 117/400 sections have no OCR text; graph barely built |
 
 ### What "playable" means here (assessed 2026-05-28)
@@ -66,7 +66,7 @@ directly determines how complete the choice graph is.**
     yet ingested.
 - **TODO §386:** only suspicious non-ending dead end — verify against the source PDF.
 
-### Vault of the Vampire — graph reconciled
+### Vault of the Vampire — clean & provably winnable
 - Profiled and hand-cleaned earlier; OCR'd much cleaner than Howl. Earlier fixed two `oo`→`0`
   graph bugs (§124 → **[200, 231]**, §237 → **[400]**).
 - **Orphan reconciliation complete (this session).** Built [`tools/report-orphans.js`](VaultOfTheVampire/tools/report-orphans.js)
@@ -85,8 +85,14 @@ directly determines how complete the choice graph is.**
 - **Key lesson:** substitution corruption leaves no garbled token to grep — both OCRs render a
   *valid wrong* number. The digit-confusion candidate heuristic found only ~half the antecedents;
   the rest needed narrative tracing + the **PDF text layer** (a separate OCR) + page rendering.
-- **Next for Vault:** the **winnability validator** (`check:winnable`) — must model the gate
-  mechanics above (computed/cipher/key references), not just stored choices.
+- **Winnability verified (this session).** Built [`tools/check-winnable.js`](VaultOfTheVampire/tools/check-winnable.js)
+  (`npm run check:winnable`, now part of `npm run check`). It proves a §1→§400 victory path
+  (Katarina slain, Nastassia rescued), modelling the computed gates as explicit edges and using
+  optimistic reachability (assumes item/stat/LUCK gates are satisfiable). Result: **all 400
+  sections reachable, 381 can reach victory (19 are death endings), zero "stuck"/trap sections.**
+  Also fixed §400 (the victory ending) which had a spurious `choices: [8]` from OCR tail-garbage.
+- **Vault is done** for the digitization goals: clean integrity, fully connected, provably
+  completable. Remaining polish is optional (cosmetic prose, the deferred stat-glyph pass).
 
 ### Sword of the Samurai — needs foundational OCR work first
 - **Not ready for cosmetic fixes.** 117 of 400 sections have no OCR text (`ocrSource: "missing"`),
@@ -104,8 +110,9 @@ directly determines how complete the choice graph is.**
    (85 orphans): port [`VaultOfTheVampire/tools/report-orphans.js`](VaultOfTheVampire/tools/report-orphans.js)
    to Howl and apply the same PDF-confirm workflow. Expect Howl to also have gate/computed
    references — run the gate-hub detector first and exclude those before chasing inbound links.
-2. **Winnability validator** (`check:winnable`) — prove ≥1 path from §1 to a victory ending; flag
-   trap cycles and unsatisfiable codeword gates.
+2. **Winnability validator** (`check:winnable`) — ✅ **built for Vault** (this session). Port to
+   Howl after its orphan pass; the computed-gate modelling and optimistic-reachability approach
+   carry over (Howl will need its own victory section + gate list).
 3. **Sword OCR completion** — recover the 117 missing sections, then rebuild choices.
 4. **Port the fix/report tooling to Vault & Sword** (they lack `report:review`, `fix:*`,
    `export:proofreading`) and **factor shared logic into [`FightingFantasy/tools/`](tools/)** —
@@ -120,7 +127,9 @@ directly determines how complete the choice graph is.**
 | `npm run fix:stat-glyph:dry` / `fix:stat-glyph` | Split stat blocks, fix stat labels, strip stray glyphs — Howl |
 | `npm run report:review` | Rebuild the OCR review queue + safe-fix candidates — Howl |
 | `npm run report:graph` | Choice-graph warnings (unreachable / dead ends) — Howl, Vault |
-| `npm run check` | Full QA suite (syntax, data, intro, OCR smoke, fixtures) — Howl, Vault |
+| `npm run report:orphans` | Orphan reconciliation: islands, gate hubs, fragile targets — Vault |
+| `npm run check:winnable` | Prove a §1→victory path through the computed gates — Vault |
+| `npm run check` | Full QA suite (syntax, data, intro, OCR smoke, fixtures, winnable) — Howl, Vault |
 
 **Running checks for Howl:** it has no local `node_modules`; borrow Vault's installed Playwright:
 

@@ -3900,10 +3900,8 @@ window.GAMEBOOK_DATA = {
     "400": {
       "number": 400,
       "page": 115,
-      "choices": [
-        8
-      ],
-      "text": "The lifeless body of the would-be ruler of Castle Heydrich falls to the floor. There is no hideous shriek, like the soul-rending cry of the Count dis- patched to hell, but simply the choking sigh of an evil woman meeting her just end. As she falls, her appearance changes. The illusion of her youth dis- appears, and a wizened old crone lies at your feet Nastassia gasps in horror and looks away, burying her face in your chest. You put an arm round her and lead her slowly up the stairs, away from this evil place. Turning as you leave the Crypt, you see the shade of Siegfried standing behind you, waving a last farewell. At lasi I can rest in peace, you sense him feeling, and you wave back as he makes a last gesture of blessing upon a warrior as brave as, but more successful than, he was. Castle Heydrich has been cleansed of its timeless, elemental evil by your hand. You sheathe your sword and lead the girl back home, to the hero's welcome that rightly awaits your return oe HL yet et eb, M ik, ee eo",
+      "choices": [],
+      "text": "The lifeless body of the would-be ruler of Castle Heydrich falls to the floor. There is no hideous shriek, like the soul-rending cry of the Count dis- patched to hell, but simply the choking sigh of an evil woman meeting her just end. As she falls, her appearance changes. The illusion of her youth dis- appears, and a wizened old crone lies at your feet Nastassia gasps in horror and looks away, burying her face in your chest. You put an arm round her and lead her slowly up the stairs, away from this evil place. Turning as you leave the Crypt, you see the shade of Siegfried standing behind you, waving a last farewell. At lasi I can rest in peace, you sense him feeling, and you wave back as he makes a last gesture of blessing upon a warrior as brave as, but more successful than, he was. Castle Heydrich has been cleansed of its timeless, elemental evil by your hand. You sheathe your sword and lead the girl back home, to the hero's welcome that rightly awaits your return.",
       "ocrSource": "tesseract"
     }
   },
