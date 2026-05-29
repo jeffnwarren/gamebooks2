@@ -9,6 +9,7 @@
     "check:js": "node --check playable/app.js",
     "check:ocr": "node tools/check-ocr-smoke.js",
     "report:graph": "node tools/check-data.js --verbose",
+    "report:orphans": "node tools/report-orphans.js",
     "report:illustrations": "python ../tools/detect-full-page-illustrations.py .",
     "build:illustrations": "python ../tools/detect-full-page-illustrations.py . --write --extract",
     "report:ocr": "node tools/report-ocr.js"
