@@ -12,7 +12,7 @@ const turnWordsPattern = [
 ].join("|");
 const turnConnectorPattern = "at\\s+once\\s+to|back\\s+to|to|lo|te|bo|eo|at|ta|i|l|fo|paragraph|section";
 const turnTokenPattern = "[0-9OoQIiLlAaEeSsBbGgqQjJzZyY$Â§%(){}.,'\\\"]{1,6}";
-const turnPattern = new RegExp(`\\b(?:${turnWordsPattern})\\b\\s*(?:${turnConnectorPattern})?\\s*(${turnTokenPattern})(?![A-Za-z])`, "gi");
+const turnPattern = new RegExp(`\\b(?:${turnWordsPattern})\\b\\s*(${turnConnectorPattern})?\\s*(${turnTokenPattern})(?![A-Za-z])`, "gi");
 
 function loadData() {
   global.window = {};
@@ -54,15 +54,21 @@ function scanTurnTargets(text, maxSection, currentNumber) {
   turnPattern.lastIndex = 0;
   let match = turnPattern.exec(source);
   while (match) {
-    const target = normalizeToken(match[1], maxSection);
-    if (target && target !== currentNumber) targets.add(target);
+    const connector = match[1] || "";
+    const token = match[2];
+    // Mirror the reader's linkify/choice guard: a letter-built token (OCR
+    // substitution, e.g. "as" = 15) only counts when an explicit connector precedes it.
+    if (!(/[A-Za-z]/.test(token) && !connector.trim())) {
+      const target = normalizeToken(token, maxSection);
+      if (target && target !== currentNumber) targets.add(target);
+    }
     match = turnPattern.exec(source);
   }
   return [...targets];
 }
 
 function endingLike(text) {
-  return /\b(adventure ends|adventure is over|quest ends here|quest has failed|you have failed|you are dead|you die|you have died|you have been killed|you are killed|you pass out|horrible end to your adventure|fate worse than death|met your doom|hollow victory|willing servant always|mindless servant|new master|slay you|barbe-?\s*cued meal|the end|congratulations|you have escaped|start all over again)\b/i.test(String(text || ""));
+  return /\b(adventure ends|adventure is over|quest ends here|quest has failed|you have failed|you are dead|you die|you have died|you have been killed|you are killed|you pass out|horrible end to your adventure|fate worse than death|met your doom|hollow victory|willing servant always|mindless servant|new master|slay you|barbe-?\s*cued meal|the end|congratulations|you have escaped|start all over again|hero'?s welcome that rightly awaits)\b/i.test(String(text || ""));
 }
 
 function snippet(text) {

@@ -8,7 +8,7 @@ The app includes:
 - Section navigation with history, bookmarks, search, and manual jump.
 - Full-page illustrations shown contextually in the reader, plus an illustration index in the sidebar.
 - Adventure sheet fields saved in local browser storage.
-- Dice, luck test, and a simple attack round helper.
+- Dice, luck test, and a combat helper that auto-fills enemy stats from the passage, runs attack rounds, applies the right damage automatically, and offers a signed STAMINA adjuster for by-hand changes.
 - An optional original PDF page pane that is off by default.
 
 The main book text now comes from fresh Tesseract OCR, which is much more readable than the PDF's embedded OCR layer. A small number of sections use the embedded OCR as fallback where Tesseract did not split a section cleanly. The PDF pane is included as the authoritative source whenever extracted text looks odd.
@@ -19,7 +19,7 @@ Run `npm run check` from the project root for JavaScript syntax, book-data integ
 
 ## QA status
 
-Current graph QA has no known missing stored choice targets: `scannerFoundUnstoredChoiceTargets` is `0`, and no suspicious non-ending dead ends. The remaining graph warning queue is `27` unreachable sections, mostly conditional, puzzle, or hidden-number paths.
+Current graph QA has no missing stored choice targets (`scannerFoundUnstoredChoiceTargets` is `0`) and no suspicious non-ending dead ends. The victory section (`400`) is reachable, as confirmed by `check:winnable`. The remaining graph warning queue is `8` unreachable-via-stored-choices sections (`94`, `169`, `188`, `328`, `350`, `374`, `376`, `378`) — conditional, puzzle, or hidden-number paths that are reached through scanned in-text links or gated routes rather than stored choices.
 
 To regenerate `book-data.js` from the PDF, run this from the project root after Tesseract and the Python packages are installed:
 

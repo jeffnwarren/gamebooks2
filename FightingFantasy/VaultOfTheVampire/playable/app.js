@@ -299,13 +299,19 @@
   function scanChoiceText(text, currentNumber) {
     const choices = new Map();
     const source = text.replace(/\s+/g, " ").trim();
-    const turnPattern = /\b(?:turn|tur|tum|tarn|tuin|tuln|tim|timi|tumi|tium|tiurn|tucn|furn|fum|fumi|faim|fiumn|hrm|rurn|burn|bun|barn|hurn|hun|hum|humm|hirn|hon|harn|ham|eum|go|return|continue)\s+(?:at\s+once\s+to|back\s+to|to|lo|te|bo|eo|at|ta|i|l|fo)?\s*(?:paragraph|section)?\s*([0-9OoQIiLlAaEeSsBbGgqQjJzZyY$%(){}.,'"]{1,6})(?![A-Za-z])/gi;
+    const turnPattern = /\b(?:turn|tur|tum|tarn|tuin|tuln|tim|timi|tumi|tium|tiurn|tucn|furn|fum|fumi|faim|fiumn|hrm|rurn|burn|bun|barn|hurn|hun|hum|humm|hirn|hon|harn|ham|eum|go|return|continue)\s+((?:at\s+once\s+to|back\s+to|to|lo|te|bo|eo|at|ta|i|l|fo)?\s*(?:paragraph|section)?)\s*([0-9OoQIiLlAaEeSsBbGgqQjJzZyY$%(){}.,'"]{1,6})(?![A-Za-z])/gi;
     let match = turnPattern.exec(source);
     let previousEnd = 0;
 
     while (match) {
-      const target = normalizeToken(match[1]);
-      if (validSection(target) && target !== currentNumber && !choices.has(target)) {
+      const connector = match[1];
+      const token = match[2];
+      const target = normalizeToken(token);
+      // Mirror linkify: a token built from OCR letter-substitutions (e.g. "as" = 15)
+      // only counts as a reference when an explicit connector precedes it. Without one,
+      // ordinary words after a trigger ("return as", "go so") are not choices.
+      const ocrWithoutConnector = /[A-Za-z]/.test(token) && !connector.trim();
+      if (!ocrWithoutConnector && validSection(target) && target !== currentNumber && !choices.has(target)) {
         const label = choiceLabelFromPrefix(source.slice(previousEnd, match.index), target);
         choices.set(target, label);
       }

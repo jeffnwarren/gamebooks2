@@ -37,6 +37,31 @@ async function statValues(page) {
   );
 }
 
+async function setStatInput(page, name, value) {
+  await page.$eval(
+    `[data-stat="${name}"]`,
+    (el, v) => {
+      el.value = v;
+      el.dispatchEvent(new Event("change", { bubbles: true }));
+    },
+    value
+  );
+}
+
+async function fieldNumber(page, selector) {
+  return page.$eval(selector, (el) => Number(el.value));
+}
+
+async function outputValue(page, selector) {
+  return page.$eval(selector, (el) => el.value);
+}
+
+async function enemyChips(page) {
+  return page.$$eval("#enemyList .enemy-chip", (els) =>
+    els.map((el) => ({ text: el.textContent, pressed: el.getAttribute("aria-pressed") }))
+  );
+}
+
 async function runHowl(page) {
   await goto(page, "background", ".intro-block");
   const background = await page.$eval("#sectionText", (element) => element.innerText);
@@ -102,6 +127,58 @@ async function runVault(page) {
   expect(within(stats.staminaInitial, 14, 24) && stats.stamina === stats.staminaInitial, "Vault STAMINA roll should be 14-24 and copied to current STAMINA.");
   expect(within(stats.luckInitial, 7, 12) && stats.luck === stats.luckInitial, "Vault LUCK roll should be 7-12 and copied to current LUCK.");
   expect(within(stats.faithInitial, 4, 9) && stats.faith === stats.faithInitial, "Vault FAITH roll should be 4-9 and copied to current FAITH.");
+
+  // Combat: a single foe auto-populates the enemy fields from the passage text.
+  await goto(page, 42, "#enemyList .enemy-chip");
+  expect((await fieldNumber(page, "#enemySkill")) === 7, "Vault §42 should auto-fill Enemy Skill 7.");
+  expect((await fieldNumber(page, "#enemyStamina")) === 9, "Vault §42 should auto-fill Enemy Stamina 9.");
+  const vampireMistChips = await enemyChips(page);
+  expect(vampireMistChips.length === 1, "Vault §42 should show one enemy chip.");
+  expect(vampireMistChips[0].text.includes("Vampire Mist"), "Vault §42 chip should name the Vampire Mist.");
+  expect(vampireMistChips[0].pressed === "true", "Vault §42 single foe should be auto-selected.");
+
+  // Combat: several foes each become a selectable chip; the first is selected.
+  await goto(page, 81, "#enemyList .enemy-chip");
+  const zombieChips = await enemyChips(page);
+  expect(zombieChips.length === 3, "Vault §81 should list three zombie chips.");
+  expect(zombieChips[0].pressed === "true", "Vault §81 first foe should be auto-selected.");
+  expect(zombieChips.filter((chip) => chip.pressed === "true").length === 1, "Vault §81 should select exactly one foe.");
+  expect((await fieldNumber(page, "#enemySkill")) === 6 && (await fieldNumber(page, "#enemyStamina")) === 5,
+    "Vault §81 should load the first zombie's stats (Skill 6, Stamina 5).");
+
+  // Combat: non-standard per-hit damage is detected and applied automatically.
+  await goto(page, 366, "#enemyList .enemy-chip");
+  expect(/Hits for 3/i.test(await outputValue(page, "#combatOutput")), "Vault §366 should announce the Homunculus hits for 3.");
+  await setStatInput(page, "skill", 1);
+  await setStatInput(page, "staminaInitial", 20);
+  await setStatInput(page, "stamina", 20);
+  await page.$eval("#enemySkill", (el) => { el.value = 12; }); // force the enemy to win the round
+  await page.evaluate(() => { Math.random = () => 0; }); // both sides roll 1+1; enemy Skill decides
+  await page.click("#attackRoundBtn");
+  const afterHit = await statValues(page);
+  expect(afterHit.stamina === 17, "Vault §366 enemy hit should deduct 3 STAMINA (variable damage), 20→17.");
+  expect(/hit for 3/i.test(await outputValue(page, "#combatOutput")), "Vault §366 attack round should report a 3-point hit.");
+
+  // STAMINA adjuster: signed amount, applied to hero or enemy, hero healing capped at initial.
+  await goto(page, 1, ".choice-list");
+  await setStatInput(page, "staminaInitial", 20);
+  await setStatInput(page, "stamina", 20);
+  await page.fill("#adjustAmount", "4");
+  expect((await page.$eval("#adjustSignBtn", (el) => el.getAttribute("aria-pressed"))) === "true",
+    "Adjuster should default to subtract (minus).");
+  await page.click("#heroAdjustBtn");
+  expect((await statValues(page)).stamina === 16, "Hero −4 should drop STAMINA 20→16.");
+  await page.click("#adjustSignBtn"); // toggle to plus
+  await page.click("#heroAdjustBtn");
+  expect((await statValues(page)).stamina === 20, "Hero +4 should restore 16→20 (capped at initial).");
+  await page.click("#heroAdjustBtn");
+  expect((await statValues(page)).stamina === 20, "Hero +4 again should stay capped at initial 20.");
+  await page.$eval("#enemyStamina", (el) => { el.value = 5; });
+  await page.click("#enemyAdjustBtn"); // sign is plus
+  expect((await fieldNumber(page, "#enemyStamina")) === 9, "Enemy +4 should raise 5→9.");
+  await page.click("#adjustSignBtn"); // back to minus
+  await page.click("#enemyAdjustBtn");
+  expect((await fieldNumber(page, "#enemyStamina")) === 5, "Enemy −4 should drop 9→5.");
 }
 
 (async () => {
