@@ -391,6 +391,69 @@ p {
   margin-top: 10px;
 }
 
+.enemy-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.enemy-list:empty {
+  display: none;
+}
+
+.enemy-chip {
+  align-items: baseline;
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  cursor: pointer;
+  display: flex;
+  flex: 1 1 auto;
+  gap: 8px;
+  justify-content: space-between;
+  padding: 7px 10px;
+  text-align: left;
+}
+
+.enemy-chip[aria-pressed="true"] {
+  background: var(--paper-strong);
+  border-color: currentColor;
+  font-weight: 700;
+}
+
+.enemy-chip .enemy-stats {
+  font-variant-numeric: tabular-nums;
+  opacity: 0.75;
+  white-space: nowrap;
+}
+
+.adjust-row {
+  align-items: stretch;
+  display: flex;
+  gap: 8px;
+  margin-top: 8px;
+}
+
+.adjust-row #adjustSignBtn {
+  flex: 0 0 auto;
+  font-weight: 800;
+  min-width: 38px;
+}
+
+.adjust-row #adjustSignBtn[aria-pressed="false"] {
+  background: var(--paper-strong);
+}
+
+.adjust-row #adjustAmount {
+  flex: 0 1 56px;
+  min-width: 0;
+  text-align: center;
+}
+
+.adjust-row #heroAdjustBtn,
+.adjust-row #enemyAdjustBtn {
+  flex: 1 1 auto;
+}
+
 .dice-section output,
 .combat-section output {
   background: var(--paper-strong);

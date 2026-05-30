@@ -73,6 +73,7 @@
     bookmarkList: document.getElementById("bookmarkList"),
     visitedList: document.getElementById("visitedList"),
     illustrationList: document.getElementById("illustrationList"),
+    readerPanel: document.querySelector(".reader-panel"),
     sectionTitle: document.getElementById("sectionTitle"),
     sectionIllustration: document.getElementById("sectionIllustration"),
     sectionText: document.getElementById("sectionText"),
@@ -83,10 +84,13 @@
     diceOutput: document.getElementById("diceOutput"),
     testLuckBtn: document.getElementById("testLuckBtn"),
     attackRoundBtn: document.getElementById("attackRoundBtn"),
+    enemyList: document.getElementById("enemyList"),
     enemySkill: document.getElementById("enemySkill"),
     enemyStamina: document.getElementById("enemyStamina"),
-    enemyMinusBtn: document.getElementById("enemyMinusBtn"),
-    heroMinusBtn: document.getElementById("heroMinusBtn"),
+    adjustSignBtn: document.getElementById("adjustSignBtn"),
+    adjustAmount: document.getElementById("adjustAmount"),
+    heroAdjustBtn: document.getElementById("heroAdjustBtn"),
+    enemyAdjustBtn: document.getElementById("enemyAdjustBtn"),
     combatOutput: document.getElementById("combatOutput"),
     inventoryText: document.getElementById("inventoryText"),
     spellsText: document.getElementById("spellsText"),
@@ -96,6 +100,8 @@
 
   let state = loadState();
   let currentPdfUrl = "";
+  // Damage the current section's foe deals per hit (usually 2; some foes hit harder).
+  let enemyHitDamage = 2;
 
   function loadState() {
     try {
@@ -130,6 +136,14 @@
     return value === "intro" || value === "background" || validSection(value);
   }
 
+  function scrollReaderToTop() {
+    // The reader panel scrolls independently on wide layouts; the window
+    // scrolls on the stacked mobile layout. Reset both so each new passage
+    // starts at the top, ready to read.
+    if (refs.readerPanel) refs.readerPanel.scrollTop = 0;
+    window.scrollTo(0, 0);
+  }
+
   function gotoIntro(pushHistory = true) {
     if (pushHistory && state.current !== "intro") {
       state.back.push(state.current);
@@ -138,6 +152,7 @@
     state.current = "intro";
     saveState();
     render();
+    scrollReaderToTop();
   }
 
   function gotoBackground(pushHistory = true) {
@@ -148,6 +163,7 @@
     state.current = "background";
     saveState();
     render();
+    scrollReaderToTop();
   }
 
   function gotoSection(number, pushHistory = true) {
@@ -164,6 +180,7 @@
     state.visited = [number, ...state.visited.filter((item) => item !== number)].slice(0, 30);
     saveState();
     render();
+    scrollReaderToTop();
   }
 
   function gotoLocation(location, pushHistory = true) {
@@ -947,6 +964,101 @@
     }
   }
 
+  function titleCaseName(name) {
+    return String(name || "")
+      .toLowerCase()
+      .replace(/\b([a-z])/g, (char) => char.toUpperCase());
+  }
+
+  function detectEnemies(text) {
+    const source = String(text || "").replace(/\s+/g, " ").trim();
+    const enemies = [];
+    const seen = new Set();
+
+    // Standard stat block: an all-caps creature name immediately before its scores,
+    // e.g. "VAMPIRE MIST SKILL 7 STAMINA 9" or "GNOME SKILL 8 STAMINA 6".
+    const standard = /((?:[A-Z][A-Z'’.-]*\s+){0,4}[A-Z][A-Z'’.-]+)\s+SKILL\s+(\d+)\s+STAMINA\s+(\d+)/g;
+    let match = standard.exec(source);
+    while (match) {
+      const skill = Number.parseInt(match[2], 10);
+      const stamina = Number.parseInt(match[3], 10);
+      const name = titleCaseName(match[1].trim());
+      const key = `${name}|${skill}|${stamina}`;
+      if (skill >= 1 && skill <= 20 && stamina >= 1 && stamina <= 40 && !seen.has(key)) {
+        seen.add(key);
+        enemies.push({ name, skill, stamina });
+      }
+      match = standard.exec(source);
+    }
+    if (enemies.length) return enemies;
+
+    // Tabular block used when several foes share a header, e.g.
+    // "SKILL STAMINA First ZOMBIE 6 5 Second ZOMBIE 7 7".
+    const tabular = /(First|Second|Third|Fourth|Fifth)\s+([A-Z][A-Z'’.-]*(?:\s+[A-Z][A-Z'’.-]*)*)\s+(\d+)\s+(\d+)/g;
+    match = tabular.exec(source);
+    while (match) {
+      const skill = Number.parseInt(match[3], 10);
+      const stamina = Number.parseInt(match[4], 10);
+      if (skill >= 1 && skill <= 20 && stamina >= 1 && stamina <= 40) {
+        enemies.push({ name: titleCaseName(`${match[1]} ${match[2]}`.trim()), skill, stamina });
+      }
+      match = tabular.exec(source);
+    }
+    return enemies;
+  }
+
+  function detectEnemyDamage(text) {
+    // Default melee damage is 2 STAMINA per hit. A few foes hit harder, always
+    // phrased as a contrast with "the usual 2" (e.g. the Homunculus's wand, the
+    // poison-bladed Gnome). Fall back to a "hits you ... N points" guard.
+    const source = String(text || "").replace(/\s+/g, " ");
+    const patterns = [
+      /(\d+)\s+points?\s+of\s+(?:damage|STAMINA)\s*,?\s+rather than the usual\s+2/i,
+      /(?:hits?|wounds?|strikes?)\s+you[^.]*?(?:causes?|inflicts?|deals?|lose)\s+(\d+)\s+points?\s+of\s+(?:damage|STAMINA)/i
+    ];
+    for (const pattern of patterns) {
+      const match = source.match(pattern);
+      if (match) {
+        const value = Number.parseInt(match[1], 10);
+        if (value >= 1 && value <= 10) return value;
+      }
+    }
+    return 2;
+  }
+
+  function applyEnemy(enemy) {
+    if (refs.enemySkill) refs.enemySkill.value = enemy.skill;
+    if (refs.enemyStamina) refs.enemyStamina.value = enemy.stamina;
+    for (const chip of refs.enemyList.querySelectorAll(".enemy-chip")) {
+      chip.setAttribute("aria-pressed", chip.dataset.name === enemy.name ? "true" : "false");
+    }
+    const hitNote = enemyHitDamage !== 2 ? ` Hits for ${enemyHitDamage}!` : "";
+    refs.combatOutput.value = `${enemy.name}: SKILL ${enemy.skill}, STAMINA ${enemy.stamina}.${hitNote} Fight!`;
+  }
+
+  function renderCombat() {
+    if (!refs.enemyList) return;
+    refs.enemyList.innerHTML = "";
+    const section = Number.isInteger(state.current) ? sections[String(state.current)] : null;
+    enemyHitDamage = section ? detectEnemyDamage(section.text) : 2;
+    const enemies = section ? detectEnemies(section.text) : [];
+    if (!enemies.length) return;
+
+    for (const enemy of enemies) {
+      const chip = document.createElement("button");
+      chip.type = "button";
+      chip.className = "enemy-chip";
+      chip.dataset.name = enemy.name;
+      chip.setAttribute("aria-pressed", "false");
+      chip.innerHTML = `<span>${escapeHtml(enemy.name)}</span><span class="enemy-stats">SKILL ${enemy.skill} / STAMINA ${enemy.stamina}</span>`;
+      chip.addEventListener("click", () => applyEnemy(enemy));
+      refs.enemyList.append(chip);
+    }
+
+    // Auto-populate the combat fields with the first foe so a new fight is ready to go.
+    applyEnemy(enemies[0]);
+  }
+
   function renderSheet() {
     for (const input of document.querySelectorAll("[data-stat]")) {
       input.value = state.stats[input.dataset.stat] ?? 0;
@@ -971,6 +1083,7 @@
     renderSection();
     renderLists();
     renderSheet();
+    renderCombat();
     renderButtons();
   }
 
@@ -1129,6 +1242,11 @@
     renderSheet();
   });
 
+  // TODO: auto-track per-fight hit counts to surface the "if the creature hits you
+  // N times, turn at once to X" escape clauses (e.g. Vampire Mist §42 at 2 hits,
+  // Huge Ghoul §70 at 3 hits). Would mean parsing that threshold/target from the
+  // section text and counting enemy wins this fight, then prompting the jump. Left
+  // manual for now — the player watches the readout and turns when the text says.
   refs.attackRoundBtn.addEventListener("click", () => {
     const hero = roll(2);
     const enemy = roll(2);
@@ -1136,11 +1254,14 @@
     const enemyAttack = enemy.total + asNumber(refs.enemySkill.value, 0);
     let message = `You ${heroAttack} (${hero.results.join("+")}), enemy ${enemyAttack} (${enemy.results.join("+")}). `;
     if (heroAttack > enemyAttack) {
-      refs.enemyStamina.value = Math.max(0, asNumber(refs.enemyStamina.value, 0) - 2);
-      message += "Enemy hit for 2.";
+      const enemyStamina = Math.max(0, asNumber(refs.enemyStamina.value, 0) - 2);
+      refs.enemyStamina.value = enemyStamina;
+      message += `You hit for 2 — enemy STAMINA ${enemyStamina}.`;
+      if (enemyStamina === 0) message += " Enemy defeated!";
     } else if (enemyAttack > heroAttack) {
-      state.stats.stamina = Math.max(0, state.stats.stamina - 2);
-      message += "You are hit for 2.";
+      state.stats.stamina = Math.max(0, state.stats.stamina - enemyHitDamage);
+      message += `You are hit for ${enemyHitDamage} — your STAMINA ${state.stats.stamina}.`;
+      if (state.stats.stamina === 0) message += " You are slain!";
     } else {
       message += "Both attacks miss.";
     }
@@ -1149,14 +1270,34 @@
     renderSheet();
   });
 
-  refs.enemyMinusBtn.addEventListener("click", () => {
-    refs.enemyStamina.value = Math.max(0, asNumber(refs.enemyStamina.value, 0) - 2);
+  // Manual STAMINA adjuster for things the attack round can't see: special damage
+  // from the prose (Holy Water, traps, venom), restoring STAMINA from Provisions or
+  // rest, or fixing a misclick. The sign toggle flips between damage (−) and heal (+).
+  function adjustSign() {
+    return refs.adjustSignBtn.getAttribute("aria-pressed") === "false" ? 1 : -1;
+  }
+
+  refs.adjustSignBtn.addEventListener("click", () => {
+    const healing = refs.adjustSignBtn.getAttribute("aria-pressed") === "true";
+    refs.adjustSignBtn.setAttribute("aria-pressed", healing ? "false" : "true");
+    refs.adjustSignBtn.innerHTML = healing ? "&plus;" : "&minus;";
   });
 
-  refs.heroMinusBtn.addEventListener("click", () => {
-    state.stats.stamina = Math.max(0, state.stats.stamina - 2);
+  refs.heroAdjustBtn.addEventListener("click", () => {
+    const delta = adjustSign() * Math.max(1, asNumber(refs.adjustAmount.value, 1));
+    const cap = state.stats.staminaInitial || Infinity;
+    const next = Math.min(cap, Math.max(0, state.stats.stamina + delta));
+    state.stats.stamina = next;
+    refs.combatOutput.value = `Hero STAMINA ${delta >= 0 ? "+" : "−"}${Math.abs(delta)} → ${next}.`;
     saveState();
     renderSheet();
+  });
+
+  refs.enemyAdjustBtn.addEventListener("click", () => {
+    const delta = adjustSign() * Math.max(1, asNumber(refs.adjustAmount.value, 1));
+    const next = Math.max(0, asNumber(refs.enemyStamina.value, 0) + delta);
+    refs.enemyStamina.value = next;
+    refs.combatOutput.value = `Enemy STAMINA ${delta >= 0 ? "+" : "−"}${Math.abs(delta)} → ${next}.`;
   });
 
   window.addEventListener("hashchange", () => {

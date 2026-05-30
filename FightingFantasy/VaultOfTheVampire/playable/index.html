@@ -131,6 +131,7 @@
 
         <section class="sheet-section combat-section">
           <h2>Combat</h2>
+          <div id="enemyList" class="enemy-list"></div>
           <div class="combat-grid">
             <label>
               <span>Enemy Skill</span>
@@ -143,8 +144,12 @@
           </div>
           <div class="dice-row">
             <button id="attackRoundBtn" type="button">Attack Round</button>
-            <button id="enemyMinusBtn" type="button">Enemy -2</button>
-            <button id="heroMinusBtn" type="button">Hero -2</button>
+          </div>
+          <div class="adjust-row">
+            <button id="adjustSignBtn" type="button" aria-pressed="true" title="Toggle damage / restore">&minus;</button>
+            <input id="adjustAmount" type="number" min="1" value="2" aria-label="STAMINA amount">
+            <button id="heroAdjustBtn" type="button">Hero</button>
+            <button id="enemyAdjustBtn" type="button">Enemy</button>
           </div>
           <output id="combatOutput">-</output>
         </section>
