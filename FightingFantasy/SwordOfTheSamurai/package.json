@@ -1,4 +1,9 @@
 {
+  "name": "sword-of-the-samurai",
+  "scripts": {
+    "check:artifacts": "node tools/check-artifacts.js",
+    "report:artifacts": "node tools/report-artifacts.js"
+  },
   "devDependencies": {
     "playwright": "^1.60.0"
   }

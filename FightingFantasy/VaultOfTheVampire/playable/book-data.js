@@ -644,7 +644,7 @@ window.GAMEBOOK_DATA = {
       "choices": [
         383
       ],
-      "text": "OO eo 64 Valderesse lifts up the Gnome by his jerkin and holds him up to speak to him face to face. \"Get my friend across the river, Snivel, free of charge. You owe me a favour for keeping those wolves away from you last week!' Turning to you, she murmurs that Snivel is not the kind of Gnome whose offer of hospitality you should accept. There is a forester's hut further along the trail and you will be able to find rest there in safety. She puts the Gnome down and he fawns and toadies to you. You clamber into his boat and he mutters some words which you don't make out. The boat moves straight out against the current, into the middle of the river! Valderesse waves goodbye to you as you step out safely on the opposite bank. Turn to 383",
+      "text": "Valderesse lifts up the Gnome by his jerkin and holds him up to speak to him face to face. \"Get my friend across the river, Snivel, free of charge. You owe me a favour for keeping those wolves away from you last week!' Turning to you, she murmurs that Snivel is not the kind of Gnome whose offer of hospitality you should accept. There is a forester's hut further along the trail and you will be able to find rest there in safety. She puts the Gnome down and he fawns and toadies to you. You clamber into his boat and he mutters some words which you don't make out. The boat moves straight out against the current, into the middle of the river! Valderesse waves goodbye to you as you step out safely on the opposite bank. Turn to 383",
       "ocrSource": "tesseract"
     },
     "65": {
@@ -1122,7 +1122,7 @@ window.GAMEBOOK_DATA = {
       "choices": [
         164
       ],
-      "text": "This spell works as normally, but to gain the extra damage you must have the higher Attack Strength in this Attack Round - otherwise the spell fails. Turn to 164 er =",
+      "text": "This spell works as normally, but to gain the extra damage you must have the higher Attack Strength in this Attack Round - otherwise the spell fails. Turn to 164",
       "ocrSource": "tesseract"
     },
     "113": {
@@ -1878,7 +1878,7 @@ window.GAMEBOOK_DATA = {
       "choices": [
         81
       ],
-      "text": "You are too slow! The Zombies are upon you before you can close the door and get away. Turn to 81 =",
+      "text": "You are too slow! The Zombies are upon you before you can close the door and get away. Turn to 81",
       "ocrSource": "tesseract"
     },
     "191": {
@@ -2086,7 +2086,7 @@ window.GAMEBOOK_DATA = {
         268,
         339
       ],
-      "text": "In desperation, the Count will try to bite your throat rather than batter you with his fists. You may sub- tract 2 from his skILL when he tries this biting attack. His bite causes normal damage (2 points) on the first hit - unless you have the Curse of the Healer (if you do, his bite causes double damage - 4 points!). If the Count bites you twice, turn at once to 268. If you win, turn to 339 er oe",
+      "text": "In desperation, the Count will try to bite your throat rather than batter you with his fists. You may sub- tract 2 from his SKILL when he tries this biting attack. His bite causes normal damage (2 points) on the first hit - unless you have the Curse of the Healer (if you do, his bite causes double damage - 4 points!). If the Count bites you twice, turn at once to 268. If you win, turn to 339",
       "ocrSource": "tesseract"
     },
     "213": {
@@ -2378,7 +2378,7 @@ window.GAMEBOOK_DATA = {
       "number": 242,
       "page": 77,
       "choices": [],
-      "text": "You draw your sword, but he laughs out loud at you! He places one hand on the crystal ball, mutters a word, and a dragon's head appears on top of it! The spiny red head breathes a narrow red jet of smoking, superheated flame at you. You scream in pain and pass out immediately, and Karl Adenauer prepares to supply a Ghoul he knows with a barbe- cued meal =",
+      "text": "You draw your sword, but he laughs out loud at you! He places one hand on the crystal ball, mutters a word, and a dragon's head appears on top of it! The spiny red head breathes a narrow red jet of smoking, superheated flame at you. You scream in pain and pass out immediately, and Karl Adenauer prepares to supply a Ghoul he knows with a barbe- cued meal",
       "ocrSource": "tesseract"
     },
     "243": {
@@ -3213,7 +3213,7 @@ window.GAMEBOOK_DATA = {
       "choices": [
         82
       ],
-      "text": "Trembling, you open a vein and allow blood to run into the chalice. As the scarlet liquid drips into the bowl, red runes glow before your eyes and seem to dance round its rim You snap into alertness as a cold hand touches your shoulder. 'You nearly fainted,' Siegfried says, \"but the magic is woven. Behold!' He points to a match- less longsword, glowing with bluish white light lying on the table before you. Although you lost STAMINA when you gave your blood, on picking up Nightstar energy pours into you and you recover not only this lost STAMINA buta further4 STAMINA points as well! Nightstar is a magical sword of considerable power. When using it, you may add 1 point to your SKILL when fighting any creature however, when fighting a Vampire you may add 2 to your SKILL. These KILL bonuses do allow you to exceed your Initial SKILL and can even raise your total SKILL above 12, if your Initial skILL was high enough for this to be the case with the bonus. You may also gain 1 FAITH point and 2 LucxK points for finding this excellent prize. Turn to 82",
+      "text": "Trembling, you open a vein and allow blood to run into the chalice. As the scarlet liquid drips into the bowl, red runes glow before your eyes and seem to dance round its rim You snap into alertness as a cold hand touches your shoulder. 'You nearly fainted,' Siegfried says, \"but the magic is woven. Behold!' He points to a match- less longsword, glowing with bluish white light lying on the table before you. Although you lost STAMINA when you gave your blood, on picking up Nightstar energy pours into you and you recover not only this lost STAMINA but a further 4 STAMINA points as well! Nightstar is a magical sword of considerable power. When using it, you may add 1 point to your SKILL when fighting any creature however, when fighting a Vampire you may add 2 to your SKILL. These SKILL bonuses do allow you to exceed your Initial SKILL and can even raise your total SKILL above 12, if your Initial SKILL was high enough for this to be the case with the bonus. You may also gain 1 FAITH point and 2 LUCK points for finding this excellent prize. Turn to 82",
       "ocrSource": "tesseract"
     },
     "329": {
@@ -3443,7 +3443,7 @@ window.GAMEBOOK_DATA = {
       "choices": [
         320
       ],
-      "text": "Gradually normal vision returns to you and, from the light of the torches in the corridor, you can see into the gloom. The Thassaloss was clearly guarding an oaken chest which stands on top of a pinewood table in this otherwise bare chamber. Unfortunate- ly, the chest is securely locked and bound, and you cannot openit. You feel frustrated and cheated, and make a note to come back here if you find any keys which might fit the chest! Turn to 320",
+      "text": "Gradually normal vision returns to you and, from the light of the torches in the corridor, you can see into the gloom. The Thassaloss was clearly guarding an oaken chest which stands on top of a pinewood table in this otherwise bare chamber. Unfortunate- ly, the chest is securely locked and bound, and you cannot open it. You feel frustrated and cheated, and make a note to come back here if you find any keys which might fit the chest! Turn to 320",
       "ocrSource": "tesseract"
     },
     "353": {
@@ -3560,7 +3560,7 @@ window.GAMEBOOK_DATA = {
         332,
         353
       ],
-      "text": "be ae 364 You look into a very snug room that is evidently used by diners who have had too much to eat and drink. Among the armchairs, footstools and cushions you spy two objects of note. First, thereisa decanter of what smells like brandy. Although there are only two large measures left in the decanter each one will restore 4 lost STAMINA points. You can drink one or both now, or save the brandy for later. (If you do this, add it to your Possessions subtracting a measure when you consume one. If you keep the brandy, you can drink it at any time except during a combat.) There is also a small drape across one corner of the room, and when you draw this back you find a smail silver mirror on a table. If you wish to take this, add the Silver Mirror to your Possessions You leave and go back to the corridor. From the east door opposite, you hear aloud slamming sound and a shout. Perhaps something has been discovered, or someone has been alerted! You must now decide either to open the northern door (turn to 332) or to head down the eastern side-passage (turn to 353 \"i",
+      "text": "You look into a very snug room that is evidently used by diners who have had too much to eat and drink. Among the armchairs, footstools and cushions you spy two objects of note. First, there is a decanter of what smells like brandy. Although there are only two large measures left in the decanter each one will restore 4 lost STAMINA points. You can drink one or both now, or save the brandy for later. (If you do this, add it to your Possessions subtracting a measure when you consume one. If you keep the brandy, you can drink it at any time except during a combat.) There is also a small drape across one corner of the room, and when you draw this back you find a small silver mirror on a table. If you wish to take this, add the Silver Mirror to your Possessions You leave and go back to the corridor. From the east door opposite, you hear aloud slamming sound and a shout. Perhaps something has been discovered, or someone has been alerted! You must now decide either to open the northern door (turn to 332) or to head down the eastern side-passage (turn to 353)",
       "ocrSource": "tesseract"
     },
     "365": {
@@ -3842,7 +3842,7 @@ window.GAMEBOOK_DATA = {
       "choices": [
         75
       ],
-      "text": "'I can't do anything about them,' the Sage sighs 'but you could try Gunthar. He claims to be a healer so he might be able to help. Up the stairs and through the door with the silver handle.' Return to 75 i =",
+      "text": "'I can't do anything about them,' the Sage sighs 'but you could try Gunthar. He claims to be a healer so he might be able to help. Up the stairs and through the door with the silver handle.' Return to 75",
       "ocrSource": "tesseract"
     },
     "395": {

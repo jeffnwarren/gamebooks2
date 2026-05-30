@@ -8,6 +8,8 @@
     "check:intro": "node tools/check-intro.js",
     "check:js": "node --check playable/app.js",
     "check:proofreader": "node tools/check-proofreader.js",
+    "check:artifacts": "node tools/check-artifacts.js",
+    "report:artifacts": "node tools/report-artifacts.js",
     "check:ocr": "node tools/check-ocr-smoke.js",
     "export:proofreading": "node tools/export-proofreading-text.js",
     "fix:intro-ocr": "node tools/apply-intro-cleanup.js",

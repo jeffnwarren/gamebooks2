@@ -174,6 +174,10 @@ COMMON_SECTION_REPLACEMENTS = {
     "yourbody": "your body",
     "iriside": "inside",
     "quesi": "quest",
+    "skILL": "SKILL",
+    "LucxK": "LUCK",
+    "thereisa": "there is a",
+    "openit": "open it",
 }
 
 TURN_WORDS = (
